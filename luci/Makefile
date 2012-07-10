@@ -284,7 +284,7 @@ $(eval $(call module,admin-full,LuCI Administration - full-featured for full con
 $(eval $(call module,rpc,LuCI RPC - JSON-RPC API,+luci-lib-json))
 $(eval $(call module,freifunk,LuCI Freifunk module,+luci-mod-admin-full +luci-lib-json +PACKAGE_luci-mod-freifunk:freifunk-firewall +freifunk-common +community-profiles))
 $(eval $(call module,niu,NIU - Next Generation Interface,+luci-mod-admin-core @BROKEN))
-
+$(eval $(call module,sam,LuCI Skifta Audio Module Web Configurator,+luci-mod-admin-core +luci-lib-ipkg))
 
 ### Applications ###
 define application
@@ -599,6 +599,10 @@ $(eval $(call collection,light,\
 	Minimum package set using only admin mini and the standard theme,\
 	+uhttpd +luci-mod-admin-mini +luci-theme-openwrt @BROKEN))
 
+$(eval $(call collection,sam,\
+	LuCI package set for Skifta Audio Module,\
+	+uhttpd +luci-mod-sam +luci-theme-openwrt +libiwinfo-lua @(!PACKAGE_luci)))
+
 
 ### Compile ###
 PKG_CONFIG_DEPENDS=$(patsubst %,CONFIG_PACKAGE_%,$(LUCI_BUILD_PACKAGES))
@@ -617,6 +621,7 @@ ifeq ($(USELOCAL),1)
 endif
 
 define Build/Configure
+	$(CP) -r files/sam $(PKG_BUILD_DIR)/modules/
 endef
 
 MAKE_FLAGS += \
