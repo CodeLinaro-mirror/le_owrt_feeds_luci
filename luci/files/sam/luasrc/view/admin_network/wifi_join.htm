@@ -17,38 +17,6 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 	local sys = require "luci.sys"
 	local utl = require "luci.util"
 
-	function guess_wifi_signal(info)
-		local scale = (100 / (info.quality_max or 100) * (info.quality or 0))
-		local icon
-
-		if not info.bssid or info.bssid == "00:00:00:00:00:00" then
-			icon = resource .. "/icons/signal-none.png"
-		elseif scale < 15 then
-			icon = resource .. "/icons/signal-0.png"
-		elseif scale < 35 then
-			icon = resource .. "/icons/signal-0-25.png"
-		elseif scale < 55 then
-			icon = resource .. "/icons/signal-25-50.png"
-		elseif scale < 75 then
-			icon = resource .. "/icons/signal-50-75.png"
-		else
-			icon = resource .. "/icons/signal-75-100.png"
-		end
-
-		return icon
-	end
-
-	function percent_wifi_signal(info)
-		local qc = info.quality or 0
-		local qm = info.quality_max or 0
-
-		if info.bssid and qc > 0 and qm > 0 then
-			return math.floor((100 / qm) * qc)
-		else
-			return 0
-		end
-	end
-
 	function format_wifi_encryption(info)
 		if info.wep == true and not info.wpa_version then
 			return "WEP"
@@ -87,68 +55,214 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 				end
 			end
 		end
+		
+		table.sort(l, function(a, b) return (tonumber(a.signal) or 999) > (tonumber(b.signal) or 999) end )
 
 		return l
 	end
+	
+	local iw_scan_list = scanlist(3)
 -%>
 
 <%+header%>
+<link rel="stylesheet" type="text/css" media="screen" href="<%=resource%>/jquery-ui-1.8.21.custom.css" />
+<script type="text/javascript" src="<%=resource%>/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="<%=resource%>/jquery.ui.core.js"></script>
+<script type="text/javascript" src="<%=resource%>/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="<%=resource%>/jquery.ui.position.js"></script>
+<script type="text/javascript" src="<%=resource%>/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="<%=resource%>/jquery.ui.sortable.js"></script>
+<script type="text/javascript" src="<%=resource%>/jquery.ui.selectable.js"></script>
+<script type="text/javascript" src="<%=resource%>/jquery.ui.button.js"></script>
+<script type="text/javascript" src="<%=resource%>/jquery.ui.dialog.js"></script>
+<script type="text/javascript">//<![CDATA[
+	var scan_list = <%=luci.http.write_json(iw_scan_list)%>;
+	
+	function guess_wifi_signal(net) {
+		var scale = Math.floor((100 / (net.quality_max || 100) * (net.quality || 0)));
+		var icon = "";
+
+		if (!net.bssid || net.bssid == "00:00:00:00:00:00") {
+			icon = "/icons/signal-none.png";
+		}
+		else if (scale < 15) { 
+			icon = "/icons/signal-none.png";
+		}
+		else if (scale < 35) {
+			icon = "/icons/signal-0-25.png";
+		}
+		else if (scale < 55) {
+			icon = "/icons/signal-25-50.png";
+		}
+		else if (scale < 75) {
+			icon = "/icons/signal-50-75.png";
+		}
+		else {
+			icon = "/icons/signal-75-100.png";
+		}
+		icon = "/luci-static/resources" + icon;
+
+		return icon
+	}
+	
+	function percent_wifi_signal(net) {
+		var qc = net.quality || 0;
+		var qm = net.quality_max || 0;
+
+		if (net.bssid && qc > 0 && qm > 0)
+			return Math.floor((100 / qm) * qc);
+		else
+			return 0;
+	}
+	
+	function is_net_encrypted(net) {
+		return net.encryption.description && net.encryption.description != "None";
+	}
+	
+	function ui_populate_network_ssid(scan_list) {
+		var ssid_select = $("#network_ssid");
+		var option = '';
+		for (var i = 0; i < scan_list.length; i++) {
+			var net = scan_list[i];
+			option += '<option class="ui-widget-content" value="' + i + '">' + (net.ssid ? net.ssid : ("hidden(BSSID:" + net.bssid + ")")) + '</option>';			
+		}
+		$(ssid_select).empty();
+		$(option).appendTo(ssid_select);
+	}
+	
+	function generate_join_form(net) {
+		var f = $("#join-network-form");
+		var e = '<input type="hidden" name="device" value="<%=utl.pcdata(dev)%>" />';
+		e += '<input type="hidden" name="join" value="' + net.ssid + '" />';
+		e += '<input type="hidden" name="mode" value="' + net.mode + '" />';
+		e += '<input type="hidden" name="bssid" value="' + net.bssid + '" />';
+		e += '<input type="hidden" name="channel" value="' + net.channel + '" />';
+		e += '<input type="hidden" name="wep" value="' + (net.encryption.wep ? 1:0) + '" />';
+		if (net.encryption.wpa) {
+			e += '<input type="hidden" name="wpa_version" value="' + net.encryption.wpa + '" />';
+			for (var j = 0; j < net.encryption.auth_suites.length; j++) {
+				e += '<input type="hidden" name="wpa_suites" value="' +
+					net.encryption.auth_suites[j] + '" />';
+			}
+			for (var j = 0; j < net.encryption.group_ciphers.length; j++) {
+				e += '<input type="hidden" name="wpa_group" value="' +
+					net.encryption.group_ciphers[j] + '" />';
+			}
+			for (var j = 0; j < net.encryption.pair_ciphers.length; j++) {
+				e += '<input type="hidden" name="wpa_pairwise" value="' +
+					net.encryption.pair_ciphers[j] + '" />';
+			}
+		}
+		if (is_net_encrypted(net)) {
+			e += '<input type="hidden" name="key" value="' + net.key + '" />';
+		}
+		$(f).empty();
+		$(e).appendTo(f);
+	}
+	
+	function validate_form() {
+		var net = scan_list[$("#network_ssid").val()];
+		if (is_net_encrypted(net)) {
+			var key = $("#network_key").val();
+			if (net.encryption.wep) {
+				if (key.length == 10 || key.length == 26 || key.length == 32) {
+					// hex string
+					return /^([a-fA-F0-9])+$/.test(key);
+				} else {
+					return key.length == 5 || key.length == 13 || key.length == 16;
+				}
+			} else if (net.encryption.wpa) {
+				return key.length >= 8;
+			} 
+		}
+		return true;
+	}
+	
+	function on_connect_btn_click() {
+		if (validate_form()) {
+			var net = scan_list[$("#network_ssid").val()];
+			if (is_net_encrypted(net)) {
+				net.key = $("#network_key").val();
+			}
+			generate_join_form(net);
+			$("#join-network-form").submit();
+		} else {
+			$("#validate_tip").text("<%:Please input correct key%>").addClass("ui-state-error");
+		}
+	}
+	
+	$(function() {
+		
+		ui_populate_network_ssid(scan_list);
+		
+		$("#connect").button()
+			     .click(on_connect_btn_click);
+		$("#back").button()
+			  .click(function() {
+				$("#back-form").submit();	
+			});
+		$("#repeat-scan").button()
+			.click(function() {
+				$("#repeat-scan-form").submit();	
+			});
+		$("#network_ssid").change(function() {
+			var net = scan_list[$(this).val()];
+			$("#network_key").val("");
+			$("#validate_tip").text("").removeClass("ui-state-error");
+			if (net && is_net_encrypted(net)) {
+				$("#li_key").show();
+			} else {
+				$("#li_key").hide();
+			}
+		}).trigger("change");
+	});
+//]]></script>
+
 
 <h2><a id="content" name="content"><%:Join Network: Wireless Scan%></a></h2>
 
-<div class="cbi-map">
-	<fieldset class="cbi-section">
-		<table class="cbi-section-table" style="empty-cells:hide">
-			<!-- scan list -->
-			<% for i, net in ipairs(scanlist(3)) do net.encryption = net.encryption or { } %>
-			<tr class="cbi-section-table-row cbi-rowstyle-<%=1 + ((i-1) % 2)%>">
-				<td class="cbi-value-field" style="width:16px; padding:3px">
-					<abbr title="Signal: <%=net.signal%> dB / Quality: <%=net.quality%>/<%=net.quality_max%>">
-						<img src="<%=guess_wifi_signal(net)%>" /><br />
-						<small><%=percent_wifi_signal(net)%>%</small>
-					</abbr>
-				</td>
-				<td class="cbi-value-field" style="vertical-align:middle; text-align:left; padding:3px">
-					<big><strong><%=net.ssid and utl.pcdata(net.ssid) or "<em>hidden</em>"%></strong></big><br />
-					<strong>Channel:</strong> <%=net.channel%> |
-					<strong>Mode:</strong> <%=net.mode%> |
-					<strong>BSSID:</strong> <%=net.bssid%> |
-					<strong>Encryption:</strong> <%=net.encryption.description or translate("Open")%>
-				</td>
-				<td class="cbi-value-field" style="width:40px">
-					<form action="<%=REQUEST_URI%>" method="post">
-						<input type="hidden" name="device" value="<%=utl.pcdata(dev)%>" />
-						<input type="hidden" name="join" value="<%=utl.pcdata(net.ssid)%>" />
-						<input type="hidden" name="mode" value="<%=net.mode%>" />
-						<input type="hidden" name="bssid" value="<%=net.bssid%>" />
-						<input type="hidden" name="channel" value="<%=net.channel%>" />
-						<input type="hidden" name="wep" value="<%=net.encryption.wep and 1 or 0%>" />
-						<% if net.encryption.wpa then %>
-						<input type="hidden" name="wpa_version" value="<%=net.encryption.wpa%>" />
-						<% for _, v in ipairs(net.encryption.auth_suites) do %><input type="hidden" name="wpa_suites" value="<%=v%>" />
-						<% end; for _, v in ipairs(net.encryption.group_ciphers) do %><input type="hidden" name="wpa_group" value="<%=v%>" />
-						<% end; for _, v in ipairs(net.encryption.pair_ciphers) do %><input type="hidden" name="wpa_pairwise" value="<%=v%>" />
-						<% end; end %>
-
-						<input type="hidden" name="clbridge" value="<%=iw.type == "wl" and 1 or 0%>" />
-
-						<input class="cbi-button cbi-button-apply" type="submit" value="<%:Join Network%>" />
-					</form>
-				</td>
-			</tr>
-			<% end %>
-			<!-- /scan list -->
-		</table>
-	</fieldset>
+<div>
+	<form>
+		<p> <%:Select the wireless network you want to join%></p>
+		<p> <%:Fill in password if required by network%> </p>
+		<p> <%:Configure a password to restrict device access%> </p>
+		<fieldset>
+			<legend><%:Network Selection%></legend>
+			<ol class="ui-widget">
+				<li class="ui-widget-content">
+					<label class="ui-widget-content" for="network_ssid"><%:Network Name%></label>
+					<select class="ui-widget-content" id="network_ssid" name="network_ssid" size="1">
+						
+					</select>
+				</li>
+				<li id="li_key" class="ui-widget-content">
+					<label class="ui-widget-content" for="network_key"><%:Network Password%></label>
+					<input class="ui-widget-content" type="password" id="network_key" name="network_key" value="" size="20"></input>
+				</li>
+				<li id="li_dev" class="ui-widget-content">
+					<label for="dev_passwd"><%:Device Password%></label>
+					<input class="ui-widget-content" type="password" id="dev_passwd" name="dev_passwd" value="" size="20"></input>
+				</li>
+			</ol>
+		</fieldset>
+		<p id="validate_tip"></p>
+	</form>
 </div>
-<div class="cbi-page-actions right">
-	<form class="inline" action="<%=luci.dispatcher.build_url("admin/network/wireless")%>" method="get">
-		<input class="cbi-button cbi-button-reset" type="submit" value="<%:Back to overview%>" />
+
+<div id="join-network-div" title="<%:Join Network%>">
+	<form id="join-network-form" action="<%=REQUEST_URI%>" method="post">	
 	</form>
-	<form class="inline" action="<%=REQUEST_URI%>" method="get">
+	<form id="back-form" action="<%=luci.dispatcher.build_url('admin/network/wireless')%>" method="get">
+	</form>
+	<form id="repeat-scan-form" action="<%=REQUEST_URI%>" method="get">
 		<input type="hidden" name="device" value="<%=utl.pcdata(dev)%>" />
-		<input class="cbi-button cbi-input-find" type="submit" value="<%:Repeat scan%>" />
-	</form>
+	</form>	
+</div>
+
+<div class="cbi-page-actions right">
+	<button id="back"><%:Back to overview%></button>
+	<button id="repeat-scan"><%:Repeat scan%></button>
+	<button id="connect"><%:Connect%></button>
 </div>
 
 <%+footer%>
