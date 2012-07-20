@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+@media all {
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0 none;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: medium none;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+/* CSS Grid */
+.g160,.g320,.g480,.g640,.g800,.g960,.g80,.g240,.g400,.g560,.g720,.g880,.g960 {
+	margin-left:10px;
+	float:left;
+	display:inline;
+} 
+
+/* 6 columns */
+.g160{width:150px;}
+.g320{width:310px;}
+.g480{width:470px;}
+.g640{width:630px;}
+.g800{width:790px;}
+.g960{width:950px;}
+
+/* 12 columns */
+.g80 {width:70px;}
+.g240{width:230px;}
+.g400{width:390px;}
+.g560{width:550px;}
+.g720{width:710px;}
+.g880{width:870px;}
+
+/* margin */
+.ml80 {margin-left:90px;}
+.ml160{margin-left:170px;}
+.ml240{margin-left:250px;}
+.ml320{margin-left:330px;}
+.ml400{margin-left:410px;}
+.ml480{margin-left:490px;}
+.ml560{margin-left:560px;}
+.ml640{margin-left:650px;}
+.ml720{margin-left:730px;}
+.ml800{margin-left:810px;}
+.ml880{margin-left:890px;}
+.ml960{margin-left:970px;}
+
+.inside{margin-left:0;}
+
+p.grid{padding-left:10px;}
+  
+.clear{clear:both;}
+.clearfix, .main{display:block;} 
+
+.clearfix:after, .main:after {
+ height:0;
+ visibility:hidden;
+ display:block;
+ font-size:0;
+ content:" ";
+ clear:both
+}
+
+
+
+/* Layout */
+html, body {
+	height: 100%;
+}
+
+
+body {
+	color: #1A3960;
+	font: 75%/1.5em Arial,Helvetica,sans-serif;
+	background: url(images/skifta-body-tile.gif) repeat-x scroll 0 0 #F7F8FC;
+}
+
+/* Container and main */
+#maincontainer {
+	width: 100%;
+	min-height: 100%;
+	margin:0 auto;
+	background:url(images/skifta-body.jpg) no-repeat center -135px;
+}
+.main {
+	width:	970px;
+	margin:	0 auto;
+	padding:0 0 20px;
+	overflow:	hidden;
+	background: none repeat scroll 0 0 transparent;
+}
+
+/****************************
+ Header
+*****************************/
+#header{
+	position: relative;
+}
+.logo {
+	margin:	16px 0 0 10px;
+	background:	url(images/skifta-logo.png) no-repeat;
+	float:	left;
+}
+.logo a {
+	width:	156px;
+	height:	84px;
+	display:block;
+	overflow:hidden;
+	text-indent:-10000px;
+	text-decoration:none;
+}
+.main h2 {
+	margin: 15px auto;
+}
+/*
+ SAM Container in wifi join
+*/
+.sam_container {
+	position: relative;
+	height: 360px;
+	background: url(images/skifta-body-tile.gif) transparent scroll repeat-x 0px -50px;
+}
+
+.guidance, .form_container {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.guidance { 
+	width: 320px;
+	float: left;
+}
+.guidance p {
+	height: 110px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.form_container {
+	position: absolute;
+	margin-left: 320px;
+	width: 630px;
+}
+
+.config_form {
+	margin:auto 10px;
+}
+
+
+.form_container ol {
+	list-style: none;
+}
+
+.form_container ol li {
+	position: relative;
+	margin: 10px auto 0px auto;
+	height: 95px;
+}
+.form_container ol li.border {
+	border-bottom: solid silver 1px;
+}
+.form_container label {
+	width: 100px;
+	float: left;
+	margin-left: 10px;
+}
+#network_ssid, #network_key, #dev_passwd {
+	position: absolute;
+	margin-left: 100px;
+}
+
+/*
+ * Font
+*/
+.main h2 {
+	color: silver;
+	font: 20px Arial,Helvetica,sans-serif;
+}
+
+.guidance {
+	color: silver;
+	font: 14px Arial,Helvetica,sans-serif; 
+}
+.sam_container legend {
+	color: silver;
+	font: 16px Arial,Helvetica,sans-serif; 
+}
+
+.form_container label {
+	color: silver;
+	font: 14px Arial,Helvetica,sans-serif;
+}
+
+/* border */
+.form_container fieldset {
+	border: solid gray 1px;
+}
+
+.left {
+	text-align: left !important;
+}
+
+.right {
+	text-align: right !important;
+}
+
+.luci {
+	position: absolute;
+	bottom: 0;
+	left: 1em;
+	height: 1.5em;
+	font-size: 80%;
+}
+
+.luci a:link,
+.luci a:visited {
+	background-color: transparent;
+	color: #666666;
+	text-decoration: none;
+	font-size: 70%;
+}
+
+.inline {
+	display: inline;
+}
+
+.error500 {
+	white-space: normal;
+	border: 1px dotted #ff0000;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 0.5em;
+}
+
+.errorbox {
+	border: 1px solid #FF0000;
+	background-color: #FFCCCC;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.errorbox a {
+	color: #000000 !important;
+}
+
+}

@@ -65,16 +65,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 -%>
 
 <%+header%>
-<link rel="stylesheet" type="text/css" media="screen" href="<%=resource%>/jquery-ui-1.8.21.custom.css" />
-<script type="text/javascript" src="<%=resource%>/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="<%=resource%>/jquery.ui.core.js"></script>
-<script type="text/javascript" src="<%=resource%>/jquery.ui.widget.js"></script>
-<script type="text/javascript" src="<%=resource%>/jquery.ui.position.js"></script>
-<script type="text/javascript" src="<%=resource%>/jquery.ui.mouse.js"></script>
-<script type="text/javascript" src="<%=resource%>/jquery.ui.sortable.js"></script>
-<script type="text/javascript" src="<%=resource%>/jquery.ui.selectable.js"></script>
-<script type="text/javascript" src="<%=resource%>/jquery.ui.button.js"></script>
-<script type="text/javascript" src="<%=resource%>/jquery.ui.dialog.js"></script>
+
 <script type="text/javascript">//<![CDATA[
 	var scan_list = <%=luci.http.write_json(iw_scan_list)%>;
 	
@@ -219,34 +210,38 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 //]]></script>
 
 
-<h2><a id="content" name="content"><%:Join Network: Wireless Scan%></a></h2>
+<h2 class="g960"	><%:Audio Module Configurator%></h2>
 
-<div>
-	<form>
+<div class="sam_container g960">
+	<div class="guidance">
 		<p> <%:Select the wireless network you want to join%></p>
 		<p> <%:Fill in password if required by network%> </p>
 		<p> <%:Configure a password to restrict device access%> </p>
-		<fieldset>
-			<legend><%:Network Selection%></legend>
-			<ol class="ui-widget">
-				<li class="ui-widget-content">
-					<label class="ui-widget-content" for="network_ssid"><%:Network Name%></label>
-					<select class="ui-widget-content" id="network_ssid" name="network_ssid" size="1">
-						
-					</select>
-				</li>
-				<li id="li_key" class="ui-widget-content">
-					<label class="ui-widget-content" for="network_key"><%:Network Password%></label>
-					<input class="ui-widget-content" type="password" id="network_key" name="network_key" value="" size="20"></input>
-				</li>
-				<li id="li_dev" class="ui-widget-content">
-					<label for="dev_passwd"><%:Device Password%></label>
-					<input class="ui-widget-content" type="password" id="dev_passwd" name="dev_passwd" value="" size="20"></input>
-				</li>
-			</ol>
-		</fieldset>
-		<p id="validate_tip"></p>
-	</form>
+	</div>
+	<div class="form_container">
+		<form class="config_form">
+			<fieldset>
+				<legend><%:Network Selection%></legend>
+				<ol>
+					<li class="border">
+						<label for="network_ssid"><%:Network Name%></label>
+						<select class="ui-widget-content" id="network_ssid" name="network_ssid" size="1">
+							
+						</select>
+					</li>
+					<li id="li_key" class="border">
+						<label for="network_key"><%:Network Password%></label>
+						<input class="ui-widget-content" type="password" id="network_key" name="network_key" value="" size="20"></input>
+					</li>
+					<li id="li_dev">
+						<label for="dev_passwd"><%:Device Password%></label>
+						<input class="ui-widget-content" type="password" id="dev_passwd" name="dev_passwd" value="" size="20"></input>
+					</li>
+				</ol>
+			</fieldset>
+			<p id="validate_tip"></p>
+		</form>
+	</div>
 </div>
 
 <div id="join-network-div" title="<%:Join Network%>">

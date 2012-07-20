@@ -520,6 +520,7 @@ $(eval $(call theme,freifunk-bno,Freifunk Berlin Nordost Theme,\
 
 $(eval $(call theme,freifunk-generic,Freifunk Generic Theme,\
 	Manuel Munz <freifunk-at-somakoma-dot-de>))
+$(eval $(call theme,sam,Skifta Audio Module Theme))
 
 ### Translations ###
 define translation
@@ -601,7 +602,7 @@ $(eval $(call collection,light,\
 
 $(eval $(call collection,sam,\
 	LuCI package set for Skifta Audio Module,\
-	+uhttpd +luci-mod-sam +luci-theme-openwrt +libiwinfo-lua @(!PACKAGE_luci)))
+	+uhttpd +luci-mod-sam +luci-theme-sam +libiwinfo-lua @(!PACKAGE_luci)))
 
 
 ### Compile ###
@@ -621,7 +622,7 @@ ifeq ($(USELOCAL),1)
 endif
 
 define Build/Configure
-	$(CP) -r files/sam $(PKG_BUILD_DIR)/modules/
+	$(CP) -r files/* $(PKG_BUILD_DIR)
 endef
 
 MAKE_FLAGS += \
