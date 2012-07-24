@@ -119,6 +119,18 @@ body {
 	margin: 15px auto;
 }
 /*
+ * Footer
+ */
+.footer {
+	margin: 10px auto;
+	width: 970px;
+}
+
+.copyright {
+	text-align: center;
+}
+
+/*
  SAM Container in wifi join
 */
 .sam_container {

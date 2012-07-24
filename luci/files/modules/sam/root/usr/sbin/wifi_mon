@@ -1,0 +1,153 @@
+#!/usr/bin/lua
+
+require "luci.sys"
+require "luci.fs"
+require "luci.util"
+
+local e_wpa_state = {
+    ["DISCONNECTED"] = 0,
+    ["INACTIVE"] = 1,
+    ["INTERFACE_DISABLED"] = 2,
+    ["SCANNING"] = 3,
+    ["AUTHENTICATING"] = 4,
+    ["ASSOCIATING"] = 5,
+    ["ASSOCIATED"] = 6,
+    ["4WAY_HANDSHAKE"] = 7,
+    ["GROUP_HANDSHAKE"] = 8,
+    ["COMPLETED"] = 9,
+}
+
+-- state 0, connecting,
+-- state 1, connected,
+-- state 2, not connected
+-- Start up -> enter state connecting, refill watchdog
+-- Stay in state 0, decrease watchdog, check timeout
+-- 0 -> 1, enter connected,
+-- 0 -> 2, enter disconnect
+-- 1 -> 0, enter state 0
+local DEFAULT_TIMEOUT = 15
+local timeout = nil
+local e_state = {
+    ["CONNECTING"] = 0,
+    ["CONNECTED"] = 1,
+    ["DISCONNECT"] = 2,
+}
+
+local state = nil
+
+function enter_connecting()
+    timeout = DEFAULT_TIMEOUT
+    state = e_state.CONNECTING
+end
+
+function enter_connected()
+    state = e_state.CONNECTED
+end
+
+function enter_disconnect()
+    state = e_state.DISCONNECT
+end
+
+function get_wpa_supplicant_info()
+    local info = { }
+    for k, v in pairs(luci.sys.process.list()) do
+        local c = v["COMMAND"]
+        local l = luci.util.split(c, "%s+", nil, true)
+        if l[1] and string.find(l[1], "wpa_supplicant") then
+            info["pid"] = k
+            for i, p in ipairs(l) do
+                if p == "-p" then
+                    info["ctrl_path"] = l[i+1]
+                elseif p == "-i" then
+                    info["interface"] = l[i+1]
+                end
+            end
+            if not info["interface"] then
+                info["interface"] = "wlan0"
+            end
+            if not info["ctrl_path"] then
+                info["ctrl_path"] = string.format("/var/run/wpa_supplicant-%s", info["interface"])
+            end
+            return info
+        end
+    end
+    return nil
+end
+
+function get_wpa_supplicant_status(i)
+    local cmd = string.format("wpa_cli -i%s -p%s status", i.interface, i.ctrl_path)
+    local t = { }
+    local s, l
+    for s in luci.util.execi(cmd) do
+        local l = luci.util.split(s, "=", 2)
+        if #l == 2 then
+            t[l[1]] = l[2]
+        end
+    end
+    if t["wpa_state"] and e_wpa_state[t.wpa_state] then
+        return t
+    else
+        return nil
+    end
+end
+
+
+function is_connection_established(x)
+    local status = get_wpa_supplicant_status(x)
+    if status and status.wpa_state and e_wpa_state[status.wpa_state] then
+        if e_wpa_state[status.wpa_state] == 9 and status["ip_address"] then
+            return true
+        else
+            return false
+        end
+    else
+        return false
+    end
+end
+
+function main_loop()
+    local info = get_wpa_supplicant_info()
+    if info then
+        enter_connecting()
+        while true do
+            os.execute("sleep 1")
+            if state == e_state.CONNECTING then
+                timeout = timeout - 1
+                if is_connection_established(info) then
+                    enter_connected()
+                elseif timeout <= 0 then
+                    enter_disconnect()
+                end
+            end
+            if state == e_state.CONNECTED then
+                if not is_connection_established(info) then
+                    enter_connecting()
+                else
+                    -- stay in connected state, do nothing
+                end
+            elseif state == e_state.DISCONNECT then
+                local uci = require "luci.model.uci".cursor()
+                local nw = require "luci.model.network".init(uci)
+                net = nw:add_network("wan", { proto = "dhcp", ifname = "eth0.2" })
+                if not net then
+                    -- the "wan" network exists and not empty
+                    -- change these options
+                    uci:set("network", "wan", "proto", "dhcp")
+                    uci:set("network", "wan", "ifname", "eth0.2")
+                end
+                uci:save("network")
+                uci:commit("network")
+                luci.sys.call("rm -f /etc/config/wireless")
+                -- need to call config_clear because we want to tell /sbin/wifi to do detection
+                luci.sys.call("{ . /lib/functions.sh; config_clear; /sbin/wifi detect > /etc/config/wireless; }")
+                uci:apply({"wireless", "network"})
+                break
+            end
+        end
+    else
+        -- didn't find wpa_supplicant process, just silently exit
+    end
+end
+
+main_loop()
+
