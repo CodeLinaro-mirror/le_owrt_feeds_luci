@@ -137,9 +137,8 @@ function main_loop()
                 end
                 uci:save("network")
                 uci:commit("network")
-                luci.sys.call("rm -f /etc/config/wireless")
-                -- need to call config_clear because we want to tell /sbin/wifi to do detection
-                luci.sys.call("{ . /lib/functions.sh; config_clear; /sbin/wifi detect > /etc/config/wireless; }")
+                --luci.sys.call("{ . /lib/functions.sh; config_clear; /sbin/wifi detect > /etc/config/wireless; }")
+                luci.sys.call("/etc/init.d/luci_sam reload");
                 uci:apply({"wireless", "network"})
                 break
             end
