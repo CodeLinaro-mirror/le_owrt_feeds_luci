@@ -95,7 +95,7 @@ end
 function is_connection_established(x)
     local status = get_wpa_supplicant_status(x)
     if status and status.wpa_state and e_wpa_state[status.wpa_state] then
-        if e_wpa_state[status.wpa_state] == 9 and status["ip_address"] then
+        if e_wpa_state[status.wpa_state] == 9 then
             return true
         else
             return false
@@ -128,12 +128,20 @@ function main_loop()
             elseif state == e_state.DISCONNECT then
                 local uci = require "luci.model.uci".cursor()
                 local nw = require "luci.model.network".init(uci)
-                net = nw:add_network("wan", { proto = "dhcp", ifname = "eth0.2" })
-                if not net then
+                -- restore old configuration
+                net = nw:get_network("wan")
+                if net then
                     -- the "wan" network exists and not empty
                     -- change these options
-                    uci:set("network", "wan", "proto", "dhcp")
-                    uci:set("network", "wan", "ifname", "eth0.2")
+                    -- check if we have _orig_if
+                    orig_if = uci:get("network", "wan", "_orig_if")
+                    if orig_if then
+                        uci:set("network", "wan", "proto", "dhcp")
+                        uci:set("network", "wan", "ifname", orig_if)
+                        uci:delete("network", "wan", "_orig_if")
+                    else
+                        uci:delete("network", "wan")
+                    end
                 end
                 uci:save("network")
                 uci:commit("network")

@@ -83,14 +83,20 @@ function wifi_add_apply(f)
 
 	-- edit the network.wan to update the interface to wlan0
 	-- TODO: change hard-coded later
-	net = nw:add_network("wan", { proto = "dhcp", ifname = "wlan0" })
-
-	if not net then
+	net = nw:get_network("wan")
+	if net then
 		-- the "wan" network exists and not empty
 		-- change these options
 		uci:set("network", "wan", "proto", "dhcp")
+		_orig_if = uci:get("network", "wan", "_orig_if")
+		orig_if = uci:get("network", "wan", "ifname")
+		if not _orig_if and orig_if and #orig_if > 0 and orig_if ~= "wlan0" then
+			uci:set("network", "wan", "_orig_if", orig_if)
+		end
 		uci:set("network", "wan", "ifname", "wlan0")
 		net = nw:get_network("wan")
+	else
+		net = nw:add_network("wan", { proto = "dhcp", ifname = "wlan0" })
 	end
 	wconf.network = net:name()
 	--dbg:write(string.format("wconf.network %s\n", wconf.network))
