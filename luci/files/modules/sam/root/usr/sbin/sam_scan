@@ -1,0 +1,35 @@
+#!/usr/bin/lua
+
+require "luci.sys"
+require "luci.json"
+
+local has_iwinfo = pcall(require, "iwinfo")
+if has_iwinfo then
+    local iw = luci.sys.wifi.getiwinfo("radio0")
+    if iw then
+        function scanlist(times)
+            local i, k, v
+	    local l = { }
+            local s = { }
+
+	    for i = 1, times do
+		for k, v in ipairs(iw.scanlist) do
+			if not s[v.bssid] then
+                		l[#l+1] = v
+				s[v.bssid] = true
+			end
+		end
+	    end
+		
+	    table.sort(l, function(a, b) return (tonumber(a.signal) or 999) > (tonumber(b.signal) or 999) end )
+
+	    return l
+	end
+	
+	local iw_scan_list = scanlist(3)
+        local dbg = io.open("/tmp/luci_sam_scan", "w")
+        dbg:write(luci.json.encode(iw_scan_list))
+        dbg:close()
+    end
+end
+

@@ -1,0 +1,3 @@
+#!/bin/sh
+IFACE=$1
+wpa_cli -i ${IFACE} -p /var/run/wpa_supplicant-${IFACE} -a /usr/sbin/sam_action.sh -B

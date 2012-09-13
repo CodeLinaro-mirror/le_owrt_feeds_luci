@@ -1,4 +1,0 @@
-#!/bin/sh
-
-killall wifi_mon
-wifi_mon &

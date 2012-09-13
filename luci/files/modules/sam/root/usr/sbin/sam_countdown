@@ -1,0 +1,40 @@
+#!/usr/bin/lua
+require "luci.sys"
+require "luci.fs"
+require "luci.util"
+
+function restore_default_cfg()
+        local uci = require "luci.model.uci".cursor()
+        local nw = require "luci.model.network".init(uci)
+        -- restore old configuration
+        local net = nw:get_network("wan")
+        if net then
+                -- the "wan" network exists and not empty
+                -- change these options
+                -- check if we have _orig_if
+                orig_if = uci:get("network", "wan", "_orig_if")
+                if orig_if then
+                        uci:set("network", "wan", "proto", "dhcp")
+                        uci:set("network", "wan", "ifname", orig_if)
+                        uci:delete("network", "wan", "_orig_if")
+                else
+                        uci:delete("network", "wan")
+                end
+        end
+        uci:save("network")
+        uci:commit("network")
+        --luci.sys.call("{ . /lib/functions.sh; config_clear; /sbin/wifi detect > /etc/config/wireless; }")
+        luci.sys.call("/etc/init.d/luci_sam reload");
+        uci:apply({"wireless", "network"})
+end
+
+function main_loop()
+        local timeout = 15
+        while timeout > 0 do
+                os.execute("sleep 1")
+                timeout = timeout - 1
+        end
+        restore_default_cfg()
+end
+
+main_loop()
