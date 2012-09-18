@@ -16,6 +16,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 
 	local sys = require "luci.sys"
 	local utl = require "luci.util"
+	local json = require "luci.json"
 
 	function format_wifi_encryption(info)
 		if info.wep == true and not info.wpa_version then
@@ -32,36 +33,9 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 			return "<em>None</em>"
 		end
 	end
-
-	local dev = luci.http.formvalue("device")
-	local iw = luci.sys.wifi.getiwinfo(dev)
-
-	if not iw then
-		luci.http.redirect(luci.dispatcher.build_url("admin/network/wireless"))
-		return
-	end
-
-
-	function scanlist(times)
-		local i, k, v
-		local l = { }
-		local s = { }
-
-		for i = 1, times do
-			for k, v in ipairs(iw.scanlist) do
-				if not s[v.bssid] then
-					l[#l+1] = v
-					s[v.bssid] = true
-				end
-			end
-		end
-		
-		table.sort(l, function(a, b) return (tonumber(a.signal) or 999) > (tonumber(b.signal) or 999) end )
-
-		return l
-	end
-	
-	local iw_scan_list = scanlist(3)
+	local fin = io.open("/tmp/luci_sam_scan", "r")
+	local iw_scan_list = json.decode(fin:read("*a"))
+	fin:close()
 -%>
 
 <%+header%>
@@ -123,7 +97,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 	
 	function generate_join_form(net) {
 		var f = $("#join-network-form");
-		var e = '<input type="hidden" name="device" value="<%=utl.pcdata(dev)%>" />';
+		var e = '<input type="hidden" name="device" value="radio0" />';
 		e += '<input type="hidden" name="join" value="' + net.ssid + '" />';
 		e += '<input type="hidden" name="mode" value="' + net.mode + '" />';
 		e += '<input type="hidden" name="bssid" value="' + net.bssid + '" />';
@@ -188,13 +162,9 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 		
 		$("#connect").button()
 			     .click(on_connect_btn_click);
-		$("#back").button()
-			  .click(function() {
-				$("#back-form").submit();	
-			});
-		$("#repeat-scan").button()
+		$("#reboot").button()
 			.click(function() {
-				$("#repeat-scan-form").submit();	
+				$("#reboot-form").submit();
 			});
 		$("#network_ssid").change(function() {
 			var net = scan_list[$(this).val()];
@@ -245,18 +215,14 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 </div>
 
 <div id="join-network-div" title="<%:Join Network%>">
-	<form id="join-network-form" action="<%=REQUEST_URI%>" method="post">	
+	<form id="join-network-form" action="<%=luci.dispatcher.build_url('admin/network/wireless_join')%>" method="post">
 	</form>
-	<form id="back-form" action="<%=luci.dispatcher.build_url('admin/network/wireless')%>" method="get">
-	</form>
-	<form id="repeat-scan-form" action="<%=REQUEST_URI%>" method="get">
-		<input type="hidden" name="device" value="<%=utl.pcdata(dev)%>" />
+	<form id="reboot-form" action="<%=luci.dispatcher.build_url('admin/network/system_reboot')%>" method="post">
 	</form>	
 </div>
 
 <div class="cbi-page-actions right">
-	<button id="back"><%:Back to overview%></button>
-	<button id="repeat-scan"><%:Repeat scan%></button>
+	<button id="reboot"><%:Reboot%></button>
 	<button id="connect"><%:Connect%></button>
 </div>
 

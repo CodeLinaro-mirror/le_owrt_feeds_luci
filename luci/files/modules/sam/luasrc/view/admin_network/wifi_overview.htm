@@ -322,7 +322,7 @@ $Id: wifi_overview.htm 8847 2012-07-01 20:05:05Z dgolle $
 					<span id="<%=dev:name()%>-iw-devinfo"></span>
 				</td>
 				<td style="width:310px;text-align:right">
-					<input type="button" class="cbi-button cbi-button-find" style="width:100px" onclick="location.href='<%=luci.dispatcher.build_url("admin/network/wireless_join")%>?device=<%=dev:name()%>'" title="<%:Find and join network%>" value="<%:Scan%>" />
+					<input type="button" class="cbi-button cbi-button-find" style="width:100px" onclick="location.href='<%=luci.dispatcher.build_url("admin/network/wireless")%>'" title="<%:Back to join network%>" value="<%:Back to join network%>" />
 				<!--	<input type="button" class="cbi-button cbi-button-add" style="width:100px" onclick="location.href='<%=luci.dispatcher.build_url("admin/network/wireless_add")%>?device=<%=dev:name()%>'" title="<%:Provide new network%>" value="<%:Add%>" /> -->
 				</td>
 			</tr>
