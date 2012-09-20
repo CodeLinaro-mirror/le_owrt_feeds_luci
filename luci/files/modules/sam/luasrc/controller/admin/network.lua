@@ -40,23 +40,11 @@ function index()
 		page = entry({"admin", "network", "wireless_status"}, call("wifi_status"), nil)
 		page.leaf = true
 
-		page = entry({"admin", "network", "system_reboot"}, call("sys_reboot"), nil)
-		page.leaf = true
-
-		page = entry({"admin", "network", "wireless_overview"}, template("admin_network/wifi_overview"), nil)
-
-		page = entry({"admin", "network", "wireless"}, template("admin_network/wifi_join"), _("Wifi"), 15)
+		page = entry({"admin", "network", "wireless"}, template("admin_network/wifi_overview"), _("Wifi"), 15)
 		page.leaf = true
 		page.subindex = true
 	end
 end
-
-function sys_reboot()
-	-- TODO: show a reboot UI to user
-	luci.template.render("admin_system/sys_reboot")
-	luci.sys.reboot()
-end
-
 
 function wifi_add_apply(f)
 	--local dbg = io.open("/tmp/luci-dbg", "w")
@@ -125,8 +113,7 @@ function wifi_add_apply(f)
 		-- Redirect to overview page
 	end
 	--dbg:close()
-
-	luci.http.redirect(luci.dispatcher.build_url("admin/network/wireless_overview"))
+	luci.http.redirect(luci.dispatcher.build_url("admin/network/wireless"))
 end
 
 function wifi_join()
@@ -159,6 +146,8 @@ function wifi_join()
 		else
 			wifi_add_apply(params)
 		end
+	else
+		luci.template.render("admin_network/wifi_join")
 	end
 end
 
