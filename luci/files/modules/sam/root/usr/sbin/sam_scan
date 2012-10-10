@@ -1,11 +1,12 @@
 #!/usr/bin/lua
 
-require "luci.sys"
-require "luci.json"
+local sys = require "luci.sys"
+local json = require "luci.json"
+local io = require "io"
 
 local has_iwinfo = pcall(require, "iwinfo")
 if has_iwinfo then
-    local iw = luci.sys.wifi.getiwinfo("radio0")
+    local iw = sys.wifi.getiwinfo("radio0")
     if iw then
         function scanlist(times)
             local i, k, v
@@ -26,10 +27,10 @@ if has_iwinfo then
 	    return l
 	end
 	
-	local iw_scan_list = scanlist(3)
-        local dbg = io.open("/tmp/luci_sam_scan", "w")
-        dbg:write(luci.json.encode(iw_scan_list))
-        dbg:close()
+	local iw_scan_list = scanlist(5)
+        local fout = io.open("/tmp/luci_sam_scan", "w")
+        fout:write(luci.json.encode(iw_scan_list))
+        fout:close()
     end
 end
 

@@ -136,53 +136,76 @@ body {
 .sam_container {
 	position: relative;
 	height: 360px;
-	background: url(images/skifta-body-tile.gif) transparent scroll repeat-x 0px -50px;
+	background: white;
+}
+.action_btns {
+	position: relative;
+	margin-top: 520px;
+	height: 30px;
+	width: 960px;
 }
 
-.guidance, .form_container {
-	margin-top: 15px;
-	margin-bottom: 15px;
+.guidance {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+.form_container {
+
 }
 .guidance { 
 	width: 320px;
 	float: left;
 }
-.guidance p {
-	height: 110px;
-	vertical-align: middle;
-	margin-left: 10px;
+.guidance table {
+	border-collapse: collapse;
+	background: url(images/guidance-body-tile.png) transparent scroll repeat-y -5px 0px;
 }
-.form_container {
-	position: absolute;
-	margin-left: 320px;
-	width: 630px;
+.guidance table tr {
+	height: 116px;
+}
+.guidance table tr td {
+	vertical-align: middle;
+	border: solid 1px rgb(210,210,210);
+}
+.guidance table tr td span {
+	margin-left: 15px;
 }
 
+.form_container {
+	position: absolute;
+	margin-left: 325px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 617px;
+	border-top: 1px solid rgb(210,210,210);
+	border-bottom: 1px solid rgb(210,210,210);
+	border-right: 1px solid rgb(210,210,210);
+}
 .config_form {
 	margin:auto 10px;
 }
 
-
-.form_container ol {
-	list-style: none;
+.form_container table {
 }
 
-.form_container ol li {
-	position: relative;
-	margin: 10px auto 0px auto;
-	height: 95px;
+.form_container table tr {
+	height: 113px;
 }
-.form_container ol li.border {
-	border-bottom: solid silver 1px;
+.form_container table tr td {
+	border: 0px;
+	vertical-align: middle;
 }
+
 .form_container label {
-	width: 100px;
-	float: left;
-	margin-left: 10px;
+	width: 200px;
+	margin-left: 25px;
+	display: block;
 }
+
 #network_ssid, #network_key, #dev_passwd {
-	position: absolute;
-	margin-left: 100px;
+	width: 500px;
+	margin-left: 25px;
 }
 
 /*
@@ -194,23 +217,20 @@ body {
 }
 
 .guidance {
-	color: silver;
-	font: 14px Arial,Helvetica,sans-serif; 
+	color: rgb(23,55,102);
+	font: bold 14px Arial,Helvetica,sans-serif;
 }
 .sam_container legend {
-	color: silver;
+	color: rgb(126,126,126);
 	font: 16px Arial,Helvetica,sans-serif; 
 }
 
 .form_container label {
-	color: silver;
-	font: 14px Arial,Helvetica,sans-serif;
+	color: rgb(126,126,126);
+	font: bold 14px Arial,Helvetica,sans-serif;
 }
 
 /* border */
-.form_container fieldset {
-	border: solid gray 1px;
-}
 
 .left {
 	text-align: left !important;
@@ -257,6 +277,12 @@ body {
 
 .errorbox a {
 	color: #000000 !important;
+}
+
+.ui-glass-style {
+	border: 1px solid #cccccc;
+	background: #f6f6f6 url(images/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x;
+	color: rgb(25,55,98);
 }
 
 }
