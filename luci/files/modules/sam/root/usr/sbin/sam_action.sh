@@ -10,6 +10,7 @@ echo "EVENT $WPA_EVENT on $WPA_IFACE" >/dev/console
 case "$WPA_EVENT" in
     "CONNECTED")
         killall -q sam_countdown
+        rm -f /tmp/sam_countdown.pid
         ;;
     "DISCONNECTED")
         sam_countdown &

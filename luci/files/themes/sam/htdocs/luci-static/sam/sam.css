@@ -208,6 +208,20 @@ body {
 	margin-left: 25px;
 }
 
+/* wifi connected layout*/
+#connected_msg {
+	margin: 50px auto auto 50px;
+	float: left;
+	width: 500px;
+}
+
+#connected_pic {
+	margin-top: 25px;
+	margin-left: 600px;
+}
+
+
+
 /*
  * Font
 */
@@ -228,6 +242,19 @@ body {
 .form_container label {
 	color: rgb(126,126,126);
 	font: bold 14px Arial,Helvetica,sans-serif;
+}
+
+#connected_msg h2 {
+	font: bold 32px Arial,Helvetica,sans-serif;
+	color: #173861;
+}
+#connected_msg h3 {
+	font: bold 16px Arial,Helvetica,sans-serif;
+	color: #173861;
+}
+#connected_msg p {
+	font: 14px Arial,Helvetica,sans-serif;
+	color: #173861;
 }
 
 /* border */

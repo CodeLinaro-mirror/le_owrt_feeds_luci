@@ -34,6 +34,12 @@ function index()
 		end)
 
 	if has_wifi then
+		page = entry({"admin", "network", "wireless_connecting"}, template("admin_network/wifi_connect"), nil)
+		page.leaf = true
+
+		page = entry({"admin", "network", "wireless_connected"}, template("admin_network/wifi_connected"), nil)
+		page.leaf = true
+
 		page = entry({"admin", "network", "wireless_join"}, call("wifi_join"), nil)
 		page.leaf = true
 
@@ -126,7 +132,7 @@ function wifi_add_apply(f)
 	end
 	--dbg:close()
 
-	luci.http.redirect(luci.dispatcher.build_url("admin/network/wireless_overview"))
+	--luci.http.redirect(luci.dispatcher.build_url("admin/network/wireless_overview"))
 end
 
 function wifi_join()
@@ -141,7 +147,7 @@ function wifi_join()
 
 	local params = {
 		device = param("device"),
-		ssid = param("join"),
+		ssid = param("ssid"),
 		channel  = param("channel"),
 		mode = param("mode"),
 		bssid = param("bssid"),
@@ -157,7 +163,11 @@ function wifi_join()
 		if cancel then
 			luci.http.redirect(luci.dispatcher.build_url("admin/network/wireless_join?device=" .. params.device))
 		else
+			local rv = { }
 			wifi_add_apply(params)
+			rv[#rv+1] = 0
+			luci.http.prepare_content("application/json")
+			luci.http.write_json(rv)
 		end
 	end
 end

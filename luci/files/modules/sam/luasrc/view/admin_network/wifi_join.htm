@@ -98,7 +98,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 	function generate_join_form(net) {
 		var f = $("#join-network-form");
 		var e = '<input type="hidden" name="device" value="radio0" />';
-		e += '<input type="hidden" name="join" value="' + net.ssid + '" />';
+		e += '<input type="hidden" name="ssid" value="' + net.ssid + '" />';
 		e += '<input type="hidden" name="mode" value="' + net.mode + '" />';
 		e += '<input type="hidden" name="bssid" value="' + net.bssid + '" />';
 		e += '<input type="hidden" name="channel" value="' + net.channel + '" />';
@@ -231,7 +231,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 </div>
 
 <div id="join-network-div" title="<%:Join Network%>">
-	<form id="join-network-form" action="<%=luci.dispatcher.build_url('admin/network/wireless_join')%>" method="post">
+	<form id="join-network-form" action="<%=luci.dispatcher.build_url('admin/network/wireless_connecting')%>" method="post">
 	</form>
 	<form id="reboot-form" action="<%=luci.dispatcher.build_url('admin/network/system_reboot')%>" method="post">
 	</form>	

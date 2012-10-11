@@ -24,17 +24,27 @@ function restore_default_cfg()
         uci:save("network")
         uci:commit("network")
         --luci.sys.call("{ . /lib/functions.sh; config_clear; /sbin/wifi detect > /etc/config/wireless; }")
-        luci.sys.call("/etc/init.d/luci_sam reload");
+        luci.sys.call("/etc/init.d/luci_sam_reload reload");
         uci:apply({"wireless", "network"})
 end
 
 function main_loop()
-        local timeout = 15
-        while timeout > 0 do
-                os.execute("sleep 1")
-                timeout = timeout - 1
+        local pid_file = io.open("/tmp/sam_countdown.pid", "r")
+        if pid_file then
+                --other process is running, exit
+                pid_file:close()
+        else
+                pid_file = io.open("/tmp/sam_countdown.pid", "w")
+                pid_file:close()
+                local timeout = 15
+                while timeout > 0 do
+                        os.execute("sleep 1")
+                        timeout = timeout - 1
+                end
+                restore_default_cfg()
+                os.remove("/tmp/sam_countdown.pid")
+                --luci.sys.call("/etc/init.d/luci_sam_scan start");
         end
-        restore_default_cfg()
 end
 
 main_loop()

@@ -1,0 +1,119 @@
+<%#
+LuCI - Lua Configuration Interface
+Copyright 2009 Jo-Philipp Wich <xm@subsignal.org>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+-%>
+
+<%-
+	local function param(x)
+		return luci.http.formvalue(x)
+	end
+
+	local params = {
+		device = param("device"),
+		ssid = param("ssid"),
+		channel  = param("channel"),
+		mode = param("mode"),
+		bssid = param("bssid"),
+		wep = param("wep"),
+		wpa_suites = param("wpa_suites"),
+		wpa_version = param("wpa_version"),
+		key = param("key")
+	}
+-%>
+
+<%+header%>
+<script type="text/javascript">//<![CDATA[
+	var params = <%=luci.http.write_json(params)%>;
+	var cnt_down_tid = null;
+	var cnt_down = 30;
+
+	function populate_join_form() {
+		var f = $("#join-network-form");
+		var e = '<input type="hidden" name="device" value="radio0" />';
+		e += '<input type="hidden" name="ssid" value="' + params.ssid + '" />';
+		e += '<input type="hidden" name="mode" value="' + params.mode + '" />';
+		e += '<input type="hidden" name="bssid" value="' + params.bssid + '" />';
+		e += '<input type="hidden" name="channel" value="' + params.channel + '" />';
+		e += '<input type="hidden" name="wep" value="' + params.wep + '" />';
+		e += '<input type="hidden" name="wpa_version" value="' + params.wpa_version + '" />';
+		e += '<input type="hidden" name="key" value="' + params.key + '" />';
+		e += '<input type="hidden" name="wpa_suites" value="' + params.wpa_suites + '" />';
+		$(e).appendTo(f);
+	}
+
+	function request_connect() {
+		$.post("<%=luci.dispatcher.build_url('admin/network/wireless_join')%>", $("#join-network-form").serialize(),
+		       function(data) {
+				//alert("Join network done");
+				//clearInterval(cnt_down_tid);
+				$("#connecting_div").hide();
+				$("#connected_div").show();
+		       }
+		);
+	}
+
+	function count_down_request() {
+		if (--cnt_down == 15) {
+			//alert("Connecting timer count down!");
+			$("#connecting_div").hide();
+			$("#connected_div").show();
+		} else if (cnt_down == 0) {
+			clearInterval(cnt_down_tid);
+			$("#overview-form").submit();
+		}
+	}
+
+	$(function() {
+		populate_join_form();
+		setTimeout(request_connect, 1000);
+		cnt_down_tid = setInterval(count_down_request, 1000);
+		var rotation = function () {$("#spin").rotate({
+				angle:0,            // reset rotation angle to 0 where to start the rotation
+				// rotate 360 degrees (counter clockwise), in 3 secconds
+				animateTo:360,
+				duration: 2000,
+				// auto-call the function after rotation, to rotate again and again
+				callback: rotation,
+				// add easing to make animation look more natural
+				// t: current time, b: begInnIng value, c: change In value, d: duration
+				easing: function (x,t,b,c,d){
+				  return c*(t/d)+b;       // linear easing
+				}
+			});
+		}
+		rotation();
+	});
+
+//]]></script>
+
+<div id="connecting_div" class="sam_container g960" style="background: transparent;">
+	<img id="spin" src="<%=media%>/images/spinning2.png" style="display: block; margin: 10px auto;"/>
+	<div style="font-size: 22px; color: silver; width: 150px; margin: 30px auto;">Connecting...</div>
+</div>
+<div id="connected_div" class="sam_container g960" style="display: none;">
+	<div id="connected_msg">
+		<h2><%:YOU'RE CONNECTED!!%></h2>
+		<h3><%:Now download Skifta to your smartphone from the Android market to begin shifting  your media.%></h3>
+		<p style="margin-top: 10px;"><%:Digital music, videos and photos from your phone, from the cloud, and remotely from home
+		        in one app on your Android phone or tablet. Everything is just a click away.%>
+		</p>
+	</div>
+	<div id="connected_pic">
+		<img src="<%=media%>/images/phone.png" />
+	</div>
+</div>
+<div style="display: none;">
+	<form id="join-network-form" action="<%=luci.dispatcher.build_url('admin/network/wireless_join')%>" method="post">
+	</form>
+	<form id="overview-form" action="<%=luci.dispatcher.build_url('admin/network/wireless_overview')%>" method="get">
+	</form>
+</div>
+
+<%+footer%>
