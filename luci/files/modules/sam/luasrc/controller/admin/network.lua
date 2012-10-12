@@ -71,7 +71,7 @@ function wifi_add_apply(f)
 
 	local wdev = nw:get_wifidev(f.device)
 	wdev:set("disabled", false)
-	wdev:set("channel", f.channel)
+	--wdev:set("channel", f.channel)
 	--dbg:write(string.format("device %s: channel: %d, ssid: %s\n", wdev:name(), f.channel, f.ssid))
 	local n
 	for _, n in ipairs(wdev:get_wifinets()) do

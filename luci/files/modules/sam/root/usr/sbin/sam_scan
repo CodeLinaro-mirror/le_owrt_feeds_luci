@@ -9,15 +9,30 @@ if has_iwinfo then
     local iw = sys.wifi.getiwinfo("radio0")
     if iw then
         function scanlist(times)
-            local i, k, v
+            local i, k, v, m
 	    local l = { }
             local s = { }
+	    -- table @r: mapping ssid to the index of entry in table @l
+	    local r = { }
+	
+	    function is_scan_entry_duplicate(a, b)
+		return (a.ssid == b.ssid) and (a.mode == b.mode) and (a.encryption.wep == b.encryption.wep) and (a.encryption.wpa == b.encryption.wpa) 
+	    end
 
 	    for i = 1, times do
 		for k, v in ipairs(iw.scanlist) do
 			if not s[v.bssid] then
-                		l[#l+1] = v
-				s[v.bssid] = true
+			    local duplicate = false
+			    for _, m in ipairs(l) do
+				if is_scan_entry_duplicate(m, v) then
+				    -- found duplicate entry, do not add it
+				    duplicate = true
+				    break
+				end
+			    end
+			    if not duplicate then
+				l[#l + 1] = v
+			    end
 			end
 		end
 	    end
