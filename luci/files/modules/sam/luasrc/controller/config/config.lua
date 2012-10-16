@@ -13,18 +13,24 @@ You may obtain a copy of the License at
 $Id: network.lua 8785 2012-06-26 21:49:27Z jow $
 ]]--
 
-module("luci.controller.admin.network", package.seeall)
+module("luci.controller.config.config", package.seeall)
 
 function index()
 	local uci = require("luci.model.uci").cursor()
-	local page
+	local root = node()
+	if not root.target then
+		root.target = alias("config")
+		root.index = true
+	end
 
-	page = node("admin", "network")
-	page.target = firstchild()
-	page.title  = _("Network")
-	page.order  = 10
-	page.index  = true
+	local page   = node("config")
+	page.target  = firstchild()
+	page.title   = _("Skifta Audio Module Configurator")
+	page.order   = 10
+	--page.sysauth = "root"
+	--page.sysauth_authenticator = "htmlauth"
 
+	page.index = true
 	local has_wifi = false
 
 	uci:foreach("wireless", "wifi-device",
@@ -34,24 +40,25 @@ function index()
 		end)
 
 	if has_wifi then
-		page = entry({"admin", "network", "wireless_connecting"}, template("admin_network/wifi_connect"), nil)
+		page = entry({"config", "connect"}, template("config/connect"), nil)
 		page.leaf = true
 
-		page = entry({"admin", "network", "wireless_connected"}, template("admin_network/wifi_connected"), nil)
+		page = entry({"config", "join"}, call("wifi_join"), nil)
 		page.leaf = true
 
-		page = entry({"admin", "network", "wireless_join"}, call("wifi_join"), nil)
+		page = entry({"config", "status"}, call("wifi_status"), nil)
 		page.leaf = true
 
-		page = entry({"admin", "network", "wireless_status"}, call("wifi_status"), nil)
+		page = entry({"config", "reboot"}, call("sys_reboot"), nil)
 		page.leaf = true
 
-		page = entry({"admin", "network", "system_reboot"}, call("sys_reboot"), nil)
+		page = entry({"config", "overview"}, template("config/overview"), nil)
 		page.leaf = true
 
-		page = entry({"admin", "network", "wireless_overview"}, template("admin_network/wifi_overview"), nil)
+		page = entry({"config", "select"}, call("wifi_add_friend_name"), nil)
+		page.leaf = true
 
-		page = entry({"admin", "network", "wireless"}, template("admin_network/wifi_join"), _("Wifi"), 15)
+		page = entry({"config", "index"}, template("config/index"), _("Skifta Audio Module"), 10)
 		page.leaf = true
 		page.subindex = true
 	end
@@ -63,6 +70,16 @@ function sys_reboot()
 	luci.sys.reboot()
 end
 
+function wifi_add_friend_name()
+	local friendly_name = luci.http.formvalue("friendly-name")
+	if friendly_name then
+		local uci = require "luci.model.uci".cursor()
+		uci:set("skifta", "main", "friendly_name", friendly_name)
+		uci:save("skifta")
+		uci:commit("skifta")
+	end
+	luci.template.render("config/select")
+end
 
 function wifi_add_apply(f)
 	--local dbg = io.open("/tmp/luci-dbg", "w")
@@ -83,7 +100,7 @@ function wifi_add_apply(f)
 		ssid    = f.ssid,
 		mode    = (f.mode == "Ad-Hoc" and "adhoc" or "sta")
 	}
-	
+
 	if f.wep == "1" then
 		wconf.encryption = "wep-open"
 		wconf.key        = "1"
@@ -119,7 +136,7 @@ function wifi_add_apply(f)
 	wconf.network = net:name()
 	--dbg:write(string.format("wconf.network %s\n", wconf.network))
 	local wnet = wdev:add_wifinet(wconf)
-	if wnet then		
+	if wnet then
 		-- Save & commit & apply
 		uci:save("wireless")
 		uci:save("network")
@@ -127,7 +144,7 @@ function wifi_add_apply(f)
 		uci:commit("network")
 		local conflist = {"wireless", "network"}
 		uci:apply(conflist)
-		--dbg:write("wnet %s: save & commit & apply\n", wnet:name())		
+		--dbg:write("wnet %s: save & commit & apply\n", wnet:name())
 		-- Redirect to overview page
 	end
 	--dbg:close()
@@ -161,7 +178,7 @@ function wifi_join()
 		local cancel  = (param("cancel") or param("cbi.cancel")) and true or false
 
 		if cancel then
-			luci.http.redirect(luci.dispatcher.build_url("admin/network/wireless_join?device=" .. params.device))
+			luci.http.redirect(luci.dispatcher.build_url("config/join?device=" .. params.device))
 		else
 			local rv = { }
 			wifi_add_apply(params)

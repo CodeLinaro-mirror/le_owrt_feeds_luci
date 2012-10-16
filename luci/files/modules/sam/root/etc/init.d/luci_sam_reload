@@ -56,7 +56,7 @@ detect_mac80211() {
 
 		mode_11n=""
 		mode_band="g"
-		channel="auto"
+		channel="6"
 		ht_cap=0
 		for cap in $(iw phy "$dev" info | grep 'Capabilities:' | cut -d: -f2); do
 			ht_cap="$(($ht_cap | $cap))"
@@ -93,7 +93,7 @@ config wifi-iface
 	option device   radio$devidx
 	option network  lan
 	option mode     ap
-	option ssid     $([ $devidx -eq 0 ] && echo "SAM-To-Be-Configured" || echo "OpenWrt")
+	option ssid     $([ $devidx -eq 0 ] && echo "\"Unconfigured Skifta Audio Module\"" || echo "OpenWrt")
 	option encryption none
 
 EOF

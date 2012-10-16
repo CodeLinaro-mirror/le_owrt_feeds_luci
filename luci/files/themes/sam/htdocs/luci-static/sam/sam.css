@@ -78,7 +78,8 @@ html, body {
 body {
 	color: #1A3960;
 	font: 75%/1.5em Arial,Helvetica,sans-serif;
-	background: url(images/skifta-body-tile.gif) repeat-x scroll 0 0 #F7F8FC;
+	/* background: url(images/skifta-body-tile.gif) repeat-x scroll 0 0 #F7F8FC; */
+	background: url(images/skifta_configurator_background.png) no-repeat center 0px;
 }
 
 /* Container and main */
@@ -86,7 +87,7 @@ body {
 	width: 100%;
 	min-height: 100%;
 	margin:0 auto;
-	background:url(images/skifta-body.jpg) no-repeat center -135px;
+	/* background:url(images/skifta-body.jpg) no-repeat center -135px; */
 }
 .main {
 	width:	970px;
@@ -101,12 +102,75 @@ body {
 *****************************/
 #header{
 	position: relative;
+	width: 960px;
+	height: 120px;
 }
+
+.lang_div {
+	margin-left: 670px;
+}
+
+#lang_menu {
+	margin: 0;
+	padding: 0;
+}
+
+#lang_menu li {
+	float: left;
+	list-style: none;
+	font: 12px Tahoma, Arial;
+}
+
+#lang_menu li > a {
+	display: block;
+	background: #181947;
+	padding: 2px 12px;
+	text-decoration: none;
+	font-size: 14px;
+	width: 100px;
+	color: #EAFFED;
+	white-space: nowrap;
+}
+
+#lang_menu li a:hover {
+	background:	#0C1421;
+}
+
+#lang_menu li ul {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	visibility: hidden;
+	border-top: 1px solid white;
+}
+
+#lang_menu li ul li
+{
+	float: none;
+	display: inline;
+}
+
+#lang_menu li ul li a {
+	display: block;
+	padding: 2px 12px;
+	text-decoration: none;
+	font-size: 12px;
+	color: #EAFFED;
+	white-space: nowrap;
+	width: auto;
+	background: #181947;
+}
+
+#lang_menu li ul li a:hover {
+	background: #0C1421;
+}
+
 .logo {
 	margin:	16px 0 0 10px;
-	background:	url(images/skifta-logo.png) no-repeat;
 	float:	left;
 }
+
+
 .logo a {
 	width:	156px;
 	height:	84px;
@@ -130,82 +194,69 @@ body {
 	text-align: center;
 }
 
-/*
- SAM Container in wifi join
-*/
 .sam_container {
 	position: relative;
-	height: 360px;
-	background: white;
-}
-.action_btns {
-	position: relative;
-	margin-top: 520px;
-	height: 30px;
-	width: 960px;
+	height: 400px;
 }
 
-.guidance {
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
+.center_container {
+	margin: 30px auto auto auto;
+	width: 720px;
+	height: 350px;
 }
-.form_container {
+.center_container div {
+	margin-left: 240px;
+	width: 420px;
+}
+.center_container h3 {
+	font-size: 14px;
+	color: #183862;
+	border-bottom: 1px solid #e3e3e3;
+}
+.center_container h4 {
+	text-align: right;
+	color: #183862;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.center_container label {
+	color: #183862;
+}
+/*
+ Index
+*/
 
-}
-.guidance { 
-	width: 320px;
-	float: left;
-}
-.guidance table {
-	border-collapse: collapse;
-	background: url(images/guidance-body-tile.png) transparent scroll repeat-y -5px 0px;
-}
-.guidance table tr {
-	height: 116px;
-}
-.guidance table tr td {
-	vertical-align: middle;
-	border: solid 1px rgb(210,210,210);
-}
-.guidance table tr td span {
-	margin-left: 15px;
-}
-
-.form_container {
-	position: absolute;
-	margin-left: 325px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	width: 617px;
-	border-top: 1px solid rgb(210,210,210);
-	border-bottom: 1px solid rgb(210,210,210);
-	border-right: 1px solid rgb(210,210,210);
-}
-.config_form {
-	margin:auto 10px;
+#friend_container {
+	background: url(images/skifta_screen1B.png) no-repeat center center;
 }
 
-.form_container table {
+#friend-name-form input {
+	margin-left: 20px;
+	width: 240px;
 }
 
-.form_container table tr {
-	height: 113px;
+
+/*
+select
+*/
+#select_container {
+	background: url(images/skifta_screen2B.png) no-repeat center center;
 }
-.form_container table tr td {
+
+#select_container table tr {
+	height: 33px;
+}
+
+#select_container table tr td {
 	border: 0px;
+	align: right;
 	vertical-align: middle;
 }
 
-.form_container label {
-	width: 200px;
+#select_container table tr td input,
+#select_container table tr td select {
 	margin-left: 25px;
-	display: block;
-}
-
-#network_ssid, #network_key, #dev_passwd {
-	width: 500px;
-	margin-left: 25px;
+	width: 250px;
 }
 
 /* wifi connected layout*/
@@ -246,15 +297,15 @@ body {
 
 #connected_msg h2 {
 	font: bold 32px Arial,Helvetica,sans-serif;
-	color: #173861;
+	color: #EAFFED;
 }
 #connected_msg h3 {
 	font: bold 16px Arial,Helvetica,sans-serif;
-	color: #173861;
+	color: #EAFFED;
 }
 #connected_msg p {
 	font: 14px Arial,Helvetica,sans-serif;
-	color: #173861;
+	color: #EAFFED;
 }
 
 /* border */

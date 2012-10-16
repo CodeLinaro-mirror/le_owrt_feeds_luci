@@ -39,6 +39,35 @@ $Id: header.htm 8701 2012-06-06 10:44:55Z jow $
 <script type="text/javascript" src="<%=resource%>/jquery.ui.selectable.js"></script>
 <script type="text/javascript" src="<%=resource%>/jquery.ui.button.js"></script>
 <script type="text/javascript" src="<%=resource%>/jquery.ui.dialog.js"></script>
+<script type="text/javascript">
+	//language select 
+	var timeout    = 500;
+	var closetimer = 0;
+	var ddmenuitem = 0;
+
+	function lang_select_ddm_open() {
+		lang_select_ddm_canceltimer();
+		lang_select_ddm_close();
+		ddmenuitem = $(this).find('ul').css('visibility', 'visible');
+	}
+
+	function lang_select_ddm_close() {
+		if(ddmenuitem)	{
+			ddmenuitem.css('visibility', 'hidden');
+		}
+	}
+
+	function lang_select_ddm_timer() {
+		closetimer = window.setTimeout(lang_select_ddm_close, timeout);
+	}
+
+	function lang_select_ddm_canceltimer() {
+		if(closetimer) {
+			window.clearTimeout(closetimer);
+			closetimer = null;
+		}
+	}
+</script>
 <title>Skifta Audio Module</title>
 </head>
 <body class="lang_<%=luci.i18n.context.lang%>">
@@ -48,7 +77,18 @@ $Id: header.htm 8701 2012-06-06 10:44:55Z jow $
 	<div class="main">
 		<div id="header" class="g960">
 			<div class="logo"><a href="/">Skifta Audio Module</a></div>
-			<div class="lang_menu"></div>
+			<div class="lang_div">
+				<ul id="lang_menu">
+					<li><a href="#"><%:Select Language%></a>
+						<ul>
+							<li><a href="#"><%:English%></a></li>
+							<li><a href="#"><%:Simplified Chinese%></a></li>
+							<li><a href="#"><%:Japanese%></a></li>
+							<li><a href="#"><%:Spanish%></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<noscript>
 			<div class="errorbox">
@@ -56,4 +96,4 @@ $Id: header.htm 8701 2012-06-06 10:44:55Z jow $
 				<%:You must enable Java Script in your browser or LuCI will not work properly.%>
 			</div>
 		</noscript>
-		<h2 class="g960"><%:Audio Module Configurator%></h2>
+		

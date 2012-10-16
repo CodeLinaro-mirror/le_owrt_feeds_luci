@@ -1,0 +1,72 @@
+<%#
+LuCI - Lua Configuration Interface
+Copyright 2009 Jo-Philipp Wich <xm@subsignal.org>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+$Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
+
+-%>
+
+<%+header%>
+
+<script type="text/javascript">//<![CDATA[
+
+	$(function() {
+		$("#next").button({
+				icons: {
+					primary: "ui-icon-circle-triangle-e"
+				}
+			}).click(function() {
+			if ($("#friendly-name").val() != "") {
+				var e = '<input type="hidden" name="friendly-name" value="' + $("#friendly-name").val()
+					+ '" />';
+				$("#next-form").empty();
+				$(e).appendTo("#next-form");
+				$("#next-form").submit();
+			}
+		});
+
+		$('#lang_menu > li').bind('mouseover', lang_select_ddm_open);
+		$('#lang_menu > li').bind('mouseout',  lang_select_ddm_timer);
+		document.onclick = lang_select_ddm_close;
+	});
+
+//]]></script>
+
+<div style="background: none transparent;" class="sam_container g960">
+	<div id="friend_container" class="center_container">
+		<div style="height: 75px;">
+		</div>
+		<div style="height: 230px;">
+			<h3><%:Give your device a friendly name so that you can identify it once on the Skifta Network.
+				Ex.: PartySpeaker%></h3>
+			<h4><%:Fields marked with%>&nbsp;<span style="color: red;">*</span>&nbsp;<%:must be complete%></h4>
+			<form id="friend-name-form">
+				<table>
+					<tr><td align="right" style="width: 150px;">
+						<label for="friendly-name"><span style="color: red;">*</span>&nbsp;<%: Friendly Name%></label>
+					</td><td align="right" style="width: 270px;">
+						<input type="text" size="20" class="ui-glass-style" id="friendly-name" name="friendly-name" />
+					</td></tr>
+				</table>
+			</form>
+		</div>
+		<div class="right">
+			<button id="next"><%:Next%></button>
+		</div>
+	</div>
+</div>
+
+<div id="next-div">
+	<form id="next-form" action="<%=luci.dispatcher.build_url('config/select')%>" method="post">
+	</form>
+</div>
+
+
+
+<%+footer%>

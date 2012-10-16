@@ -124,12 +124,12 @@ $Id: wifi_overview.htm 8847 2012-07-01 20:05:05Z dgolle $
 	var arptable = <%=luci.http.write_json(arpcache)%>;
 
 	var is_reconnecting = false;
-        
+
         function jq(id) {
             return "#" + id.replace(/(:|.)/g,'\\$1');
         }
 
-	XHR.poll(5, '<%=luci.dispatcher.build_url("admin", "network", "wireless_status", table.concat(netlist, ","))%>', null,
+	XHR.poll(5, '<%=luci.dispatcher.build_url("config", "status", table.concat(netlist, ","))%>', null,
 		function(x, st)
 		{
 			if (st)
@@ -239,7 +239,7 @@ $Id: wifi_overview.htm 8847 2012-07-01 20:05:05Z dgolle $
 								icon = "<%=resource%>/icons/signal-50-75.png";
 							else
 								icon = "<%=resource%>/icons/signal-75-100.png";
-                                                                
+
                                                         assoc_td = "<td>" + String.format(
 								'<img src="%s" title="<%:Signal%>: %d dBm / <%:Noise%>: %d dBm" />',
 								icon, assoclist[j].signal, assoclist[j].noise
@@ -248,20 +248,20 @@ $Id: wifi_overview.htm 8847 2012-07-01 20:05:05Z dgolle $
 
 							assoc_td = "<td>" + String.format('%h', iw.ssid ? iw.ssid : '?') + "</td>";
                                                         assoc_tr += assoc_td;
-                                                        
+
                                                         assoc_td = "<td>" + assoclist[j].bssid + "</td>";
                                                         assoc_tr += assoc_td;
-                                                        
+
                                                         assoc_td = "<td>" + arptable[assoclist[j].bssid]
 								? arptable[assoclist[j].bssid] : '?' + "</td>";
                                                         assoc_tr += assoc_td;
 
 							assoc_td = "<td>" + String.format('%d dBm', assoclist[j].signal) + "</td>";
                                                         assoc_tr += assoc_td;
-                                                        
+
 							assoc_td = "<td>" + String.format('%d dBm', assoclist[j].noise) + "</td>";
                                                         assoc_tr += assoc_td;
-                                                        
+
 							assoc_td = "<td>" + (assoclist[j].rx_mcs > -1)
 								? String.format('%.1f Mbit/s, MCS %d, %dMHz', assoclist[j].rx_rate / 1000, assoclist[j].rx_mcs, assoclist[j].rx_40mhz ? 40 : 20)
 								: String.format('%.1f Mbit/s', assoclist[j].rx_rate / 1000)
@@ -275,7 +275,7 @@ $Id: wifi_overview.htm 8847 2012-07-01 20:05:05Z dgolle $
                                                         assoc_tr += assoc_td;
                                                         assoc_tr += "</tr>";
                                                         $(assoc_tr).appendTo(assoctable);
-                                                        
+
 							rowstyle = (rowstyle == 1) ? 2 : 1;
 						}
 					}
@@ -283,7 +283,7 @@ $Id: wifi_overview.htm 8847 2012-07-01 20:05:05Z dgolle $
 
 				if (assoctable && assoctable.children().size() == 1)
 				{
-					var tr = "<tr class='cbi-section-table-row'>";                                   
+					var tr = "<tr class='cbi-section-table-row'>";
 					var td = "<td colspan='8'><br /><em><%:No information available%></em></td>";
                                         tr += td + "</tr>";
                                         $(tr).appendTo("assoctable");
@@ -322,7 +322,7 @@ $Id: wifi_overview.htm 8847 2012-07-01 20:05:05Z dgolle $
 					<span id="<%=dev:name()%>-iw-devinfo"></span>
 				</td>
 				<td style="width:310px;text-align:right">
-					<input type="button" class="cbi-button cbi-button-find" style="width:200px" onclick="location.href='<%=luci.dispatcher.build_url("admin/network/wireless")%>'" title="<%:Back to join network%>" value="<%:Back to join network%>" />
+					<input type="button" class="cbi-button cbi-button-find" style="width:200px" onclick="location.href='<%=luci.dispatcher.build_url("config/select")%>'" title="<%:Back to join network%>" value="<%:Back to join network%>" />
 				<!--	<input type="button" class="cbi-button cbi-button-add" style="width:100px" onclick="location.href='<%=luci.dispatcher.build_url("admin/network/wireless_add")%>?device=<%=dev:name()%>'" title="<%:Provide new network%>" value="<%:Add%>" /> -->
 				</td>
 			</tr>

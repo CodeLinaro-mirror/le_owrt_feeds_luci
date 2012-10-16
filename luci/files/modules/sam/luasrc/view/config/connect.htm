@@ -49,7 +49,7 @@ You may obtain a copy of the License at
 	}
 
 	function request_connect() {
-		$.post("<%=luci.dispatcher.build_url('admin/network/wireless_join')%>", $("#join-network-form").serialize(),
+		$.post("<%=luci.dispatcher.build_url('config/join')%>", $("#join-network-form").serialize(),
 		       function(data) {
 				//alert("Join network done");
 				//clearInterval(cnt_down_tid);
@@ -71,6 +71,7 @@ You may obtain a copy of the License at
 	}
 
 	$(function() {
+		$(".lang_div").hide();
 		populate_join_form();
 		setTimeout(request_connect, 1000);
 		cnt_down_tid = setInterval(count_down_request, 1000);
@@ -110,9 +111,9 @@ You may obtain a copy of the License at
 	</div>
 </div>
 <div style="display: none;">
-	<form id="join-network-form" action="<%=luci.dispatcher.build_url('admin/network/wireless_join')%>" method="post">
+	<form id="join-network-form" action="<%=luci.dispatcher.build_url('config/join')%>" method="post">
 	</form>
-	<form id="overview-form" action="<%=luci.dispatcher.build_url('admin/network/wireless_overview')%>" method="get">
+	<form id="overview-form" action="<%=luci.dispatcher.build_url('config/overview')%>" method="get">
 	</form>
 </div>
 
