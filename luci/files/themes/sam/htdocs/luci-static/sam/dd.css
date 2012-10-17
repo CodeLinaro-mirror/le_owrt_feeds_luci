@@ -1,0 +1,104 @@
+/************** Skin 1 *********************/
+.dd {
+	/*display:inline-block !important;*/
+	text-align:left;
+	background-color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	float:left;
+}
+
+.dd .ddTitle {
+	background:#f2f2f2;
+	border:1px solid #c3c3c3;
+	padding:3px;
+	text-indent:0;
+	cursor:default;
+	overflow:hidden;
+	height:16px;
+	color: #1b3860;
+}
+.dd .ddTitle span.arrow {
+	background:url(images/dd_arrow.gif) no-repeat 0 0; float:right; display:inline-block;width:16px; height:16px; cursor:pointer; 
+}
+
+.dd .ddTitle span.ddTitleText {text-indent:1px; overflow:hidden; line-height:16px;}
+.dd .ddTitle span.ddTitleText img{text-align:left; padding:0 2px 0 0}
+.dd .ddTitle img.selected {
+	padding:0 3px 0 0;
+	vertical-align:top;
+}
+.dd .ddChild {
+	position:absolute;
+	border:1px solid #c3c3c3;
+	border-top:none;
+	display:none;
+	margin:0;
+	width:auto;
+	overflow:auto;
+	overflow-x:hidden !important;
+	background-color:#ffffff;
+	color: #1B3860;
+}
+.dd .ddChild .opta a, .dd .ddChild .opta a:visited {padding-left:10px}
+.dd .ddChild a {
+	display:block;
+	padding:2px 0 2px 3px;
+	text-decoration:none;
+	color:#1b3860;
+	overflow:hidden;
+	white-space:nowrap;
+	cursor:pointer;
+}
+.dd .ddChild a:hover {
+	background-color:#85429B;
+	color: white;
+}
+.dd .ddChild a img {
+	border:0;
+	padding:0 2px 0 0;
+	vertical-align:middle;
+}
+.dd .ddChild a.selected {
+	background-color:#683077;
+	color: white;
+	
+}
+.hidden {display:none;}
+
+.dd .borderTop{border-top:1px solid #c3c3c3 !important;}
+.dd .noBorderTop{border-top:none 0  !important}
+
+/************* use sprite *****************/
+.dd .ddChild a.sprite, .dd .ddChild a.sprite:visited {
+	background-image:url(images/lock_signals.gif);
+	background-repeat:no-repeat;
+	padding-left:24px;
+}
+
+.dd .ddChild a.signal_100_lock, .dd .ddChild a.signal_100_lock:visited {
+	background-position:0 0px;
+}
+.dd .ddChild a.signal_75_lock, .dd .ddChild a.signal_75_lock:visited {
+	background-position:0 -22px;
+}
+.dd .ddChild a.signal_50_lock, .dd .ddChild a.signal_50_lock:visited {
+	background-position:0 -44px;
+}
+.dd .ddChild a.signal_25_lock, .dd .ddChild a.signal_25_lock:visited {
+	background-position:0 -66px;
+}
+.dd .ddChild a.signal_100_nolock, .dd .ddChild a.signal_100_nolock:visited {
+	background-position:0 -88px;
+}
+.dd .ddChild a.signal_75_nolock, .dd .ddChild a.signal_75_nolock:visited {
+	background-position:0 -110px;
+}
+.dd .ddChild a.signal_50_nolock, .dd .ddChild a.signal_50_nolock:visited {
+	background-position:0 -132px;
+}
+.dd .ddChild a.signal_25_nolock, .dd .ddChild a.signal_25_nolock:visited {
+	background-position:0 -154px;
+}
+
+/*******************************/

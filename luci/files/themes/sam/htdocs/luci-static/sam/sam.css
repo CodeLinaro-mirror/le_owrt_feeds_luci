@@ -253,10 +253,31 @@ select
 	vertical-align: middle;
 }
 
-#select_container table tr td input,
-#select_container table tr td select {
+#select_container table tr td input {
 	margin-left: 25px;
 	width: 250px;
+}
+#select_container table tr td select {
+	width: 250px;
+	border-width: 0px;
+}
+
+/* fix the select layout */
+#network_ssid_msdd,
+#network_ssid_msddHolder {
+	margin-left: 25px;
+	vertical-align: top;
+}
+#network_ssid_title {
+	margin-left: 0px;
+}
+
+#network_ssid_title span {
+	vertical-align: top;
+}
+.dd .ddTitle {
+	width: 250px;
+	vertical-align: top;
 }
 
 /* wifi connected layout*/
