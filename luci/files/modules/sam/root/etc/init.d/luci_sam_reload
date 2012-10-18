@@ -116,4 +116,7 @@ start() {
 	else
 		reload
 	fi
+
+        uci_set "network" "lan" "ipaddr" "172.19.42.1"
+        uci_commit "network"
 }
