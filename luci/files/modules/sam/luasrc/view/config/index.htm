@@ -31,6 +31,13 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 			}
 		});
 
+		$("#friendly-name").keypress(function(event) {
+			if (event.which == 13) {
+				event.preventDefault();
+				$("#next").click();
+			}
+		});
+
 		$('#lang_menu > li').bind('mouseover', lang_select_ddm_open);
 		$('#lang_menu > li').bind('mouseout',  lang_select_ddm_timer);
 		document.onclick = lang_select_ddm_close;

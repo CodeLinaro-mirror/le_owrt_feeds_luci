@@ -43,7 +43,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 <script type="text/javascript">//<![CDATA[
 	var scan_list = <%=luci.http.write_json(iw_scan_list)%>;
 	var manual_input = false;
-	var ssid_select_handler = null;
+	var ssid_select_handler = null, security_mode_handler = null;
 
 	function guess_wifi_signal(net) {
 		var scale = Math.floor((100 / (net.quality_max || 100) * (net.quality || 0)));
@@ -92,7 +92,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 	}
 
 	function ui_populate_network_ssid(scan_list) {
-		ssid_select_handler = $("#network_ssid").msDropDown({visibleRows:7, rowHeight:22, showIcon: false}).data("dd");;
+		ssid_select_handler = $("#network_ssid").msDropDown({visibleRows:7, rowHeight:22, showIcon: false}).data("dd");
 		var net = null;
 		var default_ssid = null;
 		var option, text_node, value_node, title_node;
@@ -230,20 +230,13 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 					primary: "ui-icon-circle-triangle-e"
 				}
 			}).click(on_connect_btn_click);
-		/*
-		$("#reboot").button({
-				icons: {
-					primary: "ui-icon-wrench"
-				}
-			}).click(function() {
-				$("#reboot-form").submit();
-			});
-		*/
+
 		$("#network_ssid").change(function() {
 			if ( $(this).val() == scan_list.length ) {
 				$(this).hide();
 				ssid_select_handler.visible(false);
 				$("#network_ssid_input").show();
+				security_mode_handler = $("#security_mode").msDropDown({visibleRows: 4, rowHeight: 22}).data("dd");
 				$("#li_sec").show();
 				$("#security_mode").trigger("change");
 				manual_input = true;
@@ -265,6 +258,13 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 			} else {
 				// OPEN or WEP, hide encryption mode
 				$("#li_key").show();
+			}
+		});
+
+		$("#network_key").keypress(function(event){
+			if (event.which == 13) {
+				event.preventDefault();
+				$("#connect").click();
 			}
 		});
 
@@ -296,15 +296,15 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 							</td>
 						</tr>
 						<tr id="li_sec" style="display: none;">
-							<td>
+							<td align="right">
 								<label for="security_mode"><span style="color: red;">*</span>&nbsp;<%:Security Mode%></label>
 							</td>
 							<td>
-								<select class="ui-glass-style" id="security_mode" name="security_mode" size="1" style="margin-left: 24px;">
-									<option class="ui-glass-style" value="0"><%:OPEN%></option>
-									<option class="ui-glass-style" value="1"><%:WEP%></option>
-									<option class="ui-glass-style" value="2"><%:WPA-PSK%></option>
-									<option class="ui-glass-style" value="3"><%:WPA2-PSK%></option>
+								<select id="security_mode" name="security_mode" size="1">
+									<option selected="selected" value="0"><%:OPEN%></option>
+									<option value="1"><%:WEP%></option>
+									<option value="2"><%:WPA-PSK%></option>
+									<option value="3"><%:WPA2-PSK%></option>
 								</select>
 							</td>
 						</tr>
