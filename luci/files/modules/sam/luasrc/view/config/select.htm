@@ -33,6 +33,11 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 			return "<em>None</em>"
 		end
 	end
+
+
+	os.execute(string.format("uci set rygel.config.friendly='%s'", luci.http.formvalue("friendly-name")))
+	os.execute("uci commit rygel")
+
 	local fin = io.open("/tmp/luci_sam_scan", "r")
 	local iw_scan_list = json.decode(fin:read("*a"))
 	fin:close()
