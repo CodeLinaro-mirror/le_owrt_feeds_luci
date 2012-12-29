@@ -78,7 +78,8 @@ detect_mac80211() {
 			[ "$(($ht_cap & 4096))" -eq 4096 ] && append ht_capab "$list	DSSS_CCK-40" "$N"
 		}
 		iw phy "$dev" info | grep -q '2412 MHz' || { mode_band="a"; channel="auto"; }
-
+		local macaddr="$(cat /sys/class/ieee80211/phy0/macaddress | tr 'A-Z' 'a-z')"
+		local ssidString="Skifta-${macaddr:6:12}"
 		cat <<EOF
 config wifi-device  radio$devidx
 	option type     mac80211
@@ -93,7 +94,7 @@ config wifi-iface
 	option device   radio$devidx
 	option network  lan
 	option mode     ap
-	option ssid     $([ $devidx -eq 0 ] && echo "\"Unconfigured Skifta Audio Module\"" || echo "OpenWrt")
+	option ssid     $([ $devidx -eq 0 ] && echo "\"$ssidString\"" || echo "OpenWrt")
 	option encryption none
 
 EOF
