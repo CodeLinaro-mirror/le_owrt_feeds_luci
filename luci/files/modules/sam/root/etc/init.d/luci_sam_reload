@@ -106,6 +106,13 @@ reload() {
 	[ -e /etc/config/wireless ] && rm -f /etc/config/wireless
 	config_clear
 	detect_mac80211 > /etc/config/wireless
+
+	uci add_list dhcp.@dnsmasq[0].address=/#/172.19.42.1
+	uci set dhcp.@dnsmasq[0].redirect=1
+	uci commit dhcp
+	uci set uhttpd.main.error_page="/index.html"
+	uci commit uhttpd
+
 }
 
 start() {
