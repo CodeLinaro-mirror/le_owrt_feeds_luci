@@ -58,7 +58,15 @@ function index()
 		page = entry({"config", "select"}, call("wifi_add_friend_name"), nil)
 		page.leaf = true
 
-		page = entry({"config", "index"}, template("config/index"), _("Skifta Audio Module"), 10)
+        local uci = require "luci.model.uci".cursor()
+        
+        status=uci:get("rygel", "config", "status")
+
+        if status then
+		    page = entry({"config", "index"}, template("config/overview"), _("Skifta Audio Module"), 10)
+        else
+		    page = entry({"config", "index"}, template("config/index"), _("Skifta Audio Module"), 10)
+        end
 		page.leaf = true
 		page.subindex = true
 	end
@@ -74,9 +82,9 @@ function wifi_add_friend_name()
 	local friendly_name = luci.http.formvalue("friendly-name")
 	if friendly_name then
 		local uci = require "luci.model.uci".cursor()
-		uci:set("skifta", "main", "friendly_name", friendly_name)
-		uci:save("skifta")
-		uci:commit("skifta")
+		uci:set("rygel", "config", "friendly", friendly_name)
+		uci:save("rygel")
+		uci:commit("rygel")
 	end
 	luci.template.render("config/select")
 end
@@ -137,12 +145,17 @@ function wifi_add_apply(f)
 	--dbg:write(string.format("wconf.network %s\n", wconf.network))
 	local wnet = wdev:add_wifinet(wconf)
 	if wnet then
+        -- successful to set all the required information
+        -- mark it to be configured
+        uci:set("rygel","config","status","configured"); 
 		-- Save & commit & apply
+        uci:save("rygel")
 		uci:save("wireless")
 		uci:save("network")
+        uci:commit("rygel")
 		uci:commit("wireless")
 		uci:commit("network")
-		local conflist = {"wireless", "network"}
+		local conflist = {"wireless", "network","rygel"}
 		uci:apply(conflist)
 		--dbg:write("wnet %s: save & commit & apply\n", wnet:name())
 		-- Redirect to overview page
