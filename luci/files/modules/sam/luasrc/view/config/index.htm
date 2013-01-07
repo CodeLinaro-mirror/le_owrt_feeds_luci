@@ -12,6 +12,10 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 
 -%>
 
+<%
+	os.execute("STATE=config_started /etc/statemgr >> /dev/null")
+-%>
+
 <%+header%>
 
 <script type="text/javascript">//<![CDATA[

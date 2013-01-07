@@ -112,7 +112,7 @@ reload() {
 	uci commit dhcp
 	uci set uhttpd.main.error_page="/index.html"
 	uci commit uhttpd
-
+	STATE=config_oob /etc/statemgr
 }
 
 start() {
