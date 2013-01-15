@@ -2,129 +2,65 @@
 
 START=19
 
-find_mac80211_phy() {
-	local device="$1"
+RADIO_24G=
+find_2_4_radio() {
+	local cfg=$1
 
-	local macaddr="$(config_get "$device" macaddr | tr 'A-Z' 'a-z')"
-	config_get phy "$device" phy
-	[ -z "$phy" -a -n "$macaddr" ] && {
-		for phy in $(ls /sys/class/ieee80211 2>/dev/null); do
-			[ "$macaddr" = "$(cat /sys/class/ieee80211/${phy}/macaddress)" ] || continue
-			config_set "$device" phy "$phy"
-			break
-		done
-		config_get phy "$device" phy
-	}
-	[ -n "$phy" -a -d "/sys/class/ieee80211/$phy" ] || {
-		echo "PHY for wifi device $1 not found"
-		return 1
-	}
-	[ -z "$macaddr" ] && {
-		config_set "$device" macaddr "$(cat /sys/class/ieee80211/${phy}/macaddress)"
-	}
-	return 0
+	local hwmode
+	config_get hwmode "$cfg" hwmode
+	[ "$hwmode" = "11ng" ] && RADIO_24G=$cfg
 }
 
+APVAP_24G=
+find_2_4_apvap() {
+	local cfg=$1
+	local radio=$2
 
-check_mac80211_device() {
-	config_get phy "$1" phy
-	[ -z "$phy" ] && {
-		find_mac80211_phy "$1" >/dev/null || return 0
-		config_get phy "$1" phy
-	}
-	[ "$phy" = "$dev" ] && found=1
-}
+	local mode
+	config_get mode "$cfg" mode
+	local device
+	config_get device "$cfg" device
 
-check_radio0_ssid_openwrt() {
-	config_get device "$1" device
-	config_get ssid "$1" ssid
-	[ "$ssid" = "OpenWrt" -a "$device" = "radio0" ] && found=1
-}
-
-detect_mac80211() {
-	devidx=0
-	config_load wireless
-	while :; do
-		config_get type "radio$devidx" type
-		[ -n "$type" ] || break
-		devidx=$(($devidx + 1))
-	done
-	for dev in $(ls /sys/class/ieee80211); do
-		found=0
-		config_foreach check_mac80211_device wifi-device
-		[ "$found" -gt 0 ] && continue
-
-		mode_11n=""
-		mode_band="g"
-		channel="6"
-		ht_cap=0
-		for cap in $(iw phy "$dev" info | grep 'Capabilities:' | cut -d: -f2); do
-			ht_cap="$(($ht_cap | $cap))"
-		done
-		ht_capab="";
-		[ "$ht_cap" -gt 0 ] && {
-			mode_11n="n"
-			append ht_capab "	option htmode	HT20" "$N"
-
-			list="	list ht_capab"
-			[ "$(($ht_cap & 1))" -eq 1 ] && append ht_capab "$list	LDPC" "$N"
-			[ "$(($ht_cap & 16))" -eq 16 ] && append ht_capab "$list	GF" "$N"
-			[ "$(($ht_cap & 32))" -eq 32 ] && append ht_capab "$list	SHORT-GI-20" "$N"
-			[ "$(($ht_cap & 64))" -eq 64 ] && append ht_capab "$list	SHORT-GI-40" "$N"
-			[ "$(($ht_cap & 128))" -eq 128 ] && append ht_capab "$list	TX-STBC" "$N"
-			[ "$(($ht_cap & 768))" -eq 256 ] && append ht_capab "$list	RX-STBC1" "$N"
-			[ "$(($ht_cap & 768))" -eq 512 ] && append ht_capab "$list	RX-STBC12" "$N"
-			[ "$(($ht_cap & 768))" -eq 768 ] && append ht_capab "$list	RX-STBC123" "$N"
-			[ "$(($ht_cap & 4096))" -eq 4096 ] && append ht_capab "$list	DSSS_CCK-40" "$N"
-		}
-		iw phy "$dev" info | grep -q '2412 MHz' || { mode_band="a"; channel="auto"; }
-		local macaddr="$(cat /sys/class/ieee80211/phy0/macaddress | tr 'A-Z' 'a-z')"
-		local ssidString="Skifta-${macaddr:6:12}"
-		cat <<EOF
-config wifi-device  radio$devidx
-	option type     mac80211
-	option channel  ${channel}
-	option macaddr	$(cat /sys/class/ieee80211/${dev}/macaddress)
-	option hwmode	11${mode_11n}${mode_band}
-$ht_capab
-	# Enable radio0 by default
-	option disabled $([ $devidx -eq 0 ] && echo 0 || echo 1)
-
-config wifi-iface
-	option device   radio$devidx
-	option network  lan
-	option mode     ap
-	option ssid     $([ $devidx -eq 0 ] && echo "\"$ssidString\"" || echo "OpenWrt")
-	option encryption none
-
-EOF
-	devidx=$(($devidx + 1))
-	done
-}
-
-reload() {
-	[ -e /etc/config/wireless ] && rm -f /etc/config/wireless
-	config_clear
-	detect_mac80211 > /etc/config/wireless
-
-	uci add_list dhcp.@dnsmasq[0].address=/#/172.19.42.1
-	uci set dhcp.@dnsmasq[0].redirect=1
-	uci commit dhcp
-	uci set uhttpd.main.error_page="/index.html"
-	uci commit uhttpd
-	STATE=config_oob /etc/statemgr
+	[ "$mode" = "ap" -a "$device" = "$radio" ] && \
+		APVAP_24G="$cfg"
 }
 
 start() {
-	if [ -e /etc/config/wireless ]; then
-		config_load wireless
-		found=0
-		config_foreach check_radio0_ssid_openwrt wifi-iface
-		[ $found -eq 1 ] && reload
-	else
-		reload
-	fi
+	config_load wireless
 
-        uci_set "network" "lan" "ipaddr" "172.19.42.1"
-        uci_commit "network"
+	config_foreach find_2_4_radio wifi-device
+	[ -z "${RADIO_24G}" ] && {
+		echo "Error: No 2.4GHz radio found"
+		return 1
+	}
+
+	config_foreach find_2_4_apvap wifi-iface ${RADIO_24G}
+	[ -z "${APVAP_24G}" ] && {
+		echo "Error: No 2.4GHz AP VAP found"
+		return 1
+	}
+
+	# We use the SSID to check if the device is configured
+	# Default SSID is OpenWrt - so only set config if ssid=OpenWrt
+	local ssid
+	config_get ssid "${APVAP_24G}" ssid
+	[ "$ssid" = "OpenWrt" ] || return 0
+
+	# Ok, now we start setting the Skifta configuration parameters
+	local macaddr
+	config_get macaddr ${RADIO_24G} macaddr
+	uci_set wireless ${RADIO_24G} channel 6
+	uci_set wireless ${APVAP_24G} ssid "Skifta-${macaddr:6:12}"
+	uci_commit wireless
+
+	uci_add_list dhcp @dnsmasq[0] address /#/172.19.42.1
+	uci_commit dhcp
+
+	uci_set uhttpd main error_page /index.html
+	uci_commit uhttpd
+
+        uci_set network lan ipaddr 172.19.42.1
+        uci_commit network
+
+	STATE=config_oob /etc/statemgr
 }
