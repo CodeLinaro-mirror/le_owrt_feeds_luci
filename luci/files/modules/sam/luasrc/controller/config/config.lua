@@ -46,10 +46,19 @@ function index()
 		page = entry({"config", "join"}, call("wifi_join"), nil)
 		page.leaf = true
 
+		page = entry({"config", "verify_connect"}, call("wifi_verify_connect"), nil)
+		page.leaf = true
+
+		page = entry({"config", "check_connect_status"}, call("wifi_check_connect_status"), nil)
+		page.leaf = true
+
 		page = entry({"config", "status"}, call("wifi_status"), nil)
 		page.leaf = true
 
 		page = entry({"config", "reboot"}, call("sys_reboot"), nil)
+		page.leaf = true
+
+		page = entry({"config", "connected"}, template("config/connected"), nil)
 		page.leaf = true
 
 		page = entry({"config", "overview"}, template("config/overview"), nil)
@@ -138,8 +147,14 @@ function wifi_add_apply(f)
 		wconf.bssid = f.bssid
 	end
 
-	-- edit the network.wan to update the interface to wlan0
+	-- edit the network.wan to update the interface to wlan0/ath0
 	-- TODO: change hard-coded later
+	local wifname;
+	if f.device == "wifi0" then
+		wifname = "ath0"
+	else
+		wifname = "wlan0"
+	end
 	net = nw:get_network("wan")
 	if net then
 		-- the "wan" network exists and not empty
@@ -147,13 +162,13 @@ function wifi_add_apply(f)
 		uci:set("network", "wan", "proto", "dhcp")
 		_orig_if = uci:get("network", "wan", "_orig_if")
 		orig_if = uci:get("network", "wan", "ifname")
-		if not _orig_if and orig_if and #orig_if > 0 and orig_if ~= "wlan0" then
+		if not _orig_if and orig_if and #orig_if > 0 and orig_if ~= wifname then
 			uci:set("network", "wan", "_orig_if", orig_if)
 		end
-		uci:set("network", "wan", "ifname", "wlan0")
+		uci:set("network", "wan", "ifname", wifname)
 		net = nw:get_network("wan")
 	else
-		net = nw:add_network("wan", { proto = "dhcp", ifname = "wlan0" })
+		net = nw:add_network("wan", { proto = "dhcp", ifname = wifname })
 	end
 	wconf.network = net:name()
 	--dbg:write(string.format("wconf.network %s\n", wconf.network))
@@ -214,6 +229,67 @@ function wifi_join()
 			luci.http.write_json(rv)
 		end
 	end
+end
+
+function wifi_verify_connect()
+        local dbg = io.open("/tmp/luci-dbg", "w")
+        local function param(x)
+                return luci.http.formvalue(x)
+        end
+
+        local params = {
+                device = param("device"),
+                ssid = param("ssid"),
+                channel  = param("channel"),
+                mode = param("mode"),
+                bssid = param("bssid"),
+                wep = param("wep"),
+                wpa_suites = param("wpa_suites"),
+                wpa_version = param("wpa_version"),
+                key = param("key")
+        }
+        local function get_encryption()
+                local encrypt
+                if params.wep == "1" then
+                        encrypt = "wep-open"
+                elseif (tonumber(params.wpa_version) or 0) > 0 then
+                        encrypt = (tonumber(params.wpa_version) or 0) >= 2 and "psk2" or "psk"
+                else
+                        encrypt = "none"
+                end
+                return encrypt
+        end
+
+        if params.device and params.ssid then
+                local uci = require "luci.model.uci".cursor()
+                local lnk_stat = luci.sys.call("/usr/sbin/stavap %s %s %s %s %s 2>/dev/null 1>&2" %{ params.ssid, params.bssid, params.channel,  get_encryption(), params.key })
+                dbg:write(string.format("wifi_join status: %d, ssid: %s, bssid: %s, channel: %s, encryption: %s, key: %s\n", lnk_stat, params.ssid, params.bssid, params.channel, get_encryption(), params.key))
+                uci:set("skifta", "config", "internal")
+                uci:set("skifta", "config", "connect", lnk_stat)
+                uci:set("skifta", "config", "device", params.device)
+                uci:set("skifta", "config", "ssid", params.ssid)
+                uci:set("skifta", "config", "bssid", params.bssid)
+                uci:set("skifta", "config", "channel", params.channel)
+                uci:set("skifta", "config", "mode", params.mode)
+                uci:set("skifta", "config", "wep", params.wep)
+                uci:set("skifta", "config", "wpa_suites", params.wpa_suites)
+                uci:set("skifta", "config", "wpa_version", params.wpa_version)
+                uci:set("skifta", "config", "key", params.key)
+                uci:save("skifta")
+                uci:commit("skifta")
+        end
+        dbg:close()
+end
+
+function wifi_check_connect_status()
+        local uci = require "luci.model.uci".cursor()
+        uci:load("skifta")
+        local lnk_stat = uci:get("skifta", "config", "connect")
+        if lnk_stat == '0' then
+                luci.template.render("config/connected")
+        else
+                luci.template.render("config/select")
+        end
 end
 
 function wifi_status()

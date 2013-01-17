@@ -17,6 +17,14 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 	local sys = require "luci.sys"
 	local utl = require "luci.util"
 	local json = require "luci.json"
+	local uci = require("luci.model.uci").cursor()
+	local wdevname = "radio0"
+
+	uci:foreach("wireless", "wifi-device", function(s)
+		if s["type"] == "qcawifi" then
+			wdevname = s[".name"]
+		end
+	end)
 
 	function format_wifi_encryption(info)
 		if info.wep == true and not info.wpa_version then
@@ -43,6 +51,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 
 <script type="text/javascript">//<![CDATA[
 	var scan_list = <%=luci.http.write_json(iw_scan_list)%>;
+	var wdevname = <%=luci.http.write_json(wdevname)%>;
 	var manual_input = false;
 	var ssid_select_handler = null, security_mode_handler = null;
 
@@ -115,7 +124,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 
 	function generate_join_form(net, m) {
 		var f = $("#join-network-form");
-		var e = '<input type="hidden" name="device" value="radio0" />';
+		var e = '<input type="hidden" name="device" value="' + wdevname + '" />';
 		if (m) {
 			var ssid = $("#network_ssid_input").val();
 			var security_mode = $("#security_mode").val();

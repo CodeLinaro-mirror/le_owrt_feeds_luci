@@ -3,49 +3,56 @@
 local sys = require "luci.sys"
 local json = require "luci.json"
 local io = require "io"
+local uci = require("luci.model.uci").cursor()
+local wdev = "radio0"
+
+uci:foreach("wireless", "wifi-device", function(s)
+	if s["type"] == "qcawifi" then
+		wdev = s[".name"]
+	end
+end)
 
 local has_iwinfo = pcall(require, "iwinfo")
 if has_iwinfo then
-    local iw = sys.wifi.getiwinfo("radio0")
-    if iw then
-        function scanlist(times)
-            local i, k, v, m
-	    local l = { }
-            local s = { }
-	    -- table @r: mapping ssid to the index of entry in table @l
-	    local r = { }
-	
-	    function is_scan_entry_duplicate(a, b)
-		return (a.ssid == b.ssid) and (a.mode == b.mode) and (a.encryption.wep == b.encryption.wep) and (a.encryption.wpa == b.encryption.wpa) 
-	    end
+	local iw = sys.wifi.getiwinfo(wdev)
+	if iw then
+		function scanlist(times)
+			local i, k, v, m
+			local l = { }
+			local s = { }
+			-- table @r: mapping ssid to the index of entry in table @l
+			local r = { }
 
-	    for i = 1, times do
-		for k, v in ipairs(iw.scanlist) do
-			if not s[v.bssid] then
-			    local duplicate = false
-			    for _, m in ipairs(l) do
-				if is_scan_entry_duplicate(m, v) then
-				    -- found duplicate entry, do not add it
-				    duplicate = true
-				    break
-				end
-			    end
-			    if not duplicate then
-				l[#l + 1] = v
-			    end
+			function is_scan_entry_duplicate(a, b)
+				return (a.ssid == b.ssid) and (a.mode == b.mode) and (a.encryption.wep == b.encryption.wep) and (a.encryption.wpa == b.encryption.wpa)
 			end
+
+			for i = 1, times do
+				for k, v in ipairs(iw.scanlist) do
+					if not s[v.bssid] then
+						local duplicate = false
+						for _, m in ipairs(l) do
+							if is_scan_entry_duplicate(m, v) then
+								-- found duplicate entry, do not add it
+								duplicate = true
+								break
+							end
+						end
+						if not duplicate then
+							l[#l + 1] = v
+						end
+					end
+				end
+			end
+
+			table.sort(l, function(a, b) return (tonumber(a.signal) or 999) > (tonumber(b.signal) or 999) end )
+
+			return l
 		end
-	    end
-		
-	    table.sort(l, function(a, b) return (tonumber(a.signal) or 999) > (tonumber(b.signal) or 999) end )
 
-	    return l
+		local iw_scan_list = scanlist(5)
+		local fout = io.open("/tmp/luci_sam_scan", "w")
+		fout:write(luci.json.encode(iw_scan_list))
+		fout:close()
 	end
-	
-	local iw_scan_list = scanlist(5)
-        local fout = io.open("/tmp/luci_sam_scan", "w")
-        fout:write(luci.json.encode(iw_scan_list))
-        fout:close()
-    end
 end
-

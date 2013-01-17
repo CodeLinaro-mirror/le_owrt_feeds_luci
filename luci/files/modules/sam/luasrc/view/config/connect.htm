@@ -36,7 +36,7 @@ You may obtain a copy of the License at
 
 	function populate_join_form() {
 		var f = $("#join-network-form");
-		var e = '<input type="hidden" name="device" value="radio0" />';
+		var e = '<input type="hidden" name="device" value="' + params.device + '" />';
 		e += '<input type="hidden" name="ssid" value="' + params.ssid + '" />';
 		e += '<input type="hidden" name="mode" value="' + params.mode + '" />';
 		e += '<input type="hidden" name="bssid" value="' + params.bssid + '" />';
@@ -59,21 +59,38 @@ You may obtain a copy of the License at
 		);
 	}
 
+        function verify_connect() {
+                $.post("<%=luci.dispatcher.build_url('config/verify_connect')%>", $("#join-network-form").serialize(),
+                       function(data) {
+                       }
+                );
+        }
+
 	function count_down_request() {
 		if (--cnt_down == 15) {
 			//alert("Connecting timer count down!");
-			$("#connecting_div").hide();
-			$("#connected_div").show();
+			if (params.device == "wifi0") {
+				clearInterval(cnt_down_tid);
+				$("#check-connect-form").submit();
+			} else {
+				$("#connecting_div").hide();
+				$("#connected_div").show();
+			}
 		} else if (cnt_down == 0) {
-			clearInterval(cnt_down_tid);
-			$("#overview-form").submit();
+			if (params.device != "wifi0") {
+				clearInterval(cnt_down_tid);
+				$("#overview-form").submit();
+			}
 		}
 	}
 
 	$(function() {
 		$(".lang_div").hide();
 		populate_join_form();
-		setTimeout(request_connect, 1000);
+		if (params.device == "wifi0")
+			verify_connect();
+		else
+			setTimeout(request_connect, 1000);
 		cnt_down_tid = setInterval(count_down_request, 1000);
 		var rotation = function () {$("#spin").rotate({
 				angle:0,            // reset rotation angle to 0 where to start the rotation
@@ -112,6 +129,8 @@ You may obtain a copy of the License at
 </div>
 <div style="display: none;">
 	<form id="join-network-form" action="<%=luci.dispatcher.build_url('config/join')%>" method="post">
+	</form>
+	<form id="check-connect-form" action="<%=luci.dispatcher.build_url('config/check_connect_status')%>" method="post">
 	</form>
 	<form id="overview-form" action="<%=luci.dispatcher.build_url('config/overview')%>" method="get">
 	</form>
