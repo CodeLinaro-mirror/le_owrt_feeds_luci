@@ -51,7 +51,7 @@ start() {
 	config_get macaddr ${RADIO_24G} macaddr
 	uci_set wireless ${RADIO_24G} disabled 0
 	uci_set wireless ${RADIO_24G} channel 6
-	uci_set wireless ${APVAP_24G} ssid "Skifta-${macaddr:6:12}"
+	uci_set wireless ${APVAP_24G} ssid "Skifta ${macaddr:6:12}"
 	uci_commit wireless
 
 	uci_add_list dhcp @dnsmasq[0] address /#/172.19.42.1
