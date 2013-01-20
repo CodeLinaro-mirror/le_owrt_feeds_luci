@@ -85,6 +85,20 @@ function wifi_add_friend_name()
 		uci:set("rygel", "config", "friendly", friendly_name)
 		uci:save("rygel")
 		uci:commit("rygel")
+		uci:foreach("system","system",
+		function(s)
+		if s[".index"] == 0 then
+			cfgName = s[".name"]
+		end
+		return false
+		end
+		)
+		local no_spaces_name=string.gsub(friendly_name, " ", "_")
+		uci:set("system", cfgName, "hostname", no_spaces_name)
+		uci:set("system", cfgName, "friendly_name", friendly_name)
+		uci:save("system")
+		uci:commit("system")
+		os.execute("STATE=friendly_name /etc/statemgr >> /dev/null")
 	end
 	luci.template.render("config/select")
 end
