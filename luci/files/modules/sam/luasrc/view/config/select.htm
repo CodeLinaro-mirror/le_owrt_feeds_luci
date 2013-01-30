@@ -102,10 +102,12 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 			if (i == 0) {
 				default_ssid = net.ssid ? net.ssid : ("hidden(BSSID:" + net.bssid + ")");
 			}
-			ssid_select_handler.add({text: (net.ssid ? net.ssid : ("hidden(BSSID:" + net.bssid + ")")),
+			if (net.ssid) {
+				ssid_select_handler.add({text: net.ssid,
 					 title: guess_wifi_signal(net),
 					 value: i
 					});
+			}
 		}
 		ssid_select_handler.add({text: "<%:Other Network...%>", value: i});
 		ssid_select_handler.set("selectedIndex", 0);
