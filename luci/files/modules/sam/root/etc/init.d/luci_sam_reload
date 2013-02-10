@@ -26,6 +26,11 @@ find_2_4_apvap() {
 }
 
 start() {
+	config_load system
+	local state
+	state=$(uci_get system @system[0] state)
+	[ "${state}" = "config_complete" ] && return 0
+
 	config_load wireless
 
 	config_foreach find_2_4_radio wifi-device
@@ -39,12 +44,6 @@ start() {
 		echo "Error: No 2.4GHz AP VAP found"
 		return 1
 	}
-
-	# We use the SSID to check if the device is configured
-	# Default SSID is OpenWrt - so only set config if ssid=OpenWrt
-	local ssid
-	config_get ssid "${APVAP_24G}" ssid
-	[ "$ssid" = "OpenWrt" ] || return 0
 
 	# Ok, now we start setting the Skifta configuration parameters
 	local macaddr
@@ -62,6 +61,12 @@ start() {
 
         uci_set network lan ipaddr 172.19.42.1
         uci_commit network
+
+	# We don't want to see DLNA services until the config is complete so we
+	# disable them here. They will be enabled back during the configuration
+	# process
+	/etc/init.d/rygel disable
+	/etc/init.d/orb disable
 
 	STATE=config_oob /etc/statemgr
 }

@@ -25,6 +25,10 @@ You may obtain a copy of the License at
 		wpa_version = uci:get("skifta", "config", "wpa_version"),
 		key = uci:get("skifta", "config", "key")
 	}
+
+	function config_complete()
+		os.execute("STATE=config_complete /etc/statemgr >/dev/null 2>&1")
+	end
 -%>
 
 <%+header%>
@@ -75,6 +79,7 @@ You may obtain a copy of the License at
 		$(".lang_div").hide();
 		populate_join_form();
 		request_connect();
+		<%=config_complete()%>
 	});
 
 //]]></script>

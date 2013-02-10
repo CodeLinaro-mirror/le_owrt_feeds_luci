@@ -27,8 +27,6 @@ function index()
 	page.target  = firstchild()
 	page.title   = _("Skifta Audio Module Configurator")
 	page.order   = 10
-	--page.sysauth = "root"
-	--page.sysauth_authenticator = "htmlauth"
 
 	page.index = true
 	local has_wifi = false
@@ -68,10 +66,10 @@ function index()
 		page.leaf = true
 
         local uci = require "luci.model.uci".cursor()
-        
-        status=uci:get("rygel", "config", "status")
 
-        if status then
+        status=uci:get("system", "@system[0]", "state")
+
+        if status == "config_complete" then
 		    page = entry({"config", "index"}, template("config/overview"), _("Skifta Audio Module"), 10)
         else
 		    page = entry({"config", "index"}, template("config/index"), _("Skifta Audio Module"), 10)
@@ -91,9 +89,6 @@ function wifi_add_friend_name()
 	local friendly_name = luci.http.formvalue("friendly-name")
 	if friendly_name then
 		local uci = require "luci.model.uci".cursor()
-		uci:set("rygel", "config", "friendly", friendly_name)
-		uci:save("rygel")
-		uci:commit("rygel")
 		uci:foreach("system","system",
 		function(s)
 		if s[".index"] == 0 then
@@ -107,7 +102,7 @@ function wifi_add_friend_name()
 		uci:set("system", cfgName, "friendly_name", friendly_name)
 		uci:save("system")
 		uci:commit("system")
-		os.execute("STATE=friendly_name /etc/statemgr >> /dev/null")
+		os.execute("STATE=config_friendly_name /etc/statemgr >> /dev/null")
 	end
 	luci.template.render("config/select")
 end
@@ -174,24 +169,15 @@ function wifi_add_apply(f)
 	--dbg:write(string.format("wconf.network %s\n", wconf.network))
 	local wnet = wdev:add_wifinet(wconf)
 	if wnet then
-        -- successful to set all the required information
-        -- mark it to be configured
-        uci:set("rygel","config","status","configured"); 
-		-- Save & commit & apply
-        uci:save("rygel")
 		uci:save("wireless")
 		uci:save("network")
-        uci:commit("rygel")
 		uci:commit("wireless")
 		uci:commit("network")
 		local conflist = {"wireless", "network","rygel"}
 		uci:apply(conflist)
 		--dbg:write("wnet %s: save & commit & apply\n", wnet:name())
-		-- Redirect to overview page
 	end
 	--dbg:close()
-
-	--luci.http.redirect(luci.dispatcher.build_url("admin/network/wireless_overview"))
 end
 
 function wifi_join()
