@@ -19,28 +19,23 @@ if has_iwinfo then
 		function scanlist(times)
 			local i, k, v, m
 			local l = { }
-			local s = { }
-			-- table @r: mapping ssid to the index of entry in table @l
-			local r = { }
 
 			function is_scan_entry_duplicate(a, b)
-				return (a.ssid == b.ssid) and (a.mode == b.mode) and (a.encryption.wep == b.encryption.wep) and (a.encryption.wpa == b.encryption.wpa)
+				return (a.bssid == b.bssid)
 			end
 
 			for i = 1, times do
 				for k, v in ipairs(iw.scanlist) do
-					if not s[v.bssid] then
-						local duplicate = false
-						for _, m in ipairs(l) do
-							if is_scan_entry_duplicate(m, v) then
-								-- found duplicate entry, do not add it
-								duplicate = true
-								break
-							end
+					local duplicate = false
+					for _, m in ipairs(l) do
+						if is_scan_entry_duplicate(m, v) then
+							-- found duplicate entry, do not add it
+							duplicate = true
+							break
 						end
-						if not duplicate then
-							l[#l + 1] = v
-						end
+					end
+					if not duplicate then
+						l[#l + 1] = v
 					end
 				end
 			end
