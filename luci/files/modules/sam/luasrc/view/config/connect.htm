@@ -92,27 +92,23 @@ You may obtain a copy of the License at
 		else
 			setTimeout(request_connect, 1000);
 		cnt_down_tid = setInterval(count_down_request, 1000);
-		var rotation = function () {$("#spin").rotate({
-				angle:0,            // reset rotation angle to 0 where to start the rotation
-				// rotate 360 degrees (counter clockwise), in 3 secconds
-				animateTo:360,
-				duration: 2000,
-				// auto-call the function after rotation, to rotate again and again
-				callback: rotation,
-				// add easing to make animation look more natural
-				// t: current time, b: begInnIng value, c: change In value, d: duration
-				easing: function (x,t,b,c,d){
-				  return c*(t/d)+b;       // linear easing
-				}
+		var $element = $('#dandelion');
+		function fadeInOut () {
+			$element.fadeIn(1000, function () {
+				$element.fadeOut(1500, function () {
+					$element.fadeIn(1500, function () {
+						setTimeout(fadeInOut, 500);
+					});
+				});
 			});
 		}
-		rotation();
+		fadeInOut();
 	});
 
 //]]></script>
 
 <div id="connecting_div" class="sam_container g960" style="background: transparent;">
-	<img id="spin" src="<%=media%>/images/spinning2.png" style="display: block; margin: 10px auto;"/>
+	<img id="dandelion" src="<%=media%>/images/spinning2.png" style="display: block; margin: 10px auto;"/>
 	<div style="font-size: 22px; color: silver; width: 150px; margin: 30px auto;">Connecting...</div>
 </div>
 <div id="connected_div" class="sam_container g960" style="display: none;">
