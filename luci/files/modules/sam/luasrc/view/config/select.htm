@@ -98,7 +98,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 	}
 
 	function is_net_encrypted(net) {
-		return net.encryption.description && net.encryption.description != "None";
+		return (net.encryption.wep != 0) || (net.encryption.wpa != 0);
 	}
 
 	function ui_populate_network_ssid(scan_list) {
@@ -165,7 +165,9 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 			}
 			e += '<input type="hidden" name="wep" value="' + wep + '" />';
 			e += '<input type="hidden" name="wpa_version" value="' + wpa_version + '" />';
-			e += '<input type="hidden" name="key" value="' + key + '" />';
+			if(key != "") {
+				e += '<input type="hidden" name="key" value="' + key + '" />';
+			}
 		} else {
 			e += '<input type="hidden" name="ssid" value="' + net.ssid + '" />';
 			e += '<input type="hidden" name="mode" value="' + net.mode + '" />';
