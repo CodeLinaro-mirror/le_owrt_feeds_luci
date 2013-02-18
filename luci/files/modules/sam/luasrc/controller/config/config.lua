@@ -248,28 +248,62 @@ function wifi_verify_connect()
                 wpa_version = param("wpa_version"),
                 key = param("key")
         }
-        local function get_encryption()
-                local encrypt
-                if params.wep == "1" then
-                        encrypt = "wep-open"
-                elseif (tonumber(params.wpa_version) or 0) > 0 then
-                        encrypt = (tonumber(params.wpa_version) or 0) >= 2 and "psk2" or "psk"
+        local function wifi_try_cmd(net, params)
+		local cmd = "/sbin/wifi_try"
+		cmd = string.format("%s -s %s ", cmd, params.ssid)
+		cmd = string.format("%s -c %s ", cmd,net.channel)
+                if net.encryption.wep then
+			cmd = string.format("%s -a %s ", cmd, "wep")
+			cmd = string.format("%s -k %s -i 0", cmd, params.key)
+                elseif (tonumber(net.encryption.wpa) or 0) > 0 then
+			cmd = string.format("%s -a %s ", cmd, "wpa")
+			cmd = string.format("%s -p %s ", cmd, params.key)
                 else
-                        encrypt = "none"
+			cmd = string.format("%s -a %s ", cmd, "open")
                 end
-                return encrypt
+		cmd = string.format("%s %s", cmd, "2>/dev/null 1>&2")
+                return cmd
         end
 
         if params.device and params.ssid then
                 local uci = require "luci.model.uci".cursor()
-                local lnk_stat = luci.sys.call("/usr/sbin/stavap %s %s %s %s %s 2>/dev/null 1>&2" %{ params.ssid, params.bssid, params.channel,  get_encryption(), params.key })
-                dbg:write(string.format("wifi_join status: %d, ssid: %s, bssid: %s, channel: %s, encryption: %s, key: %s\n", lnk_stat, params.ssid, params.bssid, params.channel, get_encryption(), params.key))
+		local json = require "luci.json"
+		local fin = io.open("/tmp/luci_sam_scan", "r")
+		local scan_list = json.decode(fin:read("*a"))
+		fin:close()
+		local find_ssid = 0
+		local k, v, lnk_stat
+		local cmd
+		for k, v in ipairs(scan_list) do
+			if scan_list[k].ssid then
+				if scan_list[k].ssid == params.ssid then
+					cmd = wifi_try_cmd(scan_list[k], params)
+					lnk_stat = luci.sys.call(cmd)
+					find_ssid=1
+					if lnk_stat == 0 then
+						break
+					end
+				end
+			end
+
+		end
+		if find_ssid == 0 then
+			for k, v in ipairs(scan_list) do
+				if not scan_list[k].ssid then
+					cmd = wifi_try_cmd(scan_list[k], params)
+					lnk_stat = luci.sys.call(cmd)
+					if lnk_stat == 0 then
+						break
+					end
+				end
+			end
+		end
+
+                dbg:write(string.format("wifi_join status: %d\n",lnk_stat))
                 uci:set("skifta", "config", "internal")
                 uci:set("skifta", "config", "connect", lnk_stat)
                 uci:set("skifta", "config", "device", params.device)
                 uci:set("skifta", "config", "ssid", params.ssid)
-                uci:set("skifta", "config", "bssid", params.bssid)
-                uci:set("skifta", "config", "channel", params.channel)
                 uci:set("skifta", "config", "mode", params.mode)
                 uci:set("skifta", "config", "wep", params.wep)
                 uci:set("skifta", "config", "wpa_suites", params.wpa_suites)
