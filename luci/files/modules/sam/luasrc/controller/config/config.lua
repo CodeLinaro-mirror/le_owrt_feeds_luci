@@ -250,7 +250,7 @@ function wifi_verify_connect()
         }
         local function wifi_try_cmd(net, params)
 		local cmd = "/sbin/wifi_try"
-		cmd = string.format("%s -s %s ", cmd, params.ssid)
+		cmd = string.format("%s -s '%s' ", cmd, params.ssid)
 		cmd = string.format("%s -c %s ", cmd,net.channel)
                 if net.encryption.wep then
 			cmd = string.format("%s -a %s ", cmd, "wep")

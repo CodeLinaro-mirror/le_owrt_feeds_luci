@@ -87,6 +87,25 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 		return icon;
 	}
 
+	function escapehtml(str){
+		return str.replace(/[\<>"& ]/g, function(m) {
+			switch(m) {
+				case "<":
+				return "&#60;";
+				case ">":
+				return "&#62;";
+				case "&":
+				return "&#38;";
+				case "\"":
+				return "&#34;";
+				case "\ ":
+				return "&#160;";
+				case "\\":
+				return "\\";
+			}
+		})
+	}
+
 	function percent_wifi_signal(net) {
 		var qc = net.quality || 0;
 		var qm = net.quality_max || 0;
@@ -113,7 +132,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 				default_ssid = net.ssid ? net.ssid : ("hidden(BSSID:" + net.bssid + ")");
 			}
 			if (net.ssid && (!templist[net.ssid])) {
-				ssid_select_handler.add({text: net.ssid,
+				ssid_select_handler.add({text: escapehtml(net.ssid),
 					 title: guess_wifi_signal(net),
 					 value: i
 					});
@@ -132,7 +151,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 			var security_mode = $("#security_mode").val();
 			var encrypt_mode = $("#encrypt_mode").val();
 			var wep, wpa_version, key;
-			e += '<input type="hidden" name="ssid" value="' + $("#network_ssid_input").val() + '" />';
+			e += '<input type="hidden" name="ssid" value="' + escapehtml($("#network_ssid_input").val()) + '" />';
 			e += '<input type="hidden" name="mode" value="sta" />';
 			switch (parseInt(security_mode)) {
 				case 0:
@@ -169,7 +188,7 @@ $Id: wifi_join.htm 8329 2012-03-04 18:35:13Z jow $
 				e += '<input type="hidden" name="key" value="' + key + '" />';
 			}
 		} else {
-			e += '<input type="hidden" name="ssid" value="' + net.ssid + '" />';
+			e += '<input type="hidden" name="ssid" value="' + escapehtml(net.ssid) + '" />';
 			e += '<input type="hidden" name="mode" value="' + net.mode + '" />';
 			e += '<input type="hidden" name="bssid" value="' + net.bssid + '" />';
 			e += '<input type="hidden" name="channel" value="' + net.channel + '" />';
