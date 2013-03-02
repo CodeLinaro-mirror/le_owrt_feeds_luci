@@ -299,6 +299,10 @@ function wifi_verify_connect()
                 uci:commit("skifta")
         end
         dbg:close()
+	local rv = { }
+	rv[#rv+1] = 0
+	luci.http.prepare_content("application/json")
+	luci.http.write_json(rv)
 end
 
 function wifi_check_connect_status()

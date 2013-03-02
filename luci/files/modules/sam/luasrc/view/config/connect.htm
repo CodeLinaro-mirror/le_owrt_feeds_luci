@@ -81,6 +81,7 @@ You may obtain a copy of the License at
         function verify_connect() {
                 $.post("<%=luci.dispatcher.build_url('config/verify_connect')%>", $("#join-network-form").serialize(),
                        function(data) {
+				$("#check-connect-form").submit();
                        }
                 );
         }
@@ -108,9 +109,10 @@ You may obtain a copy of the License at
 		populate_join_form();
 		if (params.device == "wifi0")
 			verify_connect();
-		else
+		else {
 			setTimeout(request_connect, 1000);
-		cnt_down_tid = setInterval(count_down_request, 1000);
+			cnt_down_tid = setInterval(count_down_request, 1000);
+		}
 		var $element = $('#dandelion');
 		function fadeInOut () {
 			$element.fadeIn(1000, function () {
