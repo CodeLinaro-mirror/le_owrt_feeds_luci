@@ -47,6 +47,9 @@ function index()
 		page = entry({"config", "verify_connect"}, call("wifi_verify_connect"), nil)
 		page.leaf = true
 
+		page = entry({"config", "verify_connecting"}, call("wifi_verify_connecting"), nil)
+		page.leaf = true
+
 		page = entry({"config", "check_connect_status"}, call("wifi_check_connect_status"), nil)
 		page.leaf = true
 
@@ -254,12 +257,15 @@ function wifi_verify_connect()
         if params.device and params.ssid then
                 local uci = require "luci.model.uci".cursor()
 		local json = require "luci.json"
+		--set connect to 100 indicate starting verify connect
+                uci:set("skifta", "config", "connect", 100)
+                uci:save("skifta")
 		local fin = io.open("/tmp/luci_sam_scan", "r")
 		local scan_list = json.decode(fin:read("*a"))
 		fin:close()
 		local find_ssid = 0
-		local k, v, lnk_stat
-		local cmd
+		local lnk_stat = 1
+		local k, v, cmd
 		for k, v in ipairs(scan_list) do
 			if scan_list[k].ssid then
 				if scan_list[k].ssid == params.ssid then
@@ -305,6 +311,21 @@ function wifi_verify_connect()
 	luci.http.write_json(rv)
 end
 
+function wifi_verify_connecting()
+	local rv = { }
+        local uci = require "luci.model.uci".cursor()
+        uci:load("skifta")
+        local lnk_stat = uci:get("skifta", "config", "connect")
+	--new system bring up,skifta.config.connect not exist
+	if not lnk_stat or lnk_stat == '100' then
+		rv[#rv+1] = 1
+        else
+		rv[#rv+1] = 0
+        end
+		luci.http.prepare_content("application/json")
+		luci.http.write_json(rv)
+
+end
 function wifi_check_connect_status()
         local uci = require "luci.model.uci".cursor()
         uci:load("skifta")

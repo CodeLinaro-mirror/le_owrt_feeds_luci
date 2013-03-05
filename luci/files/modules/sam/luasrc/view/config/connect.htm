@@ -86,6 +86,15 @@ You may obtain a copy of the License at
                 );
         }
 
+	function verify_connecting() {
+                $.post("<%=luci.dispatcher.build_url('config/verify_connecting')%>", $("#verify-connecting-form").serialize(),
+                       function(data) {
+		       		if(data == 0)
+					$("#check-connect-form").submit();
+                       }
+                );
+        }
+
 	function count_down_request() {
 		if (--cnt_down == 15) {
 			//alert("Connecting timer count down!");
@@ -107,9 +116,10 @@ You may obtain a copy of the License at
 	$(function() {
 		$(".lang_div").hide();
 		populate_join_form();
-		if (params.device == "wifi0")
+		if (params.device == "wifi0") {
 			verify_connect();
-		else {
+			cnt_down_tid = setInterval(verify_connecting, 2000);
+		} else {
 			setTimeout(request_connect, 1000);
 			cnt_down_tid = setInterval(count_down_request, 1000);
 		}
@@ -148,6 +158,8 @@ You may obtain a copy of the License at
 	<form id="join-network-form" action="<%=luci.dispatcher.build_url('config/join')%>" method="post">
 	</form>
 	<form id="check-connect-form" action="<%=luci.dispatcher.build_url('config/check_connect_status')%>" method="post">
+	</form>
+	<form id="verify-connecting-form" action="<%=luci.dispatcher.build_url('config/verify_connecting')%>" method="post">
 	</form>
 	<form id="overview-form" action="<%=luci.dispatcher.build_url('config/overview')%>" method="get">
 	</form>
