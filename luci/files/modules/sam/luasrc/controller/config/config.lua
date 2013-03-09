@@ -127,6 +127,7 @@ function wifi_add_apply(f)
 	local wconf = {
 		device  = f.device,
 		ssid    = f.ssid,
+		wps_config    = "push_button virtual_push_button physical_push_button display virtual_display";
 		mode    = (f.mode == "Ad-Hoc" and "adhoc" or "sta")
 	}
 
