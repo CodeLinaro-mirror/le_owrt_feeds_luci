@@ -286,7 +286,6 @@ $(eval $(call module,admin-full,LuCI Administration - full-featured for full con
 $(eval $(call module,rpc,LuCI RPC - JSON-RPC API,+luci-lib-json))
 $(eval $(call module,freifunk,LuCI Freifunk module,+luci-mod-admin-full +luci-lib-json +PACKAGE_luci-mod-freifunk:freifunk-firewall +freifunk-common +community-profiles))
 $(eval $(call module,niu,NIU - Next Generation Interface,+luci-mod-admin-core @BROKEN))
-$(eval $(call module,sam,LuCI Skifta Audio Module Web Configurator,+luci-mod-admin-core +luci-lib-json +luci-lib-ipkg @PACKAGE_wpa-cli||PACKAGE_qca-wpa-cli @!PACKAGE_luci-mod-admin-full))
 
 ### Applications ###
 define application
@@ -522,7 +521,6 @@ $(eval $(call theme,freifunk-bno,Freifunk Berlin Nordost Theme,\
 
 $(eval $(call theme,freifunk-generic,Freifunk Generic Theme,\
 	Manuel Munz <freifunk-at-somakoma-dot-de>))
-$(eval $(call theme,sam,Skifta Audio Module Theme))
 
 ### Translations ###
 define translation
@@ -601,10 +599,6 @@ $(eval $(call collection,ssl,\
 $(eval $(call collection,light,\
 	Minimum package set using only admin mini and the standard theme,\
 	+uhttpd +luci-mod-admin-mini +luci-theme-openwrt @BROKEN))
-
-$(eval $(call collection,sam,\
-	LuCI package set for Skifta Audio Module,\
-	+uhttpd +luci-mod-sam +luci-theme-sam +libiwinfo-lua @(!PACKAGE_luci)))
 
 
 ### Compile ###
