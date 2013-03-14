@@ -618,7 +618,6 @@ ifeq ($(USELOCAL),1)
 endif
 
 define Build/Configure
-	$(CP) -r files/* $(PKG_BUILD_DIR)
 endef
 
 MAKE_FLAGS += \
