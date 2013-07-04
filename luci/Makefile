@@ -466,6 +466,9 @@ $(eval $(call application,transmission,LuCI Support for Transmission,\
 $(eval $(call application,watchcat,LuCI Support for Watchcat,\
 	+PACKAGE_luci-app-watchcat:watchcat))
 
+$(eval $(call application,openswan,LuCI Support for Openswan,\
+	+PACKAGE_luci-app-openswan:openswan))
+
 ### Server Gateway Interfaces ###
 define sgi
   define Package/luci-sgi-$(1)
