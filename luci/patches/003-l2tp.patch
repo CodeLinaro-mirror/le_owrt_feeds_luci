@@ -55,4 +55,4 @@
 +encap:value("ip",translate("IP"));
 +
 +pppd_options = section:taboption("advanced",DynamicList, "pppd_options", translate("Additonal command line arguments for PPP"))
-+
++pppd_options.cast = 'string'
