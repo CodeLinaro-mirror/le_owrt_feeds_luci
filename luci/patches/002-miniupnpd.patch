@@ -4,7 +4,7 @@
  Copyright 2008 Steven Barth <steven@midlink.org>
  Copyright 2008-2011 Jo-Philipp Wich <xm@subsignal.org>
  
-+Copyright (c) 2013 Qualcomm Atheros, Inc.
++Copyright (c) 2013 The Linux Foundation. All rights reserved.
 +Not a Contribution.
 +
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -43,7 +43,7 @@
 +++ b/applications/luci-upnp/root/etc/uci-defaults/luci-upnp
 @@ -1,9 +1,8 @@
  #!/bin/sh
-+# Copyright (c) 2013 Qualcomm Atheros, Inc.
++# Copyright (c) 2013 The Linux Foundation. All rights reserved.
 +# Not a Contribution.
  
 -/etc/init.d/miniupnpd enabled && {
