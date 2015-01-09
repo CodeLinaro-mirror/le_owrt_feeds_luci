@@ -39,18 +39,4 @@
  
  s:taboption("general", Value, "download", translate("Downlink"),
  	translate("Value in KByte/s, informational only")).rmempty = true
---- a/applications/luci-upnp/root/etc/uci-defaults/luci-upnp
-+++ b/applications/luci-upnp/root/etc/uci-defaults/luci-upnp
-@@ -1,9 +1,8 @@
- #!/bin/sh
-+# Copyright (c) 2013 The Linux Foundation. All rights reserved.
-+# Not a Contribution.
- 
--/etc/init.d/miniupnpd enabled && {
--	/etc/init.d/miniupnpd stop
--	/etc/init.d/miniupnpd disable
--}
-+/etc/init.d/miniupnpd enabled
- 
- rm -f /tmp/luci-indexcache
- exit 0
+
