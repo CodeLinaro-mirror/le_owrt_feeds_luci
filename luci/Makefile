@@ -14,14 +14,14 @@ PKG_BUILD_PARALLEL:=0
 ifeq ($(USELOCAL),1)
   PKG_VERSION:=0.11+svn
 else
-  PKG_SOURCE_URL:=http://svn.luci.subsignal.org/luci/$(PKG_BRANCH)
+  PKG_SOURCE_URL:=git://codeaurora.org/quic/qsdk/luci
   ifeq ($(DUMP),)
-    PKG_REV:=HEAD
+    PKG_REV:=1cdab340cd5ed15be8f25d9fe97accda9ac62ee2
     PKG_VERSION:=0.11.1
   endif
   PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
   PKG_SOURCE:=$(PKG_SOURCE_SUBDIR).tar.gz
-  PKG_SOURCE_PROTO:=svn
+  PKG_SOURCE_PROTO:=git
   PKG_SOURCE_VERSION:=$(PKG_REV)
 endif
 
