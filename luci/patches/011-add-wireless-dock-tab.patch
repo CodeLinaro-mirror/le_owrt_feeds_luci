@@ -1,0 +1,88 @@
+--- a/applications/luci-dock/Makefile
++++ b/applications/luci-dock/Makefile
+@@ -0,0 +1,4 @@
++PO = dock
++
++include ../../build/config.mk
++include ../../build/module.mk
+--- a/applications/luci-dock/luasrc/controller/dock.lua
++++ b/applications/luci-dock/luasrc/controller/dock.lua
+@@ -0,0 +1,14 @@
++module("luci.controller.dock", package.seeall)
++
++function index()
++    if not nixio.fs.access("/etc/config/dock") then
++	    return
++    end
++
++    local page
++
++    page = node("admin", "network", "dock")
++    page.target = cbi("dock")
++    page.title  = _("Wireless Dock")
++    page.order  = 25
++end
+--- a/applications/luci-dock/luasrc/model/cbi/dock.lua
++++ b/applications/luci-dock/luasrc/model/cbi/dock.lua
+@@ -0,0 +1,61 @@
++--[[
++LuCI - Lua Configuration Interface
++
++Copyright (c) 2015 Qualcomm Atheros, Inc.
++
++All Rights Reserved.
++
++Qualcomm Atheros Confidential and Proprietary.
++
++$Id$
++]]--
++
++local sys = require "luci.sys"
++require("luci.sys")
++
++m = Map("dock", translate("Wireless Dock"))
++
++s = m:section(TypedSection, "dock", translate("Dock Configuration"))
++s.anonymous = true
++s.addremove = false
++
++Dock_name = s:option(Value, "Dock_name",
++				translate("Dock Name"), translate("Maximum allowed characters are 64"))
++Dock_name.datatype="maxlength(64)"
++
++USB1 = s:option(ListValue, "USB1",
++				translate("USB1"),translate("Port 1"))
++USB1.override_values = true
++USB1:value("dock", translate("Dock"))
++USB1:value("nas", translate("NAS"))
++USB1:value("none", translate("None"))
++
++USB2 = s:option(ListValue, "USB2",
++				translate("USB2"),translate("Port 2"))
++USB2.override_values = true
++USB2:value("dock", translate("Dock"))
++USB2:value("nas", translate("NAS"))
++USB2:value("none", translate("None"))
++
++USB3 = s:option(ListValue, "USB3",
++				translate("USB3"),translate("Port 3"))
++USB3.override_values = true
++USB3:value("dock", translate("Dock"))
++USB3:value("nas", translate("NAS"))
++USB3:value("none", translate("None"))
++
++USB4 = s:option(ListValue, "USB4",
++				translate("USB4"),translate("Port 4"))
++USB4.override_values = true
++USB4:value("dock", translate("Dock"))
++USB4:value("nas", translate("NAS"))
++USB4:value("none", translate("None"))
++
++USB5 = s:option(ListValue, "USB5",
++				translate("USB5"),translate("Display Link"))
++USB5.override_values = true
++USB5:value("dock", translate("Dock"))
++USB5:value("none", translate("None"))
++
++luci.sys.call("(env -i /usr/sbin/dsm_notifier) > /dev/null")
++return m
