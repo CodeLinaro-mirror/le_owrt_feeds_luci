@@ -5,8 +5,8 @@ diff -uNr a/libs/core/luasrc/model/network.lua b/libs/core/luasrc/model/network.
  	return self:_get("type")
  end
  
-+function protocol.bonding_mode(self)
-+	return self:_get("bonding_mode")
++function protocol.mode(self)
++	return self:_get("mode")
 +end
 +
  function protocol.name(self)
@@ -120,7 +120,7 @@ diff -uNr a/modules/admin-full/luasrc/model/cbi/admin_network/ifaces.lua b/modul
  auto.default = (net:proto() == "none") and auto.disabled or auto.enabled
  
 +if not net:is_virtual() and net:is_bonding() then
-+	bondingmode = s:taboption("physical", ListValue, "bonding_mode",
++	bondingmode = s:taboption("physical", ListValue, "mode",
 +			translate("Select the Link Aggregation mode used for network interface bonding"))
 +	bondingmode:value("0", "Round-robin")
 +	bondingmode:value("1", "Active-backup")
@@ -129,7 +129,7 @@ diff -uNr a/modules/admin-full/luasrc/model/cbi/admin_network/ifaces.lua b/modul
 +	bondingmode:value("4", "IEEE 802.3 and Dynamic link aggregation")
 +	bondingmode:value("5", "Adaptive transmit load balancing")
 +	bondingmode:value("6", "Adaptive load balancing")
-+	p.default = net:bonding_mode()
++	p.default = net:mode()
 +end
  
 -if not net:is_virtual() then
