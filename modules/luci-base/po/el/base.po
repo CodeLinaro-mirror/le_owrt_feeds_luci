@@ -119,10 +119,10 @@ msgstr "<abbr title=\"μέγιστο\">Μεγ.</abbr> πλήθος ταυτόχ�
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr ""
 
-msgid "ADSL"
+msgid "xDSL"
 msgstr ""
 
-msgid "ADSL Status"
+msgid "xDSL Status"
 msgstr ""
 
 msgid "AICCU (SIXXS)"
@@ -418,6 +418,11 @@ msgstr ""
 msgid "Buffered"
 msgstr ""
 
+msgid ""
+"Build/distribution specific feed definitions. This file will NOT be "
+"preserved in any sysupgrade."
+msgstr ""
+
 msgid "Buttons"
 msgstr "Κουμπιά"
 
@@ -576,6 +581,14 @@ msgid "Custom delegated IPv6-prefix"
 msgstr ""
 
 msgid ""
+"Custom feed definitions, e.g. private feeds. This file can be preserved in a "
+"sysupgrade."
+msgstr ""
+
+msgid "Custom feeds"
+msgstr ""
+
+msgid ""
 "Customizes the behaviour of the device <abbr title=\"Light Emitting Diode"
 "\">LED</abbr>s if possible."
 msgstr ""
@@ -632,6 +645,9 @@ msgstr "Προεπιλογή %d"
 
 msgid "Default gateway"
 msgstr "Προεπιλεγμένη πύλη"
+
+msgid "Default is stateless + stateful"
+msgstr ""
 
 msgid "Default route"
 msgstr ""
@@ -713,6 +729,9 @@ msgstr "Βελτιστοποίηση Απόστασης"
 
 msgid "Distance to farthest network member in meters."
 msgstr "Απόσταση σε μέτρα από το πιο απομακρυσμένο μέλος του δικτύου."
+
+msgid "Distribution feeds"
+msgstr ""
 
 msgid "Diversity"
 msgstr "Διαφορική Λήψη"
@@ -1015,6 +1034,9 @@ msgstr "Γενικές Ρυθμίσεις"
 msgid "General Setup"
 msgstr ""
 
+msgid "General options for opkg"
+msgstr ""
+
 msgid "Generate archive"
 msgstr ""
 
@@ -1223,8 +1245,8 @@ msgstr ""
 "προσπελαστεί με τους υψηλούς ρυθμούς μεταφοράς δεδομένων που διαθέτει η "
 "<abbr title=\"Random Access Memory\">RAM</abbr>."
 
-msgid "Ignore Hosts files"
-msgstr ""
+msgid "Ignore <code>/etc/hosts</code>"
+msgstr "Αγνόησε <code>/etc/hosts</code>"
 
 msgid "Ignore interface"
 msgstr "Αγνόησε διεπαφή"
@@ -1474,7 +1496,7 @@ msgstr ""
 msgid "Localise queries"
 msgstr "Τοπικά ερωτήματα"
 
-msgid "Locked to channel %d used by: %s"
+msgid "Locked to channel %s used by: %s"
 msgstr ""
 
 msgid "Log output level"
@@ -1539,6 +1561,11 @@ msgstr ""
 
 msgid "Maximum hold time"
 msgstr "Μέγιστος χρόνος κράτησης"
+
+msgid ""
+"Maximum length of the name is 15 characters including the automatic protocol/"
+"bridge prefix (br-, 6in4-, pppoe- etc.)"
+msgstr ""
 
 msgid "Maximum number of leased addresses."
 msgstr "Μέγιστος αριθμός διευθύνσεων lease"
@@ -1730,6 +1757,9 @@ msgstr ""
 
 msgid "Note: Configuration files will be erased."
 msgstr "Σημείωση: Τα αρχεία παραμετροποίησης θα διαγραφούν."
+
+msgid "Note: interface name length"
+msgstr ""
 
 msgid "Notice"
 msgstr "Επισήμανση"
@@ -2308,6 +2338,9 @@ msgstr "Σήμα:"
 
 msgid "Size"
 msgstr "Μέγεθος"
+
+msgid "Size (.ipk)"
+msgstr ""
 
 msgid "Skip"
 msgstr "Παράκαμψη"
@@ -3842,9 +3875,6 @@ msgstr "« Πίσω"
 
 #~ msgid "Here you can configure installed wifi devices."
 #~ msgstr "Εδώ μπορείτε να ρυθμίσετε τις εγκατεστημένες ασύρματες συσκευές."
-
-#~ msgid "Ignore <code>/etc/hosts</code>"
-#~ msgstr "Αγνόησε <code>/etc/hosts</code>"
 
 #~ msgid "Independent (Ad-Hoc)"
 #~ msgstr "Ανεξάρτητο (Ad-Hoc)"

@@ -122,10 +122,10 @@ msgstr "<abbr title=\"maximal\">Max.</abbr> Richiesta in uso"
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr "<abbr title='Accoppiata: %s / Gruppo: %s'>%s - %s</abbr>"
 
-msgid "ADSL"
+msgid "xDSL"
 msgstr ""
 
-msgid "ADSL Status"
+msgid "xDSL Status"
 msgstr ""
 
 msgid "AICCU (SIXXS)"
@@ -419,6 +419,11 @@ msgstr "Dispositivo Wireless Broadcom BCM%04x 802.11"
 msgid "Buffered"
 msgstr "Buffered"
 
+msgid ""
+"Build/distribution specific feed definitions. This file will NOT be "
+"preserved in any sysupgrade."
+msgstr ""
+
 msgid "Buttons"
 msgstr "Pulsanti"
 
@@ -577,6 +582,14 @@ msgid "Custom delegated IPv6-prefix"
 msgstr ""
 
 msgid ""
+"Custom feed definitions, e.g. private feeds. This file can be preserved in a "
+"sysupgrade."
+msgstr ""
+
+msgid "Custom feeds"
+msgstr ""
+
+msgid ""
 "Customizes the behaviour of the device <abbr title=\"Light Emitting Diode"
 "\">LED</abbr>s if possible."
 msgstr ""
@@ -633,6 +646,9 @@ msgstr "Predefinito %d"
 
 msgid "Default gateway"
 msgstr "Gateway predefinito"
+
+msgid "Default is stateless + stateful"
+msgstr ""
 
 msgid "Default route"
 msgstr ""
@@ -715,6 +731,9 @@ msgstr "Ottimizzazione distanza"
 
 msgid "Distance to farthest network member in meters."
 msgstr "Distanza del membro più lontano della rete in metri."
+
+msgid "Distribution feeds"
+msgstr ""
 
 msgid "Diversity"
 msgstr "Diversità"
@@ -1011,6 +1030,9 @@ msgstr "Opzioni Generali"
 msgid "General Setup"
 msgstr "Impostazioni Generali"
 
+msgid "General options for opkg"
+msgstr ""
+
 msgid "Generate archive"
 msgstr "Genera Archivio"
 
@@ -1224,8 +1246,8 @@ msgstr ""
 "dispositivo di swap non può essere acceduto alle alte velocità della <abbr "
 "title=\"Random Access Memory\">RAM</abbr>."
 
-msgid "Ignore Hosts files"
-msgstr "Ignora i files Hosts"
+msgid "Ignore <code>/etc/hosts</code>"
+msgstr "Ignora <code>/etc/hosts</code>"
 
 msgid "Ignore interface"
 msgstr "Ignora interfaccia"
@@ -1483,7 +1505,7 @@ msgstr ""
 msgid "Localise queries"
 msgstr "Localizza richieste"
 
-msgid "Locked to channel %d used by: %s"
+msgid "Locked to channel %s used by: %s"
 msgstr ""
 
 msgid "Log output level"
@@ -1547,6 +1569,11 @@ msgstr ""
 
 msgid "Maximum hold time"
 msgstr "Velocità massima"
+
+msgid ""
+"Maximum length of the name is 15 characters including the automatic protocol/"
+"bridge prefix (br-, 6in4-, pppoe- etc.)"
+msgstr ""
 
 msgid "Maximum number of leased addresses."
 msgstr ""
@@ -1736,6 +1763,9 @@ msgid "Not connected"
 msgstr ""
 
 msgid "Note: Configuration files will be erased."
+msgstr ""
+
+msgid "Note: interface name length"
 msgstr ""
 
 msgid "Notice"
@@ -2314,6 +2344,9 @@ msgstr ""
 
 msgid "Size"
 msgstr "Dimensione"
+
+msgid "Size (.ipk)"
+msgstr ""
 
 msgid "Skip"
 msgstr "Salta"
@@ -3208,6 +3241,9 @@ msgstr "Sì"
 msgid "« Back"
 msgstr "« Indietro"
 
+#~ msgid "Ignore Hosts files"
+#~ msgstr "Ignora i files Hosts"
+
 #~ msgid ""
 #~ "Always use 40MHz channels even if the secondary channel overlaps. Using "
 #~ "this option does not comply with IEEE 802.11n-2009!"
@@ -3934,9 +3970,6 @@ msgstr "« Indietro"
 
 #~ msgid "Here you can configure installed wifi devices."
 #~ msgstr "Qui puoi configurare i tuoi dispositivi wireless installati."
-
-#~ msgid "Ignore <code>/etc/hosts</code>"
-#~ msgstr "Ignora <code>/etc/hosts</code>"
 
 #~ msgid "Independent (Ad-Hoc)"
 #~ msgstr "Independente (Ad-Hoc)"

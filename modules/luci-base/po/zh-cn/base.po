@@ -114,11 +114,11 @@ msgstr "<abbr title=\"maximal\">最大</abbr>并发查询数"
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 
-msgid "ADSL"
-msgstr "ADSL"
+msgid "xDSL"
+msgstr "xDSL"
 
-msgid "ADSL Status"
-msgstr "ADSL状态"
+msgid "xDSL Status"
+msgstr "xDSL状态"
 
 msgid "AICCU (SIXXS)"
 msgstr ""
@@ -401,6 +401,11 @@ msgstr "Broadcom BCM%04x 802.11 无线网卡"
 msgid "Buffered"
 msgstr "已缓冲"
 
+msgid ""
+"Build/distribution specific feed definitions. This file will NOT be "
+"preserved in any sysupgrade."
+msgstr ""
+
 msgid "Buttons"
 msgstr "按键"
 
@@ -409,9 +414,6 @@ msgstr "CA证书.如果留空的话证书将在第一次连接时被保存."
 
 msgid "CPU"
 msgstr "CPU"
-
-msgid "CPU frequency"
-msgstr "CPU 频率"
 
 msgid "CPU usage (%)"
 msgstr "CPU使用率(%)"
@@ -442,9 +444,6 @@ msgstr "检查"
 
 msgid "Checksum"
 msgstr "校验值"
-
-msgid "Chip Model"
-msgstr "芯片型号"
 
 msgid ""
 "Choose the firewall zone you want to assign to this interface. Select "
@@ -554,6 +553,14 @@ msgid "Custom delegated IPv6-prefix"
 msgstr "自定义分配的IPv6前缀"
 
 msgid ""
+"Custom feed definitions, e.g. private feeds. This file can be preserved in a "
+"sysupgrade."
+msgstr ""
+
+msgid "Custom feeds"
+msgstr ""
+
+msgid ""
 "Customizes the behaviour of the device <abbr title=\"Light Emitting Diode"
 "\">LED</abbr>s if possible."
 msgstr "自定义<abbr title=\"Light Emitting Diode\">LED</abbr>的活动状态。"
@@ -608,6 +615,9 @@ msgstr "默认%d"
 
 msgid "Default gateway"
 msgstr "默认网关"
+
+msgid "Default is stateless + stateful"
+msgstr ""
 
 msgid "Default route"
 msgstr "默认路由"
@@ -688,6 +698,9 @@ msgstr "距离优化"
 
 msgid "Distance to farthest network member in meters."
 msgstr "最远客户端的距离(米)。"
+
+msgid "Distribution feeds"
+msgstr ""
 
 msgid "Diversity"
 msgstr "分集"
@@ -973,6 +986,9 @@ msgstr "基本设置"
 msgid "General Setup"
 msgstr "基本设置"
 
+msgid "General options for opkg"
+msgstr ""
+
 msgid "Generate archive"
 msgstr "生成备份"
 
@@ -1168,8 +1184,8 @@ msgid ""
 "of the <abbr title=\"Random Access Memory\">RAM</abbr>."
 msgstr "如果物理内存不足，闲置数据可自动移到交换区暂存，以提高可用内存。"
 
-msgid "Ignore Hosts files"
-msgstr "忽略HOSTS文件"
+msgid "Ignore <code>/etc/hosts</code>"
+msgstr "忽略 <code>/etc/hosts</code>"
 
 msgid "Ignore interface"
 msgstr "关闭DHCP"
@@ -1418,8 +1434,8 @@ msgstr "如果有多个IP可用，则根据请求来源的子网来本地化主�
 msgid "Localise queries"
 msgstr "本地化查询"
 
-msgid "Locked to channel %d used by: %s"
-msgstr "信道道已被锁定为 %d,因为该信道被 %s 使用"
+msgid "Locked to channel %s used by: %s"
+msgstr "信道道已被锁定为 %s,因为该信道被 %s 使用"
 
 msgid "Log output level"
 msgstr "日志记录等级"
@@ -1482,6 +1498,11 @@ msgstr "调制解调器就绪的最大等待时间(秒)"
 
 msgid "Maximum hold time"
 msgstr "最大持续时间"
+
+msgid ""
+"Maximum length of the name is 15 characters including the automatic protocol/"
+"bridge prefix (br-, 6in4-, pppoe- etc.)"
+msgstr ""
 
 msgid "Maximum number of leased addresses."
 msgstr "最大地址分配数量。"
@@ -1670,6 +1691,9 @@ msgstr "未连接"
 
 msgid "Note: Configuration files will be erased."
 msgstr "注意：配置文件将被删除。"
+
+msgid "Note: interface name length"
+msgstr ""
 
 msgid "Notice"
 msgstr "注意"
@@ -2247,6 +2271,9 @@ msgstr "信号:"
 
 msgid "Size"
 msgstr "大小"
+
+msgid "Size (.ipk)"
+msgstr ""
 
 msgid "Skip"
 msgstr "跳过"
@@ -3116,6 +3143,15 @@ msgstr "是"
 msgid "« Back"
 msgstr "« 后退"
 
+#~ msgid "CPU frequency"
+#~ msgstr "CPU 频率"
+
+#~ msgid "Chip Model"
+#~ msgstr "芯片型号"
+
+#~ msgid "Ignore Hosts files"
+#~ msgstr "忽略HOSTS文件"
+
 #~ msgid ""
 #~ "Always use 40MHz channels even if the secondary channel overlaps. Using "
 #~ "this option does not comply with IEEE 802.11n-2009!"
@@ -3897,9 +3933,6 @@ msgstr "« 后退"
 #~ msgstr ""
 #~ "如果连接在已有网络，那么它会被<em>桥接</em>到现有接口，并且被所选的防火墙"
 #~ "区域覆盖。取消附加选项可以重定义此接口为新的独立网络。"
-
-#~ msgid "Ignore <code>/etc/hosts</code>"
-#~ msgstr "忽略 <code>/etc/hosts</code>"
 
 #~ msgid "Independent (Ad-Hoc)"
 #~ msgstr "独立(点对点Ad-Hoc)"

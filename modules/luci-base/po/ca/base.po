@@ -119,10 +119,10 @@ msgstr "Consultes concurrents <abbr title=\"màximes\">max.</abbr>"
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr "<abbr title='Parella: %s / Grup: %s'>%s - %s</abbr>"
 
-msgid "ADSL"
+msgid "xDSL"
 msgstr ""
 
-msgid "ADSL Status"
+msgid "xDSL Status"
 msgstr ""
 
 msgid "AICCU (SIXXS)"
@@ -410,6 +410,11 @@ msgstr "Controlador sense fil Broadcom BCM%04x 802.11"
 msgid "Buffered"
 msgstr "En memòria intermèdia"
 
+msgid ""
+"Build/distribution specific feed definitions. This file will NOT be "
+"preserved in any sysupgrade."
+msgstr ""
+
 msgid "Buttons"
 msgstr "Botons"
 
@@ -563,6 +568,14 @@ msgid "Custom delegated IPv6-prefix"
 msgstr ""
 
 msgid ""
+"Custom feed definitions, e.g. private feeds. This file can be preserved in a "
+"sysupgrade."
+msgstr ""
+
+msgid "Custom feeds"
+msgstr ""
+
+msgid ""
 "Customizes the behaviour of the device <abbr title=\"Light Emitting Diode"
 "\">LED</abbr>s if possible."
 msgstr ""
@@ -619,6 +632,9 @@ msgstr "%d per defecte"
 
 msgid "Default gateway"
 msgstr "Passarel·la per defecte"
+
+msgid "Default is stateless + stateful"
+msgstr ""
 
 msgid "Default route"
 msgstr ""
@@ -698,6 +714,9 @@ msgstr "Optimització de distància"
 
 msgid "Distance to farthest network member in meters."
 msgstr "Distància al membre de la xarxa més allunyat en metres."
+
+msgid "Distribution feeds"
+msgstr ""
 
 msgid "Diversity"
 msgstr "Diversitat"
@@ -989,6 +1008,9 @@ msgstr "Ajusts generals"
 msgid "General Setup"
 msgstr ""
 
+msgid "General options for opkg"
+msgstr ""
+
 msgid "Generate archive"
 msgstr ""
 
@@ -1195,8 +1217,8 @@ msgstr ""
 "es pot accedir al dispositiu d'intercanvi amb unes taxes tan altes com les "
 "de la <abbr title=\"Random Access Memory\">RAM</abbr>."
 
-msgid "Ignore Hosts files"
-msgstr ""
+msgid "Ignore <code>/etc/hosts</code>"
+msgstr "Ignora <code>/etc/hosts</code>"
 
 msgid "Ignore interface"
 msgstr "Ignora la interfície"
@@ -1446,7 +1468,7 @@ msgstr ""
 msgid "Localise queries"
 msgstr "Localitza les peticions"
 
-msgid "Locked to channel %d used by: %s"
+msgid "Locked to channel %s used by: %s"
 msgstr ""
 
 msgid "Log output level"
@@ -1509,6 +1531,11 @@ msgid "Maximum amount of seconds to wait for the modem to become ready"
 msgstr ""
 
 msgid "Maximum hold time"
+msgstr ""
+
+msgid ""
+"Maximum length of the name is 15 characters including the automatic protocol/"
+"bridge prefix (br-, 6in4-, pppoe- etc.)"
 msgstr ""
 
 msgid "Maximum number of leased addresses."
@@ -1700,6 +1727,9 @@ msgstr "No connectat"
 
 msgid "Note: Configuration files will be erased."
 msgstr "Nota: Els fitxers de configuració s'esborraran."
+
+msgid "Note: interface name length"
+msgstr ""
 
 msgid "Notice"
 msgstr "Avís"
@@ -2276,6 +2306,9 @@ msgstr "Senyal:"
 
 msgid "Size"
 msgstr "Mida"
+
+msgid "Size (.ipk)"
+msgstr ""
 
 msgid "Skip"
 msgstr "Salta"
@@ -3795,9 +3828,6 @@ msgstr "« Enrere"
 
 #~ msgid "Here you can configure installed wifi devices."
 #~ msgstr "Ací pots configurar els dispositius sense fils instal·lats."
-
-#~ msgid "Ignore <code>/etc/hosts</code>"
-#~ msgstr "Ignora <code>/etc/hosts</code>"
 
 #~ msgid "Independent (Ad-Hoc)"
 #~ msgstr "Independent (Ad-Hoc)"

@@ -116,10 +116,10 @@ msgstr "Nejvyšší počet souběžných dotazů"
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 
-msgid "ADSL"
+msgid "xDSL"
 msgstr ""
 
-msgid "ADSL Status"
+msgid "xDSL Status"
 msgstr ""
 
 msgid "AICCU (SIXXS)"
@@ -409,6 +409,11 @@ msgstr "Broadcom modul BCM%04x 802.11 bezdrátový ovladač"
 msgid "Buffered"
 msgstr "Bufferováno"
 
+msgid ""
+"Build/distribution specific feed definitions. This file will NOT be "
+"preserved in any sysupgrade."
+msgstr ""
+
 msgid "Buttons"
 msgstr "Tlačítka"
 
@@ -567,6 +572,14 @@ msgid "Custom delegated IPv6-prefix"
 msgstr ""
 
 msgid ""
+"Custom feed definitions, e.g. private feeds. This file can be preserved in a "
+"sysupgrade."
+msgstr ""
+
+msgid "Custom feeds"
+msgstr ""
+
+msgid ""
 "Customizes the behaviour of the device <abbr title=\"Light Emitting Diode"
 "\">LED</abbr>s if possible."
 msgstr ""
@@ -623,6 +636,9 @@ msgstr "Výchozí %d"
 
 msgid "Default gateway"
 msgstr "Výchozí brána"
+
+msgid "Default is stateless + stateful"
+msgstr ""
 
 msgid "Default route"
 msgstr ""
@@ -704,6 +720,9 @@ msgstr "Optimalizace na vzdálenost"
 
 msgid "Distance to farthest network member in meters."
 msgstr "Vzdálenost nejodlehlejšího člena sítě v metrech."
+
+msgid "Distribution feeds"
+msgstr ""
 
 msgid "Diversity"
 msgstr "Diverzita"
@@ -1001,6 +1020,9 @@ msgstr "Obecná nastavení"
 msgid "General Setup"
 msgstr "Obecné nastavení"
 
+msgid "General options for opkg"
+msgstr ""
+
 msgid "Generate archive"
 msgstr "Vytvorǐt archív"
 
@@ -1206,8 +1228,8 @@ msgstr ""
 "přístup na odkládací zařízení je řádově pomalejší, než přístup do paměti "
 "<abbr title=\"Random Access Memory\">RAM</abbr>."
 
-msgid "Ignore Hosts files"
-msgstr "Ignorovat soubory Hosts"
+msgid "Ignore <code>/etc/hosts</code>"
+msgstr ""
 
 msgid "Ignore interface"
 msgstr "Ignorovat rozhraní"
@@ -1468,7 +1490,7 @@ msgstr ""
 msgid "Localise queries"
 msgstr "Lokalizační dotazy"
 
-msgid "Locked to channel %d used by: %s"
+msgid "Locked to channel %s used by: %s"
 msgstr ""
 
 msgid "Log output level"
@@ -1532,6 +1554,11 @@ msgstr "Nejvyšší počet sekund čekání, než bude modem připraven"
 
 msgid "Maximum hold time"
 msgstr "Maximální doba držení"
+
+msgid ""
+"Maximum length of the name is 15 characters including the automatic protocol/"
+"bridge prefix (br-, 6in4-, pppoe- etc.)"
+msgstr ""
 
 msgid "Maximum number of leased addresses."
 msgstr "Maximální počet zapůjčených adres."
@@ -1722,6 +1749,9 @@ msgstr "Nepřipojeno"
 
 msgid "Note: Configuration files will be erased."
 msgstr "Pozn: Konfigurační soubory budou vymazány."
+
+msgid "Note: interface name length"
+msgstr ""
 
 msgid "Notice"
 msgstr "Oznámení"
@@ -2316,6 +2346,9 @@ msgstr "Signál:"
 
 msgid "Size"
 msgstr "Velikost"
+
+msgid "Size (.ipk)"
+msgstr ""
 
 msgid "Skip"
 msgstr "Přeskočit"
@@ -3218,6 +3251,9 @@ msgstr "ano"
 
 msgid "« Back"
 msgstr "« Zpět"
+
+#~ msgid "Ignore Hosts files"
+#~ msgstr "Ignorovat soubory Hosts"
 
 #~ msgid ""
 #~ "Always use 40MHz channels even if the secondary channel overlaps. Using "

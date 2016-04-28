@@ -114,10 +114,10 @@ msgstr "<abbr title=\"maximal\">最大</abbr>並發查詢數"
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 
-msgid "ADSL"
+msgid "xDSL"
 msgstr ""
 
-msgid "ADSL Status"
+msgid "xDSL Status"
 msgstr ""
 
 msgid "AICCU (SIXXS)"
@@ -399,6 +399,11 @@ msgstr "Broadcom BCM%04x 802.11 無線控制器"
 msgid "Buffered"
 msgstr "已緩衝"
 
+msgid ""
+"Build/distribution specific feed definitions. This file will NOT be "
+"preserved in any sysupgrade."
+msgstr ""
+
 msgid "Buttons"
 msgstr "按鈕"
 
@@ -552,6 +557,14 @@ msgid "Custom delegated IPv6-prefix"
 msgstr ""
 
 msgid ""
+"Custom feed definitions, e.g. private feeds. This file can be preserved in a "
+"sysupgrade."
+msgstr ""
+
+msgid "Custom feeds"
+msgstr ""
+
+msgid ""
 "Customizes the behaviour of the device <abbr title=\"Light Emitting Diode"
 "\">LED</abbr>s if possible."
 msgstr ""
@@ -608,6 +621,9 @@ msgstr "預設 %d"
 
 msgid "Default gateway"
 msgstr "預設匝道器"
+
+msgid "Default is stateless + stateful"
+msgstr ""
 
 msgid "Default route"
 msgstr ""
@@ -688,6 +704,9 @@ msgstr "最佳化距離"
 
 msgid "Distance to farthest network member in meters."
 msgstr "到最遠的網路距離以米表示."
+
+msgid "Distribution feeds"
+msgstr ""
 
 msgid "Diversity"
 msgstr "差異"
@@ -978,6 +997,9 @@ msgstr "一般設定"
 msgid "General Setup"
 msgstr "一般設置"
 
+msgid "General options for opkg"
+msgstr ""
+
 msgid "Generate archive"
 msgstr "製作壓縮檔"
 
@@ -1177,8 +1199,8 @@ msgstr ""
 "緩慢的過程,作為交換裝置不能用高數據速率訪問該<abbr title=\"Random Access "
 "Memory\">RAM</縮寫>"
 
-msgid "Ignore Hosts files"
-msgstr "被忽視的主機檔案"
+msgid "Ignore <code>/etc/hosts</code>"
+msgstr ""
 
 msgid "Ignore interface"
 msgstr "被忽視的介面"
@@ -1427,7 +1449,7 @@ msgstr "若有多個IP可用, 本地化主機名稱端看請求的子網路而�
 msgid "Localise queries"
 msgstr "本地化網路請求"
 
-msgid "Locked to channel %d used by: %s"
+msgid "Locked to channel %s used by: %s"
 msgstr ""
 
 msgid "Log output level"
@@ -1491,6 +1513,11 @@ msgstr "等待數據機待命的最大秒數"
 
 msgid "Maximum hold time"
 msgstr "可持有最長時間"
+
+msgid ""
+"Maximum length of the name is 15 characters including the automatic protocol/"
+"bridge prefix (br-, 6in4-, pppoe- etc.)"
+msgstr ""
 
 msgid "Maximum number of leased addresses."
 msgstr "釋放出的位址群最大數量"
@@ -1679,6 +1706,9 @@ msgstr "尚未連線"
 
 msgid "Note: Configuration files will be erased."
 msgstr "注意:設定檔將被刪除."
+
+msgid "Note: interface name length"
+msgstr ""
 
 msgid "Notice"
 msgstr "通知"
@@ -2260,6 +2290,9 @@ msgstr "信號:"
 
 msgid "Size"
 msgstr "大小"
+
+msgid "Size (.ipk)"
+msgstr ""
 
 msgid "Skip"
 msgstr "跳過"
@@ -3137,6 +3170,9 @@ msgstr "是的"
 
 msgid "« Back"
 msgstr "« 倒退"
+
+#~ msgid "Ignore Hosts files"
+#~ msgstr "被忽視的主機檔案"
 
 #~ msgid ""
 #~ "Always use 40MHz channels even if the secondary channel overlaps. Using "

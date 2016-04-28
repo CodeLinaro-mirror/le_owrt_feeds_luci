@@ -130,10 +130,10 @@ msgstr "<abbr title=\"Максимум\">Max.</abbr> одночасних зап
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr "<abbr title='Парний: %s / Груповий: %s'>%s - %s</abbr>"
 
-msgid "ADSL"
+msgid "xDSL"
 msgstr ""
 
-msgid "ADSL Status"
+msgid "xDSL Status"
 msgstr ""
 
 msgid "AICCU (SIXXS)"
@@ -427,6 +427,11 @@ msgstr "Бездротовий 802.11 контролер Broadcom BCM%04x"
 msgid "Buffered"
 msgstr "Буферизовано"
 
+msgid ""
+"Build/distribution specific feed definitions. This file will NOT be "
+"preserved in any sysupgrade."
+msgstr ""
+
 msgid "Buttons"
 msgstr "Кнопки"
 
@@ -585,6 +590,14 @@ msgid "Custom delegated IPv6-prefix"
 msgstr ""
 
 msgid ""
+"Custom feed definitions, e.g. private feeds. This file can be preserved in a "
+"sysupgrade."
+msgstr ""
+
+msgid "Custom feeds"
+msgstr ""
+
+msgid ""
 "Customizes the behaviour of the device <abbr title=\"Light Emitting Diode"
 "\">LED</abbr>s if possible."
 msgstr ""
@@ -641,6 +654,9 @@ msgstr "Типово %d"
 
 msgid "Default gateway"
 msgstr "Типовий шлюз"
+
+msgid "Default is stateless + stateful"
+msgstr ""
 
 msgid "Default route"
 msgstr ""
@@ -723,6 +739,9 @@ msgstr "Оптимізація за відстанню"
 
 msgid "Distance to farthest network member in meters."
 msgstr "Відстань до найвіддаленішого вузла мережі в метрах."
+
+msgid "Distribution feeds"
+msgstr ""
 
 msgid "Diversity"
 msgstr "Різновидність"
@@ -1023,6 +1042,9 @@ msgstr "Загальні настройки"
 msgid "General Setup"
 msgstr "Загальні настройки"
 
+msgid "General options for opkg"
+msgstr ""
+
 msgid "Generate archive"
 msgstr "Cтворити архів"
 
@@ -1234,8 +1256,8 @@ msgstr ""
 "своп-пристрої не можуть бути доступні з такою високою швидкістю, як <abbr "
 "title=\"Random Access Memory\">RAM</abbr>."
 
-msgid "Ignore Hosts files"
-msgstr "Ігнорувати файли hosts"
+msgid "Ignore <code>/etc/hosts</code>"
+msgstr ""
 
 msgid "Ignore interface"
 msgstr "Ігнорувати интерфейс"
@@ -1497,7 +1519,7 @@ msgstr ""
 msgid "Localise queries"
 msgstr "Локалізувати запити"
 
-msgid "Locked to channel %d used by: %s"
+msgid "Locked to channel %s used by: %s"
 msgstr ""
 
 msgid "Log output level"
@@ -1561,6 +1583,11 @@ msgstr "Максимальний час очікування готовност�
 
 msgid "Maximum hold time"
 msgstr "Максимальний час утримування"
+
+msgid ""
+"Maximum length of the name is 15 characters including the automatic protocol/"
+"bridge prefix (br-, 6in4-, pppoe- etc.)"
+msgstr ""
 
 msgid "Maximum number of leased addresses."
 msgstr "Максимальна кількість орендованих адрес."
@@ -1751,6 +1778,9 @@ msgstr "Не підключено"
 
 msgid "Note: Configuration files will be erased."
 msgstr "Примітка: конфігураційні файли будуть видалені."
+
+msgid "Note: interface name length"
+msgstr ""
 
 msgid "Notice"
 msgstr "Попередження"
@@ -2350,6 +2380,9 @@ msgstr "Сигнал:"
 
 msgid "Size"
 msgstr "Розмір"
+
+msgid "Size (.ipk)"
+msgstr ""
 
 msgid "Skip"
 msgstr "Пропустити"
@@ -3271,6 +3304,9 @@ msgstr "так"
 
 msgid "« Back"
 msgstr "« Назад"
+
+#~ msgid "Ignore Hosts files"
+#~ msgstr "Ігнорувати файли hosts"
 
 #~ msgid ""
 #~ "Always use 40MHz channels even if the secondary channel overlaps. Using "
