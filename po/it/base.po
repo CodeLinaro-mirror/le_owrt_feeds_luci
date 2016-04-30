@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-10 03:40+0200\n"
-"PO-Revision-Date: 2013-02-10 19:40+0200\n"
-"Last-Translator: Francesco <3gasas@gmail.com>\n"
+"PO-Revision-Date: 2013-04-23 22:38+0200\n"
+"Last-Translator: muxator <a.mux@inwind.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -40,12 +40,6 @@ msgstr "Carico in 1 minuto:"
 msgid "15 Minute Load:"
 msgstr "Carico in 15 minut:"
 
-msgid "40MHz 2nd channel above"
-msgstr "secondo canale superiore a 40MHz"
-
-msgid "40MHz 2nd channel below"
-msgstr "secondo canale inferiore a 40MHz"
-
 msgid "5 Minute Load:"
 msgstr "Carico in 5 minuti:"
 
@@ -67,7 +61,8 @@ msgstr ""
 "interrogati nell'ordine del resolv file"
 
 msgid "<abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
-msgstr "<abbr title=\"Impostazione Identificatore Servizio Esteso\">ESSID</abbr>"
+msgstr ""
+"<abbr title=\"Impostazione Identificatore Servizio Esteso\">ESSID</abbr>"
 
 msgid "<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Address"
 msgstr "Indirizzo <abbr title=\"Protocollo Internet Versione 4\">IPv4</abbr>"
@@ -89,6 +84,9 @@ msgstr ""
 msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Gateway"
 msgstr "Gateway <abbr title=\"Protocollo Internet Versione 6\">IPv6</abbr>"
 
+msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Suffix (hex)"
+msgstr ""
+
 msgid "<abbr title=\"Light Emitting Diode\">LED</abbr> Configuration"
 msgstr "Configurazione <abbr title=\"Diodo ad Emissione di Luce\">LED</abbr>"
 
@@ -109,15 +107,20 @@ msgid ""
 "<abbr title=\"maximal\">Max.</abbr> <abbr title=\"Extension Mechanisms for "
 "Domain Name System\">EDNS0</abbr> packet size"
 msgstr ""
-"<abbr title=\"maximal\">Max.</abbr> dimensione pacchetti <abbr "
-"title=\"Estensione Meccanismi per il Sistema dei Nomi dei "
-"Domini\">EDNS0</abbr>"
+"<abbr title=\"maximal\">Max.</abbr> dimensione pacchetti <abbr title="
+"\"Estensione Meccanismi per il Sistema dei Nomi dei Domini\">EDNS0</abbr>"
 
 msgid "<abbr title=\"maximal\">Max.</abbr> concurrent queries"
 msgstr "<abbr title=\"maximal\">Max.</abbr> Richiesta in uso"
 
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr "<abbr title='Accoppiata: %s / Gruppo: %s'>%s - %s</abbr>"
+
+msgid "ADSL"
+msgstr ""
+
+msgid "ADSL Status"
+msgstr ""
 
 msgid "APN"
 msgstr "APN"
@@ -148,9 +151,6 @@ msgstr ""
 
 msgid "ATM device number"
 msgstr "Numero dispositivo ATM "
-
-msgid "Accept router advertisements"
-msgstr "Accetta gli annunci di router"
 
 msgid "Access Concentrator"
 msgstr "Accesso Concentratore"
@@ -193,7 +193,8 @@ msgid "Add"
 msgstr "Aggiungi"
 
 msgid "Add local domain suffix to names served from hosts files"
-msgstr "Aggiungere il suffisso di dominio locale ai nomi serviti dal file hosts"
+msgstr ""
+"Aggiungere il suffisso di dominio locale ai nomi serviti dal file hosts"
 
 msgid "Add new interface..."
 msgstr "Aggiungi nuova interfaccia..."
@@ -212,12 +213,6 @@ msgstr "Amministrazione"
 
 msgid "Advanced Settings"
 msgstr "Opzioni Avanzate"
-
-msgid "Advertise IPv6 on network"
-msgstr "Annuncia IPv6 sulla rete"
-
-msgid "Advertised network ID"
-msgstr "ID di Rete Annunciato"
 
 msgid "Alert"
 msgstr "Avviso"
@@ -252,8 +247,8 @@ msgstr ""
 "Permetti le risposte upstream nell'intervallo 127.0.0.0/8, per esempio nei "
 "servizi RBL"
 
-msgid "Allowed range is 1 to 65535"
-msgstr "Intervallo permesso 1-65535"
+msgid "Always announce default router"
+msgstr ""
 
 msgid ""
 "Always use 40MHz channels even if the secondary channel overlaps. Using this "
@@ -265,6 +260,15 @@ msgstr ""
 
 msgid "An additional network will be created if you leave this unchecked."
 msgstr "Sarà creata una rete aggiuntiva se lasci questo senza spunta."
+
+msgid "Announce as default router even if no public prefix is available."
+msgstr ""
+
+msgid "Announced DNS domains"
+msgstr ""
+
+msgid "Announced DNS servers"
+msgstr ""
 
 msgid "Antenna 1"
 msgstr "Antenna 1"
@@ -284,8 +288,16 @@ msgstr "Applica"
 msgid "Applying changes"
 msgstr "Applica modifiche"
 
+msgid ""
+"Assign a part of given length of every public IPv6-prefix to this interface"
+msgstr ""
+
 msgid "Assign interfaces..."
 msgstr "Assegna Interfacce..."
+
+msgid ""
+"Assign prefix parts using this hexadecimal subprefix ID for this interface."
+msgstr ""
 
 msgid "Associated Stations"
 msgstr "Dispositivi Wi-Fi connessi"
@@ -304,6 +316,12 @@ msgstr "Autorizzazione richiesta"
 
 msgid "Auto Refresh"
 msgstr "Aggironamento Automatico"
+
+msgid "Automatic"
+msgstr ""
+
+msgid "Automatic Homenet (HNCP)"
+msgstr ""
 
 msgid "Available"
 msgstr "Disponibili"
@@ -346,6 +364,9 @@ msgstr "Elenco dei file di cui effettuare una copia di sicurezza"
 
 msgid "Bad address specified!"
 msgstr "E' stato specificato un indirizzo errato!"
+
+msgid "Band"
+msgstr ""
 
 msgid ""
 "Below is the determined list of files to backup. It consists of changed "
@@ -398,6 +419,9 @@ msgstr "Nella cache"
 msgid "Cancel"
 msgstr "Annulla"
 
+msgid "Category"
+msgstr ""
+
 msgid "Chain"
 msgstr "Catena"
 
@@ -445,8 +469,8 @@ msgid ""
 "configuration files. To reset the firmware to its initial state, click "
 "\"Perform reset\" (only possible with squashfs images)."
 msgstr ""
-"Premi su \"Genera archivio\" per scaricare un archivio tar di backup dei file "
-"di configurazione attuali. Per ripristinare il firmware al suo stato "
+"Premi su \"Genera archivio\" per scaricare un archivio tar di backup dei "
+"file di configurazione attuali. Per ripristinare il firmware al suo stato "
 "iniziale premi \"Esegui RIpristino\" (solo per firmware basati su squashfs)."
 
 msgid "Client"
@@ -535,12 +559,15 @@ msgstr "Livello di log del Cron"
 msgid "Custom Interface"
 msgstr "Interfaccia personalizzata"
 
+msgid "Custom delegated IPv6-prefix"
+msgstr ""
+
 msgid ""
 "Customizes the behaviour of the device <abbr title=\"Light Emitting Diode"
 "\">LED</abbr>s if possible."
 msgstr ""
-"Personalizza la configurazione dei <abbr title=\"Light Emitting "
-"Diode\">LED</abbr> del sistema se possibile."
+"Personalizza la configurazione dei <abbr title=\"Light Emitting Diode\">LED</"
+"abbr> del sistema se possibile."
 
 msgid "DHCP Leases"
 msgstr "Contratta DHCP"
@@ -560,11 +587,26 @@ msgstr "Opzioni DHCP"
 msgid "DHCPv6 Leases"
 msgstr "Locazioni DHCPv6"
 
+msgid "DHCPv6 client"
+msgstr ""
+
+msgid "DHCPv6-Mode"
+msgstr ""
+
+msgid "DHCPv6-Service"
+msgstr ""
+
 msgid "DNS"
 msgstr "DNS"
 
 msgid "DNS forwardings"
 msgstr "Inoltri DNS"
+
+msgid "DNS-Label / FQDN"
+msgstr ""
+
+msgid "DS-Lite AFTR address"
+msgstr ""
 
 msgid "DUID"
 msgstr "DUID"
@@ -630,8 +672,8 @@ msgid ""
 "Disable <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr> for "
 "this interface."
 msgstr ""
-"Disabilita <abbr title=\"Protocollo di Configurazione Host "
-"Dinamico\">DHCP</abbr> per questa interfaccia."
+"Disabilita <abbr title=\"Protocollo di Configurazione Host Dinamico\">DHCP</"
+"abbr> per questa interfaccia."
 
 msgid "Disable DNS setup"
 msgstr "Disabilita il setup dei DNS"
@@ -663,10 +705,9 @@ msgid ""
 "Forwarder for <abbr title=\"Network Address Translation\">NAT</abbr> "
 "firewalls"
 msgstr ""
-"Dnsmasq è un server <abbr title=\"Dynamic Host Configuration "
-"Protocol\">DHCP</abbr> e inoltratore <abbr title=\"Domain Name "
-"System\">DNS</abbr> per firewall <abbr title=\"Network Address "
-"Translation\">NAT</abbr>"
+"Dnsmasq è un server <abbr title=\"Dynamic Host Configuration Protocol"
+"\">DHCP</abbr> e inoltratore <abbr title=\"Domain Name System\">DNS</abbr> "
+"per firewall <abbr title=\"Network Address Translation\">NAT</abbr>"
 
 msgid "Do not cache negative replies, e.g. for not existing domains"
 msgstr "Non memorizzare le repliche negative, es. per domini non esistenti"
@@ -710,6 +751,9 @@ msgid ""
 msgstr ""
 "Dropbear offre accesso <abbr title=\"Secure Shell\">SSH</abbr> e integra un "
 "server <abbr title=\"Secure Copy\">SCP</abbr>"
+
+msgid "Dual-Stack Lite (RFC6333)"
+msgstr ""
 
 msgid "Dynamic <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr>"
 msgstr ""
@@ -806,11 +850,15 @@ msgstr "Espandi gli hosts"
 msgid "Expires"
 msgstr "Scadenze"
 
+#, fuzzy
 msgid ""
-"Expiry time of leased addresses, minimum is 2 Minutes (<code>2m</code>)."
+"Expiry time of leased addresses, minimum is 2 minutes (<code>2m</code>)."
 msgstr ""
 "Tempo di scadenza di indirizzi localizzati, il minimo è di 2 minuti (<code> "
-"2m </ code>)."
+"2m </code>)."
+
+msgid "External"
+msgstr ""
 
 msgid "External system log server"
 msgstr "Server Log di Sistema esterno"
@@ -952,23 +1000,26 @@ msgstr ""
 "La conferma della password assegnata non ha prodotto risultati, la password "
 "non è stata cambiata!"
 
+msgid "Global network options"
+msgstr ""
+
 msgid "Go to password configuration..."
 msgstr "Vai alla configurazione della password..."
 
 msgid "Go to relevant configuration page"
 msgstr "Vai alla pagina di configurazione relativa"
 
+msgid "Guest"
+msgstr ""
+
 msgid "HE.net password"
 msgstr "Password HE.net"
 
-msgid "HE.net user ID"
-msgstr "ID Utente HE.net"
+msgid "HE.net username"
+msgstr ""
 
-msgid "HT capabilities"
-msgstr "capacità HT"
-
-msgid "HT mode"
-msgstr "Modalità HT"
+msgid "HT mode (802.11n)"
+msgstr ""
 
 msgid "Handler"
 msgstr "Gestore"
@@ -1033,6 +1084,9 @@ msgstr "Indirizzi IPv4"
 msgid "IPv4 and IPv6"
 msgstr "IPv4 e IPv6"
 
+msgid "IPv4 assignment length"
+msgstr ""
+
 msgid "IPv4 broadcast"
 msgstr "trasmissione IPv4"
 
@@ -1057,11 +1111,23 @@ msgstr "IPv6"
 msgid "IPv6 Firewall"
 msgstr "IPv6 Firewall"
 
+msgid "IPv6 Settings"
+msgstr ""
+
+msgid "IPv6 ULA-Prefix"
+msgstr ""
+
 msgid "IPv6 WAN Status"
 msgstr "Stato WAN IPv6"
 
 msgid "IPv6 address"
 msgstr "Indirizzi IPv6"
+
+msgid "IPv6 assignment hint"
+msgstr ""
+
+msgid "IPv6 assignment length"
+msgstr ""
 
 msgid "IPv6 gateway"
 msgstr "Gateway IPv6"
@@ -1074,6 +1140,9 @@ msgstr "Prefisso IPv6"
 
 msgid "IPv6 prefix length"
 msgstr "Lunghezza prefisso IPv6"
+
+msgid "IPv6 routed prefix"
+msgstr ""
 
 msgid "IPv6-Address"
 msgstr "Indirizzo-IPv6"
@@ -1157,6 +1226,9 @@ msgstr "Scripts di avvio"
 msgid "Install"
 msgstr "Installa"
 
+msgid "Install iputils-traceroute6 for IPv6 traceroute"
+msgstr ""
+
 msgid "Install package %q"
 msgstr "Installa il pacchetto %q"
 
@@ -1208,9 +1280,10 @@ msgstr "ID VLAN non valido! Solo gli ID unici sono consentiti"
 msgid "Invalid username and/or password! Please try again."
 msgstr "Username o password non validi! Per favore riprova."
 
+#, fuzzy
 msgid ""
-"It appears that you try to flash an image that does not fit into the flash "
-"memory, please verify the image file!"
+"It appears that you are trying to flash an image that does not fit into the "
+"flash memory, please verify the image file!"
 msgstr ""
 "Sembra tu stia provando a flashare un'immagine più grande delle dimensioni "
 "della memoria flash, per favore controlla il file!"
@@ -1293,6 +1366,15 @@ msgstr "Legenda:"
 msgid "Limit"
 msgstr "Limite"
 
+msgid "Line Attenuation"
+msgstr ""
+
+msgid "Line Speed"
+msgstr ""
+
+msgid "Line State"
+msgstr ""
+
 msgid "Link On"
 msgstr "Collegamento on"
 
@@ -1300,8 +1382,8 @@ msgid ""
 "List of <abbr title=\"Domain Name System\">DNS</abbr> servers to forward "
 "requests to"
 msgstr ""
-"Elenco di Server <abbr title=\"Sistema Nome Dimio\">DNS</abbr>a cui inoltrare "
-"le richieste in"
+"Elenco di Server <abbr title=\"Sistema Nome Dimio\">DNS</abbr>a cui "
+"inoltrare le richieste in"
 
 msgid "List of domains to allow RFC1918 responses for"
 msgstr "Elenco di domini da consentire le risposte RFC1918 per"
@@ -1339,9 +1421,10 @@ msgstr "Ora locale"
 msgid "Local domain"
 msgstr "Dominio Locale"
 
+#, fuzzy
 msgid ""
-"Local domain specification. Names matching this domain are never forwared "
-"and resolved from DHCP or hosts files only"
+"Local domain specification. Names matching this domain are never forwarded "
+"and are resolved from DHCP or hosts files only"
 msgstr ""
 "Specifiche dominio locale. I nomi di dominio corrispondenti a questi criteri "
 "non sono mai inoltrate e risolti solo da DHCP o file hosts"
@@ -1450,6 +1533,9 @@ msgstr ""
 msgid "Mode"
 msgstr "Modalità"
 
+msgid "Model"
+msgstr ""
+
 msgid "Modem device"
 msgstr "Dispositivo modem"
 
@@ -1504,6 +1590,9 @@ msgstr ""
 
 msgid "NAS ID"
 msgstr "ID della NAS"
+
+msgid "NDP-Proxy"
+msgstr ""
 
 msgid "NTP server candidates"
 msgstr ""
@@ -1573,6 +1662,9 @@ msgstr ""
 
 msgid "Noise"
 msgstr "Rumore"
+
+msgid "Noise Margin"
+msgstr ""
 
 msgid "Noise:"
 msgstr ""
@@ -1832,6 +1924,9 @@ msgstr ""
 msgid "Pseudo Ad-Hoc (ahdemo)"
 msgstr "Pseudo Ad-Hoc (ahdemo)"
 
+msgid "Public prefix routed to this device for distribution to clients."
+msgstr ""
+
 msgid "Quality"
 msgstr ""
 
@@ -1885,14 +1980,17 @@ msgstr ""
 msgid "Really reset all changes?"
 msgstr ""
 
+#, fuzzy
+msgid ""
+"Really shut down network?\\nYou might lose access to this device if you are "
+"connected via this interface."
+msgstr ""
+"Vuoi davvero spegnere questa interfaccia \"%s\" ?\\nPotresti perdere "
+"l'accesso a questo router se stai usando questa interfaccia."
+
 msgid ""
 "Really shutdown interface \"%s\" ?\\nYou might lose access to this device if "
 "you are connected via this interface."
-msgstr ""
-
-msgid ""
-"Really shutdown network ?\\nYou might lose access to this device if you are "
-"connected via this interface."
 msgstr ""
 
 msgid "Really switch protocol?"
@@ -1970,6 +2068,12 @@ msgstr "Sostituisci campo"
 msgid "Replace wireless configuration"
 msgstr ""
 
+msgid "Request IPv6-address"
+msgstr ""
+
+msgid "Request IPv6-prefix of length"
+msgstr ""
+
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr ""
 
@@ -2009,11 +2113,8 @@ msgstr ""
 msgid "Root directory for files served via TFTP"
 msgstr ""
 
-msgid "Router Model"
-msgstr "Modello Router"
-
-msgid "Router Name"
-msgstr "Nome Router"
+msgid "Router Advertisement-Service"
+msgstr ""
 
 msgid "Router Password"
 msgstr ""
@@ -2075,9 +2176,6 @@ msgid ""
 "conjunction with failure threshold"
 msgstr ""
 
-msgid "Send router solicitations"
-msgstr ""
-
 msgid "Separate Clients"
 msgstr "Isola utenti"
 
@@ -2096,10 +2194,10 @@ msgstr ""
 msgid "Services"
 msgstr "Servizi"
 
-msgid "Setup DHCP Server"
+msgid "Set up Time Synchronization"
 msgstr ""
 
-msgid "Setup Time Synchronization"
+msgid "Setup DHCP Server"
 msgstr ""
 
 msgid "Show current backup file list"
@@ -2144,8 +2242,9 @@ msgstr "Siamo spiacenti, l'oggetto che hai richiesto non è stato trovato."
 msgid "Sorry, the server encountered an unexpected error."
 msgstr "Spiacente, il server ha rilevato un errore imprevisto."
 
+#, fuzzy
 msgid ""
-"Sorry, there is no sysupgrade support present, a new firmware image must be "
+"Sorry, there is no sysupgrade support present; a new firmware image must be "
 "flashed manually. Please refer to the OpenWrt wiki for device specific "
 "install instructions."
 msgstr ""
@@ -2159,16 +2258,6 @@ msgstr "Elenca"
 
 msgid "Source"
 msgstr "Origine"
-
-msgid "Specifies the advertised preferred prefix lifetime in seconds"
-msgstr ""
-"Specifica la durata dell'annuncio con prefisso preferito della durata in "
-"secondi"
-
-msgid "Specifies the advertised valid prefix lifetime in seconds"
-msgstr ""
-"Specifica la validità dell'annuncio con prefisso preferito della durata in "
-"secondi"
 
 msgid "Specifies the button state to handle"
 msgstr "Specifica lo stato del pulsante da gestire"
@@ -2245,6 +2334,9 @@ msgstr "Ordine severo"
 msgid "Submit"
 msgstr "Invia"
 
+msgid "Swap"
+msgstr ""
+
 msgid "Swap Entry"
 msgstr "Scambia ingresso"
 
@@ -2302,12 +2394,13 @@ msgstr "Destinazione"
 msgid "Terminate"
 msgstr "Termina"
 
+#, fuzzy
 msgid ""
 "The <em>Device Configuration</em> section covers physical settings of the "
-"radio hardware such as channel, transmit power or antenna selection which is "
-"shared among all defined wireless networks (if the radio hardware is multi-"
-"SSID capable). Per network settings like encryption or operation mode are "
-"grouped in the <em>Interface Configuration</em>."
+"radio hardware such as channel, transmit power or antenna selection which "
+"are shared among all defined wireless networks (if the radio hardware is "
+"multi-SSID capable). Per network settings like encryption or operation mode "
+"are grouped in the <em>Interface Configuration</em>."
 msgstr ""
 "La sezione <em>Configurazione del Dispositivo</em> illustra le impostazioni "
 "fisiche del hardware radio come canale, la potenza di trasmissione o la "
@@ -2324,10 +2417,15 @@ msgstr ""
 "installare questo componente per il lavoro di configurazione wireless!"
 
 msgid ""
+"The HE.net endpoint update configuration changed, you must now use the plain "
+"username instead of the user ID!"
+msgstr ""
+
+msgid ""
 "The IPv6 prefix assigned to the provider, usually ends with <code>::</code>"
 msgstr ""
-"Il prefisso IPv6 assegnati dal provider, si conclude di solito con "
-"<code>::</code>"
+"Il prefisso IPv6 assegnati dal provider, si conclude di solito con <code>::</"
+"code>"
 
 msgid ""
 "The allowed characters are: <code>A-Z</code>, <code>a-z</code>, <code>0-9</"
@@ -2368,8 +2466,8 @@ msgid "The given network name is not unique"
 msgstr ""
 
 msgid ""
-"The hardware is not multi-SSID capable and existing configuration will be "
-"replaced if you proceed."
+"The hardware is not multi-SSID capable and the existing configuration will "
+"be replaced if you proceed."
 msgstr ""
 
 msgid ""
@@ -2397,9 +2495,10 @@ msgid ""
 "when finished."
 msgstr ""
 
+#, fuzzy
 msgid ""
 "The system is flashing now.<br /> DO NOT POWER OFF THE DEVICE!<br /> Wait a "
-"few minutes until you try to reconnect. It might be necessary to renew the "
+"few minutes before you try to reconnect. It might be necessary to renew the "
 "address of your computer to reach the device again, depending on your "
 "settings."
 msgstr ""
@@ -2446,7 +2545,9 @@ msgid ""
 "configurations are automatically preserved."
 msgstr ""
 
-msgid "This is the 32 byte hex encoded user ID, not the login name"
+msgid ""
+"This is either the \"Update Key\" configured for the tunnel or the account "
+"password if no update key has been configured"
 msgstr ""
 
 msgid ""
@@ -2465,6 +2566,13 @@ msgid ""
 msgstr ""
 "Questo è l&#39;unico server <abbr title=\"Dynamic Host Configuration Protocol"
 "\">DHCP</abbr> nella tua rete locale"
+
+msgid "This is the plain username for logging into the account"
+msgstr ""
+
+msgid ""
+"This is the prefix routed to you by the tunnel broker for use by clients"
+msgstr ""
 
 msgid "This is the system crontab in which scheduled tasks can be defined."
 msgstr ""
@@ -2539,6 +2647,9 @@ msgid "Tunnel ID"
 msgstr ""
 
 msgid "Tunnel Interface"
+msgstr ""
+
+msgid "Tunnel Link"
 msgstr ""
 
 msgid "Turbo Mode"
@@ -2629,6 +2740,9 @@ msgstr "Utilizzare come filesystem di root"
 msgid "Use broadcast flag"
 msgstr "Usa flag broadcast"
 
+msgid "Use builtin IPv6-management"
+msgstr ""
+
 msgid "Use custom DNS servers"
 msgstr "Usa server DNS personalizzati"
 
@@ -2637,9 +2751,6 @@ msgstr "Usa il gateway predefinito"
 
 msgid "Use gateway metric"
 msgstr "Usa la metrica del gateway"
-
-msgid "Use preferred lifetime"
-msgstr "Utilizzare durata preferita"
 
 msgid "Use routing table"
 msgstr "Utilizzare tabella di instradamento"
@@ -2650,13 +2761,10 @@ msgid ""
 "address to use and the <em>Hostname</em> is assigned as symbolic name to the "
 "requesting host."
 msgstr ""
-"Utilizzare il pulsante <em>Aggiungi</ em> per aggiungere una nuova voce di "
-"locazione. L'<em>Indirizzo-MAC</ em> identifica l'host, l'<em>Indirizzo-"
-"IPv4</ em> specifica l'indirizzo fisso da utilizzare e il <em> Nome Host</ "
-"em> è assegnato come nome simbolico alla richiesta dell'host."
-
-msgid "Use valid lifetime"
-msgstr "Utilizzare durata valida"
+"Utilizzare il pulsante <em>Aggiungi</em> per aggiungere una nuova voce di "
+"locazione. L'<em>Indirizzo-MAC</em> identifica l'host, l'<em>Indirizzo-"
+"IPv4</em> specifica l'indirizzo fisso da utilizzare e il <em> Nome Host</em>"
+" è assegnato come nome simbolico alla richiesta dell'host."
 
 msgid "Used"
 msgstr "Usato"
@@ -2794,6 +2902,10 @@ msgstr "qualsiasi"
 msgid "auto"
 msgstr "auto"
 
+#, fuzzy
+msgid "automatic"
+msgstr "statico"
+
 msgid "baseT"
 msgstr "baseT"
 
@@ -2814,6 +2926,9 @@ msgstr "dBm"
 
 msgid "disable"
 msgstr "disabilita"
+
+msgid "disabled"
+msgstr ""
 
 msgid "expired"
 msgstr "scaduto"
@@ -2839,6 +2954,9 @@ msgstr "aiuto"
 
 msgid "hidden"
 msgstr "nascosto"
+
+msgid "hybrid mode"
+msgstr ""
 
 msgid "if target is a network"
 msgstr "se la destinazione è una rete"
@@ -2876,8 +2994,23 @@ msgstr "acceso"
 msgid "open"
 msgstr "apri"
 
+msgid "relay mode"
+msgstr ""
+
 msgid "routed"
 msgstr "instradato"
+
+msgid "server mode"
+msgstr ""
+
+msgid "stateful-only"
+msgstr ""
+
+msgid "stateless"
+msgstr ""
+
+msgid "stateless + stateful"
+msgstr ""
 
 msgid "tagged"
 msgstr "etichettato"
@@ -2902,6 +3035,55 @@ msgstr "Sì"
 
 msgid "« Back"
 msgstr "« Indietro"
+
+#~ msgid "HE.net user ID"
+#~ msgstr "ID Utente HE.net"
+
+#~ msgid "40MHz 2nd channel above"
+#~ msgstr "secondo canale superiore a 40MHz"
+
+#~ msgid "40MHz 2nd channel below"
+#~ msgstr "secondo canale inferiore a 40MHz"
+
+#~ msgid "Accept router advertisements"
+#~ msgstr "Accetta gli annunci di router"
+
+#~ msgid "Advertise IPv6 on network"
+#~ msgstr "Annuncia IPv6 sulla rete"
+
+#~ msgid "Advertised network ID"
+#~ msgstr "ID di Rete Annunciato"
+
+#~ msgid "Allowed range is 1 to 65535"
+#~ msgstr "Intervallo permesso 1-65535"
+
+#~ msgid "HT capabilities"
+#~ msgstr "capacità HT"
+
+#~ msgid "HT mode"
+#~ msgstr "Modalità HT"
+
+#~ msgid "Router Model"
+#~ msgstr "Modello Router"
+
+#~ msgid "Router Name"
+#~ msgstr "Nome Router"
+
+#~ msgid "Specifies the advertised preferred prefix lifetime in seconds"
+#~ msgstr ""
+#~ "Specifica la durata dell'annuncio con prefisso preferito della durata in "
+#~ "secondi"
+
+#~ msgid "Specifies the advertised valid prefix lifetime in seconds"
+#~ msgstr ""
+#~ "Specifica la validità dell'annuncio con prefisso preferito della durata "
+#~ "in secondi"
+
+#~ msgid "Use preferred lifetime"
+#~ msgstr "Utilizzare durata preferita"
+
+#~ msgid "Use valid lifetime"
+#~ msgstr "Utilizzare durata valida"
 
 #~ msgid "Active Leases"
 #~ msgstr "Lease attivi"
@@ -2991,13 +3173,6 @@ msgstr "« Indietro"
 #~ msgstr ""
 #~ "Vuoi davvero cancellare questa rete wireless? Non potrai tornare indietro!"
 #~ "\\nPotresti perdere l'accesso a questo router se stai usando questa rete."
-
-#~ msgid ""
-#~ "Really shutdown interface \"%s\" ?\\nYou might lose access to this router "
-#~ "if you are connected via this interface."
-#~ msgstr ""
-#~ "Vuoi davvero spegnere questa interfaccia \"%s\" ?\\nPotresti perdere "
-#~ "l'accesso a questo router se stai usando questa interfaccia."
 
 #~ msgid ""
 #~ "The network ports on your router can be combined to several <abbr title="
@@ -3662,10 +3837,6 @@ msgstr "« Indietro"
 
 #~ msgid "adds domain names to hostentries in the resolv file"
 #~ msgstr "aggiungi nomi di dominio nel file resolv"
-
-#, fuzzy
-#~ msgid "automatic"
-#~ msgstr "statico"
 
 #~ msgid "automatically reconnect"
 #~ msgstr "riconnetti automaticamente"

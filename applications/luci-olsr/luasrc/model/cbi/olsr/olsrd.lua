@@ -58,7 +58,6 @@ s:tab("advanced", translate("Advanced Settings"))
 ipv = s:taboption("general", ListValue, "IpVersion", translate("Internet protocol"),
 	translate("IP-version to use. If 6and4 is selected then one olsrd instance is started for each protocol."))
 ipv:value("4", "IPv4")
-ipv:value("6", "IPv6")
 ipv:value("6and4", "6and4")
 
 

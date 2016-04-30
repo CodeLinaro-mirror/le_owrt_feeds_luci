@@ -5,13 +5,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-10 03:40+0200\n"
-"PO-Revision-Date: 2009-05-27 02:12+0200\n"
-"Last-Translator: Eduard Duran <iopahopa@gmail.com>\n"
+"PO-Revision-Date: 2014-07-18 00:04+0200\n"
+"Last-Translator: Alex <alexhenrie24@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.6\n"
 
 msgid ""
 "<em>Via proxy</em> routes requests to the given target via the specifed "
@@ -25,10 +27,10 @@ msgid ""
 msgstr ""
 
 msgid "Allowed clients"
-msgstr ""
+msgstr "Clients permesos"
 
 msgid "Allowed connect ports"
-msgstr ""
+msgstr "Ports de connexió permesos"
 
 msgid "Bind address"
 msgstr ""
@@ -59,43 +61,43 @@ msgid ""
 msgstr ""
 
 msgid "Configuration"
-msgstr ""
+msgstr "Configuració"
 
 msgid "Connection timeout"
-msgstr ""
+msgstr "Temps d'espera de connexió"
 
 msgid "Default deny"
 msgstr ""
 
 msgid "Enable Tinyproxy server"
-msgstr ""
+msgstr "Habilita el servidor Tinyproxy"
 
 msgid "Error page"
-msgstr ""
+msgstr "Pàgina d'error"
 
 msgid "Failed to retrieve statistics from url:"
 msgstr ""
 
 msgid "Filter by RegExp"
-msgstr ""
+msgstr "Filtra per expressió regular"
 
 msgid "Filter by URLs"
-msgstr ""
+msgstr "Filtra per adreça"
 
 msgid "Filter case-sensitive"
 msgstr ""
 
 msgid "Filter file"
-msgstr ""
+msgstr "Fitxer de filtració"
 
 msgid "Filtering and ACLs"
-msgstr ""
+msgstr "Filtració i ACLs"
 
 msgid "General settings"
-msgstr ""
+msgstr "Ajusts generals"
 
 msgid "Group"
-msgstr ""
+msgstr "Grup"
 
 msgid "HTML template file to serve for stat host requests"
 msgstr ""
@@ -104,25 +106,29 @@ msgid "HTML template file to serve when HTTP errors occur"
 msgstr ""
 
 msgid "Header whitelist"
-msgstr ""
+msgstr "Llista blanca de capçaleres"
 
 msgid ""
 "List of IP addresses or ranges which are allowed to use the proxy server"
 msgstr ""
+"Llista d'adreces IP o rangs dels quals es permeten utilitzar el servidor "
+"intermediari"
 
 msgid ""
 "List of allowed ports for the CONNECT method. A single value \"0\" allows "
 "all ports"
 msgstr ""
+"Llista de ports permesos per al mètode CONNECT. El valor solter \"0\" permet "
+"tots els ports"
 
 msgid "Listen address"
-msgstr ""
+msgstr "Adreça d'escolta"
 
 msgid "Listen port"
-msgstr ""
+msgstr "Port d'escolta"
 
 msgid "Log file"
-msgstr ""
+msgstr "Fitxer de registre"
 
 msgid "Log file to use for dumping messages"
 msgstr ""
@@ -160,28 +166,28 @@ msgid "Min. spare servers"
 msgstr "Mín servidors spare"
 
 msgid "Minimum number of prepared idle processes"
-msgstr ""
+msgstr "Nombre mínim de processos ociosos preparats"
 
 msgid "Number of idle processes to start when launching Tinyproxy"
-msgstr ""
+msgstr "Nombre de processos ociosos que iniciar al iniciar el Tinyproxy"
 
 msgid "Plaintext file with URLs or domains to filter. One entry per line"
 msgstr ""
 
 msgid "Policy"
-msgstr ""
+msgstr "Política"
 
 msgid "Privacy settings"
-msgstr ""
+msgstr "Ajusts de privacitat"
 
 msgid "Reject access"
 msgstr "Rebutja accés"
 
 msgid "Server Settings"
-msgstr ""
+msgstr "Ajusts de servidor"
 
 msgid "Server limits"
-msgstr ""
+msgstr "Límits de servidor"
 
 msgid ""
 "Specifies HTTP header names which are allowed to pass-through, all others "
@@ -216,10 +222,10 @@ msgid "Start spare servers"
 msgstr ""
 
 msgid "Statistics page"
-msgstr ""
+msgstr "Pàgina d'estadístiques"
 
 msgid "Status"
-msgstr ""
+msgstr "Estat"
 
 msgid "Target host"
 msgstr "Màquina destí"
@@ -228,7 +234,7 @@ msgid "Tinyproxy"
 msgstr "Tinyproxy"
 
 msgid "Tinyproxy Status"
-msgstr ""
+msgstr "Estat de Tinyproxy"
 
 msgid "Tinyproxy is a small and fast non-caching HTTP(S)-Proxy"
 msgstr "Tinyproxy és un proxy HTTP no caché petit i ràpid"
@@ -242,22 +248,23 @@ msgid ""
 msgstr ""
 
 msgid "Use syslog"
-msgstr ""
+msgstr "Utilitza el syslog"
 
 msgid "User"
-msgstr ""
+msgstr "Usuari"
 
 msgid "Via hostname"
-msgstr ""
+msgstr "Via nom de host"
 
 msgid "Via proxy"
 msgstr "Via proxy"
 
 msgid "Writes log messages to syslog instead of a log file"
 msgstr ""
+"Escriu els missatges de registre al syslog en lloc d'un fitxer de registre"
 
 msgid "X-Tinyproxy header"
-msgstr ""
+msgstr "Capçalera X-Tinyproxy"
 
 #~ msgid "Allow access from"
 #~ msgstr "Permet l'accés des de"

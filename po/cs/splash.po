@@ -1,12 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2014-08-04 19:05+0200\n"
+"Last-Translator: KubaCZ <kuba.turek@centrum.cz>\n"
 "Language-Team: none\n"
-"Language: \n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Pootle 2.0.6\n"
 
 msgid "Accept"
 msgstr "Přijmout"
@@ -39,6 +42,8 @@ msgid ""
 "As an alternative to editing the complete splash text you can also just "
 "include some custom text in the default splash page by entering it here."
 msgstr ""
+"Kromě možnosti vytvořit celý vlastní text místo textu výše také můžete jen "
+"jako doplněk připojit svůj text jeho napsáním sem."
 
 msgid ""
 "Bandwidth limit for clients is only activated when both up- and download "
@@ -69,6 +74,7 @@ msgstr ""
 msgid "Clearance time"
 msgstr ""
 
+#, fuzzy
 msgid "Client-Splash"
 msgstr "Client-Splash"
 
@@ -94,7 +100,7 @@ msgid "Clients upload speed is limited to this value (kbyte/s)"
 msgstr "Rychlost nahrávání je pro klienty omezena na tuto hodnotu (kbyte/s)"
 
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 msgid "Decline"
 msgstr "Odmítnout"
@@ -114,10 +120,10 @@ msgid "Edit the complete splash text"
 msgstr ""
 
 msgid "Fair Use Policy"
-msgstr ""
+msgstr "Fair Use Policy"
 
 msgid "Firewall zone"
-msgstr ""
+msgstr "Zóna firewallu"
 
 msgid "General"
 msgstr ""
@@ -127,11 +133,6 @@ msgstr ""
 
 msgid "Hostname"
 msgstr "Hostname"
-
-msgid ""
-"Hosts and Networks that are listed here are excluded from splashing, i.e. "
-"they are always allowed."
-msgstr ""
 
 msgid "IP Address"
 msgstr "IP adresa"
@@ -204,7 +205,7 @@ msgid "Redirect target"
 msgstr ""
 
 msgid "Safety"
-msgstr ""
+msgstr "Bezpečnost"
 
 msgid "Save"
 msgstr "Uložit"

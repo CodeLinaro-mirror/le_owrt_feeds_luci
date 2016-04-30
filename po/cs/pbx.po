@@ -1,29 +1,39 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2014-07-12 20:19+0200\n"
+"Last-Translator: koli <lukas.koluch@gmail.com>\n"
 "Language-Team: none\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Pootle 2.0.6\n"
 
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Pokročilé nastavení"
 
 msgid "Available"
-msgstr ""
+msgstr "Dostupné"
 
 msgid ""
 "Avoid using anything but alpha-numeric characters, space, comma, and period."
 msgstr ""
 
 msgid "Away"
-msgstr ""
+msgstr "Pryč"
 
 msgid "Blacklisted Numbers"
 msgstr ""
 
 msgid "Call Routing"
+msgstr ""
+
+msgid "Call-back Numbers"
+msgstr ""
+
+msgid "Call-back Provider"
 msgstr ""
 
 msgid "Call-through Numbers"
@@ -34,14 +44,20 @@ msgstr ""
 
 msgid ""
 "Designate numbers that are allowed to call through this system and which "
-"user's privileges it will have."
+"user's privileges they will have."
+msgstr ""
+
+msgid ""
+"Designate numbers to whom the system will hang up and call back, which "
+"provider will be used to call them, and which user's privileges will be "
+"granted to them."
 msgstr ""
 
 msgid "Dials numbers unmatched elsewhere"
 msgstr ""
 
 msgid "Do Not Disturb"
-msgstr ""
+msgstr "Nevyrušovat"
 
 msgid "Domain/IP Address/Dynamic Domain"
 msgstr ""
@@ -50,18 +66,25 @@ msgid "Dynamic List of Blacklisted Numbers"
 msgstr ""
 
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 msgid "Enable Incoming Calls (Register via SIP)"
-msgstr ""
+msgstr "Povolit příchozí hovory (Registrace přes SIP)"
 
 msgid "Enable Incoming Calls (set Status below)"
 msgstr ""
 
 msgid "Enable Outgoing Calls"
-msgstr ""
+msgstr "Povolit odchozí hovory"
 
 msgid "Enabled"
+msgstr "Povoleno"
+
+msgid ""
+"Enter a VoIP provider to use for call-back in the format username@some.host."
+"name, as listed in \"Outgoing Calls\" above. It's easiest to copy and paste "
+"the providers from above. Invalid entries, including providers not enabled "
+"for outgoing calls, will be rejected silently."
 msgstr ""
 
 msgid ""
@@ -82,7 +105,7 @@ msgid ""
 msgstr ""
 
 msgid "External SIP Port"
-msgstr ""
+msgstr "Externí SIP port"
 
 msgid ""
 "For each provider enabled for incoming calls, here you can restrict which "
@@ -108,21 +131,24 @@ msgid ""
 msgstr ""
 
 msgid "Full Name"
-msgstr ""
+msgstr "Celé jméno (jméno a příjmení)"
 
 msgid "General Settings"
-msgstr ""
+msgstr "Obecné nastavení"
 
 msgid "Google Accounts"
-msgstr ""
+msgstr "Google účty"
 
 msgid "Google Talk Status"
-msgstr ""
+msgstr "Stav Google Talk"
 
 msgid "Google Talk Status Message"
 msgstr ""
 
 msgid "Google Voice/Talk Accounts"
+msgstr "Google Voice/Talk účty"
+
+msgid "Hang-up Delay"
 msgstr ""
 
 msgid ""
@@ -132,6 +158,13 @@ msgid ""
 "on your smartphone, or Ekiga, Linphone, or X-Lite on your computer. By "
 "default, all SIP accounts will ring simultaneously if a call is made to one "
 "of your VoIP provider accounts or GV numbers."
+msgstr ""
+
+msgid ""
+"How long to wait before hanging up. If the provider you use to dial "
+"automatically forwards to voicemail, you can set this value to a delay that "
+"will allow you to hang up before your call gets forwarded and you get billed "
+"for it."
 msgstr ""
 
 msgid ""
@@ -172,10 +205,10 @@ msgid ""
 msgstr ""
 
 msgid "Incoming Calls"
-msgstr ""
+msgstr "Příchozí volání"
 
 msgid "Insert QoS Rules"
-msgstr ""
+msgstr "Vložte QoS pravidla"
 
 msgid "Makes Outgoing Calls"
 msgstr ""
@@ -200,7 +233,7 @@ msgid "NOTE: There are no local user accounts enabled for outgoing calls."
 msgstr ""
 
 msgid "No"
-msgstr ""
+msgstr "Ne"
 
 msgid "Number of Seconds to Ring"
 msgstr ""
@@ -209,27 +242,26 @@ msgid "Outbound Proxy"
 msgstr ""
 
 msgid "Outgoing Calls"
-msgstr ""
+msgstr "Odchozí volání"
 
 msgid "PBX Main Page"
-msgstr ""
+msgstr "Hlavní stránka PBX"
 
 msgid "PBX Service Status"
-msgstr ""
+msgstr "Stav PBX služby"
 
 msgid "PIN"
-msgstr ""
+msgstr "PIN"
 
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 msgid ""
 "Pick a random port number between 6500 and 9500 for the service to listen "
 "on. Do not pick the standard 5060, because it is often subject to brute-"
-"force attacks. When finished, (1) click \"Save and Apply\", and (2) click "
-"the \"Restart VoIP Service\" button above. Finally, (3) look in the \"SIP "
-"Device/Softphone Accounts\" section for updated Server and Port settings for "
-"your SIP Devices/Softphones."
+"force attacks. When finished, (1) click \"Save and Apply\", and (2) look in "
+"the \"SIP Device/Softphone Accounts\" section for updated Server and Port "
+"settings for your SIP Devices/Softphones."
 msgstr ""
 
 msgid "Port Setting for SIP Devices"
@@ -239,7 +271,7 @@ msgid "Providers Used for Outgoing Calls"
 msgstr ""
 
 msgid "QoS Settings"
-msgstr ""
+msgstr "Nastavení QoS"
 
 msgid "RTP Port Range End"
 msgstr ""
@@ -263,7 +295,7 @@ msgid "Rings users enabled for incoming calls"
 msgstr ""
 
 msgid "SIP Accounts"
-msgstr ""
+msgstr "SIP účty"
 
 msgid "SIP Device/Softphone Accounts"
 msgstr ""
@@ -290,7 +322,7 @@ msgid "Server Setting for Remote SIP Devices"
 msgstr ""
 
 msgid "Service Status"
-msgstr ""
+msgstr "Stav služby"
 
 msgid ""
 "Set the number of seconds to ring users upon incoming calls before hanging "
@@ -301,6 +333,12 @@ msgid "Space-Separated List of Blacklisted Numbers"
 msgstr ""
 
 msgid "Specify numbers individually here. Press enter to add more numbers."
+msgstr ""
+
+msgid ""
+"Specify numbers individually here. Press enter to add more numbers. You will "
+"have to experiment with what country and area codes you need to add to the "
+"number."
 msgstr ""
 
 msgid ""
@@ -381,13 +419,13 @@ msgid "Use this account to make outgoing calls."
 msgstr ""
 
 msgid "User Accounts"
-msgstr ""
+msgstr "Uživatelské účty"
 
 msgid "User Agent String"
 msgstr ""
 
 msgid "User Name"
-msgstr ""
+msgstr "Uživatelské jméno"
 
 msgid "Uses providers enabled for outgoing calls"
 msgstr ""
@@ -411,13 +449,14 @@ msgid ""
 msgstr ""
 
 msgid "Yes"
-msgstr ""
+msgstr "Ano"
 
 msgid ""
 "You can enter your domain name, external IP address, or dynamic domain name "
-"here Please keep in mind that if your IP address is dynamic and it changes "
-"your configuration will become invalid. Hence, it's recommended to set up "
-"Dynamic DNS in this case."
+"here. The best thing to input is a static IP address. If your IP address is "
+"dynamic and it changes, your configuration will become invalid. Hence, it's "
+"recommended to set up Dynamic DNS in this case. and enter your Dynamic DNS "
+"hostname here. You can configure Dynamic DNS with the luci-app-ddns package."
 msgstr ""
 
 msgid "You can specify a real name to show up in the Caller ID here."

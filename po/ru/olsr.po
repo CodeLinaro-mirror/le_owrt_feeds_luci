@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: LuCI: olsr\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-05-19 19:36+0200\n"
-"PO-Revision-Date: 2012-08-16 16:32+0300\n"
-"Last-Translator: Roman A. aka BasicXP <x12ozmouse@ya.ru>\n"
+"PO-Revision-Date: 2013-09-06 09:58+0200\n"
+"Last-Translator: datasheet <michael.gritsaenko@gmail.com>\n"
 "Language-Team: Russian <x12ozmouse@ya.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Pootle 2.0.4\n"
+"X-Generator: Pootle 2.0.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 msgid "Active MID announcements"
@@ -39,6 +39,12 @@ msgstr "Объявлять восходящий канал"
 msgid "Announced network"
 msgstr "Объявленная сеть"
 
+msgid "Bad (ETX > 10)"
+msgstr ""
+
+msgid "Bad (SNR < 5)"
+msgstr ""
+
 msgid "Both values must use the dotted decimal notation."
 msgstr ""
 "Оба значения должны быть в десятичном представлении с разделительными "
@@ -47,11 +53,19 @@ msgstr ""
 msgid "Broadcast address"
 msgstr "Широковещательный адрес"
 
+msgid "Can only be a valid IPv4 or IPv6 address or 'default'"
+msgstr ""
+
+msgid "Can only be a valid IPv6 address or 'default'"
+msgstr ""
+
 msgid "Configuration"
 msgstr "Конфигурация"
 
-msgid "Device"
-msgstr "Устройство"
+msgid ""
+"Could not get any data. Make sure the jsoninfo plugin is installed and "
+"allows connections from localhost."
+msgstr ""
 
 msgid "Display"
 msgstr "Показать"
@@ -115,6 +129,15 @@ msgstr "Общие настройки"
 msgid "General settings"
 msgstr "Общие настройки"
 
+msgid "Good (2 < ETX < 4)"
+msgstr ""
+
+msgid "Good (30 > SNR > 20)"
+msgstr ""
+
+msgid "Green"
+msgstr ""
+
 msgid "HNA"
 msgstr "HNA"
 
@@ -127,6 +150,10 @@ msgstr "HNA интервал"
 msgid "HNA validity time"
 msgstr "Время действия HNA"
 
+#, fuzzy
+msgid "HNA6 Announcements"
+msgstr "Объявления HNA"
+
 msgid "Hello"
 msgstr "Приветственное сообщение"
 
@@ -135,6 +162,12 @@ msgstr "Интервал приветственных сообщений"
 
 msgid "Hello validity time"
 msgstr "Время действия приветственного сообщения"
+
+msgid "Hide IPv4"
+msgstr ""
+
+msgid "Hide IPv6"
+msgstr ""
 
 msgid "Hna4"
 msgstr "Hna4"
@@ -151,6 +184,14 @@ msgstr "Имя хоста"
 msgid ""
 "Hosts in a OLSR routed network can announce connecitivity to external "
 "networks using HNA messages."
+msgstr ""
+"Хосты в маршрутизируемой сети OLSR могут извещать о подключении к внешним "
+"сетям с помощью сообщений HNA."
+
+#, fuzzy
+msgid ""
+"Hosts in a OLSR routed network can announce connecitivity to external "
+"networks using HNA6 messages."
 msgstr ""
 "Хосты в маршрутизируемой сети OLSR могут извещать о подключении к внешним "
 "сетям с помощью сообщений HNA."
@@ -278,6 +319,14 @@ msgstr ""
 "Интервал опроса сетвых интерфейсов на наличие изменений в конфигурации "
 "(сек.). По умолчанию, \"2.5\"."
 
+msgid "Invalid Value for LQMult-Value. Must be between 0.01 and 1.0."
+msgstr ""
+
+msgid ""
+"Invalid Value for LQMult-Value. You must use a decimal number between 0.01 "
+"and 1.0 here."
+msgstr ""
+
 msgid "Known OLSR routes"
 msgstr "Известные OLSR-маршруты"
 
@@ -296,6 +345,11 @@ msgstr "Рыбий глаз LQ"
 
 msgid "LQ level"
 msgstr "Уровень LQ"
+
+msgid ""
+"LQMult requires two values (IP address or 'default' and multiplicator) "
+"seperated by space."
+msgstr ""
 
 msgid "Last hop"
 msgstr "Последний прыжок"
@@ -370,11 +424,9 @@ msgid "Main IP"
 msgstr "Основной IP-адрес"
 
 msgid ""
-"Make sure that OLSRd is running, the \"txtinfo\" plugin is loaded, "
-"configured on port 2006 and accepts connections from \"127.0.0.1\"."
+"Make sure that OLSRd is running, the \"jsoninfo\" plugin is loaded, "
+"configured on port 9090 and accepts connections from \"127.0.0.1\"."
 msgstr ""
-"Удостоверьтесь, что OLSRd работает, модуль \"txtinfo\" загружен, настроен на "
-"порт 2006 и принимает соединения от \"127.0.0.1\"."
 
 msgid "Metric"
 msgstr "Метрика"
@@ -384,9 +436,17 @@ msgstr "Режим"
 
 msgid ""
 "Multiply routes with the factor given here. Allowed values are between 0.01 "
-"and 1. It is only used when LQ-Level is greater than 0. Examples:<br /"
+"and 1.0. It is only used when LQ-Level is greater than 0. Examples:<br /"
 ">reduce LQ to 192.168.0.1 by half: 192.168.0.1 0.5<br />reduce LQ to all "
 "nodes on this interface by 20%: default 0.8"
+msgstr ""
+
+#, fuzzy
+msgid ""
+"Multiply routes with the factor given here. Allowed values are between 0.01 "
+"and 1.0. It is only used when LQ-Level is greater than 0. Examples:<br /"
+">reduce LQ to fd91:662e:3c58::1 by half: fd91:662e:3c58::1 0.5<br />reduce "
+"LQ to all nodes on this interface by 20%: default 0.8"
 msgstr ""
 "Умножить маршруты на указанный коэффициент в пределах от 0.01 до 1. Данный "
 "коэффициент используется только в случае, если LQ уровень > 0. Примеры:<br /"
@@ -432,6 +492,10 @@ msgstr "OLSR - Настройки отображения"
 msgid "OLSR - HNA-Announcements"
 msgstr "OLSR - HNA-объявления"
 
+#, fuzzy
+msgid "OLSR - HNA6-Announcements"
+msgstr "OLSR - HNA-объявления"
+
 msgid "OLSR - Plugins"
 msgstr "OLSR - Модули"
 
@@ -449,6 +513,9 @@ msgstr "OLSR-шлюз"
 
 msgid "OLSR node"
 msgstr "OLSR-узел"
+
+msgid "Orange"
+msgstr ""
 
 msgid "Overview"
 msgstr "Обзор"
@@ -494,6 +561,9 @@ msgstr "Порт"
 msgid "Prefix"
 msgstr "Префикс"
 
+msgid "Red"
+msgstr ""
+
 msgid "Resolve"
 msgstr "Разрешать имена"
 
@@ -520,6 +590,25 @@ msgstr ""
 "Устанавливает основной IP-адрес маршрутизатора. Данный адрес НИКОГДА не "
 "будет изменяться во время работы olsrd. По умолчанию 0.0.0.0 (используется "
 "IP-адрес первого сетевого интерфейса)."
+
+#, fuzzy
+msgid ""
+"Sets the main IP (originator ip) of the router. This IP will NEVER change "
+"during the uptime of olsrd. Default is ::, which triggers usage of the IP of "
+"the first interface."
+msgstr ""
+"Устанавливает основной IP-адрес маршрутизатора. Данный адрес НИКОГДА не "
+"будет изменяться во время работы olsrd. По умолчанию 0.0.0.0 (используется "
+"IP-адрес первого сетевого интерфейса)."
+
+msgid "Show IPv4"
+msgstr ""
+
+msgid "Show IPv6"
+msgstr ""
+
+msgid "Signal Noise Ratio in dB"
+msgstr ""
 
 msgid "SmartGW"
 msgstr "SmartGW"
@@ -550,13 +639,17 @@ msgstr "Состояние"
 msgid "Status"
 msgstr "Статус"
 
-#, fuzzy
-msgid "Success rate of packages received from the neighbour"
-msgstr "Скорость посылок, принятых соседним узлом"
+msgid "Still usable (20 > SNR > 5)"
+msgstr ""
 
-#, fuzzy
+msgid "Still usable (4 < ETX < 10)"
+msgstr ""
+
+msgid "Success rate of packages received from the neighbour"
+msgstr "Достигнутая скорость приема посылок от соседних узлов"
+
 msgid "Success rate of packages sent to the neighbour"
-msgstr "Скорость посылок, отправленных соседнему узлу"
+msgstr "Достигнутая скорость передачи посылок к соседним узлам"
 
 msgid "TC"
 msgstr "TC"
@@ -618,8 +711,8 @@ msgid "Topology"
 msgstr "Топология"
 
 msgid ""
-"Type of service value for the IP header of control traffic. Default is \"16"
-"\"."
+"Type of service value for the IP header of control traffic. Default is "
+"\"16\"."
 msgstr ""
 "Значение поля ToS IP -аголовка управляющего трафика. По умолчанию \"16\"."
 
@@ -635,8 +728,17 @@ msgstr "Восходящий канал использует NAT"
 msgid "Use hysteresis"
 msgstr "Использовать гистерезис"
 
+msgid "Validity Time"
+msgstr ""
+
 msgid "Version"
 msgstr "Версия"
+
+msgid "Very good (ETX < 2)"
+msgstr ""
+
+msgid "Very good (SNR > 30)"
+msgstr ""
 
 msgid "WLAN"
 msgstr "WLAN"
@@ -677,5 +779,34 @@ msgstr ""
 "Определение восходящего канала происходит при наличии в локальном HNA "
 "0.0.0.0/0, ::ffff:0:0/96 или 2000::/3. Значение по умолчанию: \"оба\"."
 
+#, fuzzy
+msgid ""
+"Which kind of uplink is exported to the other mesh nodes. An uplink is "
+"detected by looking for a local HNA6 ::ffff:0:0/96 or 2000::/3. Default "
+"setting is \"both\"."
+msgstr ""
+"Какой вид восходящего канала экпортируется другим узлам ячеистой сети. "
+"Определение восходящего канала происходит при наличии в локальном HNA "
+"0.0.0.0/0, ::ffff:0:0/96 или 2000::/3. Значение по умолчанию: \"оба\"."
+
 msgid "Willingness"
 msgstr "Готовность"
+
+msgid "Yellow"
+msgstr ""
+
+msgid "no"
+msgstr ""
+
+msgid "yes"
+msgstr ""
+
+#~ msgid "Device"
+#~ msgstr "Устройство"
+
+#~ msgid ""
+#~ "Make sure that OLSRd is running, the \"txtinfo\" plugin is loaded, "
+#~ "configured on port 2006 and accepts connections from \"127.0.0.1\"."
+#~ msgstr ""
+#~ "Удостоверьтесь, что OLSRd работает, модуль \"txtinfo\" загружен, настроен "
+#~ "на порт 2006 и принимает соединения от \"127.0.0.1\"."

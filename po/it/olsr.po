@@ -37,17 +37,31 @@ msgstr "Annuncia uplink"
 msgid "Announced network"
 msgstr "Rete da annnunciare"
 
+msgid "Bad (ETX > 10)"
+msgstr ""
+
+msgid "Bad (SNR < 5)"
+msgstr ""
+
 msgid "Both values must use the dotted decimal notation."
 msgstr "Entrambi i valori devono essere nella notazione decimale puntata"
 
 msgid "Broadcast address"
 msgstr "Indirizzo di broadcast"
 
+msgid "Can only be a valid IPv4 or IPv6 address or 'default'"
+msgstr ""
+
+msgid "Can only be a valid IPv6 address or 'default'"
+msgstr ""
+
 msgid "Configuration"
 msgstr "Configurazione"
 
-msgid "Device"
-msgstr "Periferica"
+msgid ""
+"Could not get any data. Make sure the jsoninfo plugin is installed and "
+"allows connections from localhost."
+msgstr ""
 
 msgid "Display"
 msgstr "Display"
@@ -104,6 +118,15 @@ msgstr "Impostazioni Generali"
 msgid "General settings"
 msgstr "Impostazioni Generali"
 
+msgid "Good (2 < ETX < 4)"
+msgstr ""
+
+msgid "Good (30 > SNR > 20)"
+msgstr ""
+
+msgid "Green"
+msgstr ""
+
 msgid "HNA"
 msgstr "HNA"
 
@@ -116,6 +139,10 @@ msgstr "Intervallo HNA"
 msgid "HNA validity time"
 msgstr "Durata di validità HNA"
 
+#, fuzzy
+msgid "HNA6 Announcements"
+msgstr "Annuncio di HNA"
+
 msgid "Hello"
 msgstr "Ciao"
 
@@ -124,6 +151,12 @@ msgstr "Intervallo Saluto"
 
 msgid "Hello validity time"
 msgstr "Durata validità Saluto"
+
+msgid "Hide IPv4"
+msgstr ""
+
+msgid "Hide IPv6"
+msgstr ""
 
 msgid "Hna4"
 msgstr "Hna4"
@@ -140,6 +173,11 @@ msgstr "Nome Host"
 msgid ""
 "Hosts in a OLSR routed network can announce connecitivity to external "
 "networks using HNA messages."
+msgstr ""
+
+msgid ""
+"Hosts in a OLSR routed network can announce connecitivity to external "
+"networks using HNA6 messages."
 msgstr ""
 
 msgid ""
@@ -259,6 +297,14 @@ msgid ""
 "Default is \"2.5\"."
 msgstr ""
 
+msgid "Invalid Value for LQMult-Value. Must be between 0.01 and 1.0."
+msgstr ""
+
+msgid ""
+"Invalid Value for LQMult-Value. You must use a decimal number between 0.01 "
+"and 1.0 here."
+msgstr ""
+
 msgid "Known OLSR routes"
 msgstr ""
 
@@ -275,6 +321,11 @@ msgid "LQ fisheye"
 msgstr ""
 
 msgid "LQ level"
+msgstr ""
+
+msgid ""
+"LQMult requires two values (IP address or 'default' and multiplicator) "
+"seperated by space."
 msgstr ""
 
 msgid "Last hop"
@@ -338,8 +389,8 @@ msgid "Main IP"
 msgstr ""
 
 msgid ""
-"Make sure that OLSRd is running, the \"txtinfo\" plugin is loaded, "
-"configured on port 2006 and accepts connections from \"127.0.0.1\"."
+"Make sure that OLSRd is running, the \"jsoninfo\" plugin is loaded, "
+"configured on port 9090 and accepts connections from \"127.0.0.1\"."
 msgstr ""
 
 msgid "Metric"
@@ -350,9 +401,16 @@ msgstr ""
 
 msgid ""
 "Multiply routes with the factor given here. Allowed values are between 0.01 "
-"and 1. It is only used when LQ-Level is greater than 0. Examples:<br /"
+"and 1.0. It is only used when LQ-Level is greater than 0. Examples:<br /"
 ">reduce LQ to 192.168.0.1 by half: 192.168.0.1 0.5<br />reduce LQ to all "
 "nodes on this interface by 20%: default 0.8"
+msgstr ""
+
+msgid ""
+"Multiply routes with the factor given here. Allowed values are between 0.01 "
+"and 1.0. It is only used when LQ-Level is greater than 0. Examples:<br /"
+">reduce LQ to fd91:662e:3c58::1 by half: fd91:662e:3c58::1 0.5<br />reduce "
+"LQ to all nodes on this interface by 20%: default 0.8"
 msgstr ""
 
 msgid "NAT threshold"
@@ -394,6 +452,10 @@ msgstr ""
 msgid "OLSR - HNA-Announcements"
 msgstr ""
 
+#, fuzzy
+msgid "OLSR - HNA6-Announcements"
+msgstr "Annuncio di HNA"
+
 msgid "OLSR - Plugins"
 msgstr ""
 
@@ -410,6 +472,9 @@ msgid "OLSR gateway"
 msgstr ""
 
 msgid "OLSR node"
+msgstr ""
+
+msgid "Orange"
 msgstr ""
 
 msgid "Overview"
@@ -454,6 +519,9 @@ msgstr ""
 msgid "Prefix"
 msgstr ""
 
+msgid "Red"
+msgstr ""
+
 msgid "Resolve"
 msgstr ""
 
@@ -473,6 +541,21 @@ msgid ""
 "Sets the main IP (originator ip) of the router. This IP will NEVER change "
 "during the uptime of olsrd. Default is 0.0.0.0, which triggers usage of the "
 "IP of the first interface."
+msgstr ""
+
+msgid ""
+"Sets the main IP (originator ip) of the router. This IP will NEVER change "
+"during the uptime of olsrd. Default is ::, which triggers usage of the IP of "
+"the first interface."
+msgstr ""
+
+msgid "Show IPv4"
+msgstr ""
+
+msgid "Show IPv6"
+msgstr ""
+
+msgid "Signal Noise Ratio in dB"
 msgstr ""
 
 msgid "SmartGW"
@@ -499,6 +582,12 @@ msgid "State"
 msgstr ""
 
 msgid "Status"
+msgstr ""
+
+msgid "Still usable (20 > SNR > 5)"
+msgstr ""
+
+msgid "Still usable (4 < ETX < 10)"
 msgstr ""
 
 msgid "Success rate of packages received from the neighbour"
@@ -554,8 +643,8 @@ msgid "Topology"
 msgstr ""
 
 msgid ""
-"Type of service value for the IP header of control traffic. Default is \"16"
-"\"."
+"Type of service value for the IP header of control traffic. Default is "
+"\"16\"."
 msgstr ""
 
 msgid "Unable to connect to the OLSR daemon!"
@@ -570,8 +659,17 @@ msgstr "L'uplink usa il NAT"
 msgid "Use hysteresis"
 msgstr "Usa l'isteresi"
 
+msgid "Validity Time"
+msgstr ""
+
 msgid "Version"
 msgstr "Versione"
+
+msgid "Very good (ETX < 2)"
+msgstr ""
+
+msgid "Very good (SNR > 30)"
+msgstr ""
 
 msgid "WLAN"
 msgstr "WLAN"
@@ -609,5 +707,27 @@ msgstr ""
 "cercando un HNA del tipo 0.0.0.0/0, ::ffff:0:0/96 or 2000::/3. Default "
 "setting is \"both\"."
 
+#, fuzzy
+msgid ""
+"Which kind of uplink is exported to the other mesh nodes. An uplink is "
+"detected by looking for a local HNA6 ::ffff:0:0/96 or 2000::/3. Default "
+"setting is \"both\"."
+msgstr ""
+"Quale tipo di uplink è mostrato agli altri nodi. Un uplink è individuato "
+"cercando un HNA del tipo 0.0.0.0/0, ::ffff:0:0/96 or 2000::/3. Default "
+"setting is \"both\"."
+
 msgid "Willingness"
 msgstr ""
+
+msgid "Yellow"
+msgstr ""
+
+msgid "no"
+msgstr ""
+
+msgid "yes"
+msgstr ""
+
+#~ msgid "Device"
+#~ msgstr "Periferica"

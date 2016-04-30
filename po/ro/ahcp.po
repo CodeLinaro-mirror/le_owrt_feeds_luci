@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2011-10-07 00:29+0200\n"
-"Last-Translator: Daniel <daniel.petre@pitesti.rcs-rds.ro>\n"
+"PO-Revision-Date: 2014-06-28 19:14+0200\n"
+"Last-Translator: xxvirusxx <condor20_05@yahoo.it>\n"
 "Language-Team: none\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -10,14 +10,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Pootle 2.0.4\n"
+"X-Generator: Pootle 2.0.6\n"
 
 msgid "AHCP Server"
 msgstr "Server AHCP"
 
+#, fuzzy
 msgid ""
 "AHCP is an autoconfiguration protocol for IPv6 and dual-stack IPv6/IPv4 "
-"networks designed to be used in place of router discovery and DHCP on "
+"networks designed to be used in place of router discovery or DHCP on "
 "networks where it is difficult or impossible to configure a server within "
 "every link-layer broadcast domain, for example mobile ad-hoc networks."
 msgstr ""
@@ -30,13 +31,13 @@ msgid "Active AHCP Leases"
 msgstr "Conexiuni active AHCP"
 
 msgid "Address"
-msgstr "Adresa"
+msgstr "Adresă"
 
 msgid "Advanced Settings"
-msgstr "Setari avansate"
+msgstr "Setări avansate"
 
 msgid "Age"
-msgstr "Varsta"
+msgstr "Vârstă"
 
 msgid "Announced DNS servers"
 msgstr "Servere DNS anuntate"
@@ -102,10 +103,10 @@ msgid "Specifies the announced IPv4 and IPv6 network prefixes in CIDR notation"
 msgstr "Specifica prefixele IPv4 si IPv6 anuntate in format CIDR"
 
 msgid "The AHCP Service is not running."
-msgstr ""
+msgstr "Serviciul AHCP nu ruleaza"
 
 msgid "The AHCP Service is running with ID %s."
-msgstr ""
+msgstr "Serviciul AHCP nu ruleaza cu ID %s."
 
 msgid "There are no active leases."
 msgstr "Nu exista conexiuni active."

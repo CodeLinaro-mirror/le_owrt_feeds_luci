@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2013-01-29 15:41+0200\n"
-"Last-Translator: Astran <martin.hromadko@gmail.com>\n"
+"PO-Revision-Date: 2014-06-21 14:39+0200\n"
+"Last-Translator: koli <lukas.koluch@gmail.com>\n"
 "Language-Team: none\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -36,13 +36,13 @@ msgid "Enable DHCP"
 msgstr "Povolit DHCP"
 
 msgid "Enable RA"
-msgstr ""
+msgstr "Povolit RA"
 
 msgid "Enabled"
 msgstr "Povoleno"
 
 msgid "General Settings"
-msgstr "Hlavní nastavení"
+msgstr "Obecné nastavení"
 
 msgid "IPv6 Settings"
 msgstr "Nastavení IPv6"
@@ -61,15 +61,15 @@ msgid "Mesh IPv6 address"
 msgstr ""
 
 msgid "Mesh Wizard"
-msgstr ""
+msgstr "Průvodce mesh"
 
 msgid ""
-"Note: this will setup this interface for mesh operation, i.e. add to zone "
-"'freifunk' and enable olsr."
+"Note: this will set up this interface for mesh operation, i.e. add it to "
+"zone 'freifunk' and enable olsr."
 msgstr ""
 
 msgid "Protect LAN"
-msgstr ""
+msgstr "Ochrana LAN"
 
 msgid ""
 "Select this to allow others to use your connection to access the internet."
@@ -110,10 +110,10 @@ msgid ""
 msgstr ""
 
 msgid "Virtual Access Point (VAP)"
-msgstr ""
+msgstr "Virtuální přístupový bod (VAP)"
 
 msgid "Wizard"
-msgstr ""
+msgstr "Průvodce"
 
 msgid "Your device and neighbouring nodes have to use the same channel."
 msgstr ""

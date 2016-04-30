@@ -1,11 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2014-07-12 20:14+0200\n"
+"Last-Translator: koli <lukas.koluch@gmail.com>\n"
 "Language-Team: none\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Pootle 2.0.6\n"
 
 msgid ""
 "<em>Via proxy</em> routes requests to the given target via the specifed "
@@ -53,7 +57,7 @@ msgid ""
 msgstr ""
 
 msgid "Configuration"
-msgstr ""
+msgstr "Konfigurace"
 
 msgid "Connection timeout"
 msgstr ""
@@ -62,19 +66,19 @@ msgid "Default deny"
 msgstr ""
 
 msgid "Enable Tinyproxy server"
-msgstr ""
+msgstr "Povolit server Tinyproxy"
 
 msgid "Error page"
-msgstr ""
+msgstr "Chybová stránka"
 
 msgid "Failed to retrieve statistics from url:"
 msgstr ""
 
 msgid "Filter by RegExp"
-msgstr ""
+msgstr "Filtrovat podle RegExp"
 
 msgid "Filter by URLs"
-msgstr ""
+msgstr "Filtrovat podle URL adres"
 
 msgid "Filter case-sensitive"
 msgstr ""
@@ -86,10 +90,10 @@ msgid "Filtering and ACLs"
 msgstr ""
 
 msgid "General settings"
-msgstr ""
+msgstr "Obecné nastavení"
 
 msgid "Group"
-msgstr ""
+msgstr "Skupina"
 
 msgid "HTML template file to serve for stat host requests"
 msgstr ""
@@ -128,13 +132,13 @@ msgid "Logging verbosity of the Tinyproxy process"
 msgstr ""
 
 msgid "Max. clients"
-msgstr ""
+msgstr "Max. klientů"
 
 msgid "Max. requests per server"
-msgstr ""
+msgstr "Max. žádostí na server"
 
 msgid "Max. spare servers"
-msgstr ""
+msgstr "Max. záložních serverů"
 
 msgid "Maximum allowed number of concurrently connected clients"
 msgstr ""
@@ -151,7 +155,7 @@ msgid "Maximum number of seconds an inactive connection is held open"
 msgstr ""
 
 msgid "Min. spare servers"
-msgstr ""
+msgstr "Min. záložních serverů"
 
 msgid "Minimum number of prepared idle processes"
 msgstr ""
@@ -163,16 +167,16 @@ msgid "Plaintext file with URLs or domains to filter. One entry per line"
 msgstr ""
 
 msgid "Policy"
-msgstr ""
+msgstr "Politika"
 
 msgid "Privacy settings"
-msgstr ""
+msgstr "Nastavení soukromí"
 
 msgid "Reject access"
-msgstr ""
+msgstr "Odepřít přístup"
 
 msgid "Server Settings"
-msgstr ""
+msgstr "Nastavení serveru"
 
 msgid "Server limits"
 msgstr ""
@@ -210,22 +214,22 @@ msgid "Start spare servers"
 msgstr ""
 
 msgid "Statistics page"
-msgstr ""
+msgstr "Stránka statistik"
 
 msgid "Status"
-msgstr ""
+msgstr "Stav"
 
 msgid "Target host"
-msgstr ""
+msgstr "Cílový hostitel"
 
 msgid "Tinyproxy"
-msgstr ""
+msgstr "Tinyproxy"
 
 msgid "Tinyproxy Status"
-msgstr ""
+msgstr "Stav Tinyproxy"
 
 msgid "Tinyproxy is a small and fast non-caching HTTP(S)-Proxy"
-msgstr ""
+msgstr "Tinyproxy je malý a rychlý necachující HTTP(S)-Proxy server"
 
 msgid "Upstream Proxies"
 msgstr ""
@@ -236,10 +240,10 @@ msgid ""
 msgstr ""
 
 msgid "Use syslog"
-msgstr ""
+msgstr "Použít syslog"
 
 msgid "User"
-msgstr ""
+msgstr "Uživatel"
 
 msgid "Via hostname"
 msgstr ""
@@ -251,4 +255,4 @@ msgid "Writes log messages to syslog instead of a log file"
 msgstr ""
 
 msgid "X-Tinyproxy header"
-msgstr ""
+msgstr "X-Tinyproxy hlavička"

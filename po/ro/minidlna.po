@@ -1,16 +1,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2014-07-09 13:35+0200\n"
+"Last-Translator: xxvirusxx <condor20_05@yahoo.it>\n"
 "Language-Team: none\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);;\n"
+"X-Generator: Pootle 2.0.6\n"
 
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Setări avansate"
 
 msgid "Album art names:"
 msgstr ""
@@ -22,37 +25,37 @@ msgid "Announced serial number:"
 msgstr ""
 
 msgid "Browse directory"
-msgstr ""
+msgstr "Răsfoire director"
 
 msgid "Collecting data..."
-msgstr ""
+msgstr "Colectare date..."
 
 msgid "Database directory:"
 msgstr ""
 
 msgid "Enable TIVO:"
-msgstr ""
+msgstr "Activare TIVO:"
 
 msgid "Enable inotify:"
-msgstr ""
+msgstr "Activare inotify:"
 
 msgid "Enable:"
-msgstr ""
+msgstr "Activare:"
 
 msgid "Friendly name:"
-msgstr ""
+msgstr "Nume prieten:"
 
 msgid "General Settings"
-msgstr ""
+msgstr "Setări generale"
 
 msgid "Interfaces:"
-msgstr ""
+msgstr "Interfeţe"
 
 msgid "Log directory:"
 msgstr ""
 
 msgid "Media directories:"
-msgstr ""
+msgstr "Directoare media"
 
 msgid ""
 "MiniDLNA is server software with the aim of being fully compliant with DLNA/"
@@ -65,28 +68,28 @@ msgid ""
 msgstr ""
 
 msgid "Music"
-msgstr ""
+msgstr "Muzică"
 
 msgid "Network interfaces to serve."
 msgstr ""
 
 msgid "Notify interval in seconds."
-msgstr ""
+msgstr "Notificare interval în secunde."
 
 msgid "Notify interval:"
-msgstr ""
+msgstr "Notificare interval:"
 
 msgid "Pictures"
-msgstr ""
+msgstr "Fotografii"
 
 msgid "Port for HTTP (descriptions, SOAP, media transfer) traffic."
-msgstr ""
+msgstr "Port pentru HTTP (descrieri, SOAP, transfer media) trafic."
 
 msgid "Port:"
-msgstr ""
+msgstr "Port:"
 
 msgid "Presentation URL:"
-msgstr ""
+msgstr "URL de prezentare:"
 
 msgid "Root container:"
 msgstr ""
@@ -153,13 +156,13 @@ msgid "This is a list of file names to check for when searching for album art."
 msgstr ""
 
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 msgid "miniDLNA"
-msgstr ""
+msgstr "miniDLNA"
 
 msgid "miniDLNA Status"
-msgstr ""
+msgstr "Stare miniDLNA"
 
 msgid "miniSSDP socket:"
 msgstr ""

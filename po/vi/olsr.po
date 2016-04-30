@@ -38,16 +38,30 @@ msgstr ""
 msgid "Announced network"
 msgstr "Mạng lưới thông báo"
 
+msgid "Bad (ETX > 10)"
+msgstr ""
+
+msgid "Bad (SNR < 5)"
+msgstr ""
+
 msgid "Both values must use the dotted decimal notation."
 msgstr ""
 
 msgid "Broadcast address"
 msgstr ""
 
+msgid "Can only be a valid IPv4 or IPv6 address or 'default'"
+msgstr ""
+
+msgid "Can only be a valid IPv6 address or 'default'"
+msgstr ""
+
 msgid "Configuration"
 msgstr ""
 
-msgid "Device"
+msgid ""
+"Could not get any data. Make sure the jsoninfo plugin is installed and "
+"allows connections from localhost."
 msgstr ""
 
 msgid "Display"
@@ -103,6 +117,15 @@ msgstr ""
 msgid "General settings"
 msgstr "Cài đặt tổng quát"
 
+msgid "Good (2 < ETX < 4)"
+msgstr ""
+
+msgid "Good (30 > SNR > 20)"
+msgstr ""
+
+msgid "Green"
+msgstr ""
+
 msgid "HNA"
 msgstr ""
 
@@ -115,6 +138,10 @@ msgstr "Khoảng HNA"
 msgid "HNA validity time"
 msgstr "Thời gian hợp lệ hóa HNA "
 
+#, fuzzy
+msgid "HNA6 Announcements"
+msgstr "OLSR - HNA - Thông báo"
+
 msgid "Hello"
 msgstr ""
 
@@ -123,6 +150,12 @@ msgstr "Vùng xin chào"
 
 msgid "Hello validity time"
 msgstr "Thời gian hợp lệ hóa lời chào"
+
+msgid "Hide IPv4"
+msgstr ""
+
+msgid "Hide IPv6"
+msgstr ""
 
 msgid "Hna4"
 msgstr ""
@@ -139,6 +172,11 @@ msgstr ""
 msgid ""
 "Hosts in a OLSR routed network can announce connecitivity to external "
 "networks using HNA messages."
+msgstr ""
+
+msgid ""
+"Hosts in a OLSR routed network can announce connecitivity to external "
+"networks using HNA6 messages."
 msgstr ""
 
 msgid ""
@@ -237,6 +275,14 @@ msgid ""
 "Default is \"2.5\"."
 msgstr ""
 
+msgid "Invalid Value for LQMult-Value. Must be between 0.01 and 1.0."
+msgstr ""
+
+msgid ""
+"Invalid Value for LQMult-Value. You must use a decimal number between 0.01 "
+"and 1.0 here."
+msgstr ""
+
 msgid "Known OLSR routes"
 msgstr "Tuyến OLRS đã biết"
 
@@ -254,6 +300,11 @@ msgstr "LQ fisheye"
 
 msgid "LQ level"
 msgstr "LQ level"
+
+msgid ""
+"LQMult requires two values (IP address or 'default' and multiplicator) "
+"seperated by space."
+msgstr ""
 
 msgid "Last hop"
 msgstr "Hop cuối "
@@ -316,12 +367,9 @@ msgid "Main IP"
 msgstr ""
 
 msgid ""
-"Make sure that OLSRd is running, the \"txtinfo\" plugin is loaded, "
-"configured on port 2006 and accepts connections from \"127.0.0.1\"."
+"Make sure that OLSRd is running, the \"jsoninfo\" plugin is loaded, "
+"configured on port 9090 and accepts connections from \"127.0.0.1\"."
 msgstr ""
-"Bảo đảm là OLSRd đang vận hành, the &amp;quot;txtinfo&amp;quot; plugin được "
-"tải, định cấu hình trên cổng 2006 và chấp nhận kết nối từ &amp;"
-"quot;127.0.0.1&amp;quot;."
 
 msgid "Metric"
 msgstr ""
@@ -331,9 +379,16 @@ msgstr ""
 
 msgid ""
 "Multiply routes with the factor given here. Allowed values are between 0.01 "
-"and 1. It is only used when LQ-Level is greater than 0. Examples:<br /"
+"and 1.0. It is only used when LQ-Level is greater than 0. Examples:<br /"
 ">reduce LQ to 192.168.0.1 by half: 192.168.0.1 0.5<br />reduce LQ to all "
 "nodes on this interface by 20%: default 0.8"
+msgstr ""
+
+msgid ""
+"Multiply routes with the factor given here. Allowed values are between 0.01 "
+"and 1.0. It is only used when LQ-Level is greater than 0. Examples:<br /"
+">reduce LQ to fd91:662e:3c58::1 by half: fd91:662e:3c58::1 0.5<br />reduce "
+"LQ to all nodes on this interface by 20%: default 0.8"
 msgstr ""
 
 msgid "NAT threshold"
@@ -375,6 +430,10 @@ msgstr ""
 msgid "OLSR - HNA-Announcements"
 msgstr "OLSR - HNA - Thông báo"
 
+#, fuzzy
+msgid "OLSR - HNA6-Announcements"
+msgstr "OLSR - HNA - Thông báo"
+
 msgid "OLSR - Plugins"
 msgstr "OLSR - Plugins"
 
@@ -392,6 +451,9 @@ msgstr "Cổng OLSR"
 
 msgid "OLSR node"
 msgstr "OLSR node"
+
+msgid "Orange"
+msgstr ""
 
 msgid "Overview"
 msgstr ""
@@ -435,6 +497,9 @@ msgstr ""
 msgid "Prefix"
 msgstr "Tiền tố"
 
+msgid "Red"
+msgstr ""
+
 msgid "Resolve"
 msgstr ""
 
@@ -454,6 +519,21 @@ msgid ""
 "Sets the main IP (originator ip) of the router. This IP will NEVER change "
 "during the uptime of olsrd. Default is 0.0.0.0, which triggers usage of the "
 "IP of the first interface."
+msgstr ""
+
+msgid ""
+"Sets the main IP (originator ip) of the router. This IP will NEVER change "
+"during the uptime of olsrd. Default is ::, which triggers usage of the IP of "
+"the first interface."
+msgstr ""
+
+msgid "Show IPv4"
+msgstr ""
+
+msgid "Show IPv6"
+msgstr ""
+
+msgid "Signal Noise Ratio in dB"
 msgstr ""
 
 msgid "SmartGW"
@@ -480,6 +560,12 @@ msgid "State"
 msgstr ""
 
 msgid "Status"
+msgstr ""
+
+msgid "Still usable (20 > SNR > 5)"
+msgstr ""
+
+msgid "Still usable (4 < ETX < 10)"
 msgstr ""
 
 msgid "Success rate of packages received from the neighbour"
@@ -535,8 +621,8 @@ msgid "Topology"
 msgstr ""
 
 msgid ""
-"Type of service value for the IP header of control traffic. Default is \"16"
-"\"."
+"Type of service value for the IP header of control traffic. Default is "
+"\"16\"."
 msgstr ""
 
 msgid "Unable to connect to the OLSR daemon!"
@@ -551,7 +637,16 @@ msgstr ""
 msgid "Use hysteresis"
 msgstr "Dùng hysteresis"
 
+msgid "Validity Time"
+msgstr ""
+
 msgid "Version"
+msgstr ""
+
+msgid "Very good (ETX < 2)"
+msgstr ""
+
+msgid "Very good (SNR > 30)"
 msgstr ""
 
 msgid "WLAN"
@@ -581,5 +676,28 @@ msgid ""
 "Default setting is \"both\"."
 msgstr ""
 
+msgid ""
+"Which kind of uplink is exported to the other mesh nodes. An uplink is "
+"detected by looking for a local HNA6 ::ffff:0:0/96 or 2000::/3. Default "
+"setting is \"both\"."
+msgstr ""
+
 msgid "Willingness"
 msgstr "Sẵn sàng"
+
+msgid "Yellow"
+msgstr ""
+
+msgid "no"
+msgstr ""
+
+msgid "yes"
+msgstr ""
+
+#~ msgid ""
+#~ "Make sure that OLSRd is running, the \"txtinfo\" plugin is loaded, "
+#~ "configured on port 2006 and accepts connections from \"127.0.0.1\"."
+#~ msgstr ""
+#~ "Bảo đảm là OLSRd đang vận hành, the &amp;quot;txtinfo&amp;quot; plugin "
+#~ "được tải, định cấu hình trên cổng 2006 và chấp nhận kết nối từ &amp;"
+#~ "quot;127.0.0.1&amp;quot;."

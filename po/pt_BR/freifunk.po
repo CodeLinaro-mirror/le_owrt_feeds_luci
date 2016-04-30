@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-10 03:41+0200\n"
-"PO-Revision-Date: 2012-09-27 00:40+0200\n"
-"Last-Translator: Luiz Angelo <luizluca@gmail.com>\n"
+"PO-Revision-Date: 2014-06-21 19:00+0200\n"
+"Last-Translator: Éder <eder.grigorio@openmailbox.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgid "BSSID"
 msgstr "BSSID"
 
 msgid "Bad (ETX > 10)"
-msgstr ""
+msgstr "Mal (ETX > 10)"
 
 msgid "Basic Settings"
 msgstr "Configurações Básicas"
@@ -88,7 +88,11 @@ msgid "Edit index page"
 msgstr "Edita a página índice"
 
 msgid "Enable IPv6"
-msgstr ""
+msgstr "Habilitar IPv6"
+
+# 20140621: edersg: tradução
+msgid "Enable a virtual access point (VAP) by default if possible."
+msgstr "Habilitar um ponto de acesso virtual (VAP) por padrão, se possível"
 
 msgid "Error"
 msgstr "Erro"
@@ -112,10 +116,10 @@ msgid "Go to"
 msgstr "Vá para"
 
 msgid "Good (2 < ETX < 4)"
-msgstr ""
+msgstr "Bom (2 < ETX < 4)"
 
 msgid "Green"
-msgstr ""
+msgstr "Verde"
 
 msgid "Hello and welcome in the network of"
 msgstr "Olá e seja bem-vindo à rede do"
@@ -130,13 +134,13 @@ msgid "Hostname"
 msgstr "Nome do equipamento"
 
 msgid "IPv6 Config"
-msgstr ""
+msgstr "Configuração IPv6"
 
 msgid "IPv6 Prefix"
-msgstr ""
+msgstr "Prefixo IPv6"
 
 msgid "IPv6 network in CIDR notation."
-msgstr ""
+msgstr "Rede IPv6 em notação CIDR."
 
 msgid "If selected then the default content element is not shown."
 msgstr "Se selecionado, o conteúdo padrão não é mostrado."
@@ -169,7 +173,7 @@ msgid "Latitude"
 msgstr "Latitude"
 
 msgid "Legend"
-msgstr ""
+msgstr "Legenda"
 
 msgid "Load"
 msgstr "Carregar"
@@ -223,7 +227,7 @@ msgid "Operator"
 msgstr "Operador"
 
 msgid "Orange"
-msgstr ""
+msgstr "Laranja"
 
 msgid "Overview"
 msgstr "Visão Geral"
@@ -256,7 +260,7 @@ msgid "Realname"
 msgstr "Nome Real"
 
 msgid "Red"
-msgstr ""
+msgstr "Vermelho"
 
 msgid "SSID"
 msgstr "SSID"
@@ -290,7 +294,7 @@ msgid "Status"
 msgstr "Estado"
 
 msgid "Still usable (4 < ETX < 10)"
-msgstr ""
+msgstr "Ainda usável (4 < ETX < 10)"
 
 msgid "System"
 msgstr "Sistema"
@@ -348,11 +352,15 @@ msgstr "Existe uma atualização disponível!"
 msgid "Uptime"
 msgstr "Tempo de atividade"
 
+# 20140621: edersg: tradução
+msgid "VAP"
+msgstr "VAP"
+
 msgid "Verify downloaded images"
 msgstr "Verifique as imagens baixadas"
 
 msgid "Very good (ETX < 2)"
-msgstr ""
+msgstr "Muito bom (ETX < 2)"
 
 msgid ""
 "We are an initiative to establish a free, independent and open wireless mesh "
@@ -365,7 +373,7 @@ msgid "Wireless Overview"
 msgstr "Visão Geral da Rede Sem Fio"
 
 msgid "Yellow"
-msgstr ""
+msgstr "Amarelo"
 
 msgid ""
 "You can display additional content on the public index page by inserting "

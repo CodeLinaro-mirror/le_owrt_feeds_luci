@@ -22,7 +22,7 @@ n.anonymous = true
 
 function cbi_configure(device)
 	local configure = n:taboption(device, Flag, device .. "_config", translate("Configure this interface"),
-		translate("Note: this will setup this interface for mesh operation, i.e. add to zone 'freifunk' and enable olsr."))
+		translate("Note: this will set up this interface for mesh operation, i.e. add it to zone 'freifunk' and enable olsr."))
 end
 
 function cbi_ip4addr(device)
@@ -118,7 +118,7 @@ uci:foreach("wireless", "wifi-device", function(section)
 	chan:value('default')
 
 	local iwinfo = sys.wifi.getiwinfo(device)
-	if iwinfo then
+	if iwinfo and iwinfo.freqlist then
 		for _, f in ipairs(iwinfo.freqlist) do
 			if not f.restricted then
 				chan:value(f.channel)

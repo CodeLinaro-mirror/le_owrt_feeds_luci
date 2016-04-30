@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2012-08-26 22:49+0200\n"
-"Last-Translator: jhenner <jhenner@redhat.com>\n"
+"PO-Revision-Date: 2014-08-04 19:04+0200\n"
+"Last-Translator: KubaCZ <kuba.turek@centrum.cz>\n"
 "Language-Team: none\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +17,11 @@ msgstr "6to4 rozhraní"
 msgid "Address"
 msgstr "Adresa"
 
-#, fuzzy
 msgid "Addresses"
 msgstr "Adresy"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Pokročilé"
 
 msgid "Advertise Home Agent flag"
 msgstr ""
@@ -139,24 +138,24 @@ msgid "Default preference"
 msgstr "Výchozí preference"
 
 msgid "Enable"
-msgstr "Zapnout"
+msgstr "Povolit"
 
 msgid "Enable advertisements"
-msgstr "Zapnout oznamování"
+msgstr "Povolit oznamování"
 
 msgid "Enables router advertisements and solicitations"
-msgstr "Zapne oznamování routeru a hledání sousedů"
+msgstr "Povolí oznamování routeru a hledání sousedů"
 
 msgid ""
 "Enables the additional stateful administered autoconfiguration protocol "
 "(RFC2462)"
 msgstr ""
-"Zapne přídavný stavový administrovaný autokonfigurační protokol (RFC2462)"
+"Povolí přídavný stavový administrovaný autokonfigurační protokol (RFC2462)"
 
 msgid ""
 "Enables the autoconfiguration of additional, non address information "
 "(RFC2462)"
-msgstr "Zapne autokonfiguraci přídavného, neadresních informací (RFC2462)"
+msgstr "Povolí autokonfiguraci přídavného, neadresních informací (RFC2462)"
 
 msgid "General"
 msgstr "Obecné"
@@ -199,16 +198,16 @@ msgid ""
 msgstr ""
 
 msgid "Interface"
-msgstr ""
+msgstr "Rozhraní"
 
 msgid "Interface Configuration"
-msgstr ""
+msgstr "Konfigurace rozhraní"
 
 msgid "Interface required"
-msgstr ""
+msgstr "Rozhraní vyžadováno"
 
 msgid "Interfaces"
-msgstr ""
+msgstr "Rozhraní"
 
 msgid "Lifetime"
 msgstr ""
@@ -220,7 +219,7 @@ msgid "Managed flag"
 msgstr ""
 
 msgid "Max. interval"
-msgstr ""
+msgstr "Max. interval"
 
 msgid "Maximum advertisement interval"
 msgstr ""
@@ -241,7 +240,7 @@ msgid "Mobile IPv6 router registration"
 msgstr ""
 
 msgid "Multicast"
-msgstr ""
+msgstr "Multicast"
 
 msgid "On-link"
 msgstr ""
@@ -256,37 +255,37 @@ msgid "Preferred lifetime"
 msgstr ""
 
 msgid "Prefix"
-msgstr ""
+msgstr "Prefix"
 
 msgid "Prefix Configuration"
-msgstr ""
+msgstr "Nastavení prefixu"
 
 msgid "Prefixes"
-msgstr ""
+msgstr "Prefixy"
 
 msgid "RDNSS"
-msgstr ""
+msgstr "RDNSS"
 
 msgid "RDNSS Configuration"
-msgstr ""
+msgstr "Konfigurace RDNSS"
 
 msgid "Radvd"
-msgstr ""
+msgstr "Radvd"
 
 msgid "Radvd - DNSSL"
-msgstr ""
+msgstr "Radvd - DNSSL"
 
 msgid "Radvd - Interface %q"
-msgstr ""
+msgstr "Radvd - rozhraní %q"
 
 msgid "Radvd - Prefix"
-msgstr ""
+msgstr "Radvd - Prefix"
 
 msgid "Radvd - RDNSS"
-msgstr ""
+msgstr "Radvd - RDNSS"
 
 msgid "Radvd - Route"
-msgstr ""
+msgstr "Radvd - Route"
 
 msgid ""
 "Radvd is a router advertisement daemon for IPv6. It listens to router "
@@ -294,7 +293,7 @@ msgid ""
 msgstr ""
 
 msgid "Reachable time"
-msgstr ""
+msgstr "Dostupný čas"
 
 msgid ""
 "Restrict communication to specified clients, leave empty to use multicast"
@@ -307,7 +306,7 @@ msgid "Route Configuration"
 msgstr ""
 
 msgid "Routes"
-msgstr ""
+msgstr "Trasy"
 
 msgid "Source link-layer address"
 msgstr ""
@@ -338,7 +337,7 @@ msgid "Specifies the preference associated with the default router"
 msgstr ""
 
 msgid "Suffix"
-msgstr ""
+msgstr "Suffix"
 
 msgid ""
 "The maximum time allowed between sending unsolicited multicast router "
@@ -359,31 +358,32 @@ msgid "The preference for the Home Agent sending this RA"
 msgstr ""
 
 msgid "Timing"
-msgstr ""
+msgstr "Načasování"
 
 msgid "Unicast only"
-msgstr ""
+msgstr "Pouze unicast"
 
 msgid "Valid lifetime"
 msgstr ""
 
 msgid "Validity time"
-msgstr ""
+msgstr "Doba platnosti"
 
 msgid "default"
-msgstr ""
+msgstr "výchozí"
 
 msgid "high"
-msgstr ""
+msgstr "vysoká"
 
 msgid "low"
-msgstr ""
+msgstr "nízká"
 
 msgid "medium"
-msgstr ""
+msgstr "střední"
 
 msgid "no"
-msgstr ""
+msgstr "ne"
 
+# ano
 msgid "yes"
-msgstr ""
+msgstr "ano"

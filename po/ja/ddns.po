@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-04-02 13:44+0100\n"
-"PO-Revision-Date: 2012-04-22 17:38+0200\n"
+"PO-Revision-Date: 2013-10-05 17:19+0200\n"
 "Last-Translator: Kentaro <kentaro.matsuyama@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ja\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.0.4\n"
+"X-Generator: Pootle 2.0.6\n"
 
 msgid "Check for changed IP every"
 msgstr "IPアドレスが変化したかチェックを行う間隔"
@@ -35,9 +35,6 @@ msgstr ""
 msgid "Enable"
 msgstr "有効"
 
-msgid "Event interface"
-msgstr ""
-
 msgid "Force update every"
 msgstr "強制的にアップデートを行う間隔"
 
@@ -52,9 +49,6 @@ msgstr "インターフェース"
 
 msgid "Network"
 msgstr "ネットワーク"
-
-msgid "On which interface up should start the ddns script process."
-msgstr ""
 
 msgid "Password"
 msgstr "パスワード"
@@ -87,3 +81,9 @@ msgstr "分"
 
 msgid "network"
 msgstr "ネットワーク"
+
+#~ msgid "Event interface"
+#~ msgstr "イベントインターフェース"
+
+#~ msgid "On which interface up should start the ddns script process."
+#~ msgstr "どのインターフェースが起動した際にddnsスクリプトを開始するか設定してください。"

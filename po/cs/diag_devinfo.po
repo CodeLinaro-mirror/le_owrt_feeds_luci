@@ -1,14 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2014-07-11 19:32+0200\n"
+"Last-Translator: koli <lukas.koluch@gmail.com>\n"
 "Language-Team: none\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Pootle 2.0.6\n"
 
 msgid "Actions"
-msgstr ""
+msgstr "Akce"
 
 msgid "Add"
 msgstr "Přidat"
@@ -23,7 +27,7 @@ msgid "Configure"
 msgstr "Konfigurace"
 
 msgid "Configure Scans"
-msgstr ""
+msgstr "Konfigurace skenů"
 
 msgid ""
 "Configure scanning for devices on specified networks. Decreasing 'Timeout', "
@@ -44,7 +48,7 @@ msgid "Device Scan Config"
 msgstr ""
 
 msgid "Device Type"
-msgstr ""
+msgstr "Typ zařízení"
 
 msgid "Devices discovered for"
 msgstr "Devices discovered for"
@@ -62,7 +66,7 @@ msgid "End of MAC address range"
 msgstr "Konec rozsahu MAC adres"
 
 msgid "Go to relevant configuration page"
-msgstr ""
+msgstr "Přejít na příslušnou konfigurační stránku"
 
 msgid "IP Address"
 msgstr "IP adresa"
@@ -74,7 +78,7 @@ msgid "Invalid"
 msgstr "Neplatný"
 
 msgid "Link to Device"
-msgstr ""
+msgstr "Odkaz na zařízení"
 
 msgid "MAC Address"
 msgstr "MAC adresa"
@@ -92,13 +96,13 @@ msgid "Milliseconds to sleep between requests (default 100)"
 msgstr "Jak dlouho spát mezi požadavky (milisekundy, výchozí 100)"
 
 msgid "Model"
-msgstr ""
+msgstr "Model"
 
 msgid "Name"
 msgstr "Jméno"
 
 msgid "Network Device Scan"
-msgstr ""
+msgstr "Vyhledání síťových zařízení"
 
 msgid "Network Device Scanning Configuration"
 msgstr ""
@@ -127,13 +131,13 @@ msgid ""
 msgstr ""
 
 msgid "Perform Scans (this can take a few minutes)"
-msgstr ""
+msgstr "Provést skenování (může trvat několik minut)"
 
 msgid "Phone Information"
 msgstr "Informace o telefonu"
 
 msgid "Phone Scan"
-msgstr ""
+msgstr "Vyhledání telefonů"
 
 msgid "Phone Scanning Configuration"
 msgstr ""
@@ -142,7 +146,7 @@ msgid "Phones"
 msgstr "Telefony"
 
 msgid "Ports"
-msgstr ""
+msgstr "Porty"
 
 msgid "Raw"
 msgstr ""
@@ -151,16 +155,16 @@ msgid "Repeat Count"
 msgstr "Počet opakování"
 
 msgid "Repeat Scans (this can take a few minutes)"
-msgstr ""
+msgstr "Opakování skenování (může trvat několik minut)"
 
 msgid "SIP Device Information"
 msgstr "Informace o zařízení SIP"
 
 msgid "SIP Device Scan"
-msgstr ""
+msgstr "Skenování SIP zařízení"
 
 msgid "SIP Device Scanning Configuration"
-msgstr ""
+msgstr "Konfigurace skenování SIP zařízení"
 
 msgid "SIP Devices on Network"
 msgstr "Zařízení SIP na síti"
@@ -175,7 +179,7 @@ msgid "Scan for supported SIP devices on specified networks."
 msgstr ""
 
 msgid "Scanning Configuration"
-msgstr ""
+msgstr "Nastavení skenování"
 
 msgid "Scans for devices on specified networks."
 msgstr ""
@@ -187,19 +191,19 @@ msgid "Subnet"
 msgstr "Podsíť"
 
 msgid "This section contains no values yet"
-msgstr ""
+msgstr "Tato sekce zatím neobsahuje žádné hodnoty"
 
 msgid "Time to wait for responses in seconds (default 10)"
-msgstr ""
+msgstr "Doba čekání na odpovědi v sekundách (výchozí 10)"
 
 msgid "Timeout"
 msgstr "Časový limit"
 
 msgid "Use Configuration"
-msgstr ""
+msgstr "Použít nastavení"
 
 msgid "Vendor"
-msgstr ""
+msgstr "Prodejce"
 
 msgid "check other networks"
 msgstr "zkontrolovat ostatní sítě"

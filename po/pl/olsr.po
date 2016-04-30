@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2012-10-11 14:12+0200\n"
-"Last-Translator: mesiu84 <kmesek84@gmail.com>\n"
+"PO-Revision-Date: 2014-05-05 03:22+0200\n"
+"Last-Translator: piosl <sleczek.piotr@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,12 @@ msgstr "Ogłaszaj uplink"
 msgid "Announced network"
 msgstr "Ogłaszana sieć"
 
+msgid "Bad (ETX > 10)"
+msgstr ""
+
+msgid "Bad (SNR < 5)"
+msgstr ""
+
 msgid "Both values must use the dotted decimal notation."
 msgstr ""
 "Obie wartości muszą używać zapisu dziesiętnego z kropką przed częścią "
@@ -44,11 +50,19 @@ msgstr ""
 msgid "Broadcast address"
 msgstr "Adres rozgłoszeniowy (broadcast)"
 
+msgid "Can only be a valid IPv4 or IPv6 address or 'default'"
+msgstr ""
+
+msgid "Can only be a valid IPv6 address or 'default'"
+msgstr ""
+
 msgid "Configuration"
 msgstr "Konfiguracja"
 
-msgid "Device"
-msgstr "Urządzenie"
+msgid ""
+"Could not get any data. Make sure the jsoninfo plugin is installed and "
+"allows connections from localhost."
+msgstr ""
 
 msgid "Display"
 msgstr "Wyświetl"
@@ -82,7 +96,7 @@ msgid "Expected retransmission count"
 msgstr "Oczekiwana wartość retransmisji"
 
 msgid "FIB metric"
-msgstr ""
+msgstr "Metryka FIB"
 
 msgid ""
 "FIBMetric controls the metric value of the host-routes OLSRd sets. \"flat\" "
@@ -108,6 +122,15 @@ msgstr "Ustawienia ogólne"
 msgid "General settings"
 msgstr "Ustawienia ogólne"
 
+msgid "Good (2 < ETX < 4)"
+msgstr ""
+
+msgid "Good (30 > SNR > 20)"
+msgstr ""
+
+msgid "Green"
+msgstr ""
+
 msgid "HNA"
 msgstr "HNA"
 
@@ -120,6 +143,10 @@ msgstr "Interwał HNA"
 msgid "HNA validity time"
 msgstr "Czas poprawności HNA"
 
+#, fuzzy
+msgid "HNA6 Announcements"
+msgstr "Ogłoszenia HNA"
+
 msgid "Hello"
 msgstr "Hello"
 
@@ -128,6 +155,12 @@ msgstr "Interwał Hello"
 
 msgid "Hello validity time"
 msgstr "Czas poprawności Hello"
+
+msgid "Hide IPv4"
+msgstr ""
+
+msgid "Hide IPv6"
+msgstr ""
 
 msgid "Hna4"
 msgstr "Hna4"
@@ -148,6 +181,14 @@ msgstr ""
 "Hosty w sieci OLSR mogą ogłaszać połączenia z zewnętrznymi sieciami poprzez "
 "wiadomości HNA."
 
+#, fuzzy
+msgid ""
+"Hosts in a OLSR routed network can announce connecitivity to external "
+"networks using HNA6 messages."
+msgstr ""
+"Hosty w sieci OLSR mogą ogłaszać połączenia z zewnętrznymi sieciami poprzez "
+"wiadomości HNA."
+
 msgid ""
 "Hysteresis for link sensing (only for hopcount metric). Hysteresis adds more "
 "robustness to the link sensing but delays neighbor registration. Defaults is "
@@ -157,13 +198,12 @@ msgstr ""
 msgid "IP Addresses"
 msgstr "Adresy IP"
 
-#, fuzzy
 msgid ""
 "IP-version to use. If 6and4 is selected then one olsrd instance is started "
 "for each protocol."
 msgstr ""
 "Wersja protokołu IP. Jeśli jest wybrana 6and4 wtedy instancja olsrd jest "
-"uruchomiona dla każdego protokołu"
+"uruchomiona dla każdego protokołu."
 
 msgid "IPv4"
 msgstr "IPv4"
@@ -177,8 +217,8 @@ msgid ""
 "interface broadcast IP."
 msgstr ""
 "Adres rozgłoszeniowy (broadcast) IPv4 dla wychodzących pakietów OLSR. "
-"Przydatnym przykładem byłoby 255.255.255.255. Domyślna wartość to \"0.0.0.0"
-"\" - jest wtedy używany adres rozgłoszeniowy interfejsu."
+"Przydatnym przykładem byłoby 255.255.255.255. Domyślna wartość to "
+"\"0.0.0.0\" - jest wtedy używany adres rozgłoszeniowy interfejsu."
 
 msgid "IPv4 source"
 msgstr "Źródło IPv4"
@@ -187,8 +227,8 @@ msgid ""
 "IPv4 src address for outgoing OLSR packages. Default is \"0.0.0.0\", which "
 "triggers usage of the interface IP."
 msgstr ""
-"Adres źródłowy IPv4 dla wychodzących pakietów. Domyślna wartość to \"0.0.0.0"
-"\" - jest wtedy używany adres IP interfejsu."
+"Adres źródłowy IPv4 dla wychodzących pakietów. Domyślna wartość to "
+"\"0.0.0.0\" - jest wtedy używany adres IP interfejsu."
 
 msgid "IPv6"
 msgstr "IPv6"
@@ -263,6 +303,14 @@ msgid ""
 "Default is \"2.5\"."
 msgstr ""
 
+msgid "Invalid Value for LQMult-Value. Must be between 0.01 and 1.0."
+msgstr ""
+
+msgid ""
+"Invalid Value for LQMult-Value. You must use a decimal number between 0.01 "
+"and 1.0 here."
+msgstr ""
+
 msgid "Known OLSR routes"
 msgstr "Znane ścieżki OLSR"
 
@@ -280,6 +328,11 @@ msgstr "LQ-Fisheye"
 
 msgid "LQ level"
 msgstr "Poziom LQ"
+
+msgid ""
+"LQMult requires two values (IP address or 'default' and multiplicator) "
+"seperated by space."
+msgstr ""
 
 msgid "Last hop"
 msgstr "Ostatni skok (hop)"
@@ -343,11 +396,9 @@ msgid "Main IP"
 msgstr "Główny IP"
 
 msgid ""
-"Make sure that OLSRd is running, the \"txtinfo\" plugin is loaded, "
-"configured on port 2006 and accepts connections from \"127.0.0.1\"."
+"Make sure that OLSRd is running, the \"jsoninfo\" plugin is loaded, "
+"configured on port 9090 and accepts connections from \"127.0.0.1\"."
 msgstr ""
-"Upewnij się że OLSRd jest uruchomione, \"txtinfo\" plugin jest załadowany, "
-"skonfigurowany na porcie 2006 i akceptuje połączenia z 127.0.0.1 (localhost)"
 
 #, fuzzy
 msgid "Metric"
@@ -358,9 +409,16 @@ msgstr "Tryb"
 
 msgid ""
 "Multiply routes with the factor given here. Allowed values are between 0.01 "
-"and 1. It is only used when LQ-Level is greater than 0. Examples:<br /"
+"and 1.0. It is only used when LQ-Level is greater than 0. Examples:<br /"
 ">reduce LQ to 192.168.0.1 by half: 192.168.0.1 0.5<br />reduce LQ to all "
 "nodes on this interface by 20%: default 0.8"
+msgstr ""
+
+msgid ""
+"Multiply routes with the factor given here. Allowed values are between 0.01 "
+"and 1.0. It is only used when LQ-Level is greater than 0. Examples:<br /"
+">reduce LQ to fd91:662e:3c58::1 by half: fd91:662e:3c58::1 0.5<br />reduce "
+"LQ to all nodes on this interface by 20%: default 0.8"
 msgstr ""
 
 msgid "NAT threshold"
@@ -402,6 +460,10 @@ msgstr ""
 msgid "OLSR - HNA-Announcements"
 msgstr "OLSR - ogłoszenia HNA"
 
+#, fuzzy
+msgid "OLSR - HNA6-Announcements"
+msgstr "OLSR - ogłoszenia HNA"
+
 msgid "OLSR - Plugins"
 msgstr "OLSR - pluginy"
 
@@ -419,6 +481,9 @@ msgstr "Brama OLSR"
 
 msgid "OLSR node"
 msgstr "Węzeł OLSR"
+
+msgid "Orange"
+msgstr ""
 
 msgid "Overview"
 msgstr "Przegląd"
@@ -462,6 +527,9 @@ msgstr "Port"
 msgid "Prefix"
 msgstr "Prefiks"
 
+msgid "Red"
+msgstr ""
+
 msgid "Resolve"
 msgstr "Rozwiąż"
 
@@ -481,6 +549,21 @@ msgid ""
 "Sets the main IP (originator ip) of the router. This IP will NEVER change "
 "during the uptime of olsrd. Default is 0.0.0.0, which triggers usage of the "
 "IP of the first interface."
+msgstr ""
+
+msgid ""
+"Sets the main IP (originator ip) of the router. This IP will NEVER change "
+"during the uptime of olsrd. Default is ::, which triggers usage of the IP of "
+"the first interface."
+msgstr ""
+
+msgid "Show IPv4"
+msgstr ""
+
+msgid "Show IPv6"
+msgstr ""
+
+msgid "Signal Noise Ratio in dB"
 msgstr ""
 
 msgid "SmartGW"
@@ -508,6 +591,12 @@ msgstr "Stan"
 
 msgid "Status"
 msgstr "Status"
+
+msgid "Still usable (20 > SNR > 5)"
+msgstr ""
+
+msgid "Still usable (4 < ETX < 10)"
+msgstr ""
 
 #, fuzzy
 msgid "Success rate of packages received from the neighbour"
@@ -566,8 +655,8 @@ msgid "Topology"
 msgstr "Topologia"
 
 msgid ""
-"Type of service value for the IP header of control traffic. Default is \"16"
-"\"."
+"Type of service value for the IP header of control traffic. Default is "
+"\"16\"."
 msgstr ""
 
 msgid "Unable to connect to the OLSR daemon!"
@@ -582,8 +671,17 @@ msgstr "Uplink używa NAT"
 msgid "Use hysteresis"
 msgstr "Używaj histerezy"
 
+msgid "Validity Time"
+msgstr ""
+
 msgid "Version"
 msgstr "Wersja"
+
+msgid "Very good (ETX < 2)"
+msgstr ""
+
+msgid "Very good (SNR > 30)"
+msgstr ""
 
 msgid "WLAN"
 msgstr "WLAN"
@@ -621,5 +719,31 @@ msgid ""
 "Default setting is \"both\"."
 msgstr ""
 
+msgid ""
+"Which kind of uplink is exported to the other mesh nodes. An uplink is "
+"detected by looking for a local HNA6 ::ffff:0:0/96 or 2000::/3. Default "
+"setting is \"both\"."
+msgstr ""
+
 msgid "Willingness"
 msgstr "Gotowość"
+
+msgid "Yellow"
+msgstr ""
+
+msgid "no"
+msgstr ""
+
+msgid "yes"
+msgstr ""
+
+#~ msgid "Device"
+#~ msgstr "Urządzenie"
+
+#~ msgid ""
+#~ "Make sure that OLSRd is running, the \"txtinfo\" plugin is loaded, "
+#~ "configured on port 2006 and accepts connections from \"127.0.0.1\"."
+#~ msgstr ""
+#~ "Upewnij się że OLSRd jest uruchomione, \"txtinfo\" plugin jest "
+#~ "załadowany, skonfigurowany na porcie 2006 i akceptuje połączenia z "
+#~ "127.0.0.1 (localhost)"

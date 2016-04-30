@@ -227,6 +227,9 @@ end
 auto = s:taboption("advanced", Flag, "auto", translate("Bring up on boot"))
 auto.default = (net:proto() == "none") and auto.disabled or auto.enabled
 
+delegate = s:taboption("advanced", Flag, "delegate", translate("Use builtin IPv6-management"))
+delegate.default = delegate.enabled
+
 
 if not net:is_virtual() then
 	br = s:taboption("physical", Flag, "type", translate("Bridge interfaces"), translate("creates a bridge over specified interface(s)"))
@@ -447,7 +450,7 @@ if has_dnsmasq and net:proto() == "static" then
 		limit.default = "150"
 
 		local ltime = s:taboption("general", Value, "leasetime", translate("Leasetime"),
-			translate("Expiry time of leased addresses, minimum is 2 Minutes (<code>2m</code>)."))
+			translate("Expiry time of leased addresses, minimum is 2 minutes (<code>2m</code>)."))
 		ltime.rmempty = true
 		ltime.default = "12h"
 

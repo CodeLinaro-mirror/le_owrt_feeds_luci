@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-10 03:40+0200\n"
-"PO-Revision-Date: 2012-11-17 16:43+0200\n"
+"PO-Revision-Date: 2013-10-06 02:29+0200\n"
 "Last-Translator: Kentaro <kentaro.matsuyama@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ja\n"
@@ -39,12 +39,6 @@ msgstr "過去1分の負荷:"
 
 msgid "15 Minute Load:"
 msgstr "過去15分の負荷:"
-
-msgid "40MHz 2nd channel above"
-msgstr "40MHz 上側第2チャネル"
-
-msgid "40MHz 2nd channel below"
-msgstr "40MHz 下側第2チャネル"
 
 msgid "5 Minute Load:"
 msgstr "過去5分の負荷:"
@@ -87,6 +81,9 @@ msgstr ""
 msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Gateway"
 msgstr "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-ゲートウェイ"
 
+msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Suffix (hex)"
+msgstr ""
+
 msgid "<abbr title=\"Light Emitting Diode\">LED</abbr> Configuration"
 msgstr "<abbr title=\"Light Emitting Diode\">LED</abbr> 設定"
 
@@ -116,6 +113,12 @@ msgstr "<abbr title=\"maximal\">最大</abbr> 並列処理クエリ"
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr ""
 
+msgid "ADSL"
+msgstr ""
+
+msgid "ADSL Status"
+msgstr ""
+
 msgid "APN"
 msgstr "APN"
 
@@ -142,9 +145,6 @@ msgstr ""
 
 msgid "ATM device number"
 msgstr "ATMデバイス番号"
-
-msgid "Accept router advertisements"
-msgstr "ルーター広告の受信を許可する"
 
 msgid "Access Concentrator"
 msgstr "Access Concentrator"
@@ -173,10 +173,10 @@ msgid "Active Connections"
 msgstr "アクティブコネクション"
 
 msgid "Active DHCP Leases"
-msgstr "現在アクティブなDHCPリース"
+msgstr "アクティブなDHCPリース"
 
 msgid "Active DHCPv6 Leases"
-msgstr "現在アクティブなDHCPv6リース"
+msgstr "アクティブなDHCPv6リース"
 
 msgid "Ad-Hoc"
 msgstr "アドホック"
@@ -204,12 +204,6 @@ msgstr "管理画面"
 
 msgid "Advanced Settings"
 msgstr "詳細設定"
-
-msgid "Advertise IPv6 on network"
-msgstr "ネットワーク上のにIPv6 アドレスを広告する"
-
-msgid "Advertised network ID"
-msgstr "ネットワークIDを広告する"
 
 msgid "Alert"
 msgstr "警告"
@@ -240,16 +234,27 @@ msgid ""
 "Allow upstream responses in the 127.0.0.0/8 range, e.g. for RBL services"
 msgstr ""
 
-msgid "Allowed range is 1 to 65535"
-msgstr "設定可能な範囲は1から65535です"
+msgid "Always announce default router"
+msgstr ""
 
 msgid ""
 "Always use 40MHz channels even if the secondary channel overlaps. Using this "
 "option does not comply with IEEE 802.11n-2009!"
 msgstr ""
+"第2チャネルが重複しても、常に40MHz帯域幅を使用します。ただし本オプションは"
+"IEEE 802.11n-2009を満たしていません!"
 
 msgid "An additional network will be created if you leave this unchecked."
 msgstr "チェックボックスがオフの場合、追加のネットワークが作成されます。"
+
+msgid "Announce as default router even if no public prefix is available."
+msgstr ""
+
+msgid "Announced DNS domains"
+msgstr ""
+
+msgid "Announced DNS servers"
+msgstr ""
 
 msgid "Antenna 1"
 msgstr "アンテナ 1"
@@ -269,7 +274,15 @@ msgstr "適用"
 msgid "Applying changes"
 msgstr "変更を適用"
 
+msgid ""
+"Assign a part of given length of every public IPv6-prefix to this interface"
+msgstr ""
+
 msgid "Assign interfaces..."
+msgstr ""
+
+msgid ""
+"Assign prefix parts using this hexadecimal subprefix ID for this interface."
 msgstr ""
 
 msgid "Associated Stations"
@@ -289,6 +302,12 @@ msgstr "ログイン認証"
 
 msgid "Auto Refresh"
 msgstr "自動更新"
+
+msgid "Automatic"
+msgstr ""
+
+msgid "Automatic Homenet (HNCP)"
+msgstr ""
 
 msgid "Available"
 msgstr "使用可"
@@ -331,6 +350,9 @@ msgstr "バックアップ・ファイルリスト"
 
 msgid "Bad address specified!"
 msgstr "無効なアドレスです!"
+
+msgid "Band"
+msgstr ""
 
 msgid ""
 "Below is the determined list of files to backup. It consists of changed "
@@ -382,6 +404,9 @@ msgstr "キャッシュ"
 
 msgid "Cancel"
 msgstr "キャンセル"
+
+msgid "Category"
+msgstr ""
 
 msgid "Chain"
 msgstr "チェイン"
@@ -520,6 +545,9 @@ msgstr "Cronのログ出力レベル"
 msgid "Custom Interface"
 msgstr "新しいインターフェース"
 
+msgid "Custom delegated IPv6-prefix"
+msgstr ""
+
 msgid ""
 "Customizes the behaviour of the device <abbr title=\"Light Emitting Diode"
 "\">LED</abbr>s if possible."
@@ -545,11 +573,26 @@ msgstr "DHCPオプション"
 msgid "DHCPv6 Leases"
 msgstr "DHCPv6 リース"
 
+msgid "DHCPv6 client"
+msgstr ""
+
+msgid "DHCPv6-Mode"
+msgstr ""
+
+msgid "DHCPv6-Service"
+msgstr ""
+
 msgid "DNS"
 msgstr "DNS"
 
 msgid "DNS forwardings"
 msgstr "DNSフォワーディング"
+
+msgid "DNS-Label / FQDN"
+msgstr ""
+
+msgid "DS-Lite AFTR address"
+msgstr ""
 
 msgid "DUID"
 msgstr "DUID"
@@ -695,6 +738,9 @@ msgstr ""
 "クセスと統合された <abbr title=\"Secure Copy\">SCP</abbr> サーバーを提供しま"
 "す。"
 
+msgid "Dual-Stack Lite (RFC6333)"
+msgstr ""
+
 msgid "Dynamic <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr>"
 msgstr ""
 "ダイナミック <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr>"
@@ -790,11 +836,15 @@ msgstr "拡張ホスト設定"
 msgid "Expires"
 msgstr "期限切れ"
 
+#, fuzzy
 msgid ""
-"Expiry time of leased addresses, minimum is 2 Minutes (<code>2m</code>)."
+"Expiry time of leased addresses, minimum is 2 minutes (<code>2m</code>)."
 msgstr ""
 "リースアドレスの有効時間を入力します。最小設定値は2分です。 (<code>2m</"
 "code>)."
+
+msgid "External"
+msgstr ""
 
 msgid "External system log server"
 msgstr "外部システムログ・サーバー"
@@ -869,14 +919,14 @@ msgid "Force"
 msgstr "強制"
 
 msgid "Force 40MHz mode"
-msgstr ""
+msgstr "強制的に40MHzモードで動作する"
 
 msgid "Force CCMP (AES)"
 msgstr "CCMP (AES) を使用"
 
 msgid "Force DHCP on this network even if another server is detected."
 msgstr ""
-"別のDHCPサーバーが検出された場合でも、このDHCPサーバーを強制的に使用します。"
+"別のDHCPサーバーが検出された場合でも、DHCPサーバー機能を強制的に起動します。"
 
 msgid "Force TKIP"
 msgstr "TKIP を使用"
@@ -935,23 +985,26 @@ msgstr "802.11%s 無線LANコントローラ"
 msgid "Given password confirmation did not match, password not changed!"
 msgstr "入力されたパスワードが一致しません。パスワードは変更されませんでした!"
 
+msgid "Global network options"
+msgstr ""
+
 msgid "Go to password configuration..."
 msgstr "パスワード設定へ移動..."
 
 msgid "Go to relevant configuration page"
 msgstr "関連する設定ページへ移動"
 
+msgid "Guest"
+msgstr ""
+
 msgid "HE.net password"
 msgstr "HE.net パスワード"
 
-msgid "HE.net user ID"
-msgstr "HE.net ユーザーID"
+msgid "HE.net username"
+msgstr ""
 
-msgid "HT capabilities"
-msgstr "HT機能"
-
-msgid "HT mode"
-msgstr "HTモード"
+msgid "HT mode (802.11n)"
+msgstr ""
 
 msgid "Handler"
 msgstr "ハンドラ"
@@ -1013,6 +1066,9 @@ msgstr "IPv4 アドレス"
 msgid "IPv4 and IPv6"
 msgstr "IPv4及びIPv6"
 
+msgid "IPv4 assignment length"
+msgstr ""
+
 msgid "IPv4 broadcast"
 msgstr "IPv4 ブロードキャスト"
 
@@ -1037,11 +1093,23 @@ msgstr "IPv6"
 msgid "IPv6 Firewall"
 msgstr "IPv6 ファイアウォール"
 
+msgid "IPv6 Settings"
+msgstr ""
+
+msgid "IPv6 ULA-Prefix"
+msgstr ""
+
 msgid "IPv6 WAN Status"
 msgstr "IPv6 WAN ステータス"
 
 msgid "IPv6 address"
 msgstr "IPv6 アドレス"
+
+msgid "IPv6 assignment hint"
+msgstr ""
+
+msgid "IPv6 assignment length"
+msgstr ""
 
 msgid "IPv6 gateway"
 msgstr "IPv6 ゲートウェイ"
@@ -1054,6 +1122,9 @@ msgstr "IPv6 プレフィクス"
 
 msgid "IPv6 prefix length"
 msgstr "IPv6 プレフィクス長"
+
+msgid "IPv6 routed prefix"
+msgstr ""
 
 msgid "IPv6-Address"
 msgstr "IPv6-アドレス"
@@ -1133,6 +1204,9 @@ msgstr "起動スクリプト"
 msgid "Install"
 msgstr "インストール"
 
+msgid "Install iputils-traceroute6 for IPv6 traceroute"
+msgstr ""
+
 msgid "Install package %q"
 msgstr "%q パッケージをインストールします"
 
@@ -1149,7 +1223,7 @@ msgid "Interface Configuration"
 msgstr "インターフェース設定"
 
 msgid "Interface Overview"
-msgstr "インターフェース概要"
+msgstr "インターフェース一覧"
 
 msgid "Interface is reconnecting..."
 msgstr "インターフェース再接続中..."
@@ -1184,9 +1258,10 @@ msgstr "無効なVLAN IDです! ユニークなIDを入力してください。"
 msgid "Invalid username and/or password! Please try again."
 msgstr "ユーザー名とパスワードが不正です! もう一度入力してください。"
 
+#, fuzzy
 msgid ""
-"It appears that you try to flash an image that does not fit into the flash "
-"memory, please verify the image file!"
+"It appears that you are trying to flash an image that does not fit into the "
+"flash memory, please verify the image file!"
 msgstr ""
 "更新しようとしたイメージファイルはこのフラッシュメモリに適合しません。もう一"
 "度イメージファイルを確認してください!"
@@ -1269,6 +1344,15 @@ msgstr "凡例:"
 msgid "Limit"
 msgstr "割り当て数"
 
+msgid "Line Attenuation"
+msgstr ""
+
+msgid "Line Speed"
+msgstr ""
+
+msgid "Line State"
+msgstr ""
+
 msgid "Link On"
 msgstr "リンクオン"
 
@@ -1318,8 +1402,8 @@ msgid "Local domain"
 msgstr "ローカルドメイン"
 
 msgid ""
-"Local domain specification. Names matching this domain are never forwared "
-"and resolved from DHCP or hosts files only"
+"Local domain specification. Names matching this domain are never forwarded "
+"and are resolved from DHCP or hosts files only"
 msgstr ""
 
 msgid "Local domain suffix appended to DHCP names and hosts file entries"
@@ -1337,7 +1421,7 @@ msgid "Localise queries"
 msgstr "ローカライズクエリ"
 
 msgid "Locked to channel %d used by %s"
-msgstr ""
+msgstr "%sが使用しているためチャネル%dはロックされています"
 
 msgid "Log output level"
 msgstr "ログ出力レベル"
@@ -1424,6 +1508,9 @@ msgstr "プロトコル %qのプロトコル拡張が見つかりません"
 msgid "Mode"
 msgstr "モード"
 
+msgid "Model"
+msgstr ""
+
 msgid "Modem device"
 msgstr "モデムデバイス"
 
@@ -1478,6 +1565,9 @@ msgstr "マルチキャストアドレス"
 
 msgid "NAS ID"
 msgstr "NAS ID"
+
+msgid "NDP-Proxy"
+msgstr ""
 
 msgid "NTP server candidates"
 msgstr "NTPサーバー候補"
@@ -1548,6 +1638,9 @@ msgstr "ゾーンが設定されていません"
 msgid "Noise"
 msgstr "ノイズ"
 
+msgid "Noise Margin"
+msgstr ""
+
 msgid "Noise:"
 msgstr "ノイズ:"
 
@@ -1603,7 +1696,7 @@ msgid "On-State Delay"
 msgstr "点灯時間"
 
 msgid "One of hostname or mac address must be specified!"
-msgstr ""
+msgstr "1つ以上のホスト名またはmacアドレスを設定してください!"
 
 msgid "One or more fields contain invalid values!"
 msgstr "1つ以上のフィールドに無効な値が設定されています！"
@@ -1811,6 +1904,9 @@ msgstr "新しいネットワークを設定する"
 msgid "Pseudo Ad-Hoc (ahdemo)"
 msgstr "擬似アドホック (ahdemo)"
 
+msgid "Public prefix routed to this device for distribution to clients."
+msgstr ""
+
 msgid "Quality"
 msgstr "クオリティ"
 
@@ -1872,6 +1968,15 @@ msgstr ""
 msgid "Really reset all changes?"
 msgstr "本当に全ての変更をリセットしますか?"
 
+#, fuzzy
+msgid ""
+"Really shut down network?\\nYou might lose access to this device if you are "
+"connected via this interface."
+msgstr ""
+"本当にネットワークを停止しますか?\n"
+"このネットワークを経由して接続している場合、デバイスにアクセスできなくなる場"
+"合があります。"
+
 msgid ""
 "Really shutdown interface \"%s\" ?\\nYou might lose access to this device if "
 "you are connected via this interface."
@@ -1879,14 +1984,6 @@ msgstr ""
 "本当にインターフェース \"%s\" を停止しますか?\n"
 "このインターフェースを経由して接続している場合、デバイスにアクセスできなくな"
 "る場合があります。"
-
-msgid ""
-"Really shutdown network ?\\nYou might lose access to this device if you are "
-"connected via this interface."
-msgstr ""
-"本当にネットワークを停止しますか?\n"
-"このネットワークを経由して接続している場合、デバイスにアクセスできなくなる場"
-"合があります。"
 
 msgid "Really switch protocol?"
 msgstr "本当にプロトコルを切り替えますか?"
@@ -1963,6 +2060,12 @@ msgstr "エントリーの置換"
 msgid "Replace wireless configuration"
 msgstr "無線設定を置換する"
 
+msgid "Request IPv6-address"
+msgstr ""
+
+msgid "Request IPv6-prefix of length"
+msgstr ""
+
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr "DOCSIS 3.0を使用するいくつかのISPでは必要になります"
 
@@ -2002,11 +2105,8 @@ msgstr "ルート"
 msgid "Root directory for files served via TFTP"
 msgstr "TFTP経由でファイルを取り扱う際のルートディレクトリ"
 
-msgid "Router Model"
-msgstr "ルーターモデル"
-
-msgid "Router Name"
-msgstr "ルーター名"
+msgid "Router Advertisement-Service"
+msgstr ""
 
 msgid "Router Password"
 msgstr "ルーター・パスワード"
@@ -2070,9 +2170,6 @@ msgstr ""
 "設定された秒間隔でLCP echoリクエストを送信します。失敗数しきい値を設定した場"
 "合のみ、機能が有効になります。"
 
-msgid "Send router solicitations"
-msgstr "ルータ要請を送信する"
-
 msgid "Separate Clients"
 msgstr "クライアントの分離"
 
@@ -2091,11 +2188,12 @@ msgstr "サービスタイプ"
 msgid "Services"
 msgstr "サービス"
 
+#, fuzzy
+msgid "Set up Time Synchronization"
+msgstr "時刻設定"
+
 msgid "Setup DHCP Server"
 msgstr "DHCPサーバーを設定"
-
-msgid "Setup Time Synchronization"
-msgstr ""
 
 msgid "Show current backup file list"
 msgstr "現在のバックアップファイルのリストを表示する"
@@ -2134,13 +2232,14 @@ msgid "Some fields are invalid, cannot save values!"
 msgstr "無効な値が設定されているフィールドがあるため、保存できません。"
 
 msgid "Sorry, the object you requested was not found."
-msgstr ""
+msgstr "申し訳ありません。リクエストされたオブジェクトは見つかりませんでした。"
 
 msgid "Sorry, the server encountered an unexpected error."
 msgstr "申し訳ありません。サーバーに予期せぬエラーが発生しました。"
 
+#, fuzzy
 msgid ""
-"Sorry, there is no sysupgrade support present, a new firmware image must be "
+"Sorry, there is no sysupgrade support present; a new firmware image must be "
 "flashed manually. Please refer to the OpenWrt wiki for device specific "
 "install instructions."
 msgstr ""
@@ -2153,12 +2252,6 @@ msgstr "ソート"
 
 msgid "Source"
 msgstr "送信元"
-
-msgid "Specifies the advertised preferred prefix lifetime in seconds"
-msgstr "通知する推奨有効時間を設定してください。(秒単位)"
-
-msgid "Specifies the advertised valid prefix lifetime in seconds"
-msgstr "通知する最終有効時間を設定してください。(秒単位)"
 
 msgid "Specifies the button state to handle"
 msgstr ""
@@ -2230,6 +2323,9 @@ msgstr "問い合わせの制限"
 msgid "Submit"
 msgstr "送信"
 
+msgid "Swap"
+msgstr ""
+
 msgid "Swap Entry"
 msgstr "スワップ機能"
 
@@ -2287,12 +2383,13 @@ msgstr "ターゲット"
 msgid "Terminate"
 msgstr "停止"
 
+#, fuzzy
 msgid ""
 "The <em>Device Configuration</em> section covers physical settings of the "
-"radio hardware such as channel, transmit power or antenna selection which is "
-"shared among all defined wireless networks (if the radio hardware is multi-"
-"SSID capable). Per network settings like encryption or operation mode are "
-"grouped in the <em>Interface Configuration</em>."
+"radio hardware such as channel, transmit power or antenna selection which "
+"are shared among all defined wireless networks (if the radio hardware is "
+"multi-SSID capable). Per network settings like encryption or operation mode "
+"are grouped in the <em>Interface Configuration</em>."
 msgstr ""
 "<em>デバイス設定</em>セクションでは、チャネル、送信出力、アンテナ設定などの無"
 "線ハードウェアの設定を行います。また、無線ハードウェアがマルチSSID機能をサ"
@@ -2306,6 +2403,11 @@ msgid ""
 msgstr ""
 "<em>libiwinfo-lua</em> パッケージがインストールされていません。無線設定機能を"
 "正しく動作させるために、このパッケージをインストールする必要があります。"
+
+msgid ""
+"The HE.net endpoint update configuration changed, you must now use the plain "
+"username instead of the user ID!"
+msgstr ""
 
 msgid ""
 "The IPv6 prefix assigned to the provider, usually ends with <code>::</code>"
@@ -2350,17 +2452,18 @@ msgid "The following changes have been reverted"
 msgstr "以下の変更が取り消されました"
 
 msgid "The following rules are currently active on this system."
-msgstr "本システムでは、現在以下のルールが有効になっています。"
+msgstr "このシステムでは、現在以下のルールが有効になっています。"
 
 msgid "The given network name is not unique"
 msgstr "設定されたネットワーク名はユニークなものではありません"
 
+#, fuzzy
 msgid ""
-"The hardware is not multi-SSID capable and existing configuration will be "
-"replaced if you proceed."
+"The hardware is not multi-SSID capable and the existing configuration will "
+"be replaced if you proceed."
 msgstr ""
-"本ハードウェアではマルチESSIDを設定することができないため、続行した場合、設定"
-"は既存の設定と置き換えられます。"
+"このハードウェアではマルチESSIDを設定することができないため、続行した場合、設"
+"定は既存の設定と置き換えられます。"
 
 msgid ""
 "The length of the IPv4 prefix in bits, the remainder is used in the IPv6 "
@@ -2387,9 +2490,10 @@ msgid ""
 "when finished."
 msgstr "システムは設定領域を消去中です。完了後、自動的に再起動します。"
 
+#, fuzzy
 msgid ""
 "The system is flashing now.<br /> DO NOT POWER OFF THE DEVICE!<br /> Wait a "
-"few minutes until you try to reconnect. It might be necessary to renew the "
+"few minutes before you try to reconnect. It might be necessary to renew the "
 "address of your computer to reach the device again, depending on your "
 "settings."
 msgstr ""
@@ -2444,10 +2548,10 @@ msgstr ""
 "ンリストです。/etc/config/内の設定ファイル及びその他特定の設定ファイルは自動"
 "的に保持されます。"
 
-msgid "This is the 32 byte hex encoded user ID, not the login name"
+msgid ""
+"This is either the \"Update Key\" configured for the tunnel or the account "
+"password if no update key has been configured"
 msgstr ""
-"ログイン名ではなく、32バイト、16進数でエンコードされたユーザーIDを設定してく"
-"ださい"
 
 msgid ""
 "This is the content of /etc/rc.local. Insert your own commands here (in "
@@ -2469,6 +2573,13 @@ msgid ""
 msgstr ""
 "ローカルネットワーク内のみの <abbr title=\"Dynamic Host Configuration "
 "Protocol\">DHCP</abbr>として使用する"
+
+msgid "This is the plain username for logging into the account"
+msgstr ""
+
+msgid ""
+"This is the prefix routed to you by the tunnel broker for use by clients"
+msgstr ""
 
 msgid "This is the system crontab in which scheduled tasks can be defined."
 msgstr ""
@@ -2547,6 +2658,9 @@ msgstr "トンネル ID"
 msgid "Tunnel Interface"
 msgstr "トンネルインターフェース"
 
+msgid "Tunnel Link"
+msgstr ""
+
 msgid "Turbo Mode"
 msgstr "ターボモード"
 
@@ -2597,10 +2711,10 @@ msgid ""
 "Check \"Keep settings\" to retain the current configuration (requires an "
 "OpenWrt compatible firmware image)."
 msgstr ""
-"使用中のファームウェアをアップデートするために、sysupgrade機能に互換性のある"
-"ファームウェアイメージをアップロードしてください。\"設定の保持\"を有効にする"
-"と、現在の設定を維持してアップデートを行います。ただし、OpenWrt互換のファーム"
-"ウェアイメージの場合のみ、設定は保持されます。"
+"システムをアップデートする場合、sysupgrade機能に互換性のあるファームウェアイ"
+"メージをアップロードしてください。\"設定の保持\"を有効にすると、現在の設定を"
+"維持してアップデートを行います。ただし、OpenWrt互換のファームウェアイメージが"
+"アップロードされた場合のみ、設定は保持されます。"
 
 msgid "Upload archive..."
 msgstr "アーカイブをアップロード"
@@ -2635,6 +2749,9 @@ msgstr "ルート・ファイルシステムとして使用する"
 msgid "Use broadcast flag"
 msgstr "ブロードキャスト・フラグを使用する"
 
+msgid "Use builtin IPv6-management"
+msgstr ""
+
 msgid "Use custom DNS servers"
 msgstr "DNSサーバーを手動で設定"
 
@@ -2643,9 +2760,6 @@ msgstr "デフォルトゲートウェイを使用する"
 
 msgid "Use gateway metric"
 msgstr "ゲートウェイ・メトリックを使用する"
-
-msgid "Use preferred lifetime"
-msgstr "推奨有効時間"
 
 msgid "Use routing table"
 msgstr ""
@@ -2660,9 +2774,6 @@ msgstr ""
 "ドレス</em> はそのホストを識別し, <em>IPv4-アドレス</em> には払いだす固定のア"
 "ドレスを設定します。また、<em>ホスト名</em> はそのホストに対して一時的なホス"
 "ト名をアサインします。"
-
-msgid "Use valid lifetime"
-msgstr "最終有効時間"
 
 msgid "Used"
 msgstr "使用"
@@ -2748,7 +2859,7 @@ msgid "Wireless Network"
 msgstr "無線ネットワーク"
 
 msgid "Wireless Overview"
-msgstr "無線LAN概要"
+msgstr "無線LANデバイス一覧"
 
 msgid "Wireless Security"
 msgstr "無線LANセキュリティ"
@@ -2797,6 +2908,10 @@ msgstr "全て"
 msgid "auto"
 msgstr "自動"
 
+#, fuzzy
+msgid "automatic"
+msgstr "static"
+
 msgid "baseT"
 msgstr "baseT"
 
@@ -2817,6 +2932,9 @@ msgstr "dBm"
 
 msgid "disable"
 msgstr "無効"
+
+msgid "disabled"
+msgstr ""
 
 msgid "expired"
 msgstr "期限切れ"
@@ -2841,6 +2959,9 @@ msgid "help"
 msgstr "ヘルプ"
 
 msgid "hidden"
+msgstr ""
+
+msgid "hybrid mode"
 msgstr ""
 
 msgid "if target is a network"
@@ -2879,8 +3000,23 @@ msgstr "オン"
 msgid "open"
 msgstr ""
 
+msgid "relay mode"
+msgstr ""
+
 msgid "routed"
 msgstr "routed"
+
+msgid "server mode"
+msgstr ""
+
+msgid "stateful-only"
+msgstr ""
+
+msgid "stateless"
+msgstr ""
+
+msgid "stateless + stateful"
+msgstr ""
 
 msgid "tagged"
 msgstr "tagged"
@@ -2905,6 +3041,59 @@ msgstr "はい"
 
 msgid "« Back"
 msgstr "« 戻る"
+
+#~ msgid "HE.net user ID"
+#~ msgstr "HE.net ユーザーID"
+
+#~ msgid "This is the 32 byte hex encoded user ID, not the login name"
+#~ msgstr ""
+#~ "ログイン名ではなく、32バイト、16進数でエンコードされたユーザーIDを設定して"
+#~ "ください"
+
+#~ msgid "40MHz 2nd channel above"
+#~ msgstr "40MHz 上側第2チャネル"
+
+#~ msgid "40MHz 2nd channel below"
+#~ msgstr "40MHz 下側第2チャネル"
+
+#~ msgid "Accept router advertisements"
+#~ msgstr "ルーター広告の受信を許可する"
+
+#~ msgid "Advertise IPv6 on network"
+#~ msgstr "ネットワーク上のにIPv6 アドレスを広告する"
+
+#~ msgid "Advertised network ID"
+#~ msgstr "ネットワークIDを広告する"
+
+#~ msgid "Allowed range is 1 to 65535"
+#~ msgstr "設定可能な範囲は1から65535です"
+
+#~ msgid "HT capabilities"
+#~ msgstr "HT機能"
+
+#~ msgid "HT mode"
+#~ msgstr "HTモード"
+
+#~ msgid "Router Model"
+#~ msgstr "ルーターモデル"
+
+#~ msgid "Router Name"
+#~ msgstr "ルーター名"
+
+#~ msgid "Send router solicitations"
+#~ msgstr "ルータ要請を送信する"
+
+#~ msgid "Specifies the advertised preferred prefix lifetime in seconds"
+#~ msgstr "通知する推奨有効時間を設定してください。(秒単位)"
+
+#~ msgid "Specifies the advertised valid prefix lifetime in seconds"
+#~ msgstr "通知する最終有効時間を設定してください。(秒単位)"
+
+#~ msgid "Use preferred lifetime"
+#~ msgstr "推奨有効時間"
+
+#~ msgid "Use valid lifetime"
+#~ msgstr "最終有効時間"
 
 #~ msgid "Waiting for router..."
 #~ msgstr "ルーターに接続中..."
@@ -3788,10 +3977,6 @@ msgstr "« 戻る"
 
 #~ msgid "adds domain names to hostentries in the resolv file"
 #~ msgstr "リゾルバファイルのホストエントリにドメイン名を追加します"
-
-#, fuzzy
-#~ msgid "automatic"
-#~ msgstr "static"
 
 #~ msgid "automatically reconnect"
 #~ msgstr "自動再接続"

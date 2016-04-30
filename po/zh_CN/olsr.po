@@ -1,11 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2013-10-10 20:26+0200\n"
+"Last-Translator: Tanyingyu <Tanyingyu@163.com>\n"
 "Language-Team: none\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.0.6\n"
 
 msgid "Active MID announcements"
 msgstr ""
@@ -17,63 +21,78 @@ msgid "Active host net announcements"
 msgstr ""
 
 msgid "Advanced Settings"
-msgstr ""
+msgstr "高级设置"
 
 msgid "Allow gateways with NAT"
-msgstr ""
+msgstr "允许网关使用NAT"
 
 msgid "Allow the selection of an outgoing ipv4 gateway with NAT"
-msgstr ""
+msgstr "允许选定的IPv4通过网关NAT"
 
 msgid "Announce uplink"
-msgstr ""
+msgstr "广告上行"
 
 msgid "Announced network"
+msgstr "广告网络"
+
+msgid "Bad (ETX > 10)"
+msgstr ""
+
+msgid "Bad (SNR < 5)"
 msgstr ""
 
 msgid "Both values must use the dotted decimal notation."
-msgstr ""
+msgstr "两个值必须使用点分十进制表示法。"
 
 msgid "Broadcast address"
+msgstr "广播地址"
+
+msgid "Can only be a valid IPv4 or IPv6 address or 'default'"
+msgstr ""
+
+msgid "Can only be a valid IPv6 address or 'default'"
 msgstr ""
 
 msgid "Configuration"
-msgstr ""
+msgstr "配置"
 
-msgid "Device"
+msgid ""
+"Could not get any data. Make sure the jsoninfo plugin is installed and "
+"allows connections from localhost."
 msgstr ""
 
 msgid "Display"
-msgstr ""
+msgstr "显示"
 
 msgid "Downlink"
-msgstr ""
+msgstr "断线"
 
 msgid "Download Config"
-msgstr ""
+msgstr "下载配置"
 
 msgid "ETX"
-msgstr ""
+msgstr "ETX"
 
 msgid "Enable"
-msgstr ""
+msgstr "允许"
 
 msgid ""
 "Enable SmartGateway. If it is disabled, then all other SmartGateway "
 "parameters are ignored. Default is \"no\"."
 msgstr ""
+"启用SmartGateway。如果禁用，则SmartGateway其他所有参数将忽略。缺省值：“禁用”"
 
 msgid "Enable this interface."
-msgstr ""
+msgstr "启用这个端口"
 
 msgid "Enabled"
-msgstr ""
+msgstr "启用"
 
 msgid "Expected retransmission count"
-msgstr ""
+msgstr "预期重发数"
 
 msgid "FIB metric"
-msgstr ""
+msgstr "FIB度量"
 
 msgid ""
 "FIBMetric controls the metric value of the host-routes OLSRd sets. \"flat\" "
@@ -88,50 +107,74 @@ msgid "Fisheye mechanism for TCs (checked means on). Default is \"on\""
 msgstr ""
 
 msgid "Gateway"
-msgstr ""
+msgstr "网关"
 
 msgid "General Settings"
-msgstr ""
+msgstr "通用设置"
 
 msgid "General settings"
+msgstr "通用设置"
+
+msgid "Good (2 < ETX < 4)"
+msgstr ""
+
+msgid "Good (30 > SNR > 20)"
+msgstr ""
+
+msgid "Green"
 msgstr ""
 
 msgid "HNA"
-msgstr ""
+msgstr "HNA"
 
 msgid "HNA Announcements"
-msgstr ""
+msgstr "HNA公告"
 
 msgid "HNA interval"
-msgstr ""
+msgstr "HNA间隙"
 
 msgid "HNA validity time"
-msgstr ""
+msgstr "HNA有效时长"
+
+#, fuzzy
+msgid "HNA6 Announcements"
+msgstr "HNA公告"
 
 msgid "Hello"
-msgstr ""
+msgstr "Hello"
 
 msgid "Hello interval"
-msgstr ""
+msgstr "Hello间隙"
 
 msgid "Hello validity time"
+msgstr "Hello有效时长"
+
+msgid "Hide IPv4"
+msgstr ""
+
+msgid "Hide IPv6"
 msgstr ""
 
 msgid "Hna4"
-msgstr ""
+msgstr "Hna4"
 
 msgid "Hna6"
-msgstr ""
+msgstr "Hna6"
 
 msgid "Hops"
-msgstr ""
+msgstr "跳"
 
 msgid "Hostname"
-msgstr ""
+msgstr "主机名"
 
 msgid ""
 "Hosts in a OLSR routed network can announce connecitivity to external "
 "networks using HNA messages."
+msgstr ""
+
+msgid ""
+"Hosts in a OLSR routed network can announce connecitivity to external "
+"networks using HNA6 messages."
 msgstr ""
 
 msgid ""
@@ -141,7 +184,7 @@ msgid ""
 msgstr ""
 
 msgid "IP Addresses"
-msgstr ""
+msgstr "IP地址"
 
 msgid ""
 "IP-version to use. If 6and4 is selected then one olsrd instance is started "
@@ -149,10 +192,10 @@ msgid ""
 msgstr ""
 
 msgid "IPv4"
-msgstr ""
+msgstr "IPv4"
 
 msgid "IPv4 broadcast"
-msgstr ""
+msgstr "IPv4广播地址"
 
 msgid ""
 "IPv4 broadcast address for outgoing OLSR packets. One useful example would "
@@ -230,6 +273,14 @@ msgid ""
 "Default is \"2.5\"."
 msgstr ""
 
+msgid "Invalid Value for LQMult-Value. Must be between 0.01 and 1.0."
+msgstr ""
+
+msgid ""
+"Invalid Value for LQMult-Value. You must use a decimal number between 0.01 "
+"and 1.0 here."
+msgstr ""
+
 msgid "Known OLSR routes"
 msgstr ""
 
@@ -246,6 +297,11 @@ msgid "LQ fisheye"
 msgstr ""
 
 msgid "LQ level"
+msgstr ""
+
+msgid ""
+"LQMult requires two values (IP address or 'default' and multiplicator) "
+"seperated by space."
 msgstr ""
 
 msgid "Last hop"
@@ -309,8 +365,8 @@ msgid "Main IP"
 msgstr ""
 
 msgid ""
-"Make sure that OLSRd is running, the \"txtinfo\" plugin is loaded, "
-"configured on port 2006 and accepts connections from \"127.0.0.1\"."
+"Make sure that OLSRd is running, the \"jsoninfo\" plugin is loaded, "
+"configured on port 9090 and accepts connections from \"127.0.0.1\"."
 msgstr ""
 
 msgid "Metric"
@@ -321,9 +377,16 @@ msgstr ""
 
 msgid ""
 "Multiply routes with the factor given here. Allowed values are between 0.01 "
-"and 1. It is only used when LQ-Level is greater than 0. Examples:<br /"
+"and 1.0. It is only used when LQ-Level is greater than 0. Examples:<br /"
 ">reduce LQ to 192.168.0.1 by half: 192.168.0.1 0.5<br />reduce LQ to all "
 "nodes on this interface by 20%: default 0.8"
+msgstr ""
+
+msgid ""
+"Multiply routes with the factor given here. Allowed values are between 0.01 "
+"and 1.0. It is only used when LQ-Level is greater than 0. Examples:<br /"
+">reduce LQ to fd91:662e:3c58::1 by half: fd91:662e:3c58::1 0.5<br />reduce "
+"LQ to all nodes on this interface by 20%: default 0.8"
 msgstr ""
 
 msgid "NAT threshold"
@@ -365,6 +428,10 @@ msgstr ""
 msgid "OLSR - HNA-Announcements"
 msgstr ""
 
+#, fuzzy
+msgid "OLSR - HNA6-Announcements"
+msgstr "HNA公告"
+
 msgid "OLSR - Plugins"
 msgstr ""
 
@@ -381,6 +448,9 @@ msgid "OLSR gateway"
 msgstr ""
 
 msgid "OLSR node"
+msgstr ""
+
+msgid "Orange"
 msgstr ""
 
 msgid "Overview"
@@ -425,6 +495,9 @@ msgstr ""
 msgid "Prefix"
 msgstr ""
 
+msgid "Red"
+msgstr ""
+
 msgid "Resolve"
 msgstr ""
 
@@ -444,6 +517,21 @@ msgid ""
 "Sets the main IP (originator ip) of the router. This IP will NEVER change "
 "during the uptime of olsrd. Default is 0.0.0.0, which triggers usage of the "
 "IP of the first interface."
+msgstr ""
+
+msgid ""
+"Sets the main IP (originator ip) of the router. This IP will NEVER change "
+"during the uptime of olsrd. Default is ::, which triggers usage of the IP of "
+"the first interface."
+msgstr ""
+
+msgid "Show IPv4"
+msgstr ""
+
+msgid "Show IPv6"
+msgstr ""
+
+msgid "Signal Noise Ratio in dB"
 msgstr ""
 
 msgid "SmartGW"
@@ -470,6 +558,12 @@ msgid "State"
 msgstr ""
 
 msgid "Status"
+msgstr ""
+
+msgid "Still usable (20 > SNR > 5)"
+msgstr ""
+
+msgid "Still usable (4 < ETX < 10)"
 msgstr ""
 
 msgid "Success rate of packages received from the neighbour"
@@ -541,7 +635,16 @@ msgstr ""
 msgid "Use hysteresis"
 msgstr ""
 
+msgid "Validity Time"
+msgstr ""
+
 msgid "Version"
+msgstr ""
+
+msgid "Very good (ETX < 2)"
+msgstr ""
+
+msgid "Very good (SNR > 30)"
 msgstr ""
 
 msgid "WLAN"
@@ -571,5 +674,23 @@ msgid ""
 "Default setting is \"both\"."
 msgstr ""
 
+msgid ""
+"Which kind of uplink is exported to the other mesh nodes. An uplink is "
+"detected by looking for a local HNA6 ::ffff:0:0/96 or 2000::/3. Default "
+"setting is \"both\"."
+msgstr ""
+
 msgid "Willingness"
 msgstr ""
+
+msgid "Yellow"
+msgstr ""
+
+msgid "no"
+msgstr ""
+
+msgid "yes"
+msgstr ""
+
+#~ msgid "Device"
+#~ msgstr "设备"

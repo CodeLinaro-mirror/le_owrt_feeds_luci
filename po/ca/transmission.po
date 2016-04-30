@@ -1,29 +1,44 @@
-msgid "Alternative download speed"
+msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-01 23:27+0200\n"
+"PO-Revision-Date: 2014-07-17 23:50+0200\n"
+"Last-Translator: Alex <alexhenrie24@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.6\n"
+
+msgid "Alternative download speed"
+msgstr "Velocitat de baixada alternativa"
 
 msgid "Alternative speed enabled"
-msgstr ""
+msgstr "Velocitat alternativa habilitada"
 
 msgid "Alternative speed time begin"
-msgstr ""
+msgstr "Hora inicial de velocitat alternativa"
 
 msgid "Alternative speed time day"
-msgstr ""
+msgstr "Dia de velocitat alternativa"
 
 msgid "Alternative speed time end"
-msgstr ""
+msgstr "Hora final de velocitat alternativa"
 
 msgid "Alternative speed timing enabled"
-msgstr ""
+msgstr "Temporització de velocitat alternativa habilitada"
 
 msgid "Alternative upload speed"
-msgstr ""
+msgstr "Velocitat de pujada alternativa"
 
 msgid "Automatically start added torrents"
-msgstr ""
+msgstr "Comença automàticament els torrents afegits"
 
 msgid "Bandwidth settings"
-msgstr ""
+msgstr "Ajusts d'amplada de banda"
 
 msgid "Binding address IPv4"
 msgstr ""
@@ -32,64 +47,64 @@ msgid "Binding address IPv6"
 msgstr ""
 
 msgid "Block list enabled"
-msgstr ""
+msgstr "Llista de bloqueig habilitada"
 
 msgid "Blocklist URL"
 msgstr ""
 
 msgid "Blocklists"
-msgstr ""
+msgstr "Llistes de bloqueig"
 
 msgid "Cache size in MB"
 msgstr ""
 
 msgid "Config file directory"
-msgstr ""
+msgstr "Directori de fitxer de configuració"
 
 msgid "DHT enabled"
-msgstr ""
+msgstr "DHT habilitat"
 
 msgid "Debug"
-msgstr ""
+msgstr "Depuració"
 
 msgid "Download directory"
-msgstr ""
+msgstr "Directori de baixada"
 
 msgid "Download queue enabled"
-msgstr ""
+msgstr "Cua de baixada habilitada"
 
 msgid "Download queue size"
-msgstr ""
+msgstr "Mida de cua de baixada"
 
 msgid "Enable watch directory"
 msgstr ""
 
 msgid "Enabled"
-msgstr ""
+msgstr "Habilitat"
 
 msgid "Encryption"
-msgstr ""
+msgstr "Xifració"
 
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 msgid "Fast"
-msgstr ""
+msgstr "Ràpid"
 
 msgid "Files and Locations"
-msgstr ""
+msgstr "Fitxers i ubicacions"
 
 msgid "Forced"
-msgstr ""
+msgstr "Forçat"
 
 msgid "Full"
-msgstr ""
+msgstr "Ple"
 
 msgid "Global peer limit"
 msgstr ""
 
 msgid "Global settings"
-msgstr ""
+msgstr "Ajusts globals"
 
 msgid "Idle seeding limit"
 msgstr ""
@@ -98,16 +113,16 @@ msgid "Idle seeding limit enabled"
 msgstr ""
 
 msgid "Incomplete directory"
-msgstr ""
+msgstr "Directori incomplet"
 
 msgid "Incomplete directory enabled"
-msgstr ""
+msgstr "Directori incomplet habilitat"
 
 msgid "Info"
-msgstr ""
+msgstr "Informació"
 
 msgid "LPD enabled"
-msgstr ""
+msgstr "LPD habilitat"
 
 msgid "Lazy bitfield enabled"
 msgstr ""
@@ -116,10 +131,10 @@ msgid "Message level"
 msgstr ""
 
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Miscel·lani"
 
 msgid "None"
-msgstr ""
+msgstr "Cap"
 
 msgid ""
 "Number/bitfield. Start with 0, then for each day you want the scheduler "
@@ -128,13 +143,13 @@ msgid ""
 msgstr ""
 
 msgid "Off"
-msgstr ""
+msgstr "Desactivat"
 
 msgid "Open Web Interface"
 msgstr ""
 
 msgid "PEX enabled"
-msgstr ""
+msgstr "PEX habilitat"
 
 msgid "Peer Port settings"
 msgstr ""
@@ -167,10 +182,10 @@ msgid "Port forwarding enabled"
 msgstr ""
 
 msgid "Preferred"
-msgstr ""
+msgstr "Preferit"
 
 msgid "Prefetch enabled"
-msgstr ""
+msgstr "Precarrega habilitada"
 
 msgid "Queue stalled enabled"
 msgstr ""
@@ -185,46 +200,46 @@ msgid "RPC URL"
 msgstr ""
 
 msgid "RPC authentication required"
-msgstr ""
+msgstr "Autenticació RPC requerida"
 
 msgid "RPC bind address"
 msgstr ""
 
 msgid "RPC enabled"
-msgstr ""
+msgstr "RPC habilitat"
 
 msgid "RPC password"
-msgstr ""
+msgstr "Contrasenya RPC"
 
 msgid "RPC port"
-msgstr ""
+msgstr "Port RPC"
 
 msgid "RPC settings"
-msgstr ""
+msgstr "Ajusts RPC"
 
 msgid "RPC username"
-msgstr ""
+msgstr "Nom d'usuari RPC"
 
 msgid "RPC whitelist"
-msgstr ""
+msgstr "Llista blanca RPC"
 
 msgid "RPC whitelist enabled"
-msgstr ""
+msgstr "Llista blanca RPC habilitada"
 
 msgid "Ratio limit"
-msgstr ""
+msgstr "Límit de ràtio"
 
 msgid "Ratio limit enabled"
-msgstr ""
+msgstr "Límit de ràtio habilitat"
 
 msgid "Rename partial files"
 msgstr ""
 
 msgid "Run daemon as user"
-msgstr ""
+msgstr "Executa el dimoni com l'usuari"
 
 msgid "Scheduling"
-msgstr ""
+msgstr "Programació"
 
 msgid "Scrape paused torrents enabled"
 msgstr ""
@@ -254,27 +269,29 @@ msgid "Speed limit up enabled"
 msgstr ""
 
 msgid "Transmission"
-msgstr ""
+msgstr "Transmission"
 
 msgid ""
 "Transmission daemon is a simple bittorrent client, here you can configure "
 "the settings."
 msgstr ""
+"El dimoni Transmission és un client de bittorrent senzill, aquí podeu "
+"configurar els ajusts."
 
 msgid "Trash original torrent files"
-msgstr ""
+msgstr "Suprimeix els fitxers de torrent originals"
 
 msgid "Upload slots per torrent"
 msgstr ""
 
 msgid "Watch directory"
-msgstr ""
+msgstr "Directori que vigilar"
 
 msgid "in minutes from midnight"
-msgstr ""
+msgstr "en minuts des de la mitjanit"
 
 msgid "preallocation"
-msgstr ""
+msgstr "preassignació"
 
 msgid "uTP enabled"
-msgstr ""
+msgstr "uTP habilitat"

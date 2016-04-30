@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-21 23:08+0200\n"
-"PO-Revision-Date: 2013-02-27 08:13+0200\n"
+"PO-Revision-Date: 2014-06-13 14:53+0200\n"
 "Last-Translator: phantasm131 <phantasm131@gmail.com>\n"
 "Language-Team: QQ Group:75543259\n"
 "Language: zh_CN\n"
@@ -39,12 +39,6 @@ msgstr "1分钟负载:"
 
 msgid "15 Minute Load:"
 msgstr "15分钟负载:"
-
-msgid "40MHz 2nd channel above"
-msgstr "40MHz HT40+ (仅1-7频道可用）"
-
-msgid "40MHz 2nd channel below"
-msgstr "40MHz HT40- (仅5-13频道可用）"
 
 msgid "5 Minute Load:"
 msgstr "5分钟负载:"
@@ -85,6 +79,10 @@ msgstr ""
 msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Gateway"
 msgstr "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-网关"
 
+msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Suffix (hex)"
+msgstr ""
+"<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-后缀（十六进制）"
+
 msgid "<abbr title=\"Light Emitting Diode\">LED</abbr> Configuration"
 msgstr "<abbr title=\"Light Emitting Diode\">LED</abbr>配置"
 
@@ -110,6 +108,12 @@ msgstr "<abbr title=\"maximal\">最大</abbr>并发查询数"
 
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
+
+msgid "ADSL"
+msgstr "ADSL"
+
+msgid "ADSL Status"
+msgstr "ADSL状态"
 
 msgid "APN"
 msgstr "APN"
@@ -139,9 +143,6 @@ msgstr ""
 
 msgid "ATM device number"
 msgstr "ATM设备号码"
-
-msgid "Accept router advertisements"
-msgstr "接收路由通告"
 
 msgid "Access Concentrator"
 msgstr "接入集中器"
@@ -200,12 +201,6 @@ msgstr "管理权"
 msgid "Advanced Settings"
 msgstr "高级设置"
 
-msgid "Advertise IPv6 on network"
-msgstr "在网络上通告IPv6"
-
-msgid "Advertised network ID"
-msgstr "通告的网络ID"
-
 msgid "Alert"
 msgstr "警戒"
 
@@ -234,8 +229,8 @@ msgid ""
 "Allow upstream responses in the 127.0.0.0/8 range, e.g. for RBL services"
 msgstr "允许127.0.0.0/8回环范围内的上行响应，例如：RBL服务"
 
-msgid "Allowed range is 1 to 65535"
-msgstr "允许的范围：1 到 65535"
+msgid "Always announce default router"
+msgstr ""
 
 msgid ""
 "Always use 40MHz channels even if the secondary channel overlaps. Using this "
@@ -244,6 +239,15 @@ msgstr "强制启用40MHz频宽并忽略辅助信道重叠。此选项不兼容I
 
 msgid "An additional network will be created if you leave this unchecked."
 msgstr "取消选中将会另外创建一个新网络，而不会覆盖当前网络设置"
+
+msgid "Announce as default router even if no public prefix is available."
+msgstr ""
+
+msgid "Announced DNS domains"
+msgstr ""
+
+msgid "Announced DNS servers"
+msgstr ""
 
 msgid "Antenna 1"
 msgstr "天线 1"
@@ -263,8 +267,16 @@ msgstr "应用"
 msgid "Applying changes"
 msgstr "正在应用更改"
 
+msgid ""
+"Assign a part of given length of every public IPv6-prefix to this interface"
+msgstr ""
+
 msgid "Assign interfaces..."
 msgstr "分配接口..."
+
+msgid ""
+"Assign prefix parts using this hexadecimal subprefix ID for this interface."
+msgstr ""
 
 msgid "Associated Stations"
 msgstr "已连接站点"
@@ -283,6 +295,12 @@ msgstr "需要授权"
 
 msgid "Auto Refresh"
 msgstr "自动刷新"
+
+msgid "Automatic"
+msgstr ""
+
+msgid "Automatic Homenet (HNCP)"
+msgstr ""
 
 msgid "Available"
 msgstr "可用"
@@ -325,6 +343,9 @@ msgstr "文件备份列表"
 
 msgid "Bad address specified!"
 msgstr "指定了错误的地址！"
+
+msgid "Band"
+msgstr ""
 
 msgid ""
 "Below is the determined list of files to backup. It consists of changed "
@@ -375,6 +396,9 @@ msgstr "已缓存"
 
 msgid "Cancel"
 msgstr "取消"
+
+msgid "Category"
+msgstr ""
 
 msgid "Chain"
 msgstr "链"
@@ -501,6 +525,9 @@ msgstr "Cron日志级别"
 msgid "Custom Interface"
 msgstr "自定义接口"
 
+msgid "Custom delegated IPv6-prefix"
+msgstr ""
+
 msgid ""
 "Customizes the behaviour of the device <abbr title=\"Light Emitting Diode"
 "\">LED</abbr>s if possible."
@@ -524,11 +551,26 @@ msgstr "DHCP-选项"
 msgid "DHCPv6 Leases"
 msgstr "DHCPv6分配"
 
+msgid "DHCPv6 client"
+msgstr ""
+
+msgid "DHCPv6-Mode"
+msgstr ""
+
+msgid "DHCPv6-Service"
+msgstr ""
+
 msgid "DNS"
 msgstr "DNS"
 
 msgid "DNS forwardings"
 msgstr "DNS转发"
+
+msgid "DNS-Label / FQDN"
+msgstr ""
+
+msgid "DS-Lite AFTR address"
+msgstr ""
 
 msgid "DUID"
 msgstr "DUID（DHCP唯一标识符）"
@@ -665,6 +707,9 @@ msgstr ""
 "Dropbear提供了集成的<abbr title=\"Secure Copy\">SCP</abbr>服务器和基于<abbr "
 "title=\"Secure Shell\">SSH</abbr>的shell访问"
 
+msgid "Dual-Stack Lite (RFC6333)"
+msgstr ""
+
 msgid "Dynamic <abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr>"
 msgstr "动态<abbr title=\"Dynamic Host Configuration Protocol\">DHCP</abbr>"
 
@@ -719,10 +764,10 @@ msgid "Enable learning and aging"
 msgstr "启用智能交换学习"
 
 msgid "Enable this mount"
-msgstr "启用挂载项"
+msgstr "启用挂载点"
 
 msgid "Enable this swap"
-msgstr "启用swap"
+msgstr "启用交换区"
 
 msgid "Enable/Disable"
 msgstr "启用/禁用"
@@ -757,9 +802,13 @@ msgstr "扩展HOSTS文件中的主机后缀"
 msgid "Expires"
 msgstr "到期时间"
 
+#, fuzzy
 msgid ""
-"Expiry time of leased addresses, minimum is 2 Minutes (<code>2m</code>)."
+"Expiry time of leased addresses, minimum is 2 minutes (<code>2m</code>)."
 msgstr "地址租期，最小2分钟(<code>2m</code>)。"
+
+msgid "External"
+msgstr ""
 
 msgid "External system log server"
 msgstr "远程log服务器"
@@ -899,23 +948,26 @@ msgstr "Generic 802.11%s 无线网卡"
 msgid "Given password confirmation did not match, password not changed!"
 msgstr "由于密码验证不匹配，密码没有更改！"
 
+msgid "Global network options"
+msgstr ""
+
 msgid "Go to password configuration..."
 msgstr "跳转到密码配置页..."
 
 msgid "Go to relevant configuration page"
 msgstr "跳转到相关的配置页面"
 
+msgid "Guest"
+msgstr ""
+
 msgid "HE.net password"
 msgstr "HE.net密码"
 
-msgid "HE.net user ID"
-msgstr "HE.net用户ID"
+msgid "HE.net username"
+msgstr ""
 
-msgid "HT capabilities"
-msgstr "HT功能"
-
-msgid "HT mode"
-msgstr "HT模式"
+msgid "HT mode (802.11n)"
+msgstr ""
 
 msgid "Handler"
 msgstr "处理程序"
@@ -975,6 +1027,9 @@ msgstr "IPv4地址"
 msgid "IPv4 and IPv6"
 msgstr "IPv4和IPv6"
 
+msgid "IPv4 assignment length"
+msgstr ""
+
 msgid "IPv4 broadcast"
 msgstr "IPv4广播"
 
@@ -999,11 +1054,23 @@ msgstr "IPv6"
 msgid "IPv6 Firewall"
 msgstr "IPv6防火墙"
 
+msgid "IPv6 Settings"
+msgstr ""
+
+msgid "IPv6 ULA-Prefix"
+msgstr ""
+
 msgid "IPv6 WAN Status"
 msgstr "IPv6 WAN状态"
 
 msgid "IPv6 address"
 msgstr "IPv6地址"
+
+msgid "IPv6 assignment hint"
+msgstr ""
+
+msgid "IPv6 assignment length"
+msgstr ""
 
 msgid "IPv6 gateway"
 msgstr "IPv6网关"
@@ -1016,6 +1083,9 @@ msgstr "IPv6地址前缀"
 
 msgid "IPv6 prefix length"
 msgstr "IPv6地址前缀长度"
+
+msgid "IPv6 routed prefix"
+msgstr ""
 
 msgid "IPv6-Address"
 msgstr "IPv6-地址"
@@ -1053,7 +1123,7 @@ msgid ""
 "\"Random Access Memory\">RAM</abbr>. Be aware that swapping data is a very "
 "slow process as the swap-device cannot be accessed with the high datarates "
 "of the <abbr title=\"Random Access Memory\">RAM</abbr>."
-msgstr "如果物理内存不足，闲置数据可交换到swap设备暂存，以提高可用内存。"
+msgstr "如果物理内存不足，闲置数据可自动移到交换区暂存，以提高可用内存。"
 
 msgid "Ignore Hosts files"
 msgstr "忽略HOSTS文件"
@@ -1087,6 +1157,9 @@ msgstr "启动脚本"
 
 msgid "Install"
 msgstr "安装"
+
+msgid "Install iputils-traceroute6 for IPv6 traceroute"
+msgstr ""
 
 msgid "Install package %q"
 msgstr "安装软件包%q"
@@ -1139,9 +1212,10 @@ msgstr "无效的VLAN ID! 只允许唯一的ID。"
 msgid "Invalid username and/or password! Please try again."
 msgstr "无效的用户名和/或密码! 请重试。"
 
+#, fuzzy
 msgid ""
-"It appears that you try to flash an image that does not fit into the flash "
-"memory, please verify the image file!"
+"It appears that you are trying to flash an image that does not fit into the "
+"flash memory, please verify the image file!"
 msgstr "将要刷新的固件与本路由器不兼容，请重新验证固件文件。"
 
 msgid "Java Script required!"
@@ -1222,6 +1296,15 @@ msgstr "图例："
 msgid "Limit"
 msgstr "客户数"
 
+msgid "Line Attenuation"
+msgstr ""
+
+msgid "Line Speed"
+msgstr ""
+
+msgid "Line State"
+msgstr ""
+
 msgid "Link On"
 msgstr "活动链接"
 
@@ -1266,9 +1349,10 @@ msgstr "本地时间"
 msgid "Local domain"
 msgstr "本地域名"
 
+#, fuzzy
 msgid ""
-"Local domain specification. Names matching this domain are never forwared "
-"and resolved from DHCP or hosts files only"
+"Local domain specification. Names matching this domain are never forwarded "
+"and are resolved from DHCP or hosts files only"
 msgstr "本地域名规则。从不转发和处理只源自DHCP或HOSTS文件的本地域名数据"
 
 msgid "Local domain suffix appended to DHCP names and hosts file entries"
@@ -1372,6 +1456,9 @@ msgstr "缺少协议%q的协议扩展"
 msgid "Mode"
 msgstr "模式"
 
+msgid "Model"
+msgstr "主机型号"
+
 msgid "Modem device"
 msgstr "调制解调器节点"
 
@@ -1382,7 +1469,7 @@ msgid "Monitor"
 msgstr "监听Monitor"
 
 msgid "Mount Entry"
-msgstr "挂载项"
+msgstr "挂载项目"
 
 msgid "Mount Point"
 msgstr "挂载点"
@@ -1391,10 +1478,10 @@ msgid "Mount Points"
 msgstr "挂载点"
 
 msgid "Mount Points - Mount Entry"
-msgstr "挂载点-Mount"
+msgstr "挂载点-存储区"
 
 msgid "Mount Points - Swap Entry"
-msgstr "挂载点-Swap"
+msgstr "挂载点-交换区"
 
 msgid ""
 "Mount Points define at which point a memory device will be attached to the "
@@ -1424,6 +1511,9 @@ msgstr "多播地址"
 
 msgid "NAS ID"
 msgstr "NAS ID"
+
+msgid "NDP-Proxy"
+msgstr "NDP-代理"
 
 msgid "NTP server candidates"
 msgstr "候选NTP服务器"
@@ -1493,6 +1583,9 @@ msgstr "未指定区域"
 
 msgid "Noise"
 msgstr "噪声"
+
+msgid "Noise Margin"
+msgstr "噪声容限"
 
 msgid "Noise:"
 msgstr "噪声:"
@@ -1747,6 +1840,9 @@ msgstr "添加新网络"
 msgid "Pseudo Ad-Hoc (ahdemo)"
 msgstr "伪装Ad-Hoc(ahdemo)"
 
+msgid "Public prefix routed to this device for distribution to clients."
+msgstr ""
+
 msgid "Quality"
 msgstr "质量"
 
@@ -1804,19 +1900,20 @@ msgstr ""
 msgid "Really reset all changes?"
 msgstr "确定要放弃所有更改？"
 
+#, fuzzy
+msgid ""
+"Really shut down network?\\nYou might lose access to this device if you are "
+"connected via this interface."
+msgstr ""
+"确定要关闭此网络？\\\n"
+"关闭此网络，可能导致无法再访问路由器！"
+
 msgid ""
 "Really shutdown interface \"%s\" ?\\nYou might lose access to this device if "
 "you are connected via this interface."
 msgstr ""
 "确定要关闭接口\"%s\" ？\\\n"
 "删除此网络，可能导致无法再访问路由器！"
-
-msgid ""
-"Really shutdown network ?\\nYou might lose access to this device if you are "
-"connected via this interface."
-msgstr ""
-"确定要关闭此网络？\\\n"
-"关闭此网络，可能导致无法再访问路由器！"
 
 msgid "Really switch protocol?"
 msgstr "确定要切换协议？"
@@ -1893,6 +1990,12 @@ msgstr "重置条目"
 msgid "Replace wireless configuration"
 msgstr "重置无线配置"
 
+msgid "Request IPv6-address"
+msgstr ""
+
+msgid "Request IPv6-prefix of length"
+msgstr ""
+
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr "某些ISP需要，例如:同轴线网络DOCSIS 3"
 
@@ -1932,11 +2035,8 @@ msgstr "Root"
 msgid "Root directory for files served via TFTP"
 msgstr "TFTP服务器的根目录"
 
-msgid "Router Model"
-msgstr "主机型号"
-
-msgid "Router Name"
-msgstr "系统名称"
+msgid "Router Advertisement-Service"
+msgstr ""
 
 msgid "Router Password"
 msgstr "主机密码"
@@ -1996,9 +2096,6 @@ msgid ""
 "conjunction with failure threshold"
 msgstr "定时发送LCP响应(秒)，仅在结合了故障阈值时有效"
 
-msgid "Send router solicitations"
-msgstr "发送路由请求"
-
 msgid "Separate Clients"
 msgstr "隔离客户端"
 
@@ -2017,11 +2114,12 @@ msgstr "服务类型"
 msgid "Services"
 msgstr "服务"
 
+#, fuzzy
+msgid "Set up Time Synchronization"
+msgstr "设置时间同步"
+
 msgid "Setup DHCP Server"
 msgstr "配置DHCP服务器"
-
-msgid "Setup Time Synchronization"
-msgstr "设置时间同步"
 
 msgid "Show current backup file list"
 msgstr "显示当前文件备份列表"
@@ -2065,8 +2163,9 @@ msgstr "对不起，请求的目标未找到。"
 msgid "Sorry, the server encountered an unexpected error."
 msgstr "对不起，服务器遇到未知错误。"
 
+#, fuzzy
 msgid ""
-"Sorry, there is no sysupgrade support present, a new firmware image must be "
+"Sorry, there is no sysupgrade support present; a new firmware image must be "
 "flashed manually. Please refer to the OpenWrt wiki for device specific "
 "install instructions."
 msgstr ""
@@ -2078,12 +2177,6 @@ msgstr "排序"
 
 msgid "Source"
 msgstr "源地址"
-
-msgid "Specifies the advertised preferred prefix lifetime in seconds"
-msgstr "指定通告的首选前缀生存时间(秒)"
-
-msgid "Specifies the advertised valid prefix lifetime in seconds"
-msgstr "指定通告的有效前缀生存时间(秒)"
 
 msgid "Specifies the button state to handle"
 msgstr "指定要处理的按键状态"
@@ -2155,8 +2248,11 @@ msgstr "严谨查序"
 msgid "Submit"
 msgstr "提交"
 
+msgid "Swap"
+msgstr "交换区"
+
 msgid "Swap Entry"
-msgstr "Swap项"
+msgstr "交换项目"
 
 msgid "Switch"
 msgstr "交换机"
@@ -2212,12 +2308,13 @@ msgstr "对象"
 msgid "Terminate"
 msgstr "关闭"
 
+#, fuzzy
 msgid ""
 "The <em>Device Configuration</em> section covers physical settings of the "
-"radio hardware such as channel, transmit power or antenna selection which is "
-"shared among all defined wireless networks (if the radio hardware is multi-"
-"SSID capable). Per network settings like encryption or operation mode are "
-"grouped in the <em>Interface Configuration</em>."
+"radio hardware such as channel, transmit power or antenna selection which "
+"are shared among all defined wireless networks (if the radio hardware is "
+"multi-SSID capable). Per network settings like encryption or operation mode "
+"are grouped in the <em>Interface Configuration</em>."
 msgstr ""
 "<em>设备配置</em>区域可配置无线的硬件参数，比如信道、发射功率或发射天线(如果"
 "此无线模块硬件支持多SSID，则全部SSID共用此设备配置)。<em>接口配置</em>区域则"
@@ -2227,6 +2324,11 @@ msgid ""
 "The <em>libiwinfo-lua</em> package is not installed. You must install this "
 "component for working wireless configuration!"
 msgstr "软件包<em>libiwinfo-lua</em>未安装。必需安装此组件以配置无线！"
+
+msgid ""
+"The HE.net endpoint update configuration changed, you must now use the plain "
+"username instead of the user ID!"
+msgstr ""
 
 msgid ""
 "The IPv6 prefix assigned to the provider, usually ends with <code>::</code>"
@@ -2272,9 +2374,10 @@ msgstr "系统中的活跃连接。"
 msgid "The given network name is not unique"
 msgstr "给定的网络名重复"
 
+#, fuzzy
 msgid ""
-"The hardware is not multi-SSID capable and existing configuration will be "
-"replaced if you proceed."
+"The hardware is not multi-SSID capable and the existing configuration will "
+"be replaced if you proceed."
 msgstr "本机的硬件不支持多SSID，继续进行将会覆盖现有配置。"
 
 msgid ""
@@ -2306,9 +2409,10 @@ msgid ""
 "when finished."
 msgstr "系统正在删除配置分区，完成后会自动重启。"
 
+#, fuzzy
 msgid ""
 "The system is flashing now.<br /> DO NOT POWER OFF THE DEVICE!<br /> Wait a "
-"few minutes until you try to reconnect. It might be necessary to renew the "
+"few minutes before you try to reconnect. It might be necessary to renew the "
 "address of your computer to reach the device again, depending on your "
 "settings."
 msgstr ""
@@ -2353,8 +2457,10 @@ msgstr ""
 "系统升级时要保存的配置文件和目录的清单。目录/etc/config/内修改过的文件以及部"
 "分其他配置会被自动保存。"
 
-msgid "This is the 32 byte hex encoded user ID, not the login name"
-msgstr "这是32 byte hex编码的用户ID，不是登录名"
+msgid ""
+"This is either the \"Update Key\" configured for the tunnel or the account "
+"password if no update key has been configured"
+msgstr ""
 
 msgid ""
 "This is the content of /etc/rc.local. Insert your own commands here (in "
@@ -2372,6 +2478,13 @@ msgid ""
 msgstr ""
 "这是内网中唯一的<abbr title=\"Dynamic Host Configuration Protocol\">DHCP</"
 "abbr>服务器"
+
+msgid "This is the plain username for logging into the account"
+msgstr ""
+
+msgid ""
+"This is the prefix routed to you by the tunnel broker for use by clients"
+msgstr ""
 
 msgid "This is the system crontab in which scheduled tasks can be defined."
 msgstr "自定义系统crontab中的计划任务。"
@@ -2443,6 +2556,9 @@ msgstr "隧道ID"
 
 msgid "Tunnel Interface"
 msgstr "隧道接口"
+
+msgid "Tunnel Link"
+msgstr ""
 
 msgid "Turbo Mode"
 msgstr "Turbo模式"
@@ -2528,6 +2644,9 @@ msgstr "设置为根文件系统"
 msgid "Use broadcast flag"
 msgstr "使用广播标签"
 
+msgid "Use builtin IPv6-management"
+msgstr ""
+
 msgid "Use custom DNS servers"
 msgstr "使用自定义的DNS服务器"
 
@@ -2536,9 +2655,6 @@ msgstr "使用默认网关"
 
 msgid "Use gateway metric"
 msgstr "使用网关跃点"
-
-msgid "Use preferred lifetime"
-msgstr "使用首选生存时间"
 
 msgid "Use routing table"
 msgstr "使用路由表"
@@ -2551,9 +2667,6 @@ msgid ""
 msgstr ""
 "使用<em>添加</em>来增加新的租约条目。使用<em>MAC-地址</em>鉴别主机，<em>IPv4-"
 "地址</em>分配地址，<em>主机名</em>分配标识。"
-
-msgid "Use valid lifetime"
-msgstr "使用有效生存时间"
 
 msgid "Used"
 msgstr "已用"
@@ -2601,7 +2714,7 @@ msgid "WEP passphrase"
 msgstr "WEP密钥"
 
 msgid "WMM Mode"
-msgstr "WMM"
+msgstr "WMM多媒体加速"
 
 msgid "WPA passphrase"
 msgstr "WPA密钥"
@@ -2685,6 +2798,9 @@ msgstr "任意"
 msgid "auto"
 msgstr "自动"
 
+msgid "automatic"
+msgstr "自动"
+
 msgid "baseT"
 msgstr "baseT"
 
@@ -2705,6 +2821,9 @@ msgstr "dBm"
 
 msgid "disable"
 msgstr "禁用"
+
+msgid "disabled"
+msgstr "已禁用"
 
 msgid "expired"
 msgstr "过期时间"
@@ -2729,6 +2848,9 @@ msgstr "帮助"
 
 msgid "hidden"
 msgstr "隐藏"
+
+msgid "hybrid mode"
+msgstr "混合模式"
 
 msgid "if target is a network"
 msgstr "如果对象是一个网络"
@@ -2766,8 +2888,23 @@ msgstr "开"
 msgid "open"
 msgstr "开放式"
 
+msgid "relay mode"
+msgstr "中继模式"
+
 msgid "routed"
 msgstr "已路由"
+
+msgid "server mode"
+msgstr "服务器模式"
+
+msgid "stateful-only"
+msgstr ""
+
+msgid "stateless"
+msgstr ""
+
+msgid "stateless + stateful"
+msgstr ""
 
 msgid "tagged"
 msgstr "关联"
@@ -2792,6 +2929,60 @@ msgstr "是"
 
 msgid "« Back"
 msgstr "« 后退"
+
+#~ msgid "Ad-hoc mode"
+#~ msgstr "Ad-hoc模式"
+
+#~ msgid "HE.net user ID"
+#~ msgstr "HE.net用户ID"
+
+#~ msgid "This is the 32 byte hex encoded user ID, not the login name"
+#~ msgstr "这是32 byte hex编码的用户ID，不是登录名"
+
+#~ msgid "40MHz 2nd channel above"
+#~ msgstr "40MHz HT40+ (仅1-7频道可用）"
+
+#~ msgid "40MHz 2nd channel below"
+#~ msgstr "40MHz HT40- (仅5-13频道可用）"
+
+#~ msgid "Accept router advertisements"
+#~ msgstr "接收路由通告"
+
+#~ msgid "Advertise IPv6 on network"
+#~ msgstr "在网络上通告IPv6"
+
+#~ msgid "Advertised network ID"
+#~ msgstr "通告的网络ID"
+
+#~ msgid "Allowed range is 1 to 65535"
+#~ msgstr "允许的范围：1 到 65535"
+
+#~ msgid "HT capabilities"
+#~ msgstr "HT功能"
+
+#~ msgid "HT mode"
+#~ msgstr "HT模式"
+
+#~ msgid "Router Model"
+#~ msgstr "主机型号"
+
+#~ msgid "Router Name"
+#~ msgstr "系统名称"
+
+#~ msgid "Send router solicitations"
+#~ msgstr "发送路由请求"
+
+#~ msgid "Specifies the advertised preferred prefix lifetime in seconds"
+#~ msgstr "指定通告的首选前缀生存时间(秒)"
+
+#~ msgid "Specifies the advertised valid prefix lifetime in seconds"
+#~ msgstr "指定通告的有效前缀生存时间(秒)"
+
+#~ msgid "Use preferred lifetime"
+#~ msgstr "使用首选生存时间"
+
+#~ msgid "Use valid lifetime"
+#~ msgstr "使用有效生存时间"
 
 #~ msgid "Waiting for router..."
 #~ msgstr "等待路由器..."
@@ -3659,9 +3850,6 @@ msgstr "« 后退"
 
 #~ msgid "additional hostfile"
 #~ msgstr "附加的主机文件"
-
-#~ msgid "automatic"
-#~ msgstr "自动"
 
 #~ msgid "automatically reconnect"
 #~ msgstr "自动重连"

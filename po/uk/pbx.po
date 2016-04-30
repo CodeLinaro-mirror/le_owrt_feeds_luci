@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2013-03-11 21:26+0200\n"
+"PO-Revision-Date: 2013-08-13 15:47+0200\n"
 "Last-Translator: zubr_139 <zubr139@ukr.net>\n"
 "Language-Team: none\n"
 "Language: uk\n"
@@ -13,14 +13,16 @@ msgstr ""
 "X-Generator: Pootle 2.0.6\n"
 
 msgid "Advanced Settings"
-msgstr ""
+msgstr "Розширені налаштування"
 
 msgid "Available"
-msgstr ""
+msgstr "Доступний"
 
 msgid ""
 "Avoid using anything but alpha-numeric characters, space, comma, and period."
 msgstr ""
+"Намагайтеся не використовувати нічого, крім алфавітно-цифрових символів, "
+"пропусків, ком і крапок."
 
 msgid "Away"
 msgstr ""
@@ -29,44 +31,67 @@ msgid "Blacklisted Numbers"
 msgstr ""
 
 msgid "Call Routing"
+msgstr "Маршрутизація Викликів"
+
+msgid "Call-back Numbers"
+msgstr ""
+
+msgid "Call-back Provider"
 msgstr ""
 
 msgid "Call-through Numbers"
-msgstr ""
+msgstr "Виклик через номери"
 
 msgid "Copy-paste large lists of numbers here."
 msgstr ""
 
 msgid ""
 "Designate numbers that are allowed to call through this system and which "
-"user's privileges it will have."
+"user's privileges they will have."
+msgstr ""
+
+msgid ""
+"Designate numbers to whom the system will hang up and call back, which "
+"provider will be used to call them, and which user's privileges will be "
+"granted to them."
 msgstr ""
 
 msgid "Dials numbers unmatched elsewhere"
 msgstr ""
 
+#, fuzzy
 msgid "Do Not Disturb"
-msgstr ""
+msgstr "Не турбувати"
 
 msgid "Domain/IP Address/Dynamic Domain"
 msgstr ""
 
+#, fuzzy
 msgid "Dynamic List of Blacklisted Numbers"
-msgstr ""
+msgstr "Динамічний список небажаних дзвінків"
 
 msgid "Email"
-msgstr ""
+msgstr "Електронна скринька"
 
+#, fuzzy
 msgid "Enable Incoming Calls (Register via SIP)"
-msgstr ""
+msgstr "Активувати вхідні дзвінки (зареєструватися через SIP)"
 
+#, fuzzy
 msgid "Enable Incoming Calls (set Status below)"
-msgstr ""
+msgstr "Активувати вхідні дзвінки (Встановити низький статус)"
 
 msgid "Enable Outgoing Calls"
-msgstr ""
+msgstr "Активувати вихідні виклики"
 
 msgid "Enabled"
+msgstr "Активувати"
+
+msgid ""
+"Enter a VoIP provider to use for call-back in the format username@some.host."
+"name, as listed in \"Outgoing Calls\" above. It's easiest to copy and paste "
+"the providers from above. Invalid entries, including providers not enabled "
+"for outgoing calls, will be rejected silently."
 msgstr ""
 
 msgid ""
@@ -76,18 +101,25 @@ msgid ""
 "successfully."
 msgstr ""
 
+#, fuzzy
 msgid ""
 "Enter this IP (or IP:port) in the Server/Registrar setting of SIP devices "
 "you will use ONLY locally and never from a remote location."
 msgstr ""
+"Введіть цей IP (або IP:порт) Сервера/Реєстратор налаштування SIP пристрою ви "
+"будете використовувати тільки локально й ніколи з віддаленого місця."
 
+#, fuzzy
 msgid ""
 "Enter this hostname (or hostname:port) in the Server/Registrar setting of "
 "SIP devices you will use from a remote location (they will work locally too)."
 msgstr ""
+"Введіть це хост ім'я (або ім'я хоста:порт) сервер/Реєстратор налаштування "
+"SIP пристрою ви будете використовувати з віддаленого місця розташування "
+"(воно також буде працювати локально)."
 
 msgid "External SIP Port"
-msgstr ""
+msgstr "Зовнішній порт SIP"
 
 msgid ""
 "For each provider enabled for incoming calls, here you can restrict which "
@@ -113,13 +145,13 @@ msgid ""
 msgstr ""
 
 msgid "Full Name"
-msgstr ""
+msgstr "Повне Ім'я"
 
 msgid "General Settings"
-msgstr ""
+msgstr "Загальні Налаштування"
 
 msgid "Google Accounts"
-msgstr ""
+msgstr "Облікові записи Google"
 
 msgid "Google Talk Status"
 msgstr ""
@@ -130,6 +162,9 @@ msgstr ""
 msgid "Google Voice/Talk Accounts"
 msgstr ""
 
+msgid "Hang-up Delay"
+msgstr ""
+
 msgid ""
 "Here you must configure at least one SIP account, that you will use to "
 "register with this service. Use this account either in an Analog Telephony "
@@ -137,6 +172,13 @@ msgid ""
 "on your smartphone, or Ekiga, Linphone, or X-Lite on your computer. By "
 "default, all SIP accounts will ring simultaneously if a call is made to one "
 "of your VoIP provider accounts or GV numbers."
+msgstr ""
+
+msgid ""
+"How long to wait before hanging up. If the provider you use to dial "
+"automatically forwards to voicemail, you can set this value to a delay that "
+"will allow you to hang up before your call gets forwarded and you get billed "
+"for it."
 msgstr ""
 
 msgid ""
@@ -231,10 +273,9 @@ msgstr ""
 msgid ""
 "Pick a random port number between 6500 and 9500 for the service to listen "
 "on. Do not pick the standard 5060, because it is often subject to brute-"
-"force attacks. When finished, (1) click \"Save and Apply\", and (2) click "
-"the \"Restart VoIP Service\" button above. Finally, (3) look in the \"SIP "
-"Device/Softphone Accounts\" section for updated Server and Port settings for "
-"your SIP Devices/Softphones."
+"force attacks. When finished, (1) click \"Save and Apply\", and (2) look in "
+"the \"SIP Device/Softphone Accounts\" section for updated Server and Port "
+"settings for your SIP Devices/Softphones."
 msgstr ""
 
 msgid "Port Setting for SIP Devices"
@@ -306,6 +347,12 @@ msgid "Space-Separated List of Blacklisted Numbers"
 msgstr ""
 
 msgid "Specify numbers individually here. Press enter to add more numbers."
+msgstr ""
+
+msgid ""
+"Specify numbers individually here. Press enter to add more numbers. You will "
+"have to experiment with what country and area codes you need to add to the "
+"number."
 msgstr ""
 
 msgid ""
@@ -420,9 +467,10 @@ msgstr "Так"
 
 msgid ""
 "You can enter your domain name, external IP address, or dynamic domain name "
-"here Please keep in mind that if your IP address is dynamic and it changes "
-"your configuration will become invalid. Hence, it's recommended to set up "
-"Dynamic DNS in this case."
+"here. The best thing to input is a static IP address. If your IP address is "
+"dynamic and it changes, your configuration will become invalid. Hence, it's "
+"recommended to set up Dynamic DNS in this case. and enter your Dynamic DNS "
+"hostname here. You can configure Dynamic DNS with the luci-app-ddns package."
 msgstr ""
 
 msgid "You can specify a real name to show up in the Caller ID here."
