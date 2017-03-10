@@ -187,7 +187,7 @@ else
 
 	function ch.formvalue(self, section)
 		return {
-			m:formvalue(self:cbid(section) .. ".band") or (hw_modes.g and "11g" or "11a"),
+			(hw_modes.ad and "11ad") or (m:formvalue(self:cbid(section) .. ".band") or (hw_modes.g and "11g" or "11a")),
 			m:formvalue(self:cbid(section) .. ".channel") or "auto",
 			m:formvalue(self:cbid(section) .. ".htmode") or ""
 		}
@@ -265,27 +265,6 @@ if hwtype == "qcawifi" then
 			%{ p.display_dbm, p.display_mw })
 		end
 	end
-
-	mode = s:taboption("advanced", ListValue, "hwmode", translate("Mode"))
-	mode:value("", translate("auto"))
-	if hw_modes.b then mode:value("11b", "802.11b") end
-	if hw_modes.g then mode:value("11g", "802.11g") end
-	if hw_modes.a then mode:value("11a", "802.11a") end
-	if hw_modes.ad then mode:value("11ad", "802.11ad") end
-
-	if hw_modes.g and hw_modes.n then mode:value("11ng", "802.11g+n") end
-	if hw_modes.a and hw_modes.n then mode:value("11na", "802.11a+n") end
-	if hw_modes.ac then mode:value("11ac", "802.11ac") end
-
-	htmode = s:taboption("advanced", ListValue, "htmode", translate("HT mode"))
-	htmode:depends("hwmode", "11na")
-	htmode:depends("hwmode", "11ng")
-	htmode:depends("hwmode", "11ac")
-	htmode:depends("hwmode", "11ad")
-	htmode:value("HT20", "20MHz")
-	htmode:value("HT40-", translate("40MHz 2nd channel below"))
-	htmode:value("HT40+", translate("40MHz 2nd channel above"))
-	htmode:value("HT80", "80MHz")
 
 	s:taboption("advanced", Value, "txantenna", translate("Tx Antenna bitmask"))
 	s:taboption("advanced", Value, "rxantenna", translate("Rx Antenna bitmask"))
