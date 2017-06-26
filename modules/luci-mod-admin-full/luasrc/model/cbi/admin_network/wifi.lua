@@ -217,6 +217,28 @@ if hwtype == "mac80211" then
 				%{ p.display_dbm, p.display_mw })
 		end
 	end
+	mode = s:taboption("advanced", ListValue, "hwmode", translate("Mode"))
+	mode:value("", translate("auto"))
+	if hw_modes.b then
+		mode:value("11b", "802.11b")
+		if hw_modes.g then
+			mode:value("11bg", "802.11b+g")
+		end
+	end
+	if hw_modes.g then mode:value("11g", "802.11g") end
+	if hw_modes.a then mode:value("11a", "802.11a") end
+	if hw_modes.ac then mode:value("11ac", "802.11ac") end
+	if hw_modes.n then
+		if hw_modes.g then
+			mode:value("11ng", "2.4GHz (802.11g+n)")
+			mode:value("11n", "2.4GHz (802.11n)")
+		end
+		if hw_modes.a then
+			mode:value("11na", "5GHz (802.11a+n)")
+			mode:value("11n", "5GHz (802.11n)")
+		end
+
+	end
 
 	local cl = iw and iw.countrylist
 	if cl and #cl > 0 then
