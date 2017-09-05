@@ -227,13 +227,16 @@ if hwtype == "mac80211" then
 	end
 	if hw_modes.g then mode:value("11g", "802.11g") end
 	if hw_modes.a then mode:value("11a", "802.11a") end
-	if hw_modes.ac then mode:value("11ac", "802.11ac") end
+	if hw_modes.ac then
+		mode:value("11ac", "802.11ac")
+		mode:value("11a", "802.11a")
+	end
 	if hw_modes.n then
 		if hw_modes.g then
 			mode:value("11ng", "2.4GHz (802.11g+n)")
 			mode:value("11n", "2.4GHz (802.11n)")
 		end
-		if hw_modes.a then
+		if hw_modes.a or hw_modes.ac then
 			mode:value("11na", "5GHz (802.11a+n)")
 			mode:value("11n", "5GHz (802.11n)")
 		end
