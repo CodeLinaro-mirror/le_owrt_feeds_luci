@@ -13,6 +13,7 @@ local knownParams = {
 	{ "Service", {
 		-- initialisation and daemon options
 		{ ListValue,	"verb",							{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 },						translate("Set output verbosity") },
+		{ Flag,			"enable_dca",						0,																translate("Enable Data Channel Acceleration") },
 		{ Flag,			"mlock",						0,																translate("Disable Paging") },
 		{ Flag,			"disable_occ",					0,																translate("Disable options consistency check") },
 	--	{ Value,		"user",							"root",															translate("Set UID to user") },
