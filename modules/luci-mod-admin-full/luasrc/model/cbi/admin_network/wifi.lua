@@ -787,8 +787,23 @@ cipher:value("gcmp", translate("Force GCMP"))
 cipher:value("tkip", translate("Force TKIP"))
 cipher:value("tkip+ccmp", translate("Force TKIP and CCMP (AES)"))
 
+cipher_wpa3 = s:taboption("encryption", ListValue, "cipher_wpa3", translate("Cipher"))
+cipher_wpa3:depends({encryption="sae"})
+cipher_wpa3:depends({encryption="owe"})
+cipher_wpa3:value("auto", translate("auto"))
+cipher_wpa3:value("ccmp", translate("Force CCMP (AES)"))
+cipher_wpa3:value("gcmp", translate("Force GCMP"))
+
 function encr.cfgvalue(self, section)
 	local v = tostring(ListValue.cfgvalue(self, section))
+	local s = self.map.uci:get("wireless", section, "sae") == "1"
+	local o = self.map.uci:get("wireless", section, "owe") == "1"
+	if s then
+		return "sae"
+	elseif o then
+		return "owe"
+	end
+
 	if v == "wep" then
 		return "wep-open"
 	elseif v and v:match("%+") then
@@ -800,11 +815,25 @@ end
 function encr.write(self, section, value)
 	local e = tostring(encr:formvalue(section))
 	local c = tostring(cipher:formvalue(section))
-	if value == "wpa" or value == "wpa2"  then
+	local c_wpa3 = tostring(cipher_wpa3:formvalue(section))
+	self.map.uci:delete("wireless", section, "sae")
+	self.map.uci:delete("wireless", section, "owe")
+	self.map.uci:delete("wireless", section, "ieee80211w")
+	if e == "wpa" or e == "wpa2" or e == "sae" then
 		self.map.uci:delete("wireless", section, "key")
 	end
-	if e and (c == "tkip" or c == "ccmp" or c == "gcmp" or c == "tkip+ccmp") then
-		e = e .. "+" .. c
+	if e == "sae" or e == "owe" then
+		self.map:set(section, e, "1")
+		self.map:set(section, "ieee80211w", "1")
+		if c_wpa3 ~= "auto" then
+			e = c_wpa3
+		else
+			e = "gcmp+ccmp"
+		end
+	else
+		if e and (c == "tkip" or c == "ccmp" or c == "gcmp" or c == "tkip+ccmp") then
+			e = e .. "+" .. c
+		end
 	end
 	self.map:set(section, "encryption", e)
 end
@@ -823,6 +852,19 @@ function cipher.cfgvalue(self, section)
 end
 
 function cipher.write(self, section)
+	return encr:write(section)
+end
+
+function cipher_wpa3.cfgvalue(self, section)
+	local v = tostring(ListValue.cfgvalue(encr, section))
+	if v then
+		v = v:gsub("aes", "ccmp")
+		if v == "gcmp+ccmp" then v = "auto" end
+	end
+	return v
+end
+
+function cipher_wpa3.write(self, section)
 	return encr:write(section)
 end
 
@@ -854,6 +896,8 @@ if hwtype == "atheros" or hwtype == "qcawifi" or hwtype == "mac80211" or hwtype 
 			encr:value("wpa", "WPA-EAP", {mode="ap"}, {mode="sta"}, {mode="ap-wds"}, {mode="sta-wds"})
 			encr:value("wpa2", "WPA2-EAP", {mode="ap"}, {mode="sta"}, {mode="ap-wds"}, {mode="sta-wds"})
 		end
+		encr:value("sae", "WPA3-SAE", {mode="ap"}, {mode="sta"}, {mode="ap-wds"}, {mode="sta-wds"})
+		encr:value("owe", "WPA3-OWE", {mode="ap"}, {mode="sta"}, {mode="ap-wds"}, {mode="sta-wds"})
 	elseif hostapd and not supplicant then
 		encr:value("psk", "WPA-PSK", {mode="ap"}, {mode="ap-wds"})
 		encr:value("psk2", "WPA2-PSK", {mode="ap"}, {mode="ap-wds"})
@@ -862,6 +906,8 @@ if hwtype == "atheros" or hwtype == "qcawifi" or hwtype == "mac80211" or hwtype 
 			encr:value("wpa", "WPA-EAP", {mode="ap"}, {mode="ap-wds"})
 			encr:value("wpa2", "WPA2-EAP", {mode="ap"}, {mode="ap-wds"})
 		end
+		encr:value("sae", "WPA3-SAE", {mode="ap"}, {mode="ap-wds"})
+		encr:value("owe", "WPA3-OWE", {mode="ap"}, {mode="ap-wds"})
 		encr.description = translate(
 			"WPA-Encryption requires wpa_supplicant (for client mode) or hostapd (for AP " ..
 			"and ad-hoc mode) to be installed."
@@ -874,6 +920,8 @@ if hwtype == "atheros" or hwtype == "qcawifi" or hwtype == "mac80211" or hwtype 
 			encr:value("wpa", "WPA-EAP", {mode="sta"}, {mode="sta-wds"})
 			encr:value("wpa2", "WPA2-EAP", {mode="sta"}, {mode="sta-wds"})
 		end
+		encr:value("sae", "WPA3-SAE", {mode="sta"}, {mode="sta-wds"})
+		encr:value("owe", "WPA3-OWE", {mode="sta"}, {mode="sta-wds"})
 		encr.description = translate(
 			"WPA-Encryption requires wpa_supplicant (for client mode) or hostapd (for AP " ..
 			"and ad-hoc mode) to be installed."
@@ -943,6 +991,7 @@ wpakey:depends("encryption", "psk")
 wpakey:depends("encryption", "psk2")
 wpakey:depends("encryption", "psk+psk2")
 wpakey:depends("encryption", "psk-mixed")
+wpakey:depends("encryption", "sae")
 wpakey.datatype = "wpakey"
 wpakey.rmempty = true
 wpakey.password = true
