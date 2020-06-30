@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-12-03 08:26+0000\n"
-"Last-Translator: Tavaninja <metalcorpe@gmail.com>\n"
+"PO-Revision-Date: 2020-05-23 15:41+0000\n"
+"Last-Translator: george k <norhorn@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsadvanced-reboot/el/>\n"
 "Language: el\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.1-dev\n"
 
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:163
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:171
 #: applications/luci-app-advanced-reboot/luasrc/view/advanced_reboot/advanced_reboot.htm:10
 msgid "Advanced Reboot"
 msgstr "Προχωρημένη Επανεκκίνηση"
@@ -29,10 +29,10 @@ msgstr "Ακύρωση"
 msgid "Changes applied."
 msgstr "Οι αλλαγές εφαρμόστηκαν."
 
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:123
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:124
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:131
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:132
 msgid "Compressed"
-msgstr ""
+msgstr "Συμπιεσμένο"
 
 #: applications/luci-app-advanced-reboot/luasrc/view/advanced_reboot/alternative_reboot.htm:10
 #: applications/luci-app-advanced-reboot/luasrc/view/advanced_reboot/power_off.htm:10
@@ -56,7 +56,7 @@ msgstr "Υλικολογισμικό"
 msgid "Loading"
 msgstr "Φόρτωση"
 
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:205
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:213
 msgid "No access to fw_printenv or fw_printenv!"
 msgstr "Δεν υπάρχει πρόσβαση στο fw_printenv ή fw_printenv!"
 
@@ -99,14 +99,14 @@ msgstr "Επανεκκίνηση σε εναλλακτικό διαμερισμ�
 msgid "Reboot to current partition"
 msgstr "Επανεκκίνηση στον τρέχον διαμερισμό"
 
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:184
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:256
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:192
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:264
 #: applications/luci-app-advanced-reboot/luasrc/view/advanced_reboot/applyreboot.htm:9
 #: applications/luci-app-advanced-reboot/luasrc/view/advanced_reboot/applyreboot.htm:39
 msgid "Rebooting..."
 msgstr "Επανεκκίνηση..."
 
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:289
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:297
 msgid "Shutting down..."
 msgstr "Απενεργοποίηση..."
 
@@ -118,7 +118,7 @@ msgstr "Κατάσταση"
 msgid "System"
 msgstr "Σύστημα"
 
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:185
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:193
 msgid ""
 "The system is rebooting now.<br /> DO NOT POWER OFF THE DEVICE!<br /> Wait a "
 "few minutes before you try to reconnect. It might be necessary to renew the "
@@ -130,7 +130,7 @@ msgstr ""
 "χρειαστεί να ανανεώσετε τη διεύθυνση του υπολογιστή σας για να συνδεθείται "
 "ξανά στη συσκευή, ανάλογα με τις ρυθμίσεις σας."
 
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:257
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:265
 msgid ""
 "The system is rebooting to an alternative partition now.<br /> DO NOT POWER "
 "OFF THE DEVICE!<br /> Wait a few minutes before you try to reconnect. It "
@@ -143,7 +143,7 @@ msgstr ""
 "του υπολογιστή σας για να συνδεθείτε ξανά στη συσκευή, ανάλογα με τις "
 "ρυθμίσεις σας."
 
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:290
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:298
 msgid ""
 "The system is shutting down now.<br /> DO NOT POWER OFF THE DEVICE!<br /> It "
 "might be necessary to renew the address of your computer to reach the device "
@@ -153,38 +153,38 @@ msgstr ""
 "<br /> Ίσως χρειαστεί να ανανεώσετε τη διεύθυνση του υπολογιστή σας για να "
 "συνδεθείτε ξανά στη συσκευή, ανάλογα με τις ρυθμίσεις σας."
 
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:136
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:137
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:240
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:241
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:144
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:145
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:248
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:249
 msgid "Unable to find Dual Boot Flag Partition."
 msgstr "Δεν είναι δυνατή η εύρεση Διπλής καταχώρησης Σημαίας Εκκίνησης."
 
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:212
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:213
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:220
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:221
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:234
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:235
+msgid "Unable to obtain firmware environment variable: %s."
+msgstr "Δεν είναι δυνατή η λήψη στοιχείων firmware: %s."
+
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:256
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:257
+msgid "Unable to set Dual Boot Flag Partition entry for partition: %s."
+msgstr "Δεν μπορεί να ορισθεί το διαμέρισμα δίσκου ως διπλής εκκίνησης: %s."
+
 #: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:226
 #: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:227
-msgid "Unable to obtain firmware environment variable"
-msgstr "Αδύνατη λήψη μεταβλητής περιβάλλοντος υλικολογισμικού"
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:240
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:241
+msgid "Unable to set firmware environment variable: %s to %s."
+msgstr "Δεν μπορεί να ρυθμιστούν στοιχεία του firmware: %s έως %s."
 
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:248
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:249
-msgid "Unable to set Dual Boot Flag Partition entry for partition"
-msgstr ""
-
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:218
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:219
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:232
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:233
-msgid "Unable to set firmware environment variable"
-msgstr ""
-
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:118
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:119
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:123
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:124
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:126
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:127
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:131
+#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:132
 msgid "Unknown"
-msgstr ""
+msgstr "Άγνωστο"
 
 #: applications/luci-app-advanced-reboot/luasrc/view/advanced_reboot/alternative_reboot.htm:12
 msgid ""
@@ -204,38 +204,35 @@ msgid ""
 "support power off.<br /><br /> Click \"Proceed\" below to power off your "
 "device."
 msgstr ""
+"ΠΡΟΣΟΧΗ: Η απενεργοποίηση μπορεί να έχει ως αποτέλεσμα την επανεκκίνηση "
+"συσκευής χωρίς υποστήριξη λειτουργίας απενεργοποίησης. <br /><br /> Κάντε "
+"κλικ στην επιλογή \"Συνέχεια\" για να απενεργοποιήσετε τη συσκευή σας."
 
 #: applications/luci-app-advanced-reboot/luasrc/view/advanced_reboot/applyreboot.htm:46
 msgid "Waiting for changes to be applied..."
-msgstr ""
+msgstr "Περιμένετε να εφαρμοστούν οι αλλαγές..."
 
 #: applications/luci-app-advanced-reboot/luasrc/view/advanced_reboot/advanced_reboot.htm:83
 msgid "Warning: Device (%s) is unknown or isn't a dual-partition device!"
 msgstr ""
+"Προσοχή: Άγνωστη συσκευή (%s) ή δεν είναι συσκευή διπλού διαμερίσματος!"
 
 #: applications/luci-app-advanced-reboot/luasrc/view/advanced_reboot/advanced_reboot.htm:14
 msgid "Warning: There are unsaved changes that will get lost on reboot!"
-msgstr ""
+msgstr "Προσοχή: Οι μη αποθηκευμένες αλλαγές θα χαθούν με την επανεκκίνηση!"
 
 #: applications/luci-app-advanced-reboot/luasrc/view/advanced_reboot/advanced_reboot.htm:97
 msgid "Warning: This system does not support powering off!"
-msgstr ""
+msgstr "Προσοχή: Το σύστημα δεν υποστηρίζει λειτουργία τερματισμού!"
 
 #: applications/luci-app-advanced-reboot/luasrc/view/advanced_reboot/advanced_reboot.htm:85
 msgid "Warning: Unable to obtain device information!"
-msgstr ""
+msgstr "Προσοχή: Δεν είναι δυνατή η λήψη πληροφοριών συσκευής!"
 
 #: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:45
-msgid "attempting to mount alternative partition"
-msgstr ""
+msgid "attempting to mount alternative partition (mtd%s)"
+msgstr "προσπάθεια προσάρτησης εναλλακτικού διαμερίσματος (mtd%s)"
 
 #: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:54
-msgid "attempting to unmount alternative partition"
-msgstr ""
-
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:218
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:219
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:232
-#: applications/luci-app-advanced-reboot/luasrc/controller/advanced_reboot.lua:233
-msgid "to"
-msgstr ""
+msgid "attempting to unmount alternative partition (mtd%s)"
+msgstr "προσπάθεια αποσύνδεσης εναλλακτικού διαμερίσματος (mtd%s)"

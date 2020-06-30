@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-01-12 19:22+0000\n"
-"Last-Translator: Khomyak-sibiryak <owalski@protonmail.com>\n"
+"PO-Revision-Date: 2020-06-07 15:48+0000\n"
+"Last-Translator: Artem <KovalevArtem.ru@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationshttps-dns-proxy/ru/>\n"
 "Language: ru\n"
@@ -9,15 +9,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.10.1\n"
+"X-Generator: Weblate 4.1-dev\n"
+
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:72
+msgid "%s is not installed or not found"
+msgstr "%s не установлен или не найден"
 
 #: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/com.adguard.dns-family.lua:3
 msgid "AdGuard (Family Protection)"
-msgstr ""
+msgstr "AdGuard (Семейная защита)"
 
 #: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/com.adguard.dns.lua:3
 msgid "AdGuard (Standard)"
 msgstr "AdGuard (Стандарт)"
+
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/ca.cira.canadianshield.family.lua:3
+msgid "CIRA Canadian Shield (Family)"
+msgstr ""
+
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/ca.cira.canadianshield.private.lua:3
+msgid "CIRA Canadian Shield (Private)"
+msgstr ""
+
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/ca.cira.canadianshield.protected.lua:3
+msgid "CIRA Canadian Shield (Protected)"
+msgstr ""
 
 #: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/org.cleanbrowsing.doh-adult.lua:3
 msgid "CleanBrowsing (Adult Filter)"
@@ -29,23 +45,27 @@ msgstr "CleanBrowsing (Семейный фильтр)"
 
 #: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/org.cleanbrowsing.doh-security.lua:3
 msgid "CleanBrowsing (Security Filter)"
-msgstr ""
+msgstr "CleanBrowsing (Фильтр безопасности)"
 
 #: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/com.cloudflare-dns.lua:3
 msgid "Cloudflare"
 msgstr "Cloudflare"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:85
-msgid "DHCP and DNS"
-msgstr "DHCP и DNS"
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/com.cloudflare-dns.family.lua:3
+msgid "Cloudflare (Family Protection)"
+msgstr ""
+
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/com.cloudflare-dns.security.lua:3
+msgid "Cloudflare (Security Protection)"
+msgstr ""
 
 #: applications/luci-app-https-dns-proxy/luasrc/controller/https-dns-proxy.lua:4
-msgid "DNS Over HTTPS Proxy"
-msgstr "DNS Over HTTPS"
+msgid "DNS HTTPS Proxy"
+msgstr "Прокси-сервер DNS HTTPS"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:64
-msgid "DNS Over HTTPS Proxy Settings"
-msgstr "Настройки DNS Over HTTPS"
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:106
+msgid "DNS HTTPS Proxy Settings"
+msgstr "Настройки прокси-сервера DNS HTTPS"
 
 #: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers.disabled/sb.dns.lua:3
 msgid "DNS.SB"
@@ -55,23 +75,19 @@ msgstr "DNS.SB"
 msgid "Digitale Gesellschaft"
 msgstr "Digitale Gesellschaft"
 
-#: applications/luci-app-https-dns-proxy/luasrc/view/https-dns-proxy/buttons.htm:53
+#: applications/luci-app-https-dns-proxy/luasrc/view/https-dns-proxy/buttons.htm:57
 msgid "Disable"
 msgstr "Отключить"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:56
-msgid "DoH"
-msgstr "DoH"
-
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:143
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:177
 msgid "EDNS client subnet"
 msgstr "Клиентская подсеть EDNS"
 
-#: applications/luci-app-https-dns-proxy/luasrc/view/https-dns-proxy/buttons.htm:51
+#: applications/luci-app-https-dns-proxy/luasrc/view/https-dns-proxy/buttons.htm:54
 msgid "Enable"
 msgstr "Включить"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:87
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:27
 msgid "For more information on different options check"
 msgstr "Для получения дополнительной информации о различных опциях, проверьте"
 
@@ -79,15 +95,23 @@ msgstr "Для получения дополнительной информац�
 msgid "Google"
 msgstr "Google"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:83
-msgid "Instances"
-msgstr ""
-
 #: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:126
+msgid "Instances"
+msgstr "Примеры"
+
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/gr.libredns.doh.lua:3
+msgid "LibreDNS"
+msgstr "LibreDNS"
+
+#: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/gr.libredns.doh-ads.lua:3
+msgid "LibreDNS (No Ads)"
+msgstr "LibreDNS (без рекламы)"
+
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:160
 msgid "Listen address"
 msgstr "Адрес"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:139
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:173
 msgid "Listen port"
 msgstr "Порт"
 
@@ -99,7 +123,7 @@ msgstr "Загрузка"
 msgid "ODVR (nic.cz)"
 msgstr "ODVR (nic.cz)"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:146
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:180
 msgid "Proxy server"
 msgstr "Прокси сервер"
 
@@ -117,59 +141,58 @@ msgstr "Quad 9 (Защищен)"
 
 #: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers/net.quad9.dns10.lua:3
 msgid "Quad 9 (Unsecured)"
-msgstr ""
+msgstr "Quad 9 (незащищенный)"
 
-#: applications/luci-app-https-dns-proxy/luasrc/view/https-dns-proxy/buttons.htm:43
+#: applications/luci-app-https-dns-proxy/luasrc/view/https-dns-proxy/buttons.htm:44
 msgid "Reload"
 msgstr "Перезапустить"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:99
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:133
 msgid "Resolver"
 msgstr "Поставщик"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:56
-msgid "Running"
-msgstr "Запущен"
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:98
+msgid "Running: %s DoH at %s:%s"
+msgstr ""
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:66
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:68
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:110
 msgid "Service Status"
 msgstr "Статус сервиса"
+
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:108
+msgid "Service Status [%s %s]"
+msgstr ""
 
 #: applications/luci-app-https-dns-proxy/luasrc/view/https-dns-proxy/buttons.htm:41
 msgid "Start"
 msgstr "Запустить"
 
-#: applications/luci-app-https-dns-proxy/luasrc/view/https-dns-proxy/buttons.htm:45
+#: applications/luci-app-https-dns-proxy/luasrc/view/https-dns-proxy/buttons.htm:47
 msgid "Stop"
 msgstr "Остановить"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:37
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:76
 msgid "Stopped"
-msgstr "Остановлен"
+msgstr "Остановлено"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:22
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:63
 msgid "Unknown Provider"
 msgstr "Неизвестный поставщик"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:83
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:127
 msgid ""
 "When you add/remove any instances below, they will be used to override the "
-"'DNS forwardings' section of"
+"'DNS forwardings' section of %sDHCP and DNS%s."
 msgstr ""
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:91
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:48
 msgid "and"
 msgstr "и"
 
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:56
-msgid "at"
-msgstr ""
-
-#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:32
-msgid "is not installed or not found"
-msgstr "не установлен или не найден"
+#: applications/luci-app-https-dns-proxy/luasrc/model/cbi/https-dns-proxy.lua:78
+msgid "disabled"
+msgstr "отключено"
 
 #: applications/luci-app-https-dns-proxy/luasrc/https-dns-proxy/providers.disabled/cn.rubyfish.dns.lua:3
 msgid "rubyfish.cn"
-msgstr ""
+msgstr "rubyfish.cn"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LuCI: splash\n"
 "POT-Creation-Date: 2013-11-13 18:52+0200\n"
-"PO-Revision-Date: 2020-01-13 14:26+0000\n"
-"Last-Translator: Nazym Bavbekov <joker2000joker@list.ru>\n"
+"PO-Revision-Date: 2020-06-07 15:48+0000\n"
+"Last-Translator: Artem <KovalevArtem.ru@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationssplash/ru/>\n"
 "Language: ru\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.10.1\n"
+"X-Generator: Weblate 4.1-dev\n"
 "Project-Info: Это технический перевод, не дословный. Главное-удобный русский "
 "интерфейс, все проверялось в графическом режиме, совместим с другими apps\n"
 
@@ -76,7 +76,7 @@ msgid ""
 "Become an active member of this community and help by operating your own node"
 msgstr ""
 "Станьте активным участником данного сообщества и окажите содействие, "
-"запустив свой узел сети."
+"запустив свой узел сети"
 
 #: applications/luci-app-splash/luasrc/model/cbi/splash/splash.lua:62
 msgid "Blacklist"
@@ -123,7 +123,7 @@ msgstr ""
 
 #: applications/luci-app-splash/luasrc/model/cbi/splash/splash.lua:15
 msgid "Clients download speed is limited to this value (kbyte/s)"
-msgstr "Скорость скачивания для клиентов ограничена этим значением (КБ/c)."
+msgstr "Скорость скачивания для клиентов ограничена этим значением (КБ/c)"
 
 #: applications/luci-app-splash/luasrc/model/cbi/splash/splash.lua:10
 msgid ""
@@ -135,7 +135,7 @@ msgstr ""
 
 #: applications/luci-app-splash/luasrc/model/cbi/splash/splash.lua:14
 msgid "Clients upload speed is limited to this value (kbyte/s)"
-msgstr "Скорость загрузки для клиентов ограничена этим значением (КБ/c)."
+msgstr "Скорость загрузки для клиентов ограничена этим значением (КБ/c)"
 
 #: applications/luci-app-splash/luasrc/view/splash/blocked.htm:15
 #: applications/luci-app-splash/luasrc/view/splash/splash.htm:54
@@ -189,7 +189,7 @@ msgstr "Имя хоста"
 #: applications/luci-app-splash/luasrc/model/cbi/splash/splash.lua:76
 #: applications/luci-app-splash/luasrc/view/admin_status/splash.htm:206
 msgid "IP Address"
-msgstr "IP-Адрес"
+msgstr "IP адрес"
 
 #: applications/luci-app-splash/luasrc/view/splash/splash.htm:98
 msgid ""
@@ -208,7 +208,7 @@ msgstr "Включить собственный текст в заставку �
 
 #: applications/luci-app-splash/luasrc/model/cbi/splash/splash.lua:38
 msgid "Intercept client traffic on this Interface"
-msgstr "Перехватывать клиентский трафик на этом интерфейсе."
+msgstr "Перехватывать клиентский трафик на этом интерфейсе"
 
 #: applications/luci-app-splash/luasrc/model/cbi/splash/splash.lua:21
 msgid "Interfaces"
@@ -292,7 +292,7 @@ msgstr "Сохранить"
 
 #: applications/luci-app-splash/luasrc/model/cbi/splash/splash.lua:30
 msgid "Splash rules are integrated in this firewall zone"
-msgstr "Правила Splash интегрированы в зону этого межсетевого экрана."
+msgstr "Правила Splash интегрированы в зону этого межсетевого экрана"
 
 #: applications/luci-app-splash/luasrc/controller/splash/splash.lua:9
 msgid "Splashtext"
@@ -391,7 +391,7 @@ msgstr "Белый список"
 
 #: applications/luci-app-splash/luasrc/view/splash/splash.htm:77
 msgid "You are now connected to the free wireless mesh network"
-msgstr "Теперь вы подключены к свободной беспроводной Mesh сети."
+msgstr "Теперь вы подключены к свободной беспроводной Mesh сети"
 
 #: applications/luci-app-splash/luasrc/model/cbi/splash/splashtext.lua:13
 msgid ""

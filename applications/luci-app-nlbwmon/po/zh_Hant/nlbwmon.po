@@ -3,15 +3,15 @@
 #
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-12-19 19:39+0000\n"
-"Last-Translator: 孤爺仔 <7312140@qq.com>\n"
+"PO-Revision-Date: 2020-04-03 14:28+0000\n"
+"Last-Translator: KurisuWong <wcl2005hk@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "openwrt/luciapplicationsnlbwmon/zh_Hant/>\n"
-"Language: zh-tw\n"
+"Language: zh_Hant\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:661
 msgid "%d IPv4-only hosts"
@@ -123,7 +123,7 @@ msgstr "統計週期"
 
 #: applications/luci-app-nlbwmon/luasrc/model/cbi/nlbw/config.lua:21
 msgid "Advanced Settings"
-msgstr "高階設定"
+msgstr "進階設定"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:85
 msgid "Application"
@@ -195,7 +195,7 @@ msgstr "連線"
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:48
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:86
 msgid "Connections"
-msgstr "連線"
+msgstr "連線數"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:31
 msgid "Connections / Host"
@@ -219,7 +219,7 @@ msgstr "每月的某一天"
 msgid ""
 "Day of month to restart the accounting period. Use negative values to count "
 "towards the end of month, e.g. \"-5\" to specify the 27th of July or the "
-"24th of Februrary."
+"24th of February."
 msgstr ""
 "每個月重啟統計週期的日期。使用負數表示從月底開始計算，例如：\"-5\" 可以表示7"
 "月27號或者2月24號。"
@@ -482,7 +482,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:289
 msgid "Upload"
-msgstr ""
+msgstr "上傳"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:51
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:89

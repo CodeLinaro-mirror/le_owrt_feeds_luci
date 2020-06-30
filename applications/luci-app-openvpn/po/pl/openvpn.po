@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2020-01-28 03:40+0000\n"
+"PO-Revision-Date: 2020-05-02 15:56+0000\n"
 "Last-Translator: Marcin Net <marcin.net@linux.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsopenvpn/pl/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: applications/luci-app-openvpn/luasrc/model/cbi/openvpn-advanced.lua:821
 #: applications/luci-app-openvpn/luasrc/model/cbi/openvpn-advanced.lua:824
@@ -86,7 +86,7 @@ msgstr "Automatycznie przekieruj domyślną trasę"
 #: applications/luci-app-openvpn/luasrc/model/cbi/openvpn.lua:11
 msgid "Below is a list of configured OpenVPN instances and their current state"
 msgstr ""
-"Ponieżej znajduje się lista skonfigurowanych procesów OpenVPN wraz z ich "
+"Poniżej znajduje się lista skonfigurowanych instancji OpenVPN wraz z ich "
 "aktualnymi stanami"
 
 #: applications/luci-app-openvpn/luasrc/model/cbi/openvpn-advanced.lua:119
@@ -554,7 +554,7 @@ msgstr "Uruchom skrypt cmd po rozłączeniu klienta"
 
 #: applications/luci-app-openvpn/luasrc/model/cbi/openvpn-advanced.lua:123
 msgid "Run up/down scripts for all restarts"
-msgstr "Uruchom skrypty up/down dla wszystkich restartów"
+msgstr "Uruchom skrypty góra/dół dla wszystkich restartów"
 
 #: applications/luci-app-openvpn/luasrc/model/cbi/openvpn-file.lua:37
 msgid "Save"

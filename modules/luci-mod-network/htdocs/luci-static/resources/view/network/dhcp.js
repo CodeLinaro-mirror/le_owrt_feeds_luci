@@ -1,4 +1,7 @@
 'use strict';
+'require view';
+'require dom';
+'require poll';
 'require rpc';
 'require uci';
 'require form';
@@ -33,7 +36,7 @@ CBILeaseStatus = form.DummyValue.extend({
 					E('div', { 'class': 'th' }, _('Hostname')),
 					E('div', { 'class': 'th' }, _('IPv4-Address')),
 					E('div', { 'class': 'th' }, _('MAC-Address')),
-					E('div', { 'class': 'th' }, _('Leasetime remaining'))
+					E('div', { 'class': 'th' }, _('Lease time remaining'))
 				]),
 				E('div', { 'class': 'tr placeholder' }, [
 					E('div', { 'class': 'td' }, E('em', _('Collecting data...')))
@@ -63,6 +66,9 @@ CBILease6Status = form.DummyValue.extend({
 });
 
 function validateHostname(sid, s) {
+	if (s == null || s == '')
+		return true;
+
 	if (s.length > 256)
 		return _('Expecting: %s').format(_('valid hostname'));
 
@@ -96,7 +102,7 @@ function validateServerSpec(sid, s) {
 	if (s == null || s == '')
 		return true;
 
-	var m = s.match(/^\/(.+)\/(.*)$/);
+	var m = s.match(/^(?:\/(.+)\/)?(.*)$/);
 	if (!m)
 		return _('Expecting: %s').format(_('valid hostname'));
 
@@ -113,17 +119,26 @@ function validateServerSpec(sid, s) {
 
 	if (!m)
 		return _('Expecting: %s').format(_('valid IP address'));
-	else if (validation.parseIPv4(m[1]) && m[3] != null && !validation.parseIPv4(m[3]))
-		return _('Expecting: %s').format(_('valid IPv4 address'));
-	else if (validation.parseIPv6(m[1]) && m[3] != null && !validation.parseIPv6(m[3]))
-		return _('Expecting: %s').format(_('valid IPv6 address'));
-	else if ((m[2] != null && +m[2] > 65535) || (m[4] != null && +m[4] > 65535))
+
+	if (validation.parseIPv4(m[1])) {
+		if (m[3] != null && !validation.parseIPv4(m[3]))
+			return _('Expecting: %s').format(_('valid IPv4 address'));
+	}
+	else if (validation.parseIPv6(m[1])) {
+		if (m[3] != null && !validation.parseIPv6(m[3]))
+			return _('Expecting: %s').format(_('valid IPv6 address'));
+	}
+	else {
+		return _('Expecting: %s').format(_('valid IP address'));
+	}
+
+	if ((m[2] != null && +m[2] > 65535) || (m[4] != null && +m[4] > 65535))
 		return _('Expecting: %s').format(_('valid port value'));
 
 	return true;
 }
 
-return L.view.extend({
+return view.extend({
 	load: function() {
 		return Promise.all([
 			callHostHints(),
@@ -216,6 +231,7 @@ return L.view.extend({
 			o = s.taboption('advanced', form.Flag, 'dnsseccheckunsigned',
 				_('DNSSEC check unsigned'),
 				_('Requires upstream supports DNSSEC; verify unsigned domain responses really come from unsigned domains'));
+			o.default = o.enabled;
 			o.optional = true;
 		}
 
@@ -394,7 +410,7 @@ return L.view.extend({
 		ss.anonymous = true;
 
 		so = ss.option(form.Value, 'name', _('Hostname'));
-		so.datatype = 'hostname("strict")';
+		so.validate = validateHostname;
 		so.rmempty  = true;
 		so.write = function(section, value) {
 			uci.set('dhcp', section, 'name', value);
@@ -439,7 +455,7 @@ return L.view.extend({
 
 				var node = ipopt.map.findElement('id', ipopt.cbid(section_id));
 				if (node)
-					L.dom.callClassMethod(node, 'setValue', hosts[mac].ipv4);
+					dom.callClassMethod(node, 'setValue', hosts[mac].ipv4);
 			}, this, ipopt, section_id));
 
 			return node;
@@ -486,7 +502,7 @@ return L.view.extend({
 			o = s.taboption('leases', CBILease6Status, '__status6__');
 
 		return m.render().then(function(mapEl) {
-			L.Poll.add(function() {
+			poll.add(function() {
 				return callDHCPLeases().then(function(leaseinfo) {
 					var leases = Array.isArray(leaseinfo.dhcp_leases) ? leaseinfo.dhcp_leases : [],
 					    leases6 = Array.isArray(leaseinfo.dhcp6_leases) ? leaseinfo.dhcp6_leases : [];

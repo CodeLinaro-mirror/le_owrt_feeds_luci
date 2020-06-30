@@ -4,16 +4,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2019-12-19 19:39+0000\n"
-"Last-Translator: 孤爺仔 <7312140@qq.com>\n"
+"PO-Revision-Date: 2020-04-06 12:20+0000\n"
+"Last-Translator: Trevor <wowpapa3232@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "openwrt/luciapplicationsupnp/zh_Hant/>\n"
-"Language: zh-tw\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: applications/luci-app-upnp/luasrc/model/cbi/upnp/upnp.lua:81
 msgid ""
@@ -71,11 +71,11 @@ msgstr "收集資料中..."
 
 #: applications/luci-app-upnp/luasrc/model/cbi/upnp/upnp.lua:88
 msgid "Comment"
-msgstr "評論"
+msgstr "註解"
 
 #: applications/luci-app-upnp/luasrc/view/upnp_status.htm:29
 msgid "Delete"
-msgstr ""
+msgstr "刪除"
 
 #: applications/luci-app-upnp/luasrc/view/upnp_status.htm:47
 msgid "Description"
@@ -147,7 +147,7 @@ msgstr "提醒間隔"
 
 #: applications/luci-app-upnp/luasrc/model/cbi/upnp/upnp.lua:50
 msgid "Port"
-msgstr "埠號"
+msgstr "埠"
 
 #: applications/luci-app-upnp/luasrc/model/cbi/upnp/upnp.lua:73
 msgid "Presentation URL"
@@ -193,7 +193,7 @@ msgstr "通用隨插即用（UPnP）"
 
 #: applications/luci-app-upnp/luasrc/view/upnp_status.htm:26
 msgid "Unknown"
-msgstr "未知"
+msgstr "未知的"
 
 #: applications/luci-app-upnp/luasrc/model/cbi/upnp/upnp.lua:47
 msgid "Uplink"

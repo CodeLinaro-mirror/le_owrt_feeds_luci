@@ -1,8 +1,14 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2020-06-13 22:13+0000\n"
+"Last-Translator: Satoru Yoshida <ramat@ram.ne.jp>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/openwrt/"
+"luciapplicationsshadowsocks-libev/ja/>\n"
 "Language: ja\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:176
 msgid "<hidden>"
@@ -14,7 +20,7 @@ msgstr ""
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/instance-details.lua:24
 msgid "Advanced Settings"
-msgstr ""
+msgstr "詳細設定"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/instance-details.lua:32
 msgid "Bind address"
@@ -64,11 +70,11 @@ msgstr ""
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/rules.lua:35
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/servers.lua:33
 msgid "Disable"
-msgstr ""
+msgstr "無効"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/instances.lua:86
 msgid "Disabled"
-msgstr ""
+msgstr "無効"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/rules.lua:87
 msgid "Dst default"
@@ -108,7 +114,7 @@ msgstr ""
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/instances.lua:89
 msgid "Enabled"
-msgstr ""
+msgstr "有効"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/rules.lua:54
 msgid "Extra arguments"
@@ -144,7 +150,7 @@ msgstr ""
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/instance-details.lua:23
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/rules.lua:31
 msgid "General Settings"
-msgstr ""
+msgstr "一般設定"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:129
 msgid "IPv6 First"
@@ -192,7 +198,7 @@ msgstr ""
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:122
 msgid "MTU"
-msgstr ""
+msgstr "MTU"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:97
 msgid "Method"
@@ -223,7 +229,7 @@ msgstr ""
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/instances.lua:78
 msgid "Overview"
-msgstr ""
+msgstr "概要"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:202
 msgid "Package is not installed"
@@ -232,10 +238,12 @@ msgstr ""
 #: applications/luci-app-shadowsocks-libev/luasrc/model/cbi/shadowsocks-libev/rules.lua:55
 msgid "Passes additional arguments to iptables. Use with care!"
 msgstr ""
+"iptablesにパススルーする追加の引数を設定してください。ただし、注意して設定し"
+"てください！"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:101
 msgid "Password"
-msgstr ""
+msgstr "パスワード"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:109
 msgid "Plugin"
@@ -273,7 +281,7 @@ msgstr ""
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:91
 msgid "Server"
-msgstr ""
+msgstr "サーバー"
 
 #: applications/luci-app-shadowsocks-libev/luasrc/model/shadowsocks-libev.lua:94
 msgid "Server port"

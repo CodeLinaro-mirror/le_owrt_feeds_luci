@@ -2,14 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: INAGAKI Hiroshi <musashino.open@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2020-06-13 22:13+0000\n"
+"Last-Translator: Satoru Yoshida <ramat@ram.ne.jp>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/openwrt/"
+"luciapplicationsnlbwmon/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:661
 msgid "%d IPv4-only hosts"
@@ -121,7 +123,7 @@ msgstr "収集期間"
 
 #: applications/luci-app-nlbwmon/luasrc/model/cbi/nlbw/config.lua:21
 msgid "Advanced Settings"
-msgstr "拡張設定"
+msgstr "詳細設定"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:85
 msgid "Application"
@@ -173,7 +175,7 @@ msgstr ""
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:94
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:133
 msgid "Collecting data..."
-msgstr ""
+msgstr "データを収集中..."
 
 #: applications/luci-app-nlbwmon/luasrc/model/cbi/nlbw/config.lua:177
 msgid "Commit interval"
@@ -202,7 +204,7 @@ msgstr "ホスト毎の接続数"
 
 #: applications/luci-app-nlbwmon/luasrc/model/cbi/nlbw/config.lua:195
 msgid "Database directory"
-msgstr "データベース ディレクトリ"
+msgstr "データベース・ディレクトリ"
 
 #: applications/luci-app-nlbwmon/luasrc/model/cbi/nlbw/config.lua:196
 msgid ""
@@ -220,7 +222,7 @@ msgstr "月間"
 msgid ""
 "Day of month to restart the accounting period. Use negative values to count "
 "towards the end of month, e.g. \"-5\" to specify the 27th of July or the "
-"24th of Februrary."
+"24th of February."
 msgstr ""
 "月の中で新たな収集期間を開始する日です。月の最終日からの日数をマイナス値で指"
 "定することができます（例: 7月27日または2月24日は \"-5\"）。"
@@ -231,27 +233,27 @@ msgstr "表示"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:303
 msgid "Down. (Bytes)"
-msgstr ""
+msgstr "ダウンロード（バイト）"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:304
 msgid "Down. (Pkts.)"
-msgstr ""
+msgstr "ダウンロード（パケット）"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:285
 msgid "Download"
-msgstr ""
+msgstr "ダウンロード"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:49
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:87
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:126
 msgid "Download (Bytes)"
-msgstr ""
+msgstr "ダウンロード（バイト）"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:50
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:88
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:127
 msgid "Download (Packets)"
-msgstr ""
+msgstr "ダウンロード（パケット）"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:65
 msgid "Download / Application"
@@ -285,11 +287,11 @@ msgstr "特定の間隔"
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:534
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:639
 msgid "Force reload…"
-msgstr "強制リロード..."
+msgstr "強制リロード…"
 
 #: applications/luci-app-nlbwmon/luasrc/model/cbi/nlbw/config.lua:20
 msgid "General Settings"
-msgstr "全般設定"
+msgstr "一般設定"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/backup.htm:28
 msgid "Generate Backup"
@@ -306,7 +308,7 @@ msgstr "ホスト名: <big id=\"bubble-hostname\">example.org</big>"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:624
 msgid "IPv4"
-msgstr ""
+msgstr "IPv4"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:103
 msgid "IPv4 vs. IPv6"
@@ -376,7 +378,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:13
 msgid "Netlink Bandwidth Monitor"
-msgstr "Netlink Bandwidth Monitor"
+msgstr "Netlink 帯域幅モニター"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/backup.htm:9
 msgid "Netlink Bandwidth Monitor - Backup / Restore"
@@ -486,27 +488,27 @@ msgstr "トラフィック内訳"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:305
 msgid "Up. (Bytes)"
-msgstr ""
+msgstr "アップロード（バイト）"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:306
 msgid "Up. (Pkts.)"
-msgstr ""
+msgstr "アップロード（パケット）"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:289
 msgid "Upload"
-msgstr ""
+msgstr "アップロード"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:51
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:89
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:128
 msgid "Upload (Bytes)"
-msgstr ""
+msgstr "アップロード（バイト）"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:52
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:90
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:129
 msgid "Upload (Packets)"
-msgstr ""
+msgstr "アップロード（パケット）"
 
 #: applications/luci-app-nlbwmon/luasrc/view/nlbw/display.htm:70
 msgid "Upload / Application"
@@ -536,6 +538,9 @@ msgid ""
 "mainly useful for memory constrained systems which might not be able to "
 "satisfy memory allocation after longer uptime periods."
 msgstr ""
+"メモリ内で可能な最大のデータベース・サイズを事前に割り当てるかどうか。 これは"
+"主に、稼働時間が長くなるとメモリ割り当てを満たせない可能性があるメモリに制約"
+"のあるシステムで役立ちます。"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw.js:88
 msgid "no traffic"
