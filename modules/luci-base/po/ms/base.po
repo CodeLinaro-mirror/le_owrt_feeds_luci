@@ -17,8 +17,7 @@ msgstr ""
 msgid "%.1f dB"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:111
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:252
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:114
 msgid "%d Bit"
 msgstr ""
 
@@ -390,9 +389,9 @@ msgstr ""
 msgid "Add instance"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:143
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:149
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:238
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:162
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:168
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:259
 msgid "Add key"
 msgstr ""
 
@@ -702,8 +701,6 @@ msgstr "Otorisasi Diperlukan"
 
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:196
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:197
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:241
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:244
 msgid "Auto Refresh"
 msgstr ""
 
@@ -902,7 +899,7 @@ msgstr ""
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1913
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:126
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:270
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:181
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:200
 msgid "Cancel"
 msgstr "Batal"
 
@@ -1048,8 +1045,8 @@ msgstr "Pelanggan"
 msgid "Client ID to send when requesting DHCP"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:145
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:151
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:164
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:170
 msgid "Close"
 msgstr ""
 
@@ -1373,8 +1370,8 @@ msgstr ""
 msgid "Delete"
 msgstr "Padam"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:177
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:183
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:196
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:202
 msgid "Delete key"
 msgstr ""
 
@@ -1566,7 +1563,7 @@ msgstr ""
 msgid "Do you really want to delete \"%s\" ?"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:178
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:197
 msgid "Do you really want to delete the following SSH key?"
 msgstr ""
 
@@ -2167,7 +2164,6 @@ msgstr ""
 #: themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/header.htm:57
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:215
 #: themes/luci-theme-openwrt/luasrc/view/themes/openwrt.org/header.htm:82
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:284
 msgid "Go to password configuration..."
 msgstr ""
 
@@ -2743,7 +2739,6 @@ msgstr ""
 #: themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/header.htm:64
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:222
 #: themes/luci-theme-openwrt/luasrc/view/themes/openwrt.org/header.htm:72
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:291
 msgid "JavaScript required!"
 msgstr ""
 
@@ -3494,7 +3489,6 @@ msgstr ""
 #: themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/header.htm:54
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:212
 #: themes/luci-theme-openwrt/luasrc/view/themes/openwrt.org/header.htm:79
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:279
 msgid "No password set!"
 msgstr ""
 
@@ -3502,8 +3496,8 @@ msgstr ""
 msgid "No peers defined yet"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:118
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:259
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:137
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:268
 msgid "No public keys present yet."
 msgstr ""
 
@@ -3746,6 +3740,10 @@ msgstr ""
 msgid "Options"
 msgstr "Pilihan"
 
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:116
+msgid "Options:"
+msgstr ""
+
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:346
 msgid "Other:"
 msgstr ""
@@ -3953,7 +3951,7 @@ msgstr ""
 msgid "Password2"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:232
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:253
 msgid "Paste or drag SSH key file…"
 msgstr ""
 
@@ -4167,7 +4165,7 @@ msgstr "Pseudo Ad-Hoc (ahdemo)"
 msgid "Public Key"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:266
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:275
 msgid ""
 "Public keys allow for the passwordless SSH logins with a higher security "
 "compared to the use of plain passwords. In order to upload a new key to the "
@@ -4607,7 +4605,7 @@ msgstr ""
 msgid "SSH username"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:265
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:274
 #: modules/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json:41
 msgid "SSH-Keys"
 msgstr ""
@@ -5173,7 +5171,7 @@ msgstr ""
 msgid ""
 "The flash image was uploaded. Below is the checksum and file size listed, "
 "compare them with the original file to ensure data integrity. <br /> Click "
-"\"Proceed\" below to start the flash procedure."
+"'Continue' below to start the flash procedure."
 msgstr ""
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/routes.js:195
@@ -5184,11 +5182,11 @@ msgstr "Peraturan berikut sedang aktif pada sistem ini."
 msgid "The gateway address must not be a local IP address"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:144
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:163
 msgid "The given SSH public key has already been added."
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:150
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:169
 msgid ""
 "The given SSH public key is invalid. Please supply proper public RSA or "
 "ECDSA keys."
@@ -5319,7 +5317,6 @@ msgstr ""
 #: themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/header.htm:55
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:213
 #: themes/luci-theme-openwrt/luasrc/view/themes/openwrt.org/header.htm:80
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:282
 msgid ""
 "There is no password set on this router. Please configure a root password to "
 "protect the web interface."
@@ -5618,8 +5615,7 @@ msgstr ""
 msgid "Unmount"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:109
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:250
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:112
 msgid "Unnamed key"
 msgstr ""
 
@@ -6048,7 +6044,6 @@ msgstr ""
 #: themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/header.htm:65
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:223
 #: themes/luci-theme-openwrt/luasrc/view/themes/openwrt.org/header.htm:73
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:294
 msgid ""
 "You must enable JavaScript in your browser or LuCI will not work properly."
 msgstr ""
@@ -6266,12 +6261,10 @@ msgstr ""
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:894
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:898
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:197
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:245
 msgid "off"
 msgstr ""
 
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:196
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:242
 msgid "on"
 msgstr ""
 

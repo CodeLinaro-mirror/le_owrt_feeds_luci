@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-10 03:40+0200\n"
-"PO-Revision-Date: 2020-08-08 06:14+0000\n"
-"Last-Translator: Youngbin Han <sukso96100@gmail.com>\n"
+"PO-Revision-Date: 2020-12-19 09:40+0000\n"
+"Last-Translator: orangepizza <abnoeh@mail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/openwrt/luci/ko/"
 ">\n"
 "Language: ko\n"
@@ -12,26 +12,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:913
 #, fuzzy
 msgid "%.1f dB"
 msgstr "%.1f dB"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:111
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:252
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:114
 #, fuzzy
 msgid "%d Bit"
 msgstr "%d Bit"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:3651
 msgid "%d invalid field(s)"
-msgstr ""
+msgstr "%d 잘못된 필드(들)"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/switch.js:35
 msgid "%s is untagged in multiple VLANs!"
-msgstr ""
+msgstr "%s 는 여러 VLAN에서 태그 없음으로 설정되었습니다!"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/bandwidth.js:294
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:403
@@ -58,7 +57,7 @@ msgstr "(연결된 인터페이스 없음)"
 
 #: modules/luci-compat/luasrc/view/cbi/ucisection.htm:48
 msgid "-- Additional Field --"
-msgstr ""
+msgstr "-- 추가 설정 --"
 
 #: modules/luci-base/htdocs/luci-static/resources/cbi.js:275
 #: modules/luci-base/htdocs/luci-static/resources/form.js:3186
@@ -75,18 +74,19 @@ msgstr "-- 선택하세요 --"
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:968
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:1937
 #: modules/luci-compat/luasrc/view/cbi/header.htm:6
+#, fuzzy
 msgid "-- custom --"
-msgstr ""
+msgstr "-- custom --"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:269
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:378
 msgid "-- match by label --"
-msgstr ""
+msgstr "--label로 지정 --"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:255
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:361
 msgid "-- match by uuid --"
-msgstr ""
+msgstr "-- uuid로 지정 --"
 
 #: modules/luci-compat/luasrc/view/cbi/firewall_zonelist.htm:27
 #: modules/luci-compat/luasrc/view/cbi/network_ifacelist.htm:44
@@ -96,7 +96,7 @@ msgstr "-- 선택하세요 --"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:932
 msgid "0 = not using RSSI threshold, 1 = do not change driver default"
-msgstr ""
+msgstr "0 = RSSI 임계값을 사용하지 않음, 1 = 드라이버 기본값 사용"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/load.js:231
 msgid "1 Minute Load:"
@@ -112,8 +112,9 @@ msgstr "4자리 16진수 ID"
 
 #: modules/luci-compat/luasrc/model/network/proto_4x6.lua:18
 #: protocols/luci-proto-ipv6/htdocs/luci-static/resources/protocol/464xlat.js:11
+#, fuzzy
 msgid "464XLAT (CLAT)"
-msgstr ""
+msgstr "464XLAT (CLAT)"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/load.js:241
 msgid "5 Minute Load:"
@@ -121,7 +122,7 @@ msgstr "5분 부하:"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1456
 msgid "6-octet identifier as a hex string - no colons"
-msgstr ""
+msgstr "6옥텟 식별자를 : 없는 16진수로"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1416
 msgid "802.11r Fast Transition"
@@ -129,23 +130,23 @@ msgstr ""
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1580
 msgid "802.11w Association SA Query maximum timeout"
-msgstr ""
+msgstr "802.11w Association SA 쿼리 최대 대기 시간"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1587
 msgid "802.11w Association SA Query retry timeout"
-msgstr ""
+msgstr "802.11w Association SA 쿼리 재시도 최대 대기 시간"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1568
 msgid "802.11w Management Frame Protection"
-msgstr ""
+msgstr "802.11w 관리 프레임 보호 (Management Frame Protection)"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1580
 msgid "802.11w maximum timeout"
-msgstr ""
+msgstr "802.11w 최대 대기 시간"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1587
 msgid "802.11w retry timeout"
-msgstr ""
+msgstr "802.11w 재시도 대기 시간"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:949
 msgid "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
@@ -405,9 +406,9 @@ msgstr "VLAN 추가"
 msgid "Add instance"
 msgstr "인스턴스 추가"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:143
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:149
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:238
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:162
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:168
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:259
 msgid "Add key"
 msgstr ""
 
@@ -719,8 +720,6 @@ msgstr "인증이 필요합니다"
 
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:196
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:197
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:241
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:244
 msgid "Auto Refresh"
 msgstr "자동 Refresh"
 
@@ -922,7 +921,7 @@ msgstr ""
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1913
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:126
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:270
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:181
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:200
 msgid "Cancel"
 msgstr "취소"
 
@@ -1076,8 +1075,8 @@ msgstr ""
 msgid "Client ID to send when requesting DHCP"
 msgstr "DHCP 요청시 전송할 Client ID"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:145
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:151
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:164
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:170
 msgid "Close"
 msgstr ""
 
@@ -1406,8 +1405,8 @@ msgstr ""
 msgid "Delete"
 msgstr "삭제"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:177
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:183
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:196
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:202
 msgid "Delete key"
 msgstr ""
 
@@ -1599,7 +1598,7 @@ msgstr ""
 msgid "Do you really want to delete \"%s\" ?"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:178
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:197
 msgid "Do you really want to delete the following SSH key?"
 msgstr ""
 
@@ -2203,7 +2202,6 @@ msgstr ""
 #: themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/header.htm:57
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:215
 #: themes/luci-theme-openwrt/luasrc/view/themes/openwrt.org/header.htm:82
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:284
 msgid "Go to password configuration..."
 msgstr "암호 설정 하기"
 
@@ -2770,7 +2768,6 @@ msgstr ""
 #: themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/header.htm:64
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:222
 #: themes/luci-theme-openwrt/luasrc/view/themes/openwrt.org/header.htm:72
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:291
 msgid "JavaScript required!"
 msgstr ""
 
@@ -3520,7 +3517,6 @@ msgstr ""
 #: themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/header.htm:54
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:212
 #: themes/luci-theme-openwrt/luasrc/view/themes/openwrt.org/header.htm:79
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:279
 msgid "No password set!"
 msgstr "암호 설정을 해주세요!"
 
@@ -3528,8 +3524,8 @@ msgstr "암호 설정을 해주세요!"
 msgid "No peers defined yet"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:118
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:259
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:137
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:268
 msgid "No public keys present yet."
 msgstr ""
 
@@ -3772,6 +3768,10 @@ msgstr ""
 msgid "Options"
 msgstr ""
 
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:116
+msgid "Options:"
+msgstr ""
+
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/connections.js:346
 msgid "Other:"
 msgstr ""
@@ -3981,7 +3981,7 @@ msgstr ""
 msgid "Password2"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:232
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:253
 msgid "Paste or drag SSH key file…"
 msgstr ""
 
@@ -4195,7 +4195,7 @@ msgstr ""
 msgid "Public Key"
 msgstr "공개 키"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:266
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:275
 msgid ""
 "Public keys allow for the passwordless SSH logins with a higher security "
 "compared to the use of plain passwords. In order to upload a new key to the "
@@ -4637,7 +4637,7 @@ msgstr "SSH 서버 포트"
 msgid "SSH username"
 msgstr "SSH 사용자 이름"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:265
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:274
 #: modules/luci-mod-system/root/usr/share/luci/menu.d/luci-mod-system.json:41
 #, fuzzy
 msgid "SSH-Keys"
@@ -5212,7 +5212,7 @@ msgstr "LuCI가 제대로 작동하려면 기존 무선 구성이 변경되어�
 msgid ""
 "The flash image was uploaded. Below is the checksum and file size listed, "
 "compare them with the original file to ensure data integrity. <br /> Click "
-"\"Proceed\" below to start the flash procedure."
+"'Continue' below to start the flash procedure."
 msgstr ""
 "플래시 이미지가 업로드 되었습니다. 아래는 체크섬과 파일 크기 목록입니다. 원"
 "본 파일과 비교하여 데이터 무결성을 검증하세요.<br />아래 \"진행하기\"를 눌러 "
@@ -5226,11 +5226,11 @@ msgstr "다음의 rule 들이 현재 이 시스템에 적용 중입니다."
 msgid "The gateway address must not be a local IP address"
 msgstr "게이트웨이 주소는 절때로 로컬IP 주소면 안됩니다"
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:144
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:163
 msgid "The given SSH public key has already been added."
 msgstr "제출하신 SSH 공개키는 이미 추가되어 있습니다."
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:150
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:169
 msgid ""
 "The given SSH public key is invalid. Please supply proper public RSA or "
 "ECDSA keys."
@@ -5360,7 +5360,6 @@ msgstr ""
 #: themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/header.htm:55
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:213
 #: themes/luci-theme-openwrt/luasrc/view/themes/openwrt.org/header.htm:80
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:282
 msgid ""
 "There is no password set on this router. Please configure a root password to "
 "protect the web interface."
@@ -5666,8 +5665,7 @@ msgstr ""
 msgid "Unmount"
 msgstr ""
 
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:109
-#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:250
+#: modules/luci-mod-system/htdocs/luci-static/resources/view/system/sshkeys.js:112
 msgid "Unnamed key"
 msgstr ""
 
@@ -6103,7 +6101,6 @@ msgstr ""
 #: themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/header.htm:65
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:223
 #: themes/luci-theme-openwrt/luasrc/view/themes/openwrt.org/header.htm:73
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:294
 msgid ""
 "You must enable JavaScript in your browser or LuCI will not work properly."
 msgstr ""
@@ -6323,12 +6320,10 @@ msgstr ""
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:894
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:898
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:197
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:245
 msgid "off"
 msgstr ""
 
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:196
-#: themes/luci-theme-rosy/luasrc/view/themes/rosy/header.htm:242
 msgid "on"
 msgstr ""
 

@@ -3,20 +3,21 @@
 #
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-08-07 19:10+0800\n"
-"Last-Translator: Yangfl <mmyangfl@gmail.com>\n"
-"Language-Team:  <debian-l10n-chinese@lists.debian.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-01-09 15:32+0000\n"
+"Last-Translator: akibou <jinwenxin1997@icloud.com>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"openwrt/luciapplicationsfwknopd/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: applications/luci-app-fwknopd/luasrc/model/cbi/fwknopd.lua:48
 msgid ""
 "Allow SPA clients to request access to services through an iptables firewall "
 "instead of just to it."
-msgstr "允許 SPA 客戶端請求通過 iptables 防火牆訪問服務，而不僅僅是被攔截。"
+msgstr "容許 SPA 客戶端請求通過 iptables 防火牆存取服務，而不僅僅是被攔截。"
 
 #: applications/luci-app-fwknopd/luasrc/model/cbi/fwknopd.lua:49
 msgid "Allow SPA clients to request forwarding destination by DNS name."
@@ -44,8 +45,8 @@ msgid ""
 "“FW_ACCESS_TIMEOUT” is not set then the default timeout of 30 seconds will "
 "automatically be set."
 msgstr ""
-"定義在源 IP 位址的有效敲門序列後，fwknopd 授予其通過防火牆訪問的時間長度。如"
-"果未設定“FW_ACCESS_TIMEOUT”，則將自動設定預設超時 30 秒。"
+"定義在取得源 IP 位址的有效敲門序列後，fwknopd 允許通過防火牆存取的「時間長"
+"度」。如果未設定 “FW_ACCESS_TIMEOUT”，將自動設定逾時 30 秒為預設值。"
 
 #: applications/luci-app-fwknopd/luasrc/model/cbi/fwknopd.lua:18
 #: applications/luci-app-fwknopd/luasrc/model/cbi/fwknopd.lua:20
