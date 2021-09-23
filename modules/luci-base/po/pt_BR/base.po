@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-06-10 03:41+0200\n"
-"PO-Revision-Date: 2021-06-07 14:45+0000\n"
+"PO-Revision-Date: 2021-09-09 14:30+0000\n"
 "Last-Translator: Wellington Terumi Uemura <wellingtonuemura@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "openwrt/luci/pt_BR/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 4.8.1-dev\n"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:916
 msgid "%.1f dB"
@@ -176,7 +176,7 @@ msgid "<abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
 msgstr ""
 "<abbr title=\"Identificador de Conjunto de Serviços Estendidos\">ESSID</abbr>"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:468
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:465
 msgid "<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Address"
 msgstr "Endereço <abbr title=\"Protocolo de Internet Versão 4\">IPv4</abbr>"
 
@@ -202,7 +202,7 @@ msgstr ""
 msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Gateway"
 msgstr "Roteador <abbr title=\"Protocolo de Internet Versão 6\">IPv6</abbr>"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:497
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:494
 msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Suffix (hex)"
 msgstr ""
 "<abbr title=\"Internet Protocol Version 6/Protocolo Internet Versão "
@@ -220,7 +220,7 @@ msgstr "Nome do <abbr title=\"Diodo Emissor de Luz\">LED</abbr>"
 msgid "<abbr title=\"Media Access Control\">MAC</abbr>-Address"
 msgstr "Endereço <abbr title=\"Controle de Acesso ao Meio\">MAC</abbr>"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:491
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:488
 msgid "<abbr title=\"The DHCP Unique Identifier\">DUID</abbr>"
 msgstr "<abbr title=\"Identificador Único do DHCP\">DUID</abbr>"
 
@@ -699,7 +699,7 @@ msgstr "Aplicar sem verificação"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4179
 msgid "Applying configuration changes… %ds"
-msgstr "Aplicando as mudanças de configuração... %ds"
+msgstr "Aplicando as alterações na configuração... %ds"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/10_system.js:56
 msgid "Architecture"
@@ -1048,7 +1048,7 @@ msgstr "Alterações"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4275
 msgid "Changes have been reverted."
-msgstr "As mudanças foram revertidas."
+msgstr "As alterações foram revertidas."
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/password.js:46
 msgid "Changes the administrator password for accessing the device"
@@ -1119,8 +1119,8 @@ msgid ""
 "Click \"Generate archive\" to download a tar archive of the current "
 "configuration files."
 msgstr ""
-"Clique em \"Gerar arquivo\" para baixar um arquivo tar com os arquivos de "
-"configuração atuais."
+"Clique em \"Gerar arquivo\" para baixar um arquivo tar contendo as "
+"configurações atuais."
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:393
 msgid ""
@@ -1273,7 +1273,7 @@ msgid ""
 "settings such as the IP address or wireless security credentials."
 msgstr ""
 "Não foi possível reestabelecer o acesso ao dispositivo depois de aplicar as "
-"mudanças na configuração. Pode ser necessário reconectar se você modificou "
+"alterações na configuração. Pode ser necessário reconectar se você modificou "
 "configurações relacionadas a rede, como endereços IP ou credenciais de "
 "segurança da rede sem fio."
 
@@ -1623,7 +1623,7 @@ msgstr "Desabilitar esta rede"
 #: protocols/luci-proto-ppp/htdocs/luci-static/resources/protocol/pppoe.js:56
 #: protocols/luci-proto-ppp/htdocs/luci-static/resources/protocol/pptp.js:69
 msgid "Disabled"
-msgstr "Desabilitado"
+msgstr "Desativado"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:1105
 msgid "Disassociate On Low Acknowledgement"
@@ -2096,7 +2096,7 @@ msgstr "Falha ao alterar a senha do sistema."
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4086
 msgid "Failed to confirm apply within %ds, waiting for rollback…"
 msgstr ""
-"A confirmação das mudanças na configuração não foram confirmadas em %d "
+"A confirmação das alterações na configuração não foram confirmadas em %d "
 "segundos. Aguardando a reversão da configuração…"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/startup.js:35
@@ -2507,7 +2507,7 @@ msgstr "Firewall para IPv4"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/30_network.js:29
 msgid "IPv4 Upstream"
-msgstr "Enlace IPv4 Superior"
+msgstr "Conexão do enlace IPv4"
 
 #: modules/luci-base/htdocs/luci-static/resources/protocol/static.js:178
 msgid "IPv4 address"
@@ -2597,7 +2597,7 @@ msgstr ""
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/30_network.js:29
 msgid "IPv6 Upstream"
-msgstr "Enlace IPv6 Superior"
+msgstr "Conexão do enlace IPv6"
 
 #: modules/luci-base/htdocs/luci-static/resources/protocol/static.js:205
 msgid "IPv6 address"
@@ -3104,7 +3104,7 @@ msgstr "Latência"
 msgid "Leaf"
 msgstr "Folha"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:488
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:485
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:589
 msgid "Lease time"
 msgstr "Tempo de concessão"
@@ -3260,7 +3260,7 @@ msgstr "Carregando conteúdo do diretório…"
 #: modules/luci-base/luasrc/view/view.htm:4
 #: modules/luci-mod-status/luasrc/view/admin_status/index.htm:12
 msgid "Loading view…"
-msgstr "Carregando visão…"
+msgstr "Carregando a visualização…"
 
 #: modules/luci-base/htdocs/luci-static/resources/network.js:12
 #: modules/luci-compat/luasrc/model/network.lua:30
@@ -3967,7 +3967,7 @@ msgstr "Rota em enlace"
 msgid "On-State Delay"
 msgstr "Atraso no estado de conexões"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:477
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:474
 msgid "One of hostname or mac address must be specified!"
 msgstr ""
 "É necessário especificar ao menos um nome de equipamento ou endereço MAC!"
@@ -4418,11 +4418,11 @@ msgstr "Realizar a serialização dos pacotes na saída (opcional)."
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/reboot.js:28
 msgid "Perform reboot"
-msgstr "Reiniciar o sistema"
+msgstr "Reinicie o sistema"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:375
 msgid "Perform reset"
-msgstr "Restaurar as configuração iniciais"
+msgstr "Restaure as configurações iniciais"
 
 #: modules/luci-base/htdocs/luci-static/resources/rpc.js:410
 msgid "Permission denied"
@@ -4457,7 +4457,7 @@ msgstr "Pcts."
 
 #: modules/luci-base/luasrc/view/sysauth.htm:19
 msgid "Please enter your username and password."
-msgstr "Entre com o seu usuário e senha."
+msgstr "Entre com o nome do seu usuário e a senha."
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:3732
 msgid "Please select the file to upload."
@@ -4926,11 +4926,11 @@ msgstr "Recurso não encontrado"
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:810
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/startup.js:97
 msgid "Restart"
-msgstr "Reiniciar"
+msgstr "Reinicie"
 
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/iptables.js:313
 msgid "Restart Firewall"
-msgstr "Reiniciar o firewall"
+msgstr "Reinicie o firewall"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:808
 msgid "Restart radio interface"
@@ -4942,20 +4942,20 @@ msgstr "Restauração"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:379
 msgid "Restore backup"
-msgstr "Restaurar cópia de segurança"
+msgstr "Restaure uma cópia de segurança"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:340
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:341
 msgid "Reveal/hide password"
-msgstr "Revelar/ocultar a senha"
+msgstr "Revele/oculte a senha"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4017
 msgid "Revert"
-msgstr "Reverter"
+msgstr "Reverta"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4102
 msgid "Revert changes"
-msgstr "Reverter as mudanças"
+msgstr "Reverta as alterações"
 
 #: modules/luci-base/htdocs/luci-static/resources/ui.js:4284
 msgid "Revert request failed with status <code>%h</code>"
@@ -5090,11 +5090,11 @@ msgstr "Erro ao salvar"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:403
 msgid "Save mtdblock"
-msgstr "Salvar o bloco mtd"
+msgstr "Salve o bloco mtd"
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/flash.js:393
 msgid "Save mtdblock contents"
-msgstr "Salvar o conteúdo do bloco mtd"
+msgstr "Salve o conteúdo do bloco mtd"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/wireless.js:815
 msgid "Scan"
@@ -5705,11 +5705,11 @@ msgid ""
 msgstr ""
 "Não foi possível alcançar o dispositivo depois de %d segundos após a "
 "aplicação das alterações que ficaram pendentes, que, por razões de "
-"segurança, não foram aplicadas. Se mesmo assim você acredita que as mudanças "
-"de configuração estão corretas, salve uma configuração sem selecionar nada. "
-"Alternativamente, você pode ignorar este aviso e editar as alterações antes "
-"de tentar aplicar novamente ou reverter todas as alterações pendentes para "
-"manter a configuração atual funcionando."
+"segurança, não foram aplicadas. Se mesmo assim você acredita que as "
+"alterações na configuração estão corretas, salve uma configuração sem "
+"selecionar nada. Alternativamente, você pode ignorar este aviso e editar as "
+"alterações antes de tentar aplicar novamente ou reverter todas as alterações "
+"pendentes para manter a configuração atual funcionando."
 
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:279
 #: modules/luci-mod-system/htdocs/luci-static/resources/view/system/mounts.js:391
@@ -5891,8 +5891,8 @@ msgstr ""
 "A imagem carregada não contém um formato suportado. Confirme que você "
 "escolheu uma imagem para a sua plataforma."
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:528
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:560
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:525
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:557
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/40_dhcp.js:52
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/40_dhcp.js:89
 msgid "There are no active leases"
@@ -6472,7 +6472,7 @@ msgstr "Chave do usuário (codificada em formato PEM)"
 #: protocols/luci-proto-openconnect/htdocs/luci-static/resources/protocol/openconnect.js:105
 #: protocols/luci-proto-vpnc/htdocs/luci-static/resources/protocol/vpnc.js:56
 msgid "Username"
-msgstr "Nome do Usuário"
+msgstr "Nome do usuário"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/interfaces.js:962
 msgid "VC-Mux"
@@ -6682,11 +6682,11 @@ msgid ""
 "after a device reboot.<br /><strong>Warning: If you disable essential init "
 "scripts like \"network\", your device might become inaccessible!</strong>"
 msgstr ""
-"Neste local, você pode ativar ou desativar os scripts de iniciação "
-"instalados. As mudanças serão aplicadas após a reiniciação do equipamento."
-"<br /><strong>Aviso: Se você desativar algum script de iniciação essencial "
-"como por exemplo \"rede/network\", o dispositivo poderá tornar-se "
-"inacessível!</strong>"
+"Neste local, você pode ativar ou desativar os scripts instalados para a "
+"iniciação. As alterações serão aplicadas após a reiniciação do equipamento."
+"<br /><strong>Aviso: Caso desative algum script essencial de iniciação como "
+"por exemplo \"rede/network\", o dispositivo poderá ficar inacessível!</"
+"strong>"
 
 #: themes/luci-theme-bootstrap/luasrc/view/themes/bootstrap/header.htm:65
 #: themes/luci-theme-material/luasrc/view/themes/material/header.htm:223
@@ -6809,8 +6809,8 @@ msgstr "desabilitado"
 msgid "driver default"
 msgstr "padrão do driver"
 
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:517
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:538
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:514
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:535
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/40_dhcp.js:42
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/40_dhcp.js:69
 msgid "expired"
@@ -6995,8 +6995,8 @@ msgid "unknown"
 msgstr "desconhecido"
 
 #: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:333
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:515
-#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:536
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:512
+#: modules/luci-mod-network/htdocs/luci-static/resources/view/network/dhcp.js:533
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/40_dhcp.js:40
 #: modules/luci-mod-status/htdocs/luci-static/resources/view/status/include/40_dhcp.js:67
 msgid "unlimited"
