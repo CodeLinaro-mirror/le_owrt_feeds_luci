@@ -879,8 +879,8 @@ if hwtype == "atheros" or hwtype == "qcawifi" or hwtype == "mac80211" or hwtype 
 	local wapid = fs.access("/usr/sbin/wapid")
 
 	-- Probe EAP support
-	local has_ap_eap  = (os.execute("hostapd -veap >/dev/null 2>/dev/null") == 0)
-	local has_sta_eap = (os.execute("wpa_supplicant -veap >/dev/null 2>/dev/null") == 0)
+	local has_ap_eap  = false
+	local has_sta_eap = true
 
 	if wapid then
 		encr:value("wapi-psk","WAPI-PSK",  {mode="ap"})
@@ -1018,6 +1018,7 @@ wepslot:value("2", translatef("Key #%d", 2))
 wepslot:value("3", translatef("Key #%d", 3))
 wepslot:value("4", translatef("Key #%d", 4))
 
+--[[
 wepslot.cfgvalue = function(self, section)
 	local slot = tonumber(m.uci:get("wireless", section, "key"))
 	if not slot or slot < 1 or slot > 4 then
@@ -1025,6 +1026,7 @@ wepslot.cfgvalue = function(self, section)
 	end
 	return slot
 end
+--]]
 
 wepslot.write = function(self, section, value)
 	self.map.uci:set("wireless", section, "key", value)
