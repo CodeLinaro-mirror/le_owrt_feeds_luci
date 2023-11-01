@@ -67,7 +67,7 @@ m.title = luci.util.pcdata(wnet:get_i18n())
 
 local function txpower_list(iw)
 	local list = iw.txpwrlist or { }
-	local off  = tonumber(iw.txpower_offset) or 0
+	local off  = tonumber(iw.txpower_offset, 10) or 0
 	local new  = { }
 	local prev = -1
 	local _, val
@@ -88,7 +88,7 @@ local function txpower_list(iw)
 end
 
 local function txpower_current(pwr, list)
-	pwr = tonumber(pwr)
+	pwr = tonumber(pwr, 10)
 	if pwr ~= nil then
 		local _, item
 		for _, item in ipairs(list) do
@@ -1019,7 +1019,7 @@ wepslot:value("3", translatef("Key #%d", 3))
 wepslot:value("4", translatef("Key #%d", 4))
 
 wepslot.cfgvalue = function(self, section)
-	local slot = tonumber(m.uci:get("wireless", section, "key"))
+	local slot = tonumber(m.uci:get("wireless", section, "key"), 10)
 	if not slot or slot < 1 or slot > 4 then
 		return 1
 	end
