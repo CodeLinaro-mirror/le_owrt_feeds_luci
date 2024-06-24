@@ -150,6 +150,7 @@ if wnet:mode() ~= "sta" then
 			if not found_sta then
 				found_sta = {}
 				found_sta.channel = net:channel()
+				found_sta.is_up = net:is_up()
 				found_sta.names = {}
 			end
 			found_sta.names[#found_sta.names+1] = net:shortname()
@@ -158,7 +159,7 @@ if wnet:mode() ~= "sta" then
 end
 
 if found_sta then
-	if found_sta:is_up() and found_sta:channel()~=nil then
+	if found_sta.is_up and found_sta.channel ~=nil then
 		ch = s:taboption("general", DummyValue, "choice", translate("Channel"))
 		ch.value = translatef("Locked to channel %d used by %s",
 			found_sta:channel(), found_sta:shortname())
